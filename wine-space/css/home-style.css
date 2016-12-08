@@ -1,0 +1,22 @@
+.bxslider div.slide .slide_scena{
+	display: none;
+}
+
+input.quantity{
+	background-color: rgba(0, 0, 0, 0.1);
+	width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+td.chiffre{
+	text-align: center;
+}
+
+#map-canvas { width: 100%; height: 200px; margin: 0;}
+
+@media screen and (max-width: 860px){
+	.text_scena_description {
+		background-color: inherit !important;
+	}
+}
