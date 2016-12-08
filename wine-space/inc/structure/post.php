@@ -2,23 +2,23 @@
 /**
  * Template functions used for posts.
  *
- * @package winegrower
+ * @package winespace
  */
 
-if ( ! function_exists( 'winegrower_post_header' ) ) {
+if ( ! function_exists( 'winespace_post_header' ) ) {
 	/**
 	 * Display the post header with a link to the single post
 	 * @since 1.0.0
 	 */
-	function winegrower_post_header() { ?>
+	function winespace_post_header() { ?>
 		<header class="entry-header">
 		<?php
 		if ( is_single() ) {
-			winegrower_posted_on();
+			winespace_posted_on();
 			the_title( '<h1 class="entry-title" itemprop="name headline">', '</h1>' );
 		} else {
 			if ( 'post' == get_post_type() ) {
-				winegrower_posted_on();
+				winespace_posted_on();
 			}
 
 			the_title( sprintf( '<h1 class="entry-title" itemprop="name headline"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
@@ -29,12 +29,12 @@ if ( ! function_exists( 'winegrower_post_header' ) ) {
 	}
 }
 
-if ( ! function_exists( 'winegrower_post_content' ) ) {
+if ( ! function_exists( 'winespace_post_content' ) ) {
 	/**
 	 * Display the post content with a link to the single post
 	 * @since 1.0.0
 	 */
-	function winegrower_post_content() {
+	function winespace_post_content() {
 		?>
 		<div class="entry-content" itemprop="articleBody">
 		<?php
@@ -44,13 +44,13 @@ if ( ! function_exists( 'winegrower_post_content' ) ) {
 
 		the_content(
 			sprintf(
-				__( 'Continue reading %s', 'winegrower' ),
+				__( 'Continue reading %s', 'winespace' ),
 				'<span class="screen-reader-text">' . get_the_title() . '</span>'
 			)
 		);
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'winegrower' ),
+			'before' => '<div class="page-links">' . __( 'Pages:', 'winespace' ),
 			'after'  => '</div>',
 		) );
 		?>
@@ -59,24 +59,24 @@ if ( ! function_exists( 'winegrower_post_content' ) ) {
 	}
 }
 
-if ( ! function_exists( 'winegrower_post_meta' ) ) {
+if ( ! function_exists( 'winespace_post_meta' ) ) {
 	/**
 	 * Display the post meta
 	 * @since 1.0.0
 	 */
-	function winegrower_post_meta() {
+	function winespace_post_meta() {
 		?>
 		<aside class="entry-meta">
 			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 
 			<?php
 			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( __( ', ', 'winegrower' ) );
+			$categories_list = get_the_category_list( __( ', ', 'winespace' ) );
 
-			if ( $categories_list && winegrower_categorized_blog() ) : ?>
+			if ( $categories_list && winespace_categorized_blog() ) : ?>
 				<span class="cat-links">
 					<?php
-					echo '<span class="screen-reader-text">' . esc_attr( __( 'Categories: ', 'winegrower' ) ) . '</span>';
+					echo '<span class="screen-reader-text">' . esc_attr( __( 'Categories: ', 'winespace' ) ) . '</span>';
 					echo wp_kses_post( $categories_list );
 					?>
 				</span>
@@ -84,12 +84,12 @@ if ( ! function_exists( 'winegrower_post_meta' ) ) {
 
 			<?php
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', __( ', ', 'winegrower' ) );
+			$tags_list = get_the_tag_list( '', __( ', ', 'winespace' ) );
 
 			if ( $tags_list ) : ?>
 				<span class="tags-links">
 					<?php
-					echo '<span class="screen-reader-text">' . esc_attr( __( 'Tags: ', 'winegrower' ) ) . '</span>';
+					echo '<span class="screen-reader-text">' . esc_attr( __( 'Tags: ', 'winespace' ) ) . '</span>';
 					echo wp_kses_post( $tags_list );
 					?>
 				</span>
@@ -98,35 +98,35 @@ if ( ! function_exists( 'winegrower_post_meta' ) ) {
 			<?php endif; // End if 'post' == get_post_type() ?>
 
 			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'winegrower' ), __( '1 Comment', 'winegrower' ), __( '% Comments', 'winegrower' ) ); ?></span>
+				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'winespace' ), __( '1 Comment', 'winespace' ), __( '% Comments', 'winespace' ) ); ?></span>
 			<?php endif; ?>
 		</aside>
 		<?php
 	}
 }
 
-if ( ! function_exists( 'winegrower_paging_nav' ) ) {
+if ( ! function_exists( 'winespace_paging_nav' ) ) {
 	/**
 	 * Display navigation to next/previous set of posts when applicable.
 	 */
-	function winegrower_paging_nav() {
+	function winespace_paging_nav() {
 		global $wp_query;
 
 		$args = array(
 			'type' 		=> 'list',
-			'next_text' => __( 'Next', 'winegrower' ) . '&nbsp;<span class="meta-nav">&rarr;</span>',
-			'prev_text'	=> '<span class="meta-nav">&larr;</span>&nbsp' . __( 'Previous', 'winegrower' ),
+			'next_text' => __( 'Next', 'winespace' ) . '&nbsp;<span class="meta-nav">&rarr;</span>',
+			'prev_text'	=> '<span class="meta-nav">&larr;</span>&nbsp' . __( 'Previous', 'winespace' ),
 			);
 
 		the_posts_pagination( $args );
 	}
 }
 
-if ( ! function_exists( 'winegrower_post_nav' ) ) {
+if ( ! function_exists( 'winespace_post_nav' ) ) {
 	/**
 	 * Display navigation to next/previous post when applicable.
 	 */
-	function winegrower_post_nav() {
+	function winespace_post_nav() {
 		$args = array(
 			'next_text' => '%title &nbsp;<span class="meta-nav">&rarr;</span>',
 			'prev_text'	=> '<span class="meta-nav">&larr;</span>&nbsp;%title',
@@ -135,11 +135,11 @@ if ( ! function_exists( 'winegrower_post_nav' ) ) {
 	}
 }
 
-if ( ! function_exists( 'winegrower_posted_on' ) ) {
+if ( ! function_exists( 'winespace_posted_on' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
-	function winegrower_posted_on() {
+	function winespace_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s" itemprop="datePublished">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s" itemprop="datePublished">%4$s</time>';
@@ -153,16 +153,16 @@ if ( ! function_exists( 'winegrower_posted_on' ) ) {
 		);
 
 		$posted_on = sprintf(
-			_x( 'Posted on %s', 'post date', 'winegrower' ),
+			_x( 'Posted on %s', 'post date', 'winespace' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
-			_x( 'by %s', 'post author', 'winegrower' ),
+			_x( 'by %s', 'post author', 'winespace' ),
 			'<span class="vcard author"><span class="fn" itemprop="author"><a class="url fn n" rel="author" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span></span>'
 		);
 
-		echo apply_filters( 'winegrower_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>', $posted_on, $byline );
+		echo apply_filters( 'winespace_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>', $posted_on, $byline );
 
 	}
 }

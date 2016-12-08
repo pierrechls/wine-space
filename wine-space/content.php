@@ -1,6 +1,6 @@
 <?php
 /**
- * @package winegrower
+ * @package winespace
  */
 ?>
 
@@ -8,11 +8,11 @@
 
 	<?php
 	/**
- 	 * @hooked winegrower_post_header() - 10
- 	 * @hooked winegrower_post_meta() - 20
- 	 * @hooked winegrower_post_content() - 30
+ 	 * @hooked winespace_post_header() - 10
+ 	 * @hooked winespace_post_meta() - 20
+ 	 * @hooked winespace_post_content() - 30
 	 */
-	do_action( 'winegrower_loop_post' );
+	do_action( 'winespace_loop_post' );
 	?>
 
 </article><!-- #post-## -->

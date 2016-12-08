@@ -12,18 +12,18 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package winegrower
+ * @package winespace
  */
 
 /**
  * Setup the WordPress core custom header feature.
  *
- * @uses winegrower_header_style()
- * @uses winegrower_admin_header_style()
- * @uses winegrower_admin_header_image()
+ * @uses winespace_header_style()
+ * @uses winespace_admin_header_style()
+ * @uses winespace_admin_header_image()
  */
-function winegrower_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'winegrower_custom_header_args', array(
+function winespace_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'winespace_custom_header_args', array(
 		'default-image'          => '',
 		'header-text'     		 => false,
 		'width'                  => 1950,

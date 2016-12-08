@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * @package winegrower
+ * @package winespace
  */
 
  include (TEMPLATEPATH . '/to-cart.php');

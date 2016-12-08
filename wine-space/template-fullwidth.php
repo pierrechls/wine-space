@@ -4,7 +4,7 @@
  *
  * Template Name: Full width
  *
- * @package winegrower
+ * @package winespace
  */
 
 get_header(); ?>
@@ -15,16 +15,16 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-				do_action( 'winegrower_page_before' );
+				do_action( 'winespace_page_before' );
 				?>
 
 				<?php get_template_part( 'content', 'page' ); ?>
 
 				<?php
 				/**
-				 * @hooked winegrower_display_comments - 10
+				 * @hooked winespace_display_comments - 10
 				 */
-				do_action( 'winegrower_page_after' );
+				do_action( 'winespace_page_after' );
 				?>
 
 			<?php endwhile; // end of the loop. ?>

@@ -1,7 +1,7 @@
-.winegrower-add-ons {
+.winespace-add-ons {
   overflow: hidden;
   zoom: 1; }
-  .winegrower-add-ons .add-on {
+  .winespace-add-ons .add-on {
     border: 1px solid #ddd;
     background: #f8f8f8;
     margin-bottom: 2.618em;
@@ -11,24 +11,24 @@
     clear: both;
     position: relative;
     min-height: 330px; }
-    .winegrower-add-ons .add-on.image-vertical .content {
+    .winespace-add-ons .add-on.image-vertical .content {
       padding-left: 225px; }
-    .winegrower-add-ons .add-on.image-vertical.product-hero .content {
+    .winespace-add-ons .add-on.image-vertical.product-hero .content {
       background: url(../welcome-screen/img/product-hero.png) top left no-repeat; }
-    .winegrower-add-ons .add-on.image-vertical.share .content {
+    .winespace-add-ons .add-on.image-vertical.share .content {
       background: url(../welcome-screen/img/share.png) top left no-repeat; }
-    .winegrower-add-ons .add-on.image-vertical.wc-customiser .content {
+    .winespace-add-ons .add-on.image-vertical.wc-customiser .content {
       background: url(../welcome-screen/img/wc-customiser.png) top left no-repeat; }
-    .winegrower-add-ons .add-on.image-vertical.winegrower-designer .content {
-      background: url(../welcome-screen/img/winegrower-designer.png) top left no-repeat; }
-    .winegrower-add-ons .add-on.image-horizontal .content {
+    .winespace-add-ons .add-on.image-vertical.winespace-designer .content {
+      background: url(../welcome-screen/img/winespace-designer.png) top left no-repeat; }
+    .winespace-add-ons .add-on.image-horizontal .content {
       padding-bottom: 130px; }
-    .winegrower-add-ons .add-on.image-horizontal.footer-bar .content {
+    .winespace-add-ons .add-on.image-horizontal.footer-bar .content {
       background: url(../welcome-screen/img/footer-bar.png) bottom center no-repeat; }
-    .winegrower-add-ons .add-on.image-horizontal.product-pagination .content {
+    .winespace-add-ons .add-on.image-horizontal.product-pagination .content {
       padding-bottom: 155px;
       background: url(../welcome-screen/img/product-pagination.png) bottom left no-repeat; }
-    .winegrower-add-ons .add-on .premium, .winegrower-add-ons .add-on .free {
+    .winespace-add-ons .add-on .premium, .winespace-add-ons .add-on .free {
       background: #333;
       color: #fff;
       font-size: .618em;
@@ -37,26 +37,26 @@
       position: absolute;
       top: 0;
       right: 0; }
-    .winegrower-add-ons .add-on .premium {
+    .winespace-add-ons .add-on .premium {
       background: #0074a2; }
-    .winegrower-add-ons .add-on:nth-child(even) {
+    .winespace-add-ons .add-on:nth-child(even) {
       float: right;
       clear: none; }
-    .winegrower-add-ons .add-on h4 {
+    .winespace-add-ons .add-on h4 {
       margin-top: 0;
       font-size: 1em;
       padding: 1.618em;
       line-height: 1.4;
       background: #fff;
       margin: 0; }
-    .winegrower-add-ons .add-on .content {
+    .winespace-add-ons .add-on .content {
       padding: 1em 1.618em 1.618em 1.618em; }
-      .winegrower-add-ons .add-on .content p:last-child {
+      .winespace-add-ons .add-on .content p:last-child {
         margin-bottom: 0; }
-    .winegrower-add-ons .add-on.activated {
+    .winespace-add-ons .add-on.activated {
       border-color: #7ad03a;
       border-width: 2px; }
-    .winegrower-add-ons .add-on .activated {
+    .winespace-add-ons .add-on .activated {
       background: #7ad03a;
       color: #fff;
       font-size: 13px;
@@ -66,9 +66,9 @@
       padding: 0 10px 1px;
       display: inline-block;
       border-radius: 3px; }
-      .winegrower-add-ons .add-on .activated span {
+      .winespace-add-ons .add-on .activated span {
         line-height: 26px; }
-  .winegrower-add-ons img {
+  .winespace-add-ons img {
     padding: .618em;
     background: #fff;
     box-sizing: border-box; }
@@ -77,22 +77,22 @@
   margin-right: 0 !important; }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .winegrower-add-ons .add-on.image-vertical.product-hero .content {
+  .winespace-add-ons .add-on.image-vertical.product-hero .content {
     background-image: url(../welcome-screen/img/product-hero@2x.png);
     background-size: 245px 345px; }
-  .winegrower-add-ons .add-on.image-vertical.share .content {
+  .winespace-add-ons .add-on.image-vertical.share .content {
     background-image: url(../welcome-screen/img/share@2x.png);
     background-size: 245px 303px; }
-  .winegrower-add-ons .add-on.image-vertical.wc-customiser .content {
+  .winespace-add-ons .add-on.image-vertical.wc-customiser .content {
     background-image: url(../welcome-screen/img/wc-customiser@2x.png);
     background-size: 245px 303px; }
-  .winegrower-add-ons .add-on.image-vertical.winegrower-designer .content {
-    background-image: url(../welcome-screen/img/winegrower-designer@2x.png);
+  .winespace-add-ons .add-on.image-vertical.winespace-designer .content {
+    background-image: url(../welcome-screen/img/winespace-designer@2x.png);
     background-size: 245px 303px; }
-  .winegrower-add-ons .add-on.image-horizontal.footer-bar .content {
+  .winespace-add-ons .add-on.image-horizontal.footer-bar .content {
     background-image: url(../welcome-screen/img/footer-bar@2x.png);
     background-size: 570px 120px; }
-  .winegrower-add-ons .add-on.image-horizontal.product-pagination .content {
+  .winespace-add-ons .add-on.image-horizontal.product-pagination .content {
     background-image: url(../welcome-screen/img/product-pagination@2x.png);
     background-size: 570px 130px; } }
 

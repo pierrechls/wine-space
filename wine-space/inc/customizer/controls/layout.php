@@ -2,8 +2,8 @@
 /**
  * Class to create a custom layout control
  */
-if ( ! class_exists( 'Layout_Picker_winegrower_Control' ) ) {
-	class Layout_Picker_winegrower_Control extends WP_Customize_Control {
+if ( ! class_exists( 'Layout_Picker_winespace_Control' ) ) {
+	class Layout_Picker_winespace_Control extends WP_Customize_Control {
 
 		/**
 		* Render the content on the theme customizer page

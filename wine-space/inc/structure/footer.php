@@ -2,26 +2,26 @@
 /**
  * Template functions used for the site footer.
  *
- * @package winegrower
+ * @package winespace
  */
 
-if ( ! function_exists( 'winegrower_footer_widgets' ) ) {
+if ( ! function_exists( 'winespace_footer_widgets' ) ) {
 	/**
 	 * Display the footer widget regions
 	 * @since  1.0.0
 	 * @return  void
 	 */
-	function winegrower_footer_widgets() {
+	function winespace_footer_widgets() {
 		if ( is_active_sidebar( 'footer-4' ) ) {
-			$widget_columns = apply_filters( 'winegrower_footer_widget_regions', 4 );
+			$widget_columns = apply_filters( 'winespace_footer_widget_regions', 4 );
 		} elseif ( is_active_sidebar( 'footer-3' ) ) {
-			$widget_columns = apply_filters( 'winegrower_footer_widget_regions', 3 );
+			$widget_columns = apply_filters( 'winespace_footer_widget_regions', 3 );
 		} elseif ( is_active_sidebar( 'footer-2' ) ) {
-			$widget_columns = apply_filters( 'winegrower_footer_widget_regions', 2 );
+			$widget_columns = apply_filters( 'winespace_footer_widget_regions', 2 );
 		} elseif ( is_active_sidebar( 'footer-1' ) ) {
-			$widget_columns = apply_filters( 'winegrower_footer_widget_regions', 1 );
+			$widget_columns = apply_filters( 'winespace_footer_widget_regions', 1 );
 		} else {
-			$widget_columns = apply_filters( 'winegrower_footer_widget_regions', 0 );
+			$widget_columns = apply_filters( 'winespace_footer_widget_regions', 0 );
 		}
 
 		if ( $widget_columns > 0 ) : ?>
@@ -46,18 +46,18 @@ if ( ! function_exists( 'winegrower_footer_widgets' ) ) {
 	}
 }
 
-if ( ! function_exists( 'winegrower_credit' ) ) {
+if ( ! function_exists( 'winespace_credit' ) ) {
 	/**
 	 * Display the theme credit
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function winegrower_credit() {
+	function winespace_credit() {
 		?>
 		<div class="site-info">
-			<?php echo esc_html( apply_filters( 'winegrower_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>
-			<?php if ( apply_filters( 'winegrower_credit_link', true ) ) { ?>
-			<br /> <?php printf( __( '%1$s designed by %2$s.', 'winegrower' ), 'winegrower', '<a href="http://www.woothemes.com" alt="Premium WordPress Themes & Plugins by WooThemes" title="Premium WordPress Themes & Plugins by WooThemes" rel="designer">WooThemes</a>' ); ?>
+			<?php echo esc_html( apply_filters( 'winespace_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>
+			<?php if ( apply_filters( 'winespace_credit_link', true ) ) { ?>
+			<br /> <?php printf( __( '%1$s designed by %2$s.', 'winespace' ), 'winespace', '<a href="http://www.woothemes.com" alt="Premium WordPress Themes & Plugins by WooThemes" title="Premium WordPress Themes & Plugins by WooThemes" rel="designer">WooThemes</a>' ); ?>
 			<?php } ?>
 		</div><!-- .site-info -->
 		<?php

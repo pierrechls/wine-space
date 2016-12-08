@@ -2,75 +2,75 @@
 /**
  * Integration logic for WooCommerce extensions
  *
- * @package winegrower
+ * @package winespace
  */
 
 /**
  * Styles & Scripts
  * @return void
  */
-function winegrower_woocommerce_integrations_scripts() {
+function winespace_woocommerce_integrations_scripts() {
 	/**
 	 * Bookings
 	 */
 	if ( is_woocommerce_extension_activated( 'WC_Bookings' ) ) {
-		wp_enqueue_style( 'winegrower-woocommerce-bookings-style', get_template_directory_uri() . '/inc/woocommerce/css/bookings.css' );
+		wp_enqueue_style( 'winespace-woocommerce-bookings-style', get_template_directory_uri() . '/inc/woocommerce/css/bookings.css' );
 	}
 
 	/**
 	 * Brands
 	 */
 	if ( is_woocommerce_extension_activated( 'WC_Brands' ) ) {
-		wp_enqueue_style( 'winegrower-woocommerce-brands-style', get_template_directory_uri() . '/inc/woocommerce/css/brands.css' );
+		wp_enqueue_style( 'winespace-woocommerce-brands-style', get_template_directory_uri() . '/inc/woocommerce/css/brands.css' );
 	}
 
 	/**
 	 * Wishlists
 	 */
 	if ( is_woocommerce_extension_activated( 'WC_Wishlists_Wishlist' ) ) {
-		wp_enqueue_style( 'winegrower-woocommerce-wishlists-style', get_template_directory_uri() . '/inc/woocommerce/css/wishlists.css' );
+		wp_enqueue_style( 'winespace-woocommerce-wishlists-style', get_template_directory_uri() . '/inc/woocommerce/css/wishlists.css' );
 	}
 
 	/**
 	 * AJAX Layered Nav
 	 */
 	if ( is_woocommerce_extension_activated( 'SOD_Widget_Ajax_Layered_Nav' ) ) {
-		wp_enqueue_style( 'winegrower-woocommerce-ajax-layered-nav-style', get_template_directory_uri() . '/inc/woocommerce/css/ajax-layered-nav.css' );
+		wp_enqueue_style( 'winespace-woocommerce-ajax-layered-nav-style', get_template_directory_uri() . '/inc/woocommerce/css/ajax-layered-nav.css' );
 	}
 
 	/**
 	 * Variation Swatches
 	 */
 	if ( is_woocommerce_extension_activated( 'WC_SwatchesPlugin' ) ) {
-		wp_enqueue_style( 'winegrower-variation-swatches-style', get_template_directory_uri() . '/inc/woocommerce/css/variation-swatches.css' );
+		wp_enqueue_style( 'winespace-variation-swatches-style', get_template_directory_uri() . '/inc/woocommerce/css/variation-swatches.css' );
 	}
 
 	/**
 	 * Composite Products
 	 */
 	if ( is_woocommerce_extension_activated( 'WC_Composite_Products' ) ) {
-		wp_enqueue_style( 'winegrower-composite-products-style', get_template_directory_uri() . '/inc/woocommerce/css/composite-products.css' );
+		wp_enqueue_style( 'winespace-composite-products-style', get_template_directory_uri() . '/inc/woocommerce/css/composite-products.css' );
 	}
 
 	/**
 	 * WooCommerce Photography
 	 */
 	if ( is_woocommerce_extension_activated( 'WC_Photography' ) ) {
-		wp_enqueue_style( 'winegrower-woocommerce-photography-style', get_template_directory_uri() . '/inc/woocommerce/css/photography.css' );
+		wp_enqueue_style( 'winespace-woocommerce-photography-style', get_template_directory_uri() . '/inc/woocommerce/css/photography.css' );
 	}
 
 	/**
 	 * Product Reviews Pro
 	 */
 	if ( is_woocommerce_extension_activated( 'WC_Product_Reviews_Pro' ) ) {
-		wp_enqueue_style( 'winegrower-woocommerce-product-reviews-pro-style', get_template_directory_uri() . '/inc/woocommerce/css/product-reviews-pro.css' );
+		wp_enqueue_style( 'winespace-woocommerce-product-reviews-pro-style', get_template_directory_uri() . '/inc/woocommerce/css/product-reviews-pro.css' );
 	}
 
 	/**
 	 * WooCommerce Smart Coupons
 	 */
 	if ( is_woocommerce_extension_activated( 'WC_Smart_Coupons' ) ) {
-		wp_enqueue_style( 'winegrower-woocommerce-smart-coupons-style', get_template_directory_uri() . '/inc/woocommerce/css/smart-coupons.css' );
+		wp_enqueue_style( 'winespace-woocommerce-smart-coupons-style', get_template_directory_uri() . '/inc/woocommerce/css/smart-coupons.css' );
 	}
 }
 
@@ -79,16 +79,16 @@ function winegrower_woocommerce_integrations_scripts() {
  *
  * @since 1.0
  */
-if ( ! function_exists( 'winegrower_add_integrations_customizer_css' ) ) {
-	function winegrower_add_integrations_customizer_css() {
+if ( ! function_exists( 'winespace_add_integrations_customizer_css' ) ) {
+	function winespace_add_integrations_customizer_css() {
 
-		if ( is_winegrower_customizer_enabled() ) {
-			$accent_color 					= winegrower_sanitize_hex_color( get_theme_mod( 'winegrower_accent_color', apply_filters( 'winegrower_default_accent_color', '#96588a' ) ) );
-			$header_text_color 				= winegrower_sanitize_hex_color( get_theme_mod( 'winegrower_header_text_color', apply_filters( 'winegrower_default_header_text_color', '#9aa0a7' ) ) );
-			$header_background_color 		= winegrower_sanitize_hex_color( get_theme_mod( 'winegrower_header_background_color', apply_filters( 'winegrower_default_header_background_color', '#2c2d33' ) ) );
-			$text_color 					= winegrower_sanitize_hex_color( get_theme_mod( 'winegrower_text_color', apply_filters( 'winegrower_default_text_color', '#60646c' ) ) );
-			$button_background_color 		= winegrower_sanitize_hex_color( get_theme_mod( 'winegrower_button_background_color', apply_filters( 'winegrower_default_button_background_color', '#60646c' ) ) );
-			$button_text_color 				= winegrower_sanitize_hex_color( get_theme_mod( 'winegrower_button_text_color', apply_filters( 'winegrower_default_button_text_color', '#ffffff' ) ) );
+		if ( is_winespace_customizer_enabled() ) {
+			$accent_color 					= winespace_sanitize_hex_color( get_theme_mod( 'winespace_accent_color', apply_filters( 'winespace_default_accent_color', '#96588a' ) ) );
+			$header_text_color 				= winespace_sanitize_hex_color( get_theme_mod( 'winespace_header_text_color', apply_filters( 'winespace_default_header_text_color', '#9aa0a7' ) ) );
+			$header_background_color 		= winespace_sanitize_hex_color( get_theme_mod( 'winespace_header_background_color', apply_filters( 'winespace_default_header_background_color', '#2c2d33' ) ) );
+			$text_color 					= winespace_sanitize_hex_color( get_theme_mod( 'winespace_text_color', apply_filters( 'winespace_default_text_color', '#60646c' ) ) );
+			$button_background_color 		= winespace_sanitize_hex_color( get_theme_mod( 'winespace_button_background_color', apply_filters( 'winespace_default_button_background_color', '#60646c' ) ) );
+			$button_text_color 				= winespace_sanitize_hex_color( get_theme_mod( 'winespace_button_text_color', apply_filters( 'winespace_default_button_text_color', '#ffffff' ) ) );
 
 			$woocommerce_style 				= '';
 
@@ -155,7 +155,7 @@ if ( ! function_exists( 'winegrower_add_integrations_customizer_css' ) ) {
 				}';
 			}
 
-			wp_add_inline_style( 'winegrower-style', $woocommerce_style );
+			wp_add_inline_style( 'winespace-style', $woocommerce_style );
 
 		}
 	}

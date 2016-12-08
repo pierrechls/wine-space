@@ -1,4 +1,4 @@
-.winegrower-add-ons {
+.winespace-add-ons {
 	overflow: hidden;
 	zoom: 1;
 
@@ -36,9 +36,9 @@
 				}
 			}
 
-			&.winegrower-designer {
+			&.winespace-designer {
 				.content {
-					background: url(../welcome-screen/img/winegrower-designer.png) top left no-repeat;
+					background: url(../welcome-screen/img/winespace-designer.png) top left no-repeat;
 				}
 			}
 		}
@@ -136,7 +136,7 @@
 @media
 (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-    .winegrower-add-ons {
+    .winespace-add-ons {
 		.add-on {
 			&.image-vertical {
 				&.product-hero {
@@ -160,9 +160,9 @@
 					}
 				}
 
-				&.winegrower-designer {
+				&.winespace-designer {
 					.content {
-						background-image: url(../welcome-screen/img/winegrower-designer@2x.png);
+						background-image: url(../welcome-screen/img/winespace-designer@2x.png);
 						background-size: 245px 303px;
 					}
 				}

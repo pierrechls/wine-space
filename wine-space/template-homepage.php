@@ -9,7 +9,7 @@
  *
  * Template name: Homepage
  *
- * @package winegrower
+ * @package winespace
  */
 
 get_header(); ?>
@@ -19,12 +19,12 @@ get_header(); ?>
 
 			<?php
 			/**
-			 * @hooked winegrower_homepage_content - 10
-			 * @hooked winegrower_product_categories - 20
-			 * @hooked winegrower_recent_products - 30
-			 * @hooked winegrower_featured_products - 40
-			 * @hooked winegrower_popular_products - 50
-			 * @hooked winegrower_on_sale_products - 60
+			 * @hooked winespace_homepage_content - 10
+			 * @hooked winespace_product_categories - 20
+			 * @hooked winespace_recent_products - 30
+			 * @hooked winespace_featured_products - 40
+			 * @hooked winespace_popular_products - 50
+			 * @hooked winespace_on_sale_products - 60
 			 */
 			do_action( 'homepage' ); ?>
 

@@ -11,12 +11,12 @@
 # Wilbert Kramer <kramerw@goliathgames.nl>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: winegrower\n"
-"Report-Msgid-Bugs-To: https://github.com/woothemes/winegrower/issues\n"
+"Project-Id-Version: winespace\n"
+"Report-Msgid-Bugs-To: https://github.com/woothemes/winespace/issues\n"
 "POT-Creation-Date: 2015-06-10 15:02:20+00:00\n"
 "PO-Revision-Date: 2015-06-10 15:02+0000\n"
 "Last-Translator: James Koster <jay@woothemes.com>\n"
-"Language-Team: Dutch (http://www.transifex.com/projects/p/winegrower-1/language/nl/)\n"
+"Language-Team: Dutch (http://www.transifex.com/projects/p/winespace-1/language/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -84,9 +84,9 @@ msgstr "Verbeter uw site"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:10
 msgid ""
-"Below you will find a selection of free and commercial winegrower extensions"
+"Below you will find a selection of free and commercial winespace extensions"
 " that could help improve your online store."
-msgstr "Hieronder vind je een selectie van gratis en betaalde winegrower extensies die je kunnen helpen je webshop te verbeteren."
+msgstr "Hieronder vind je een selectie van gratis en betaalde winespace extensies die je kunnen helpen je webshop te verbeteren."
 
 #: inc/admin/welcome-screen/sections/add-ons.php:14
 msgid "Make your site instantly recognisable by adding your logo"
@@ -99,10 +99,10 @@ msgstr "Gratis (Third Party)"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:16
 msgid ""
-"Jetpack is probably a plugin you're already familiar with. winegrower fully "
+"Jetpack is probably a plugin you're already familiar with. winespace fully "
 "supports Jetpacks site logo feature making it easy to upload and display "
 "your logo via the Customizer. %sMore info &rarr;%s"
-msgstr "Jetpack is een plugin die je waarschijnlijk al kent. winegrower biedt ondersteuning voor Jetpacks site logo feature, die het gemakkelijk maakt om een logo te uploaden en te tonen via de Customizer. %sMeer info &rarr;%s"
+msgstr "Jetpack is een plugin die je waarschijnlijk al kent. winespace biedt ondersteuning voor Jetpacks site logo feature, die het gemakkelijk maakt om een logo te uploaden en te tonen via de Customizer. %sMeer info &rarr;%s"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:19
 #: inc/admin/welcome-screen/sections/add-ons.php:32
@@ -121,8 +121,8 @@ msgid "Install Jetpack"
 msgstr "Installeer Jetpack"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:27
-msgid "Further customise your store with the winegrower Designer"
-msgstr "Pas je webwinkel verder aan met de winegrower Designer"
+msgid "Further customise your store with the winespace Designer"
+msgstr "Pas je webwinkel verder aan met de winespace Designer"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:27
 #: inc/admin/welcome-screen/sections/add-ons.php:40
@@ -132,34 +132,34 @@ msgstr "Premium"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:29
 msgid ""
-"winegrower Designer adds a bunch of additional appearance settings allowing "
-"you to further tweak and perfect your winegrower design by changing the "
+"winespace Designer adds a bunch of additional appearance settings allowing "
+"you to further tweak and perfect your winespace design by changing the "
 "header layout, button styles, typographical schemes/scales and more."
-msgstr "winegrower Designer stelt een reeks extra visualisatie instellingen beschikbaar, die je toelaten om je winegrower design verder te tweaken en te perfectioneren door onder meer de layout van de kopjes, knoppen, lettertypes en -groottes aan te passen."
+msgstr "winespace Designer stelt een reeks extra visualisatie instellingen beschikbaar, die je toelaten om je winespace design verder te tweaken en te perfectioneren door onder meer de layout van de kopjes, knoppen, lettertypes en -groottes aan te passen."
 
 #: inc/admin/welcome-screen/sections/add-ons.php:34
-msgid "Buy %swinegrower Designer%s now"
-msgstr "Koop %swinegrower Designer%s nu"
+msgid "Buy %swinespace Designer%s now"
+msgstr "Koop %swinespace Designer%s nu"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:40
-msgid "Highlight a product of your choosing with the winegrower Product Hero"
-msgstr "Zet een product naar keuze in de kijker met de winegrower Product Hero"
+msgid "Highlight a product of your choosing with the winespace Product Hero"
+msgstr "Zet een product naar keuze in de kijker met de winespace Product Hero"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:42
 msgid ""
-"The winegrower Product Hero extension adds a parallax hero component to your"
+"The winespace Product Hero extension adds a parallax hero component to your"
 " homepage highlighting a specific product at your store. Use the shortcode "
 "to add attractive hero components to posts, pages or widgets."
-msgstr "De winegrower Product Hero extensie voegt een parallax hero component toe aan je homepage, die een specifiek product op je webstore in de kijker zet. Gebruik de shortcode om mooie hero componenten toe te voegen aan berichten, pagina's of widgets."
+msgstr "De winespace Product Hero extensie voegt een parallax hero component toe aan je homepage, die een specifiek product op je webstore in de kijker zet. Gebruik de shortcode om mooie hero componenten toe te voegen aan berichten, pagina's of widgets."
 
 #: inc/admin/welcome-screen/sections/add-ons.php:47
-msgid "Buy %swinegrower Product Hero%s now"
-msgstr "Koop %swinegrower Product Hero%s nu"
+msgid "Buy %swinespace Product Hero%s now"
+msgstr "Koop %swinespace Product Hero%s nu"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:53
 msgid ""
-"Have your visitors market your store for you with winegrower Product Sharing"
-msgstr "Laat je bezoekers je webwinkel aanprijzen met winegrower Product Sharing"
+"Have your visitors market your store for you with winespace Product Sharing"
+msgstr "Laat je bezoekers je webwinkel aanprijzen met winespace Product Sharing"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:53
 #: inc/admin/welcome-screen/sections/add-ons.php:66
@@ -169,73 +169,73 @@ msgstr "Gratis"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:55
 msgid ""
-"winegrower Product Sharing adds attractive social sharing icons for "
+"winespace Product Sharing adds attractive social sharing icons for "
 "Facebook, Twitter, Pinterest and Email to your product pages. %sMore info "
 "&rarr;%s"
-msgstr "winegrower Product Sharing voegt mooie social share iconen voor Facebook, Twitter, Pinterest en e-mail toe aan je product pagina's. %sMeer info &rarr;%s"
+msgstr "winespace Product Sharing voegt mooie social share iconen voor Facebook, Twitter, Pinterest en e-mail toe aan je product pagina's. %sMeer info &rarr;%s"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:60
-msgid "Install winegrower Product Sharing"
-msgstr "Installeer winegrower Product Sharing"
+msgid "Install winespace Product Sharing"
+msgstr "Installeer winespace Product Sharing"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:66
-msgid "Add a site-wide call out to your footer with winegrower Footer Bar"
-msgstr "Voeg een boodschap toe op je volledige website in de footer met de winegrower Footer Bar"
+msgid "Add a site-wide call out to your footer with winespace Footer Bar"
+msgstr "Voeg een boodschap toe op je volledige website in de footer met de winespace Footer Bar"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:68
 msgid ""
-"winegrower Footer Bar adds a full width widgetised region above the default "
-"winegrower footer widget area. %sMore info &rarr;%s"
-msgstr "winegrower Footer Bar voegt een volledige regio voor widgets toe boven de standaard winegrower footer widget regio. %sMeer info &rarr;%s"
+"winespace Footer Bar adds a full width widgetised region above the default "
+"winespace footer widget area. %sMore info &rarr;%s"
+msgstr "winespace Footer Bar voegt een volledige regio voor widgets toe boven de standaard winespace footer widget regio. %sMeer info &rarr;%s"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:73
-msgid "Install winegrower Footer Bar"
-msgstr "Installeer winegrower Footer Bar"
+msgid "Install winespace Footer Bar"
+msgstr "Installeer winespace Footer Bar"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:79
-msgid "winegrower Product Pagination"
-msgstr "winegrower Product Pagination"
+msgid "winespace Product Pagination"
+msgstr "winespace Product Pagination"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:81
 msgid ""
-"winegrower Product Pagination adds unobtrusive links to next/previous "
+"winespace Product Pagination adds unobtrusive links to next/previous "
 "products on your WooCommerce single product pages. %sMore info &rarr;%s"
-msgstr "winegrower Product Pagination voegt niet-opdringerige koppelingen toe naar het vorige/volgende product op je WooCommeerce product detail pagina's. %sMeer info &rarr;%s"
+msgstr "winespace Product Pagination voegt niet-opdringerige koppelingen toe naar het vorige/volgende product op je WooCommeerce product detail pagina's. %sMeer info &rarr;%s"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:86
-msgid "Install winegrower Product Pagination"
-msgstr "Installeer winegrower Product Pagination"
+msgid "Install winespace Product Pagination"
+msgstr "Installeer winespace Product Pagination"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:92
 msgid ""
-"Refine your shop archives and product pages with the winegrower WooCommerce "
+"Refine your shop archives and product pages with the winespace WooCommerce "
 "Customiser"
-msgstr "Verfijn je winkelarchief en product pagina's met de winegrower WooCommerce Customiser"
+msgstr "Verfijn je winkelarchief en product pagina's met de winespace WooCommerce Customiser"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:94
 msgid ""
-"The winegrower WooCommerce Customiser extension gives you further control "
+"The winespace WooCommerce Customiser extension gives you further control "
 "over the look and feel of your shop. Change the product archive and single "
 "layouts, toggle various shop components and more."
-msgstr "De winegrower WooCommerce Customiser extensie bied je diepere controle over de look & feel van je shop. Wijzig de layout van je product archief & product details, zet verschillende winkelcomponenten aan/uit, etc..."
+msgstr "De winespace WooCommerce Customiser extensie bied je diepere controle over de look & feel van je shop. Wijzig de layout van je product archief & product details, zet verschillende winkelcomponenten aan/uit, etc..."
 
 #: inc/admin/welcome-screen/sections/add-ons.php:99
-msgid "Buy %swinegrower WooCommerce Customiser%s now"
-msgstr "Koop %swinegrower WooCommerce Customiser%s nu"
+msgid "Buy %swinespace WooCommerce Customiser%s now"
+msgstr "Koop %swinespace WooCommerce Customiser%s nu"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:105
-msgid "Add practical information to your pages with winegrower Top Bar"
-msgstr "Voeg praktische informatie toe aan je pagina's met winegrower Top Bar"
+msgid "Add practical information to your pages with winespace Top Bar"
+msgstr "Voeg praktische informatie toe aan je pagina's met winespace Top Bar"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:107
 msgid ""
-"winegrower Top Bar adds a widgetised content area at the top of your site "
+"winespace Top Bar adds a widgetised content area at the top of your site "
 "and customise it's appearance in the Customizer. %sMore info &rarr;%s"
-msgstr "winegrower Top Bar voegt een widget regio toe bovenaan je site. Pas de weergave aan in de Customizer. %sMeer info &rarr;%s"
+msgstr "winespace Top Bar voegt een widget regio toe bovenaan je site. Pas de weergave aan in de Customizer. %sMeer info &rarr;%s"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:112
-msgid "Install winegrower Top Bar"
-msgstr "Installeer winegrower Top Bar"
+msgid "Install winespace Top Bar"
+msgstr "Installeer winespace Top Bar"
 
 #: inc/admin/welcome-screen/sections/add-ons.php:120
 msgid ""
@@ -250,10 +250,10 @@ msgstr "Maak een heel nieuw uiterlijk"
 
 #: inc/admin/welcome-screen/sections/child-themes.php:14
 msgid ""
-"Below you will find a selection of winegrower child themes that will "
+"Below you will find a selection of winespace child themes that will "
 "transform the look and feel of your site while retaining the rock solid "
-"winegrower foundation."
-msgstr "Hieronder vind je een selectie van winegrower sub-thema's die de look & feel van je website veranderen, zonder de robuustheid van winegrower te verliezen."
+"winespace foundation."
+msgstr "Hieronder vind je een selectie van winespace sub-thema's die de look & feel van je website veranderen, zonder de robuustheid van winespace te verliezen."
 
 #: inc/admin/welcome-screen/sections/child-themes.php:20
 msgid "Galleria Child Theme"
@@ -265,7 +265,7 @@ msgstr ""
 
 #: inc/admin/welcome-screen/sections/child-themes.php:22
 msgid ""
-"Galleria is a winegrower child theme perfect for fashion and design stores. "
+"Galleria is a winespace child theme perfect for fashion and design stores. "
 "Stylish and minimalist, it gives sites a high class look and keeps products "
 "centerstage."
 msgstr ""
@@ -311,24 +311,24 @@ msgstr "Boutique"
 
 #: inc/admin/welcome-screen/sections/child-themes.php:46
 msgid ""
-"Boutique is a simple, traditionally designed winegrower child theme, ideal "
+"Boutique is a simple, traditionally designed winespace child theme, ideal "
 "for small stores or boutiques. Add your logo, create a unique color scheme "
 "and start selling!"
-msgstr "Boutique is een simpel, traditioneel ontworpen winegrower sub-thema, ideaal voor kleine winkels en boetiekjes. Voeg je logo toe en maak een uniek kleurschema en start met verkopen."
+msgstr "Boutique is een simpel, traditioneel ontworpen winespace sub-thema, ideaal voor kleine winkels en boetiekjes. Voeg je logo toe en maak een uniek kleurschema en start met verkopen."
 
 #: inc/admin/welcome-screen/sections/child-themes.php:51
 msgid "Read more %sabout Boutique%s &rarr;"
 msgstr "Lees meer %sover Boutique%s &rarr;"
 
 #: inc/admin/welcome-screen/sections/getting-started.php:15
-msgid "Using winegrower"
-msgstr "Gebruiken van winegrower"
+msgid "Using winespace"
+msgstr "Gebruiken van winespace"
 
 #: inc/admin/welcome-screen/sections/getting-started.php:16
 msgid ""
-"We've purposely kept winegrower lean & mean so configuration is a breeze. "
+"We've purposely kept winespace lean & mean so configuration is a breeze. "
 "Here are some common theme-setup tasks:"
-msgstr "We hebben winegrower met opzet simpel gehouden zodat het instellen gemakkelijk gaat. Hier zijn wat gebruikelijke stappen om het thema in te stellen:"
+msgstr "We hebben winespace met opzet simpel gehouden zodat het instellen gemakkelijk gaat. Hier zijn wat gebruikelijke stappen om het thema in te stellen:"
 
 #: inc/admin/welcome-screen/sections/getting-started.php:20
 #: inc/admin/welcome-screen/sections/getting-started.php:23
@@ -337,10 +337,10 @@ msgstr "Installeer WooCommerce"
 
 #: inc/admin/welcome-screen/sections/getting-started.php:21
 msgid ""
-"Although winegrower works fine as a standard WordPress theme, it really "
+"Although winespace works fine as a standard WordPress theme, it really "
 "shines when used for an online store. Install WooCommerce and start selling "
 "now."
-msgstr "Hoewel winegrower het prima doet als standaard WordPress theme, Komt het pas echt tot zijn recht in een online winkel. Installeer WooCommerce en start met verkopen."
+msgstr "Hoewel winespace het prima doet als standaard WordPress theme, Komt het pas echt tot zijn recht in een online winkel. Installeer WooCommerce en start met verkopen."
 
 #: inc/admin/welcome-screen/sections/getting-started.php:26
 msgid "Configure menu locations"
@@ -348,13 +348,13 @@ msgstr "Configureer menu locaties"
 
 #: inc/admin/welcome-screen/sections/getting-started.php:27
 msgid ""
-"winegrower includes three menu locations for primary, secondary and handheld"
+"winespace includes three menu locations for primary, secondary and handheld"
 " navigation. The primary navigation is perfect for your key pages like the "
 "shop and product categories. The secondary navigation is better suited to "
 "lower traffic pages such as terms and conditions. The handheld navigation "
 "gives you complete control over what menu items to serve to handheld "
 "devices."
-msgstr "winegrower bevat drie menu-locaties voor primaire, secondaire en mobiele navigatie. e primaire navigatie is perfect geschikt voor je hoofdpagina's zoals de shop en de productcategorieën. De secondaire navigatie past beter bij minder bezochte pagina's zoals algemene voorwaarden. De mobiele navigatie geeft je volledige controle over welke menu-items gebruikt worden op mobiele apparaten."
+msgstr "winespace bevat drie menu-locaties voor primaire, secondaire en mobiele navigatie. e primaire navigatie is perfect geschikt voor je hoofdpagina's zoals de shop en de productcategorieën. De secondaire navigatie past beter bij minder bezochte pagina's zoals algemene voorwaarden. De mobiele navigatie geeft je volledige controle over welke menu-items gebruikt worden op mobiele apparaten."
 
 #: inc/admin/welcome-screen/sections/getting-started.php:28
 msgid "Configure menus"
@@ -366,9 +366,9 @@ msgstr "Cre&euml;er een kleurschema"
 
 #: inc/admin/welcome-screen/sections/getting-started.php:31
 msgid ""
-"Using the WordPress Customizer you can tweak winegrower's appearance to "
+"Using the WordPress Customizer you can tweak winespace's appearance to "
 "match your brand."
-msgstr "Met de WordPress Customizer kun je winegrowers uiterlijk aanpassen aan jouw eigen huisstijl."
+msgstr "Met de WordPress Customizer kun je winespaces uiterlijk aanpassen aan jouw eigen huisstijl."
 
 #: inc/admin/welcome-screen/sections/getting-started.php:32
 msgid "Open the Customizer"
@@ -390,9 +390,9 @@ msgstr "Configureer homepage sjabloon"
 
 #: inc/admin/welcome-screen/sections/getting-started.php:47
 msgid ""
-"winegrower includes a homepage template that displays a selection of "
+"winespace includes a homepage template that displays a selection of "
 "products from your store."
-msgstr "winegrower bevat een homepage sjabloon dat een selectie van producten van uw winkel toont."
+msgstr "winespace bevat een homepage sjabloon dat een selectie van producten van uw winkel toont."
 
 #: inc/admin/welcome-screen/sections/getting-started.php:48
 msgid ""
@@ -417,9 +417,9 @@ msgstr "Bekijk documentatie"
 
 #: inc/admin/welcome-screen/sections/getting-started.php:56
 msgid ""
-"You can read detailed information on winegrowers features and how to develop"
+"You can read detailed information on winespaces features and how to develop"
 " on top of it in the documentation."
-msgstr "Je kunt gedetailleerde informatie over winegrowers mogelijkheden en hoe je deze kunt doorontwikkelen vinden in de documentatie."
+msgstr "Je kunt gedetailleerde informatie over winespaces mogelijkheden en hoe je deze kunt doorontwikkelen vinden in de documentatie."
 
 #: inc/admin/welcome-screen/sections/getting-started.php:57
 msgid "View documentation &rarr;"
@@ -427,29 +427,29 @@ msgstr "Bekijk documentatie &rarr;"
 
 #: inc/admin/welcome-screen/sections/intro.php:14
 msgid ""
-"Awesome! You've decided to use winegrower to enrich your WooCommerce store "
+"Awesome! You've decided to use winespace to enrich your WooCommerce store "
 "design."
-msgstr "Geweldig! Je koos ervoor om winegrower te gebruiken om je WooCommerce winkelontwerp te verrijken."
+msgstr "Geweldig! Je koos ervoor om winespace te gebruiken om je WooCommerce winkelontwerp te verrijken."
 
 #: inc/admin/welcome-screen/sections/intro.php:15
 msgid ""
 "Whether you're a store owner, WordPress developer, or both - we hope you "
-"enjoy winegrower's deep integration with WooCommerce core (including several"
+"enjoy winespace's deep integration with WooCommerce core (including several"
 " popular WooCommerce extensions), plus the flexible design and extensible "
 "codebase that this theme provides."
-msgstr "Of je nu een winkeleigenaar, WordPress developer of beide bent - we hopen dat je winegrower kunt waarderen met z'n diepe integratie met WooCommerce (inclusief verschillende populaire WooCommerce extensies), plus de flexibele opzet van het design en de uitbreidbare codebasis dat geboden wordt door dit thema."
+msgstr "Of je nu een winkeleigenaar, WordPress developer of beide bent - we hopen dat je winespace kunt waarderen met z'n diepe integratie met WooCommerce (inclusief verschillende populaire WooCommerce extensies), plus de flexibele opzet van het design en de uitbreidbare codebasis dat geboden wordt door dit thema."
 
 #: inc/admin/welcome-screen/sections/tabs.php:2
 msgid "Getting Started"
 msgstr "Aan de slag"
 
 #: inc/admin/welcome-screen/sections/tabs.php:3
-msgid "Enhance winegrower"
-msgstr "Uitbreiden winegrower"
+msgid "Enhance winespace"
+msgstr "Uitbreiden winespace"
 
 #: inc/admin/welcome-screen/sections/tabs.php:4
-msgid "winegrower Child Themes"
-msgstr "winegrower Subthema's"
+msgid "winespace Child Themes"
+msgstr "winespace Subthema's"
 
 #: inc/admin/welcome-screen/sections/who.php:8
 msgid "The Woo Team"
@@ -494,8 +494,8 @@ msgid "View WooCommerce Documentation"
 msgstr "Bekijk WooCommerce Documentatie"
 
 #: inc/admin/welcome-screen/sections/who.php:27
-msgid "Can I contribute to winegrower?"
-msgstr "Kan ik bijdragen aan winegrower?"
+msgid "Can I contribute to winespace?"
+msgstr "Kan ik bijdragen aan winespace?"
 
 #: inc/admin/welcome-screen/sections/who.php:28
 msgid "Can I Contribute?"
@@ -504,17 +504,17 @@ msgstr "Kan ik bijdragen?"
 #: inc/admin/welcome-screen/sections/who.php:29
 msgid ""
 "Found a bug? Want to contribute a patch or create a new feature? GitHub is "
-"the place to go! Or would you like to translate winegrower in to your "
+"the place to go! Or would you like to translate winespace in to your "
 "language? Get involved at Transifex."
-msgstr "Bug gevonden? Bijdragen aan een patch of een nieuwe functie creëren? GitHub is de juiste plaats! Of wil je winegrower in jouw taal vertalen? Dat kan bij Transifex."
+msgstr "Bug gevonden? Bijdragen aan een patch of een nieuwe functie creëren? GitHub is de juiste plaats! Of wil je winespace in jouw taal vertalen? Dat kan bij Transifex."
 
 #: inc/admin/welcome-screen/sections/who.php:30
-msgid "winegrower at GitHub"
-msgstr "winegrower bij GitHub"
+msgid "winespace at GitHub"
+msgstr "winespace bij GitHub"
 
 #: inc/admin/welcome-screen/sections/who.php:30
-msgid "winegrower at Transifex"
-msgstr "winegrower bij Transifex"
+msgid "winespace at Transifex"
+msgstr "winespace bij Transifex"
 
 #: inc/admin/welcome-screen/sections/who.php:34
 msgid "Can't find a feature?"
@@ -522,13 +522,13 @@ msgstr "Kunt u een functie niet vinden?"
 
 #: inc/admin/welcome-screen/sections/who.php:35
 msgid ""
-"Please suggest and vote on ideas / feature requests at the %swinegrower "
+"Please suggest and vote on ideas / feature requests at the %swinespace "
 "Ideasboard%s. The most popular ideas will see prioritised development."
-msgstr "Stel nieuwe mogelijkheden voor, en stem op voorstellen van anderen op de %swinegrower Ideasboard%s. De populairste ideeën worden met voorrang ontwikkeld"
+msgstr "Stel nieuwe mogelijkheden voor, en stem op voorstellen van anderen op de %swinespace Ideasboard%s. De populairste ideeën worden met voorrang ontwikkeld"
 
 #: inc/admin/welcome-screen/sections/who.php:37
-msgid "Are you enjoying winegrower?"
-msgstr "Heb je plezier van winegrower?"
+msgid "Are you enjoying winespace?"
+msgstr "Heb je plezier van winespace?"
 
 #: inc/admin/welcome-screen/sections/who.php:38
 msgid ""
@@ -537,24 +537,24 @@ msgstr "Waarom zou je geen review achterlaten op %sWordPress.org%s? We zullen he
 
 #: inc/admin/welcome-screen/welcome-screen.php:47
 msgid ""
-"Thanks for choosing winegrower! You can read hints and tips on how get the "
+"Thanks for choosing winespace! You can read hints and tips on how get the "
 "most out of your new theme on the %swelcome screen%s."
-msgstr "Bedankt om winegrower te kiezen! Je vind aanwijzingen en tips, over hoe je het meeste uit je nieuwe thema haalt, op het %swelcome screen%s."
+msgstr "Bedankt om winespace te kiezen! Je vind aanwijzingen en tips, over hoe je het meeste uit je nieuwe thema haalt, op het %swelcome screen%s."
 
 #: inc/admin/welcome-screen/welcome-screen.php:48
-msgid "Get started with winegrower"
-msgstr "Starten met winegrower"
+msgid "Get started with winespace"
+msgstr "Starten met winespace"
 
 #: inc/customizer/controls/more.php:16
 msgid ""
-"There's a range of winegrower extensions available to put additional power "
-"in your hands. Check out the %swinegrower%s page in your dashboard for more "
+"There's a range of winespace extensions available to put additional power "
+"in your hands. Check out the %swinespace%s page in your dashboard for more "
 "information."
-msgstr "Er is een verzameling winegrower uitbreidingen beschikbaar om nog meer mogelijk te maken. Check de %swinegrower%s pagina in je dashboard voor meer informatie."
+msgstr "Er is een verzameling winespace uitbreidingen beschikbaar om nog meer mogelijk te maken. Check de %swinespace%s pagina in je dashboard voor meer informatie."
 
 #: inc/customizer/controls/more.php:20
-msgid "Enjoying winegrower?"
-msgstr "Heb je plezier van winegrower?"
+msgid "Enjoying winespace?"
+msgstr "Heb je plezier van winespace?"
 
 #: inc/customizer/controls/more.php:23
 msgid ""
@@ -779,22 +779,22 @@ msgid "Search Results for: %s"
 msgstr "Zoekresultaten voor: %s"
 
 #. Theme Name of the plugin/theme
-msgid "winegrower"
-msgstr "winegrower"
+msgid "winespace"
+msgstr "winespace"
 
 #. Theme URI of the plugin/theme
-msgid "http://www.woothemes.com/winegrower"
-msgstr "http://www.woothemes.com/winegrower"
+msgid "http://www.woothemes.com/winespace"
+msgstr "http://www.woothemes.com/winespace"
 
 #. Description of the plugin/theme
 msgid ""
-"winegrower is the perfect theme for your next WooCommerce project. Designed "
+"winespace is the perfect theme for your next WooCommerce project. Designed "
 "and developed by WooThemes, it features a deep integration with our market "
 "leading WooCommerce plugin, several layout & color options to personalise "
 "your shop, multiple widget regions, a responsive design and much more. "
 "Developers will love it's lean and extensible codebase making it a joy to "
 "customise and extend. Looking for a WooCommerce theme? Look no further!"
-msgstr "winegrower is het perfecte thema voor je volgende WooCommerce project. Ontworpen en gemaakt door WooThemes, brengt het een diepe integratie met onze marktleider WooCommerce plugin, verschillende Layout en kleurenopties om je winkel te personaliseren, meerdere widget-gebieden, een responsive ontwerp en nog veel meer. Ontwikkelaars zullen de schone en uitgebreide codebase, welke het uitstekend aanpasbaar en uitbreidbaar maken, waarderen. Op zoek naar een WooCommerce thema? Zoek niet verder!"
+msgstr "winespace is het perfecte thema voor je volgende WooCommerce project. Ontworpen en gemaakt door WooThemes, brengt het een diepe integratie met onze marktleider WooCommerce plugin, verschillende Layout en kleurenopties om je winkel te personaliseren, meerdere widget-gebieden, een responsive ontwerp en nog veel meer. Ontwikkelaars zullen de schone en uitgebreide codebase, welke het uitstekend aanpasbaar en uitbreidbaar maken, waarderen. Op zoek naar een WooCommerce thema? Zoek niet verder!"
 
 #. Author of the plugin/theme
 msgid "WooThemes"

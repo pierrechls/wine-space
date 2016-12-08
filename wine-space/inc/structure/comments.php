@@ -2,15 +2,15 @@
 /**
  * Template functions used for the site comments.
  *
- * @package winegrower
+ * @package winespace
  */
 
-if ( ! function_exists( 'winegrower_display_comments' ) ) {
+if ( ! function_exists( 'winespace_display_comments' ) ) {
 	/**
-	 * winegrower display comments
+	 * winespace display comments
 	 * @since  1.0.0
 	 */
-	function winegrower_display_comments() {
+	function winespace_display_comments() {
 		// If comments are open or we have at least one comment, load up the comment template
 		if ( comments_open() || '0' != get_comments_number() ) :
 			comments_template();
@@ -18,12 +18,12 @@ if ( ! function_exists( 'winegrower_display_comments' ) ) {
 	}
 }
 
-if ( ! function_exists( 'winegrower_comment' ) ) {
+if ( ! function_exists( 'winespace_comment' ) ) {
 	/**
-	 * winegrower comment template
+	 * winespace comment template
 	 * @since 1.0.0
 	 */
-	function winegrower_comment( $comment, $args, $depth ) {
+	function winespace_comment( $comment, $args, $depth ) {
 		if ( 'div' == $args['style'] ) {
 			$tag = 'div';
 			$add_below = 'comment';
@@ -37,10 +37,10 @@ if ( ! function_exists( 'winegrower_comment' ) ) {
 		<div class="comment-meta commentmetadata">
 			<div class="comment-author vcard">
 			<?php echo get_avatar( $comment, 128 ); ?>
-			<?php printf( __( '<cite class="fn">%s</cite>', 'winegrower' ), get_comment_author_link() ); ?>
+			<?php printf( __( '<cite class="fn">%s</cite>', 'winespace' ), get_comment_author_link() ); ?>
 			</div>
 			<?php if ( '0' == $comment->comment_approved ) : ?>
-				<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'winegrower' ); ?></em>
+				<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'winespace' ); ?></em>
 				<br />
 			<?php endif; ?>
 
@@ -56,7 +56,7 @@ if ( ! function_exists( 'winegrower_comment' ) ) {
 
 		<div class="reply">
 		<?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-		<?php edit_comment_link( __( 'Edit', 'winegrower' ), '  ', '' ); ?>
+		<?php edit_comment_link( __( 'Edit', 'winespace' ), '  ', '' ); ?>
 		</div>
 		</div>
 		<?php if ( 'div' != $args['style'] ) : ?>

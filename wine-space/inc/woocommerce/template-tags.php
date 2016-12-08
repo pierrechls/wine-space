@@ -2,7 +2,7 @@
 /**
  * Custom template tags used to integrate this theme with WooCommerce.
  *
- * @package winegrower
+ * @package winespace
  */
 
 /**
@@ -12,11 +12,11 @@
  * @return array           Settings
  * @since  1.0.0
  */
-if ( ! function_exists( 'winegrower_cart_link' ) ) {
-	function winegrower_cart_link() {
+if ( ! function_exists( 'winespace_cart_link' ) ) {
+	function winespace_cart_link() {
 		?>
-			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'winegrower' ); ?>">
-				<?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'winegrower' ), WC()->cart->get_cart_contents_count() ) );?></span>
+			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'winespace' ); ?>">
+				<?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'winespace' ), WC()->cart->get_cart_contents_count() ) );?></span>
 			</a>
 		<?php
 	}
@@ -28,8 +28,8 @@ if ( ! function_exists( 'winegrower_cart_link' ) ) {
  * @uses  is_woocommerce_activated() check if WooCommerce is activated
  * @return void
  */
-if ( ! function_exists( 'winegrower_product_search' ) ) {
-	function winegrower_product_search() {
+if ( ! function_exists( 'winespace_product_search' ) ) {
+	function winespace_product_search() {
 		if ( is_woocommerce_activated() ) { ?>
 			<div class="site-search">
 				<?php the_widget( 'WC_Widget_Product_Search', 'title=' ); ?>
@@ -45,8 +45,8 @@ if ( ! function_exists( 'winegrower_product_search' ) ) {
  * @uses  is_woocommerce_activated() check if WooCommerce is activated
  * @return void
  */
-if ( ! function_exists( 'winegrower_header_cart' ) ) {
-	function winegrower_header_cart() {
+if ( ! function_exists( 'winespace_header_cart' ) ) {
+	function winespace_header_cart() {
 		if ( is_woocommerce_activated() ) {
 			if ( is_cart() ) {
 				$class = 'current-menu-item';
@@ -56,7 +56,7 @@ if ( ! function_exists( 'winegrower_header_cart' ) ) {
 		?>
 		<ul class="site-header-cart menu">
 			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php winegrower_cart_link(); ?>
+				<?php winespace_cart_link(); ?>
 			</li>
 			<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
 		</ul>
@@ -72,8 +72,8 @@ if ( ! function_exists( 'winegrower_header_cart' ) ) {
  * @return  void
  * @uses    woocommerce_upsell_display()
  */
-if ( ! function_exists( 'winegrower_upsell_display' ) ) {
-	function winegrower_upsell_display() {
+if ( ! function_exists( 'winespace_upsell_display' ) ) {
+	function winespace_upsell_display() {
 		woocommerce_upsell_display( -1, 3 );
 	}
 }
@@ -83,8 +83,8 @@ if ( ! function_exists( 'winegrower_upsell_display' ) ) {
  * @since   1.4.3
  * @return  void
  */
-function winegrower_sorting_wrapper() {
-	echo '<div class="winegrower-sorting">';
+function winespace_sorting_wrapper() {
+	echo '<div class="winespace-sorting">';
 }
 
 /**
@@ -92,30 +92,30 @@ function winegrower_sorting_wrapper() {
  * @since   1.4.3
  * @return  void
  */
-function winegrower_sorting_wrapper_close() {
+function winespace_sorting_wrapper_close() {
 	echo '</div>';
 }
 
 /**
- * winegrower shop messages
+ * winespace shop messages
  * @since   1.4.4
  * @uses    do_shortcode
  */
-function winegrower_shop_messages() {
+function winespace_shop_messages() {
 	if ( ! is_checkout() ) {
 		echo wp_kses_post( do_shortcode_func( 'woocommerce_messages' ) );
 	}
 }
 
 /**
- * winegrower WooCommerce Pagination
+ * winespace WooCommerce Pagination
  * WooCommerce disables the product pagination inside the woocommerce_product_subcategories() function
- * but since winegrower adds pagination before that function is excuted we need a separate function to
+ * but since winespace adds pagination before that function is excuted we need a separate function to
  * determine whether or not to display the pagination.
  * @since 1.4.4
  */
-if ( ! function_exists( 'winegrower_woocommerce_pagination' ) ) {
-	function winegrower_woocommerce_pagination() {
+if ( ! function_exists( 'winespace_woocommerce_pagination' ) ) {
+	function winespace_woocommerce_pagination() {
 		if ( woocommerce_products_will_display() ) {
 			woocommerce_pagination();
 		}

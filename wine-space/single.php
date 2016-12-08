@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package winegrower
+ * @package winespace
  */
 
 get_header(); ?>

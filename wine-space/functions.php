@@ -1,8 +1,8 @@
 <?php
 /**
- * winegrower engine room
+ * winespace engine room
  *
- * @package winegrower
+ * @package winespace
  */
 
 /**

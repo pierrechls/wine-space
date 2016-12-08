@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package winegrower
+ * @package winespace
  *
  */
 
@@ -34,5 +34,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 
-<?php do_action( 'winegrower_sidebar' ); ?>
+<?php do_action( 'winespace_sidebar' ); ?>
 <?php get_footer(); ?>

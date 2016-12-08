@@ -1,8 +1,8 @@
 /*
-Theme Name:   	Wine Grower
+Theme Name:   	Wine Space
 Author:       	Pierre Charles
-Author URI:		  http://pierre-charles.com/
-Description:  	Wine Grower WooCommerce Theme
+Author URI:		http://pierre-charles.com/
+Description:  	Wine Space WooCommerce Theme
 
 */
 .clear:before, .entry-content:before, .comment-content:before, .site-header:before, .site-content:before, .site-footer:before, .gallery:before, .clear:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after, .gallery:after {
@@ -660,7 +660,7 @@ a {
   a:focus {
     outline: 1px solid #96588a; }
 
-.winegrower-cute * {
+.winespace-cute * {
   font-family: "Comic Sans MS", sans-serif; }
 
 /**
@@ -753,7 +753,7 @@ a {
     width: 21.7391304348%;
     float: left;
     margin-right: 4.347826087%; }
-  .winegrower-full-width-content .content-area {
+  .winespace-full-width-content .content-area {
     width: 100%;
     float: left;
     margin-left: 0;

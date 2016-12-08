@@ -4,7 +4,7 @@
  * Sets up the welcome screen page, hides the menu item
  * and contains the screen content.
  */
-class winegrower_Welcome {
+class winespace_Welcome {
 
 	/**
 	 * Constructor
@@ -12,16 +12,16 @@ class winegrower_Welcome {
 	 */
 	public function __construct() {
 
-		add_action( 'admin_menu', array( $this, 'winegrower_welcome_register_menu' ) );
-		add_action( 'load-themes.php', array( $this, 'winegrower_activation_admin_notice' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'winegrower_welcome_style' ) );
+		add_action( 'admin_menu', array( $this, 'winespace_welcome_register_menu' ) );
+		add_action( 'load-themes.php', array( $this, 'winespace_activation_admin_notice' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'winespace_welcome_style' ) );
 
-		add_action( 'winegrower_welcome', array( $this, 'winegrower_welcome_intro' ), 				10 );
-		add_action( 'winegrower_welcome', array( $this, 'winegrower_welcome_tabs' ), 				20 );
-		add_action( 'winegrower_welcome', array( $this, 'winegrower_welcome_getting_started' ), 	30 );
-		add_action( 'winegrower_welcome', array( $this, 'winegrower_welcome_addons' ), 				40 );
-		add_action( 'winegrower_welcome', array( $this, 'winegrower_welcome_child_themes' ), 		50 );
-		add_action( 'winegrower_welcome', array( $this, 'winegrower_welcome_who' ), 				60 );
+		add_action( 'winespace_welcome', array( $this, 'winespace_welcome_intro' ), 				10 );
+		add_action( 'winespace_welcome', array( $this, 'winespace_welcome_tabs' ), 				20 );
+		add_action( 'winespace_welcome', array( $this, 'winespace_welcome_getting_started' ), 	30 );
+		add_action( 'winespace_welcome', array( $this, 'winespace_welcome_addons' ), 				40 );
+		add_action( 'winespace_welcome', array( $this, 'winespace_welcome_child_themes' ), 		50 );
+		add_action( 'winespace_welcome', array( $this, 'winespace_welcome_who' ), 				60 );
 
 	} // end constructor
 
@@ -29,11 +29,11 @@ class winegrower_Welcome {
 	 * Adds an admin notice upon successful activation.
 	 * @since 1.0.3
 	 */
-	public function winegrower_activation_admin_notice() {
+	public function winespace_activation_admin_notice() {
 		global $pagenow;
 
 		if ( is_admin() && 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) { // input var okay
-			add_action( 'admin_notices', array( $this, 'winegrower_welcome_admin_notice' ), 99 );
+			add_action( 'admin_notices', array( $this, 'winespace_welcome_admin_notice' ), 99 );
 		}
 	}
 
@@ -41,11 +41,11 @@ class winegrower_Welcome {
 	 * Display an admin notice linking to the welcome screen
 	 * @since 1.0.3
 	 */
-	public function winegrower_welcome_admin_notice() {
+	public function winespace_welcome_admin_notice() {
 		?>
 			<div class="updated notice is-dismissible">
-				<p><?php echo sprintf( esc_html__( 'Thanks for choosing winegrower! You can read hints and tips on how get the most out of your new theme on the %swelcome screen%s.', 'winegrower' ), '<a href="' . esc_url( admin_url( 'themes.php?page=winegrower-welcome' ) ) . '">', '</a>' ); ?></p>
-				<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=winegrower-welcome' ) ); ?>" class="button" style="text-decoration: none;"><?php _e( 'Get started with winegrower', 'winegrower' ); ?></a></p>
+				<p><?php echo sprintf( esc_html__( 'Thanks for choosing winespace! You can read hints and tips on how get the most out of your new theme on the %swelcome screen%s.', 'winespace' ), '<a href="' . esc_url( admin_url( 'themes.php?page=winespace-welcome' ) ) . '">', '</a>' ); ?></p>
+				<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=winespace-welcome' ) ); ?>" class="button" style="text-decoration: none;"><?php _e( 'Get started with winespace', 'winespace' ); ?></a></p>
 			</div>
 		<?php
 	}
@@ -55,10 +55,10 @@ class winegrower_Welcome {
 	 * @return void
 	 * @since  1.4.4
 	 */
-	public function winegrower_welcome_style() {
-		global $winegrower_version;
+	public function winespace_welcome_style() {
+		global $winespace_version;
 
-		wp_enqueue_style( 'winegrower-welcome-screen', get_template_directory_uri() . '/inc/admin/css/welcome.css', $winegrower_version );
+		wp_enqueue_style( 'winespace-welcome-screen', get_template_directory_uri() . '/inc/admin/css/welcome.css', $winespace_version );
 	}
 
 	/**
@@ -66,15 +66,15 @@ class winegrower_Welcome {
 	 * @see  add_theme_page()
 	 * @since 1.0.0
 	 */
-	public function winegrower_welcome_register_menu() {
-		add_theme_page( 'winegrower', 'winegrower', 'read', 'winegrower-welcome', array( $this, 'winegrower_welcome_screen' ) );
+	public function winespace_welcome_register_menu() {
+		add_theme_page( 'winespace', 'winespace', 'read', 'winespace-welcome', array( $this, 'winespace_welcome_screen' ) );
 	}
 
 	/**
 	 * The welcome screen
 	 * @since 1.0.0
 	 */
-	public function winegrower_welcome_screen() {
+	public function winespace_welcome_screen() {
 		require_once( ABSPATH . 'wp-load.php' );
 		require_once( ABSPATH . 'wp-admin/admin.php' );
 		require_once( ABSPATH . 'wp-admin/admin-header.php' );
@@ -83,12 +83,12 @@ class winegrower_Welcome {
 
 			<?php
 			/**
-			 * @hooked winegrower_welcome_intro - 10
-			 * @hooked winegrower_welcome_getting_started - 20
-			 * @hooked winegrower_welcome_addons - 30
-			 * @hooked winegrower_welcome_who - 40
+			 * @hooked winespace_welcome_intro - 10
+			 * @hooked winespace_welcome_getting_started - 20
+			 * @hooked winespace_welcome_addons - 30
+			 * @hooked winespace_welcome_who - 40
 			 */
-			do_action( 'winegrower_welcome' ); ?>
+			do_action( 'winespace_welcome' ); ?>
 
 		</div>
 		<?php
@@ -98,7 +98,7 @@ class winegrower_Welcome {
 	 * Welcome screen intro
 	 * @since 1.0.0
 	 */
-	public function winegrower_welcome_intro() {
+	public function winespace_welcome_intro() {
 		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/intro.php' );
 	}
 
@@ -106,7 +106,7 @@ class winegrower_Welcome {
 	 * Welcome screen intro
 	 * @since 1.4.4
 	 */
-	public function winegrower_welcome_tabs() {
+	public function winespace_welcome_tabs() {
 		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/tabs.php' );
 	}
 
@@ -114,7 +114,7 @@ class winegrower_Welcome {
 	 * Welcome screen about section
 	 * @since 1.0.0
 	 */
-	public function winegrower_welcome_who() {
+	public function winespace_welcome_who() {
 		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/who.php' );
 	}
 
@@ -122,7 +122,7 @@ class winegrower_Welcome {
 	 * Welcome screen getting started section
 	 * @since 1.0.0
 	 */
-	public function winegrower_welcome_getting_started() {
+	public function winespace_welcome_getting_started() {
 		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/getting-started.php' );
 	}
 
@@ -130,7 +130,7 @@ class winegrower_Welcome {
 	 * Welcome screen add ons
 	 * @since 1.0.0
 	 */
-	public function winegrower_welcome_addons() {
+	public function winespace_welcome_addons() {
 		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/add-ons.php' );
 	}
 
@@ -138,9 +138,9 @@ class winegrower_Welcome {
 	 * Welcome screen child themes
 	 * @since 1.4.4
 	 */
-	public function winegrower_welcome_child_themes() {
+	public function winespace_welcome_child_themes() {
 		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/child-themes.php' );
 	}
 }
 
-$GLOBALS['winegrower_Welcome'] = new winegrower_Welcome();
+$GLOBALS['winespace_Welcome'] = new winespace_Welcome();

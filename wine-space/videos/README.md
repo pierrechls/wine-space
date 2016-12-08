@@ -1,6 +1,6 @@
 [![Version](https://img.shields.io/badge/version-1.0-green.svg)](https://img.shields.io/badge/version-1.1-green.svg) [![Build status](https://img.shields.io/badge/build-passing-green.svg)](https://img.shields.io/badge/build-passing-green.svg) [![CMS](https://img.shields.io/badge/CMS-WordPress-lightgrey.svg)](https://img.shields.io/badge/CMS-WordPress-lightgrey.svg) [![eCommerce](https://img.shields.io/badge/E%20Commerce%20solution-WooCommerce-lightgrey.svg)](https://img.shields.io/badge/E%20Commerce%20solution-WooCommerce-lightgrey.svg)
 
-# Wine Grower
+# Wine Space
 
 ### Convert your video
 

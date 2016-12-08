@@ -1121,7 +1121,7 @@ p.stars {
 	}
 }
 
-.winegrower-sorting {
+.winespace-sorting {
 	font-size: .857em;
 	margin-bottom: 2.618em;
 }
@@ -1263,7 +1263,7 @@ dl.variation {
 /**
  * Homepage
  */
-.winegrower-product-section {
+.winespace-product-section {
 	border-bottom: 3px solid rgba(0,0,0,0.025);
 	margin-bottom: 4.236em;
 
@@ -1412,7 +1412,7 @@ dl.variation {
 	 */
 	.page-template-template-fullwidth-php,
 	.page-template-template-homepage-php,
-	.winegrower-full-width-content {
+	.winespace-full-width-content {
 		.site-main {
 			.columns-1 {
 				ul.products {
@@ -1564,7 +1564,7 @@ dl.variation {
 	}
 
 	// Full width single product
-	.winegrower-full-width-content.single-product {
+	.winespace-full-width-content.single-product {
 		div.product {
 			.images {
 				@include span(4 of 12);
@@ -1605,7 +1605,7 @@ dl.variation {
 		margin-bottom: 1.618em;
 	}
 
-	.winegrower-sorting {
+	.winespace-sorting {
 		@include clearfix;
 		margin-bottom: 2.618em;
 
@@ -1882,7 +1882,7 @@ dl.variation {
 		}
 	}
 
-	.winegrower-full-width-content {
+	.winespace-full-width-content {
 		.woocommerce-tabs {
 			ul.tabs {
 				@include span(4 of 12);

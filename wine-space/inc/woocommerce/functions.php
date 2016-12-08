@@ -2,7 +2,7 @@
 /**
  * General functions used to integrate this theme with WooCommerce.
  *
- * @package winegrower
+ * @package winespace
  */
 
 /**
@@ -11,8 +11,8 @@
  * @since   1.0.0
  * @return  void
  */
-if ( ! function_exists( 'winegrower_before_content' ) ) {
-	function winegrower_before_content() {
+if ( ! function_exists( 'winespace_before_content' ) ) {
+	function winespace_before_content() {
 		?>
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
@@ -26,13 +26,13 @@ if ( ! function_exists( 'winegrower_before_content' ) ) {
  * @since   1.0.0
  * @return  void
  */
-if ( ! function_exists( 'winegrower_after_content' ) ) {
-	function winegrower_after_content() {
+if ( ! function_exists( 'winespace_after_content' ) ) {
+	function winespace_after_content() {
 		?>
 			</main><!-- #main -->
 		</div><!-- #primary -->
 
-		<?php do_action( 'winegrower_sidebar' );
+		<?php do_action( 'winespace_sidebar' );
 	}
 }
 
@@ -41,8 +41,8 @@ if ( ! function_exists( 'winegrower_after_content' ) ) {
  * @return integer products per row
  * @since  1.0.0
  */
-function winegrower_loop_columns() {
-	return apply_filters( 'winegrower_loop_columns', 3 ); // 3 products per row
+function winespace_loop_columns() {
+	return apply_filters( 'winespace_loop_columns', 3 ); // 3 products per row
 }
 
 /**
@@ -50,7 +50,7 @@ function winegrower_loop_columns() {
  * @param  array $classes
  * @return array $classes modified to include 'woocommerce-active' class
  */
-function winegrower_woocommerce_body_class( $classes ) {
+function winespace_woocommerce_body_class( $classes ) {
 	if ( is_woocommerce_activated() ) {
 		$classes[] = 'woocommerce-active';
 	}
@@ -64,13 +64,13 @@ function winegrower_woocommerce_body_class( $classes ) {
  * @param  array $fragments Fragments to refresh via AJAX
  * @return array            Fragments to refresh via AJAX
  */
-if ( ! function_exists( 'winegrower_cart_link_fragment' ) ) {
-	function winegrower_cart_link_fragment( $fragments ) {
+if ( ! function_exists( 'winespace_cart_link_fragment' ) ) {
+	function winespace_cart_link_fragment( $fragments ) {
 		global $woocommerce;
 
 		ob_start();
 
-		winegrower_cart_link();
+		winespace_cart_link();
 
 		$fragments['a.cart-contents'] = ob_get_clean();
 
@@ -82,10 +82,10 @@ if ( ! function_exists( 'winegrower_cart_link_fragment' ) ) {
  * WooCommerce specific scripts & stylesheets
  * @since 1.0.0
  */
-function winegrower_woocommerce_scripts() {
-	global $winegrower_version;
+function winespace_woocommerce_scripts() {
+	global $winespace_version;
 
-	wp_enqueue_style( 'winegrower-woocommerce-style', get_template_directory_uri() . '/inc/woocommerce/css/woocommerce.css', $winegrower_version );
+	wp_enqueue_style( 'winespace-woocommerce-style', get_template_directory_uri() . '/inc/woocommerce/css/woocommerce.css', $winespace_version );
 }
 
 /**
@@ -94,8 +94,8 @@ function winegrower_woocommerce_scripts() {
  * @since 1.0.0
  * @return  array $args related products args
  */
-function winegrower_related_products_args( $args ) {
-	$args = apply_filters( 'winegrower_related_products_args', array(
+function winespace_related_products_args( $args ) {
+	$args = apply_filters( 'winespace_related_products_args', array(
 		'posts_per_page' => 3,
 		'columns'        => 3,
 	) );
@@ -108,8 +108,8 @@ function winegrower_related_products_args( $args ) {
  * @return integer number of columns
  * @since  1.0.0
  */
-function winegrower_thumbnail_columns() {
-	return intval( apply_filters( 'winegrower_product_thumbnail_columns', 4 ) );
+function winespace_thumbnail_columns() {
+	return intval( apply_filters( 'winespace_product_thumbnail_columns', 4 ) );
 }
 
 /**
@@ -117,8 +117,8 @@ function winegrower_thumbnail_columns() {
  * @return integer number of products
  * @since  1.0.0
  */
-function winegrower_products_per_page() {
-	return intval( apply_filters( 'winegrower_products_per_page', 12 ) );
+function winespace_products_per_page() {
+	return intval( apply_filters( 'winespace_products_per_page', 12 ) );
 }
 
 /**

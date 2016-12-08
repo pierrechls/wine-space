@@ -1,8 +1,8 @@
 <?php
 /**
- * winegrower engine room
+ * winespace engine room
  *
- * @package winegrower
+ * @package winespace
  */
 
 /**
@@ -31,7 +31,7 @@ require get_template_directory() . '/inc/functions/extras.php';
 /**
  * Customizer additions.
  */
-if ( is_winegrower_customizer_enabled() ) {
+if ( is_winespace_customizer_enabled() ) {
 	require get_template_directory() . '/inc/customizer/hooks.php';
 	require get_template_directory() . '/inc/customizer/controls.php';
 	require get_template_directory() . '/inc/customizer/display.php';
