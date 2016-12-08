@@ -8,8 +8,6 @@
  include (TEMPLATEPATH . '/mail-wine-grower.php');
  
  get_header(); ?>
-
- 	<div class="main-container nobg container-video" id="presentation"></div>
         
         <div id="code_promo" class="main-container" style="background-color: rgba(247,247,247,0.8)">
         	 <?php
@@ -172,5 +170,8 @@
                 </article>
             </div> 
         </div> 
+        
+		</div> <!-- end content div -->
+		</div> <!-- end container div -->
 
 <?php get_footer(); ?>

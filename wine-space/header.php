@@ -19,9 +19,6 @@
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/home-style.css">
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/supersized.css">
 
-		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style_video.css">
-	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/bigvideo.css">
-
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/lightbox/css/lightbox.css">
 
 	    <script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
@@ -30,6 +27,10 @@
 		<script src="<?php bloginfo('template_directory'); ?>/slider/jquery.bxslider.min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/slider/jquery.bxslider.js"></script>
 		<link href="<?php bloginfo('template_directory'); ?>/slider/jquery.bxslider.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/organicfoodicons.css" />
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/component.css" />
+		<script src="<?php bloginfo('template_directory'); ?>/js/modernizr-custom.js"></script>
 		
 		<script type="text/javascript">
 			localStorage.setItem('website', '<?php echo get_site_url(); ?>');
@@ -41,23 +42,64 @@
         <!--[if lt IE 8]>
              <p class="chromeframe">Vous utilisez un navigateur obsolète. <a href="http://browsehappy.ch/fr/">Mettez à jour votre navigateur</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">installez Google Chrome Frame</a> pour une meilleure expérience de ce site.</p>
         <![endif]-->
-        <div class="header-container" id="top">
-            <header class="wrapper clearfix">
-                <h1 class="title"><a href="<?php echo get_site_url(); ?>/"><span></span></a></h1>
-            </header>
-        </div>
-        <nav id="nav-container">
-            <ul class="wrapper clearfix menu_complete">
-                <li><a href="<?php echo get_site_url(); ?>/histoire/">Histoire</a></li>
-                <li><a href="<?php echo get_site_url(); ?>/terroir/">Le terroir</a></li>
-                <li><a href="<?php echo get_site_url(); ?>/#cuvees">Nos cuvées</a></li>
-                <li><a class="big" href="<?php echo get_site_url(); ?>/partenaires-distributeurs/">Partenaires<br/>distributeurs</a></li>
-                <li><a class="big" href="<?php echo get_site_url(); ?>/operations-speciales/">Opérations<br/>spéciales</a></li>
-                <li><a href="<?php echo get_site_url(); ?>/phototeque/">Phototèque</a></li>
-                <li><a href="<?php echo get_site_url(); ?>/blog/">Actualités</a></li>
-                <li><a href="<?php echo get_site_url(); ?>/#contact">Contact</a></li>
-            </ul>
-            <ul class="wrapper clearfix menu_responsive">
-            	<li id="open_menu" data-dialog="somedialog" style="width: 100%; cursor:pointer;"><img src="<?php bloginfo('template_directory'); ?>/images/menu/menu.svg" style="width: auto; height: 100%;" /></li>
-            </ul>
-        </nav>
+        
+        <div class="container">
+		<!-- Blueprint header -->
+		<header class="bp-header cf">
+			<div class="dummy-logo">
+				<div class="dummy-icon foodicon foodicon--coconut"></div>
+				<h2 class="dummy-heading">Espace Vin</h2>
+			</div>
+			<div class="bp-header__main">
+				<span class="bp-header__present">Blueprint <span class="bp-tooltip bp-icon bp-icon--about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
+				<h1 class="bp-header__title">Multi-Level Menu</h1>
+				<nav class="bp-nav">
+					<a class="bp-nav__item bp-icon bp-icon--prev" href="http://tympanus.net/Blueprints/PageStackNavigation/" data-info="previous Blueprint"><span>Previous Blueprint</span></a>
+					<!--a class="bp-nav__item bp-icon bp-icon--next" href="" data-info="next Blueprint"><span>Next Blueprint</span></a-->
+					<a class="bp-nav__item bp-icon bp-icon--drop" href="http://tympanus.net/codrops/?p=25521" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>
+					<a class="bp-nav__item bp-icon bp-icon--archive" href="http://tympanus.net/codrops/category/blueprints/" data-info="Blueprints archive"><span>Go to the archive</span></a>
+				</nav>
+			</div>
+		</header>
+		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
+		<nav id="ml-menu" class="menu">
+			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+			<div class="menu__wrap">
+				<ul data-menu="main" class="menu__level">
+				<?php 
+				$wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC',  'parent' =>0));
+				foreach($wcatTerms as $wcatTerm) :
+				?>
+					<li class="menu__item"><a class="menu__link in" data-submenu="<?php echo $wcatTerm->slug ?>" href="#"><?php echo $wcatTerm->name; ?></a>
+				<?php 
+				endforeach; 
+				?>
+				</ul>
+				
+				<?php 
+				foreach($wcatTerms as $wcatTerm) :
+				?>
+					<ul data-menu="<?php echo $wcatTerm->slug ?>" class="menu__level">
+						<?php
+						$wsubargs = array(
+						   'hierarchical' => 1,
+						   'show_option_none' => '',
+						   'hide_empty' => 0,
+						   'parent' => $wcatTerm->term_id,
+						   'taxonomy' => 'product_cat'
+						);
+						$wsubcats = get_categories($wsubargs);
+						foreach ($wsubcats as $wsc):
+						?>
+							<li class="menu__item"><a class="menu__link" href="<?php echo get_term_link( $wsc->slug, $wsc->taxonomy );?>"><?php echo $wsc->name;?></a></li>
+						<?php
+						endforeach;
+						?>  
+					</ul>
+			    <?php 
+					endforeach; 
+				?>
+			</div>
+		</nav>
+		<div class="content">
+			<p class="info">Please choose a category</p>
