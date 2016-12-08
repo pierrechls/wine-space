@@ -119,6 +119,7 @@ function calcul()
 	this.document.getElementById('total_total_aff').value = eval(total+fdp).toFixed(2)+' €';
 }
 
+/*
 $(function() {
 	$(document).ready(function () {
 	  var top = $('#nav-container').offset().top - parseFloat($('.header-container').css('marginTop').replace(/auto/, 0));
@@ -137,6 +138,7 @@ $(function() {
 	  });
 	});
 });
+*/
 
 $(function() {
 	$('a[href*=#]').click(function() {
@@ -301,12 +303,3 @@ function enableScroll() {
     window.ontouchmove = null;
     document.onkeydown = null;
 }
-
-$("#open_menu").click(function(){
-	disableScroll();
-	$("#nav-container").css("opacity", "0");
-});
-
-$("#close_menu").click(function(){
-	enableScroll();
-});
