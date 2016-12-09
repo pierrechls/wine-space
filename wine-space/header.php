@@ -50,7 +50,7 @@
 		<header class="bp-header cf">
 			<div class="dummy-logo">
 				<div class="dummy-icon foodicon foodicon--coconut"></div>
-				<h2 class="dummy-heading">Espace Vin</h2>
+				<!-- <h2 class="dummy-heading">Espace Vin</h2> -->
 			</div>
 			<div class="bp-header__main">
 				<nav class="bp-nav">
@@ -71,13 +71,17 @@
 					 <?php $children = get_terms( $wcatTerm->taxonomy, array( 'parent' => $wcatTerm->term_id, 'hide_empty' => false ) ); ?>
 					 
 					 <?php if ( $children ) { ?>
-						 	<li class="menu__item"><a class="menu__link in" data-submenu="<?php echo $wcatTerm->slug ?>" href="#"><?php echo $wcatTerm->name; ?></a>
+						 	<li class="menu__item"><a class="menu__link in" data-submenu="<?php echo $wcatTerm->slug ?>" href="#"><?php echo $wcatTerm->name; ?></a></li>
 					 <?php } else { ?>
-						 <li class="menu__item"><a class="menu__link" data-submenu="<?php echo $wcatTerm->slug ?>" href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy );?>"><?php echo $wcatTerm->name; ?></a>
+						 <li class="menu__item"><a class="menu__link" data-submenu="<?php echo $wcatTerm->slug ?>" href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy );?>"><?php echo $wcatTerm->name; ?></a></li>
 					 <?php } ?>
 				<?php 
 				endforeach; 
 				?>
+					<li class="menu__item space__item"><a class="menu__link" href="#"></a></li>
+					<li class="menu__item"><a class="menu__link" data-submenu="presse-distinctions" href="<?php echo get_site_url(); ?>/presse-distinctions/">Presses & Distinctions</a></li>
+					<li class="menu__item"><a class="menu__link" data-submenu="actualites" href="<?php echo get_site_url(); ?>/actualites/">Actualités</a></li>
+					<li class="menu__item"><a class="menu__link" data-submenu="contact" href="<?php echo get_site_url(); ?>/contact/">Contact</a></li>
 				</ul>
 				
 				<?php 
