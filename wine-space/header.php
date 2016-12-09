@@ -49,7 +49,7 @@
 		<!-- Blueprint header -->
 		<header class="bp-header cf">
 			<div class="dummy-logo">
-				<div class="dummy-icon foodicon foodicon--coconut"></div>
+				<a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png"/></a>
 				<!-- <h2 class="dummy-heading">Espace Vin</h2> -->
 			</div>
 			<div class="bp-header__main">
@@ -110,4 +110,3 @@
 			</div>
 		</nav>
 		<div class="content">
-			<p class="info">Please choose a category</p>

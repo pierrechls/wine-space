@@ -7,33 +7,6 @@
  * @package winespace
  */
 ?>
-
-		<script type="text/javascript"> 
-		        var j = jQuery.noConflict();
-				
-				var maxSlides, minSlides, width = j(window).width();
-				
-				if (width < 430) {
-					minSlides = 1;
-				    maxSlides = 1;
-				} else {
-					minSlides = 2;
-				    maxSlides = 2;
-				}
-		
-		        j(function ($) {
-		        j(document).ready(function(){
-		          j('.slider1').bxSlider({
-		            mode: 'horizontal',
-		            slideWidth: 5000,
-				    minSlides: minSlides,
-				    maxSlides: maxSlides,
-				    slideMargin: 10, 
-				    pager: false
-		          });
-		        }); 
-		        });
-	        </script>
 	        
 	        <script>
 	        	

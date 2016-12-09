@@ -48,7 +48,7 @@ body {
 	overflow: hidden;
 	margin: 0;
 	color: #cecece;
-	background: #2a2b30;
+	background: #baa571;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -100,7 +100,7 @@ a:hover {
 	text-indent: 3px;
 	letter-spacing: 3px;
 	text-transform: uppercase;
-	color: #5c5edc;
+	color: #baa571;
 }
 
 .bp-tooltip:after {
@@ -127,7 +127,7 @@ a:hover {
 	letter-spacing: 0;
 	text-transform: none;
 	color: #fff;
-	background: #5c5edc;
+	background: #baa571;
 }
 
 .bp-nav {
@@ -159,11 +159,16 @@ a:hover {
 	width: 600%;
 	text-align: center;
 	pointer-events: none;
-	color: #595a5f;
+	color: #FFFFFF;
 }
 
 .bp-nav__item:hover {
-	background: #5c5edc;
+	background: #FFFFFF;
+}
+
+.bp-nav__item:hover {
+	background: #FFFFFF;
+	color: #414141;
 }
 
 .bp-icon:after {
@@ -173,7 +178,7 @@ a:hover {
 	font-variant: normal;
 	text-align: center;
 	text-transform: none;
-	color: #5c5edc;
+	color: #baa571;
 	-webkit-font-smoothing: antialiased;
 	speak: none;
 }
@@ -221,7 +226,7 @@ a:hover {
 	padding: 1em 0 0 0;
 	text-align: center;
 	color: #3b3d4a;
-	background: #1c1d22;
+	background: #414141;
 }
 
 .dummy-icon {
@@ -256,7 +261,7 @@ a:hover {
 	height: 200px;
 	margin: 10px;
 	border-radius: 5px;
-	background: #1c1d22;
+	background: #414141;
 }
 
 .product .foodicon {
@@ -348,12 +353,12 @@ body #cdawrap a:hover.carbon-poweredby {
 	left: 0;
 	width: 300px;
 	height: calc(100vh - 120px);
-	background: #1c1d22;
+	background: #414141;
 }
 
 .menu__wrap {
 	position: absolute;
-	top: 3.5em;
+	top: 2.5em;
 	bottom: 0;
 	overflow: hidden;
 	width: 100%;
@@ -409,12 +414,12 @@ body #cdawrap a:hover.carbon-poweredby {
 	position: absolute;
 	right: 0;
 	padding: 0.25em 1.25em;
-	color: #2a2b30;
+	color: #baa571;
 }
 
 .menu__link:hover,
 .menu__link[data-submenu]:hover::after {
-	color: #5c5edc;
+	color: #baa571;
 }
 
 .menu__link--current::before {
@@ -425,7 +430,7 @@ body #cdawrap a:hover.carbon-poweredby {
 	top: 50%;
 	left: 0.5em;
 	height: 4px;
-	color: #5c5edc;
+	color: #baa571;
 }
 
 [class^='animate-'],
@@ -561,7 +566,7 @@ body #cdawrap a:hover.carbon-poweredby {
 	font-size: 0.65em;
 	line-height: 1;
 	position: relative;
-	padding: 2.5em 3.75em 1.5em 2.5em;
+	padding: 1.5em 3.75em 0.5em 1em;
 }
 
 .menu__breadcrumbs a {
@@ -571,7 +576,7 @@ body #cdawrap a:hover.carbon-poweredby {
 	vertical-align: middle;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	color: #5c5edc;
+	color: #baa571;
 }
 
 .menu__breadcrumbs a:last-child {
@@ -603,7 +608,7 @@ body #cdawrap a:hover.carbon-poweredby {
 	margin: 0;
 	padding: 1.365em 0.65em 0 0;
 	cursor: pointer;
-	color: #2a2b30;
+	color: #baa571;
 	border: none;
 	background: none;
 }
