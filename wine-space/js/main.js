@@ -1,7 +1,5 @@
 var url = localStorage.getItem('website');
 
-$("div.main-container.nobg.container-video").append("<video controls preload='auto' autoplay='true' loop><source src='" + url + "/wp-content/themes/wine-grower/videos/wine-grower.mp4' type='video/mp4' /><source src='" + url + "/wp-content/themes/wine-grower/videos/wine-grower.webm' type='video/webm' /><source src='" + url + "/wp-content/themes/wine-grower/videos/wine-grower.ogv' type='video/ogg' /></video>");
-
 
 function MM_validateForm() { //v4.0
 	  if (document.getElementById){

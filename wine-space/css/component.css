@@ -155,9 +155,9 @@ a:hover {
 	font-weight: bold;
 	position: absolute;
 	top: 120%;
-	right: 0;
+	left: -250%;
 	width: 600%;
-	text-align: right;
+	text-align: center;
 	pointer-events: none;
 	color: #595a5f;
 }
