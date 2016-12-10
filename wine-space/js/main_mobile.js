@@ -1,7 +1,3 @@
-$("#code_promo").css("background-color", "#000");
-$("#code_promo").css("margin-top", "0");
-$("div.main-container.nobg.container-video").css("display", "none");
-
 function MM_validateForm() { //v4.0
 	  if (document.getElementById){
 		var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
@@ -116,25 +112,6 @@ function calcul()
 	this.document.getElementById('total_total').value = eval(total+fdp).toFixed(2);
 	this.document.getElementById('total_total_aff').value = eval(total+fdp).toFixed(2)+' €';
 }
-
-$(function() {	
-	$(document).ready(function () {  
-	  var top = $('#nav-container').offset().top - parseFloat($('.header-container').css('marginTop').replace(/auto/, 0));
-	  $(window).scroll(function (event) {
-		// what the y position of the scroll is
-		var y = $(this).scrollTop();
-	  
-		// whether that's below the form
-		if (y >= top) {
-		  // if so, ad the fixed class
-		  $('#nav-container').addClass('fixed');
-		} else {
-		  // otherwise remove it
-		  $('#nav-container').removeClass('fixed');
-		}
-	  });
-	});
-});
 
 $(function() {
 	$('a[href*=#]').click(function() {
@@ -254,9 +231,6 @@ function send_form_cuv(){
     });
   });
 
-$("#code_promo_desktop").css("display", "none");
-$("#code_promo_mobile").css("display", "block");
-
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
 function preventDefault(e) {
@@ -290,8 +264,3 @@ function enableScroll() {
     window.ontouchmove = null;  
     document.onkeydown = null;  
 }
-
-$("#open_menu").click(function(){
-	disableScroll();
-	$("#nav-container").css("opacity", "0");
-});

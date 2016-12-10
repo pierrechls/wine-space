@@ -117,8 +117,34 @@ get_header( 'shop' ); ?>
 	?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
+			
+			
+			<?php $cepages = do_shortcode( "[types field='cepages'][/types]" ); if( $cepages != '' ) { ?>
+					<p>Cépages : <?php echo $cepages; ?></p>
+			<?php }	?>
+			
+			<?php $terroir = do_shortcode( "[types field='terroir'][/types]" ); if( $terroir != '' ) { ?>
+					<p>Terroir : <?php echo $terroir; ?></p>
+			<?php }	?>
+			
+			<?php $rendement = do_shortcode( "[types field='rendement'][/types]" ); if( $rendement != '' ) { ?>
+					<p>Rendement : <?php echo $rendement; ?></p>
+			<?php }	?>
+			
+			<?php $vignification = do_shortcode( "[types field='vignification'][/types]" ); if( $vignification != '' ) { ?>
+					<p>Vignification : <?php echo $vignification; ?></p>
+			<?php }	?>
+			
+			<?php $degustation = do_shortcode( "[types field='degustation'][/types]" ); if( $degustation != '' ) { ?>
+					<p>Dégustation : <?php echo $degustation; ?></p>
+			<?php }	?>
+			
+			<?php $fichetechnique = do_shortcode( "[types field='fiche-technique' link='true' title='Fiche technique'][/types]" ); if( $fichetechnique != '' ) { ?>
+					<?php echo $fichetechnique; ?>
+			<?php }	?>
 
-			<?php wc_get_template_part( 'content', 'single-product' ); ?>
+			
+			<?php the_content() ?>
 
 		<?php endwhile; // end of the loop. ?>
 

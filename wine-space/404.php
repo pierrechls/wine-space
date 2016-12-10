@@ -10,9 +10,14 @@ get_header(); ?>
 <style>
 
 #primary{
-	background-color: #fff;
-	height: 1000px;
+	height: 100vh;
 	/*margin-top: -20px;*/
+	background-image: url('<?php bloginfo('template_directory'); ?>/images/404-background.png');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	padding: 2em 1em;
+	min-height: 100vh;
 }
 
 #primary .entry-content{
@@ -20,15 +25,17 @@ get_header(); ?>
 }
 
 .page-content h1{
+	font-size: 1.4em;
 	margin: 0;
 	text-align: center;
-	padding: 2em;
+	color: #FFFFFF;
 }
 
 .page-content p{
 	margin: 0;
 	text-align: center;
 	padding: 2em;
+	color: #FFFFFF;
 }
 
 .page-content a{
@@ -64,9 +71,17 @@ get_header(); ?>
 	margin-top: 0;
 }
 
+section.error-404.not-found {
+	top: 30%;
+    left: 50%;
+    position: absolute;
+    margin-left: -10rem;
+    width: 20rem;
+}
+
 </style>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area 404">
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
@@ -75,9 +90,9 @@ get_header(); ?>
 					
 					<h1 class="page-title">Oups ! Cette page n’a pas été trouvée.</h1>
 				
-					<p>Il semblerait qu'aucune page corresponde à votre recherche...</p>
+					<p>Il semblerait qu'aucune page ne corresponde à votre recherche...</p>
 					
-					<a class="return-to-shop" href="<?php echo get_site_url(); ?>">Retour à la boutique</a>
+					<a class="return-to-shop" href="<?php echo get_site_url(); ?>">Retour à l'accueil</a>
 
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
