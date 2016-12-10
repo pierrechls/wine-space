@@ -24,14 +24,18 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
-
+		
+		<div class="category-product">
+		
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
 			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
 
 		<?php endif; ?>
 
-		<?php do_action( 'woocommerce_archive_description' ); ?>
+		<?php //do_action( 'woocommerce_archive_description' ); ?>
+		
+		<?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
 
 		<?php if ( have_posts() ) : ?>
 
@@ -42,18 +46,44 @@ get_header( 'shop' ); ?>
 				 * @hooked woocommerce_result_count - 20
 				 * @hooked woocommerce_catalog_ordering - 30
 				 */
-				do_action( 'woocommerce_before_shop_loop' );
+				
+				//do_action( 'woocommerce_before_shop_loop' );
 			?>
 
 			<?php woocommerce_product_loop_start(); ?>
 
 				<?php woocommerce_product_subcategories(); ?>
+				
+				<?php
+				
+					$products = new WP_Query( array(
+				        'posts_per_page' => -1,
+				        'product_cat' => $term->slug,
+				        'post_type' => 'product',
+				        'orderby' => 'date',
+				        'order' => 'ASC'
+				    ) );
 
-				<?php while ( have_posts() ) : the_post(); ?>
+					while ( $products->have_posts() ) : $products->the_post();
+				
+				?>
 
-					<?php wc_get_template_part( 'content', 'product' ); ?>
+					    <li class="product">
+					    	<a href="<?php echo get_permalink( $products->post->ID ) ?>">
+					        	<img src="<?php the_post_thumbnail_url( 'full' ); ?>" /><br/>
+					        	<div class="info">
+					        		<h3><?php the_title(); ?></h3>
+									<?php echo apply_filters( 'woocommerce_short_description', $products->post->post_excerpt ) ?>
+									<p><a class="btn-add-to-cart" href="?add-to-cart=<?php echo $products->post->ID ?>">Ajouter au panier</a></p>
+					        	</div>
+					    	</a>
+					    </li>
 
-				<?php endwhile; // end of the loop. ?>
+				<?php 
+					
+					endwhile;
+					wp_reset_query();
+				?>
 
 			<?php woocommerce_product_loop_end(); ?>
 
@@ -63,7 +93,8 @@ get_header( 'shop' ); ?>
 				 *
 				 * @hooked woocommerce_pagination - 10
 				 */
-				do_action( 'woocommerce_after_shop_loop' );
+				
+				//do_action( 'woocommerce_after_shop_loop' );
 			?>
 
 		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
@@ -71,6 +102,8 @@ get_header( 'shop' ); ?>
 			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 
 		<?php endif; ?>
+		
+		</div>
 
 	<?php
 		/**

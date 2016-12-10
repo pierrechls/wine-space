@@ -12,6 +12,15 @@ Author URI: http://www.pierre-charles.com/
 :-ms-input-placeholder { color:#38393a; } /* ie */
 input:-moz-placeholder { color:#38393a; }
 
+* {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 body {
     font-size: 1em;
     line-height: 1.4;
@@ -159,6 +168,67 @@ a {
     border-radius: 0;
 }
 
+.category-product{
+	background-image: url('../images/products-background.png');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	padding: 2em 1em;
+	min-height: 100vh;
+}
+
+.category-product h1 {
+	color: #FFFFFF;
+	position: fixed;
+    right: 0;
+    top: 4em;
+    font-size: 1em;
+    z-index: 99;
+    margin: 0 0 0 auto;
+    padding: 0.3em 3em 0;
+    text-align: right;
+}
+
+.category-product p.woocommerce-info {
+    position: absolute;
+    font-weight: 600;
+    padding: 1em;
+    background: rgba(0,0,0,0.5);
+    width: 200px;
+    top: 30%;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.category-product .product {
+	width: 200px;
+	vertical-align: top;
+	margin: 50px 30px;
+}
+
+.category-product .product img {
+	width: 125px;
+}
+
+.category-product .product .info h3{
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0.5em auto 0 auto;
+}
+
+.category-product .product .info p{
+	font-size: 0.8em;
+	margin: 0 0 1em 0;
+}
+
+.category-product .product .info .btn-add-to-cart {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    border: 1px solid #FFFFFF;
+    padding: 0.5em 1em;
+}
 
 .slide .add-to-cart{
 	margin-top: 50px;
@@ -538,7 +608,6 @@ input.bouton:hover {
 }
 
 .footer-container {
-	margin-top: 100px;
 	background: #000;
 }
 .footer-container footer {

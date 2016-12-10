@@ -81,7 +81,7 @@ a:hover {
 	right: 0;
     z-index: 99;
 	margin: 0 0 0 auto;
-	padding: 2em 3em 0;
+	padding: 1em 3em 0;
 	text-align: right;
 }
 
@@ -171,7 +171,7 @@ a:hover {
 
 .bp-nav__item:hover {
 	background: #FFFFFF;
-	color: #414141;
+	color: #000000;
 }
 
 .bp-icon:after {
@@ -229,7 +229,7 @@ a:hover {
 	padding: 1em 0 0 0;
 	text-align: center;
 	color: #3b3d4a;
-	background: #414141;
+	background: #000000;
 }
 
 .dummy-icon {
@@ -254,31 +254,14 @@ a:hover {
 
 .products {
 	margin: 0;
-	padding: 2em;
+	padding: 2em 1em;
 	text-align: center;
 }
 
 .product {
 	display: inline-block;
-	width: 200px;
-	height: 200px;
 	margin: 10px;
-	border-radius: 5px;
-	background: #414141;
-}
-
-.product .foodicon {
-	font-size: 4em;
-	line-height: 190px;
-	color: #3b3d4a;
-}
-
-.info {
-	font-size: 1.1em;
-	font-weight: bold;
-	padding: 20vh 1em 0;
 	text-align: center;
-	color: #47484c;
 }
 
 body #cdawrap {
@@ -358,7 +341,7 @@ body #cdawrap a:hover.carbon-poweredby {
 	left: 0;
 	width: 300px;
 	height: calc(100vh - 120px);
-	background: #414141;
+	background: #000000;
 }
 
 .menu__wrap {
