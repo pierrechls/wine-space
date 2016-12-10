@@ -14,7 +14,7 @@
 					
 					<?php 
 				
-						query_posts(array( 'category_name'  => 'code-promo', 'posts_per_page' => -1));
+						query_posts(array( 'category_name'  => 'code-promo', 'posts_per_page' => -1, 'orderby' => 'date', 'order' => 'ASC' ));
 						while (have_posts()) : the_post();
 					
 					?>
@@ -44,7 +44,8 @@
 						pager: false,
 						maxSlides: 1,
 						minSlides: 1,
-						adaptiveHeight: true
+						adaptiveHeight: true,
+						auto: true
 					});
 				}); 
 		    });
