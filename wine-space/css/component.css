@@ -301,12 +301,14 @@ body #cdawrap a:hover.carbon-poweredby {
 
 @media screen and (max-width: 40em) {
 	.bp-header {
-		padding-top: 3em;
+		/*padding-top: 3em;*/
 	}
 	.bp-header__main,
 	.bp-nav {
-		width: 100%;
-		text-align: center;
+		padding: 0.5em 0.5em;
+	    /* width: 100%; */
+	    text-align: center;
+	    margin: 0;
 	}
 	.dummy-logo {
 		display: none;
