@@ -30,7 +30,7 @@
 ===================================*/
 
 .bx-wrapper .bx-viewport {
-	left: -35px;
+	/*left: -35px;*/
 	padding: 1em;
 	
 	/*fix other elements on the page moving (on Chrome)*/
