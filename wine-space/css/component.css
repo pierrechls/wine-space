@@ -81,7 +81,7 @@ a:hover {
 	right: 0;
     z-index: 99;
 	margin: 0 0 0 auto;
-	padding: 1em 3em 0;
+	padding: 2rem 4rem 0 0;
 	text-align: right;
 }
 
@@ -293,7 +293,7 @@ body #cdawrap a:hover.carbon-poweredby {
 	}
 	.bp-header__main,
 	.bp-nav {
-		padding: 0.5em 0.5em;
+		padding: 1.2rem 1rem;
 	    /* width: 100%; */
 	    text-align: center;
 	    margin: 0;
@@ -301,6 +301,11 @@ body #cdawrap a:hover.carbon-poweredby {
 	.dummy-logo {
 		display: none;
 	}
+	
+	.category-product h1 {
+		padding: 0.6rem 2.8rem 0;
+	}
+	
 	.content {
 		margin: 0;
 	}
