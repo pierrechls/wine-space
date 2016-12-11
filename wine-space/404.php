@@ -16,7 +16,7 @@ get_header(); ?>
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
-	padding: 2em 1em;
+	padding: 2.5rem 1rem;
 	min-height: 100vh;
 }
 
@@ -25,7 +25,7 @@ get_header(); ?>
 }
 
 .page-content h1{
-	font-size: 1.4em;
+	font-size: 2.2rem;
 	margin: 0;
 	text-align: center;
 	color: #FFFFFF;
@@ -34,7 +34,9 @@ get_header(); ?>
 .page-content p{
 	margin: 0;
 	text-align: center;
-	padding: 2em;
+	font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 3rem;
 	color: #FFFFFF;
 }
 
@@ -45,20 +47,20 @@ get_header(); ?>
     border: none;
     background-color: #b7a56d;
     color: white;
-    font-size: 16.5px;
-    padding: 10px 20px;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
     width: 50%;
-    max-width: 200px;
+    max-width: 20rem;
     -moz-transition: 0.25s;
     -o-transition: 0.25s;
     transition: 0.25s;
     -webkit-backface-visibility: hidden;
     font: 15px 'Lato', sans-serif;
     font-weight: 300;
-    text-indent: 1px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
+    text-indent: 0.1rem;
+    -webkit-border-radius: 0.6rem;
+    -moz-border-radius: 0.6rem;
+    border-radius: 0.6rem;
     -moz-box-shadow: none;
     box-shadow: none;
 }
@@ -75,8 +77,8 @@ section.error-404.not-found {
 	top: 30%;
     left: 50%;
     position: absolute;
-    margin-left: -10rem;
-    width: 20rem;
+    margin-left: -15rem;
+    width: 30rem;
 }
 
 </style>

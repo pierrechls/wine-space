@@ -17,88 +17,116 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <style>
 
-.text_scena_description{
-	position: absolute;
-    top: 500px;
-    width: 25%;
+.content .illustration {
+	float: left;
+    width: 45%;
+    height: 100vh;
+    text-align: center;
+    background: #000;
+    background-image: url('<?php bloginfo('template_directory'); ?>/images/products-background.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
-.text_scena_description.right{
-    right: 10%;
+.content .description {
+    background: #c2ad74;
+    color: #000;
+    overflow: scroll;
+    padding: 8rem 4rem 4rem 4rem;
+    height: 100vh;
 }
 
-.text_scena_description.left{
-    left: 10%;
+.content .description h1 {
+	text-align: right;
+	padding: 0;
+	font-size: 3.5rem;
+}
+.content .description h3 {
+	text-align: right;
+    padding: 0;
+    color: #000;
+    margin: 1rem auto;
+    font-size: 2rem;
 }
 
-.text_scena_description h2, .text_scena_description p{
-	/*color: #6e5145;*/
-	color: #fff;
-} 
+.content .description .form-add-to-cart {
+	text-align: right;
+	margin: 4em auto;
+}
 
-.text_scena_description h2.black, .text_scena_description p.black{
-	color: #000;
-} 
+.content .description .form-add-to-cart form .quantity {
+	vertical-align: top;
+	display: inline-block;
+}
 
-.slide_scena img:nth-child(2){
-	display: none;
+.content .description .form-add-to-cart form .quantity input.qty{
+	width: 7rem;
+    background: transparent;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-right: 2rem;
+    vertical-align: top;
+    text-align: center;
+    border: 0.3rem solid #000;
 }
 
 
+.content .description .form-add-to-cart form button.button {
+	background: #000;
+    outline: 0;
+    text-transform: uppercase;
+    border: 0;
+    font-size: 1.3rem;
+    color: #FFF;
+    padding: 1.1rem 1.3rem;
+    vertical-align: top;
+    border-radius: 0.8rem;
+}
+
+.content .description .informations {
+	padding: 0 0 0 0;
+}
+
+.content .description .informations .domaine {
+	text-align: justify;
+	font-size: 1.5rem;
+    line-height: 2.3rem;
+}
+
+.content .description .informations .fiche-technique {
+	text-align: left;
+}
+
+.content .description .informations .fiche-technique .element {
+	margin: 4rem auto;
+}
+
+.content .description .informations .fiche-technique .element h4 {
+	margin: 0 auto 0.9rem auto;
+    font-size: 1.9rem;
+    line-height: 2.3rem;
+}
+
+.content .description .informations .fiche-technique .element p {
+	margin: 0 auto;
+	font-size: 1.5rem;
+    line-height: 2.3rem;
+}
 
 @media screen and (max-width: 860px){
-	.slide_scena img:nth-child(1){
-		display: none;
+
+	.content .illustration {
+		float: none;
+		width: 100%;
 	}
-	.slide_scena img:nth-child(2){
-		display: block;
+	
+	.content .description {
+		overflow: inherit;
+		height: auto;
 	}
-	.text_scena_description {
-	    position: relative;
-	    width: 100%;
-	    top: 0;
-		right: 0 !important;
-		left: 0 !important;
-	    background-color: #000;
-	    margin-top: -20px;
-	    text-align: center;
-	    padding-bottom: 3em;
-	    padding-left: 0.5em;
-	    padding-right: 0.5em;
-	    
-	}
-	.text_scena_description h2{
-		text-align: center;
-	}
-}
 
-.text_scena_description h2{
-	margin-bottom: 4em;
-} 
-.text_scena_description p{
-	margin-bottom: 1em;
-} 
-
-div.summary.entry-summary{
-	display: none;
-}
-
-.slide_scena a{
-	display: block;
-    margin: 1em auto;
-    text-transform: uppercase;
-}
-
-.slide_scena a.black{
-	color: #000;
-}
-
-.slide_scena a#fiche_technique{
-	text-transform: capitalize;	
-}
-
-.footer-container{
-	margin-top: 0px !important;
 }
 
 </style>
@@ -117,55 +145,79 @@ get_header( 'shop' ); ?>
 	?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
-		
-			<?php if ( $product->is_in_stock() ) : ?>
+			
+			<div class="illustration">
+				<img src="<?php the_post_thumbnail_url( 'full' ); ?>" />
+			</div>
+			<div class="description">
+			
+				<h1><?php the_title(); ?></h1>
+				<h3><?php echo $product->post->post_excerpt ?></h3>
+				
+				<div class="form-add-to-cart">
+					<?php if ( $product->is_in_stock() ) : ?>
 
-			    <?php
-			        if ( $product->product_type == 'simple' ) {
+					    <?php
+					        if ( $product->product_type == 'simple' ) {
+					
+					            ?>
+					            <form action="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="cart" method="post" enctype='multipart/form-data'>
+					
+					                <?php woocommerce_quantity_input(); ?>
+					
+					                <button type="submit" class="button alt">Ajouter au panier</button>
+					
+					            </form>
+					            <?php
+					
+					        }
+					    ?>
+					
+					<?php endif; ?>
+				</div>
+				
+				<div class="informations">
+					<div class="domaine"><?php the_content() ?></div>
+					<div class="fiche-technique">
+						<div class="element">
+							<?php $cepages = do_shortcode( "[types field='cepages'][/types]" ); if( $cepages != '' ) { ?>
+									<h4>Cépages</h4>
+									<?php echo $cepages; ?>
+							<?php }	?>
+						</div>
+						
+						<div class="element">
+							<?php $terroir = do_shortcode( "[types field='terroir'][/types]" ); if( $terroir != '' ) { ?>
+									<h4>Terroir</h4>
+									<?php echo $terroir; ?>
+							<?php }	?>
+						</div>
+						
+						<div class="element">
+							<?php $rendement = do_shortcode( "[types field='rendement'][/types]" ); if( $rendement != '' ) { ?>
+									<h4>Rendement</h4>
+									<?php echo $rendement; ?>
+							<?php }	?>
+						</div>
+						
+						<div class="element">
+							<?php $vignification = do_shortcode( "[types field='vignification'][/types]" ); if( $vignification != '' ) { ?>
+									<h4>Vignification</h4>
+									<?php echo $vignification; ?>
+							<?php }	?>
+						</div>
+						
+						<div class="element">
+							<?php $degustation = do_shortcode( "[types field='degustation'][/types]" ); if( $degustation != '' ) { ?>
+									<h4>Dégustation</h4>
+									<?php echo $degustation; ?>
+							<?php }	?>
+						</div>
+						
+					</div>
+				</div>
 			
-			            ?>
-			            <form action="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="cart" method="post" enctype='multipart/form-data'>
-			
-			                <?php woocommerce_quantity_input(); ?>
-			
-			                <button type="submit" class="button alt">Ajouter au panier</button>
-			
-			            </form>
-			            <?php
-			
-			        }
-			    ?>
-			
-			<?php endif; ?>
-			
-			<img src="<?php the_post_thumbnail_url( 'full' ); ?>" />
-			
-			<?php $cepages = do_shortcode( "[types field='cepages'][/types]" ); if( $cepages != '' ) { ?>
-					<p>Cépages : <?php echo $cepages; ?></p>
-			<?php }	?>
-			
-			<?php $terroir = do_shortcode( "[types field='terroir'][/types]" ); if( $terroir != '' ) { ?>
-					<p>Terroir : <?php echo $terroir; ?></p>
-			<?php }	?>
-			
-			<?php $rendement = do_shortcode( "[types field='rendement'][/types]" ); if( $rendement != '' ) { ?>
-					<p>Rendement : <?php echo $rendement; ?></p>
-			<?php }	?>
-			
-			<?php $vignification = do_shortcode( "[types field='vignification'][/types]" ); if( $vignification != '' ) { ?>
-					<p>Vignification : <?php echo $vignification; ?></p>
-			<?php }	?>
-			
-			<?php $degustation = do_shortcode( "[types field='degustation'][/types]" ); if( $degustation != '' ) { ?>
-					<p>Dégustation : <?php echo $degustation; ?></p>
-			<?php }	?>
-			
-			<?php $fichetechnique = do_shortcode( "[types field='fiche-technique' link='true' title='Fiche technique'][/types]" ); if( $fichetechnique != '' ) { ?>
-					<?php echo $fichetechnique; ?>
-			<?php }	?>
-
-			
-			<?php the_content() ?>
+			</div>
 
 		<?php endwhile; // end of the loop. ?>
 

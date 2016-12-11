@@ -48,7 +48,8 @@
 				}
 			</script>
 
-        <div class="footer-container">
+       <!--
+ <div class="footer-container">
             <footer class="wrapper">
             	<p><?php bloginfo('name'); ?> © 2016</p>
             	<p><a href="<?php echo get_site_url(); ?>/conditions-generales-de-vente/">CGV</a> | <a href="<?php echo get_site_url(); ?>/mentions-legales/">Mentions Légales</a></p>
@@ -57,12 +58,10 @@
                 <p style="color: #989696;">Developped by <a style="color: #989696;" href="http://www.brainfactory.fr/" target="_blank"> Brain Factory</a></p>
             </footer>
         </div>
+-->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/responsiveslides.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/supersized.3.2.7.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/supersized.shutter.js"></script>
 		
 		
         <script src="<?php bloginfo('template_directory'); ?>/js/mobile.js"></script>
