@@ -117,7 +117,28 @@ get_header( 'shop' ); ?>
 	?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
+		
+			<?php if ( $product->is_in_stock() ) : ?>
+
+			    <?php
+			        if ( $product->product_type == 'simple' ) {
 			
+			            ?>
+			            <form action="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="cart" method="post" enctype='multipart/form-data'>
+			
+			                <?php woocommerce_quantity_input(); ?>
+			
+			                <button type="submit" class="button alt">Ajouter au panier</button>
+			
+			            </form>
+			            <?php
+			
+			        }
+			    ?>
+			
+			<?php endif; ?>
+			
+			<img src="<?php the_post_thumbnail_url( 'full' ); ?>" />
 			
 			<?php $cepages = do_shortcode( "[types field='cepages'][/types]" ); if( $cepages != '' ) { ?>
 					<p>Cépages : <?php echo $cepages; ?></p>
