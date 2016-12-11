@@ -14,11 +14,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <style>
-
-#primary{
-	background-color: #fff;
-	/*margin-top: -20px;*/
-}
+	
+	#primary{
+		background-color: #fff;
+	}
+	
+	
+    .bp-header__main {
+	    display: none;
+    }
+	
+	#primary h1 {
+	    background: #c4af78;
+	    padding: 3.5rem 1rem;
+	    color: #FFF;
+	    margin: 0;
+	    font-size: 2.5rem;
+    }
+    
+    #primary h3 {
+    	padding: 2rem 0;
+    }
+    
+    #primary .myaccount-content {
+	    padding: 1rem 2rem;
+	    font-size: 1.7rem;
+	    color: #000;
+    }
 
 header.entry-header{
 	display: none;
@@ -108,6 +130,11 @@ a.woocommerce-remove-coupon{
 }
 
 </style>
+
+<h1 class="woocommerce-title-user">Mon panier</h1>
+
+
+<div class="myaccount-content" >
 
 <?php
 
@@ -251,3 +278,5 @@ do_action( 'woocommerce_before_cart' ); ?>
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>
+
+</div>

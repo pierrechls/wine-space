@@ -6,7 +6,15 @@
  * @package 	WooCommerce/Templates
  * @version     2.2.0
  */
+?>
+ 
+ <style>
+  #primary {
+	  color: #000;
+  }
+ </style>
 
+<?php 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }

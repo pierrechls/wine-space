@@ -287,7 +287,17 @@ body #cdawrap a:hover.carbon-poweredby {
 	color: #fff;
 }
 
+#primary {
+	color: #000;
+}
+
 @media screen and (max-width: 40em) {
+
+	#primary h1.woocommerce-title-user {
+		padding: 10rem 1rem 3rem 1rem;
+		text-align: center;
+	}
+
 	.bp-header {
 		/*padding-top: 3em;*/
 	}

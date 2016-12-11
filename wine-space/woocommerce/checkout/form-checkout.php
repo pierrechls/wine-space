@@ -15,10 +15,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <style>
 
-#primary{
-	background-color: #fff;
-	/*margin-top: -20px;*/
-}
+	#primary{
+		background-color: #fff;
+	}
+	
+	#primary h1 {
+	    background: #c4af78;
+	    padding: 3.5rem 1rem;
+	    color: #FFF;
+	    margin: 0;
+	    font-size: 2.5rem;
+    }
+    
+    #primary h3 {
+    	padding: 2rem 0;
+    }
+    
+    #primary .myaccount-content {
+	    padding: 1rem 2rem;
+	    font-size: 1.7rem;
+	    color: #000;
+    }
+    
+    .bp-header__main {
+	    display: none;
+    }
 
 header.entry-header{
 	display: none;
@@ -213,6 +234,10 @@ div#payment.woocommerce-checkout-payment div.form-row.place-order input[type="su
 
 </style>
 
+<h1 class="woocommerce-title-user">Ma commande</h1>
+
+
+<div class="myaccount-content" >
 <?php
 
 wc_print_notices();
@@ -261,3 +286,5 @@ $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->g
 </form>
 
 <?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+
+</div>
