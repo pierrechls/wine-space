@@ -29,6 +29,32 @@ if ( ! defined( 'ABSPATH' ) ) {
     background-position: center center;
 }
 
+.content .illustration .wine-image {
+	width: 100%;
+    height: 100%;
+    text-align: center;  /* align the inline(-block) elements horizontally */
+    font: 0/0 a;         /* remove the gap between inline(-block) elements */
+}
+
+.content .illustration .wine-image:before {      /* create a full-height inline block pseudo-element */
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle; /* vertical alignment of the inline element */
+    height: 100%;
+}
+
+.content .illustration .wine-image .wine-image-child {
+    display: inline-block;
+    vertical-align: middle;          /* vertical alignment of the inline element */
+    font: 16px/1 Arial, sans-serif;  /* reset the font property */
+    padding: 5px;
+}
+
+.content .illustration .wine-image .wine-image-child img {
+	height: 80%;
+	width: auto;
+}
+
 .content .description {
     background: #c2ad74;
     color: #000;
@@ -147,7 +173,11 @@ get_header( 'shop' ); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			
 			<div class="illustration">
-				<img src="<?php the_post_thumbnail_url( 'full' ); ?>" />
+				<div class="wine-image">
+					<div class="wine-image-child">
+						<img src="<?php the_post_thumbnail_url( 'full' ); ?>" />
+					</div>
+				</div>
 			</div>
 			<div class="description">
 			
