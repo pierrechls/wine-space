@@ -21,14 +21,32 @@ get_currentuserinfo();
 
 <style>
 
+	.bp-header__main {
+		display: none;
+	}
+
 	#primary{
 		background-color: #fff;
-		padding: 1em;
 	}
-	#primary a{
-		color : #38393a;
-		font-weight: 800;
-	}
+	
+	#primary h1 {
+	    background: #c4af78;
+	    padding: 3.5rem 1rem;
+	    color: #FFF;
+	    margin: 0;
+	    font-size: 2.5rem;
+    }
+    
+    #primary h3 {
+    	padding: 2rem 0;
+    }
+    
+    #primary .myaccount-content {
+	    padding: 1rem 2rem;
+	    font-size: 1.7rem;
+	    color: #000;
+    }
+    
 	abbr[title] {
 	    border-bottom: none;
 	    color: #a18e38;
@@ -46,6 +64,8 @@ get_currentuserinfo();
 	<?php wc_get_template( 'myaccount/my-address.php' ); ?>
 
 <?php else : ?>
+
+<div class="myaccount-content">
 
 	<form method="post">
 
@@ -68,5 +88,7 @@ get_currentuserinfo();
 		</p>
 
 	</form>
+	
+</div>
 
 <?php endif; ?>

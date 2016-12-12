@@ -18,23 +18,47 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php wc_print_notices(); ?>
 
 <style>
+	
+	.bp-header__main {
+		display: none;
+	}
 
 	#primary{
 		background-color: #fff;
-		padding: 1em;
+		padding: 0 !important;
 	}
+	
+	#primary .entry-content {
+		padding: 2rem;
+	}
+	
+	#primary h1.entry-title {
+		background: #c4af78;
+	    padding: 3.5rem 1rem;
+	    color: #FFF;
+	    margin: 0;
+	    font-size: 2.5rem;
+	}
+	
+	
+	
 	#primary a{
 		color : #38393a;
-		font-weight: 800;
+		font-weight: 600;
+		font-style: italic;
 	}
-	mark {
+	mark, strong {
 	    color: #000;
 	    background: none;
-	    font-weight: 800;
+	    font-weight: 600;
 	}
 	
 	header.title{
 		margin-bottom: 10px;
+	}
+	
+	table th {
+		font-weight: 600;
 	}
 	
 	@media only screen and (max-width: 480px) { 

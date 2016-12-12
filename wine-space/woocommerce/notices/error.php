@@ -19,15 +19,20 @@ if ( ! $messages ){
 
 <style>
 ul.woocommerce-error{
-	padding: 1em;
-    text-align: center;
+	padding: 2rem 1.2rem;
+    text-align: left;
     list-style: none;
     background-color: #a18e38;
     color: #fff;
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1.7rem;
     margin: 0;
-    margin-bottom: 1em;
+}
+@media only screen and (max-width: 40em){
+	ul.woocommerce-error{
+		padding: 8rem 1.2rem 2rem 1.2rem;
+		text-align: center;
+	}
 }
 </style>
 
