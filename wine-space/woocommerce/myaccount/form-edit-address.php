@@ -47,6 +47,15 @@ get_currentuserinfo();
 	    color: #000;
     }
     
+    @media screen and (max-width: 60em){
+	
+		#primary h1 {
+			padding: 10rem 1rem 3rem 1rem;
+			text-align: center;
+		}	
+	
+	}
+    
 	abbr[title] {
 	    border-bottom: none;
 	    color: #a18e38;

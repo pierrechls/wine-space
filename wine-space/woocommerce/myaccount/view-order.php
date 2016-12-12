@@ -40,6 +40,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    font-size: 2.5rem;
 	}
 	
+	@media screen and (max-width: 60em){
+	
+		#primary h1.entry-title {
+			padding: 10rem 1rem 3rem 1rem;
+			text-align: center;
+		}	
+	
+	}
 	
 	
 	#primary a{

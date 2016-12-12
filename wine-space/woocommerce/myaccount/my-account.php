@@ -42,6 +42,15 @@ wc_print_notices(); ?>
 	    color: #000;
     }
     
+    @media screen and (max-width: 60em){
+	
+		#primary h1 {
+			padding: 10rem 1rem 3rem 1rem;
+			text-align: center;
+		}	
+	
+	}
+    
 	header.entry-header{
 		display: none;
 	}

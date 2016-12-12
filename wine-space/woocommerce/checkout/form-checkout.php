@@ -40,6 +40,15 @@ if ( ! defined( 'ABSPATH' ) ) {
     .bp-header__main {
 	    display: none;
     }
+    
+    @media screen and (max-width: 60em){
+	
+		#primary h1 {
+			padding: 10rem 1rem 3rem 1rem;
+			text-align: center;
+		}	
+	
+	}
 
 header.entry-header{
 	display: none;
@@ -141,6 +150,7 @@ p.form-row.form-row-wide.create-account label.checkbox{
 h3#order_review_heading{
 	background-color: #a18e38;
     color: #fff;
+    padding: 2rem;
     margin-bottom: 10px;
 }
 

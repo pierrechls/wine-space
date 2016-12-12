@@ -291,7 +291,7 @@ body #cdawrap a:hover.carbon-poweredby {
 	color: #000;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 60em) {
 
 	#primary h1.woocommerce-title-user {
 		padding: 10rem 1rem 3rem 1rem;
@@ -669,7 +669,7 @@ body #cdawrap a:hover.carbon-poweredby {
 	color: #FFFFFF;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 60em) {
 	.action--open,
 	.action--close {
 		display: block;

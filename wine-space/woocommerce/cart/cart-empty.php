@@ -17,12 +17,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #primary{
 	background-color: #fff;
-	height: 1000px;
+	height: 100vh;
 	/*margin-top: -20px;*/
 }
 
-#primary .entry-content{
-	padding-top: 3em;
+#primary .entry-content .woocommerce-message{
+	padding: 10rem 1.2rem;
+    text-align: center;
+}
+
+.entry-content p.cart-empty {
+	margin: 4rem auto 1rem auto;
+}
+
+.bp-header__main {
+	display: none;
 }
 
 header.entry-header{

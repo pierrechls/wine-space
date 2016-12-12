@@ -37,10 +37,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     }
     
     #primary .myaccount-content {
-	    padding: 1rem 2rem;
 	    font-size: 1.7rem;
 	    color: #000;
     }
+
+	#primary .myaccount-content .shop_table.cart {
+		margin: 2rem auto;
+	}
 
 header.entry-header{
 	display: none;

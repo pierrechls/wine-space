@@ -29,7 +29,7 @@ div.woocommerce-message{
     margin: 0;
 }
 
-@media only screen and (max-width: 40em){
+@media only screen and (max-width: 60em){
 	div.woocommerce-message{
 		padding: 8rem 1.2rem 2rem 1.2rem;
 		text-align: center;

@@ -17,11 +17,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	#primary{
 		background-color: #fff;
-		padding: 1em;
 	}
+	
+	#primary h2 {
+	    background: #c4af78;
+	    padding: 3.5rem 1rem;
+	    color: #FFF;
+	    margin: 0;
+	    font-size: 2.5rem;
+    }
+    
+    #primary .entry-content form.login{
+	    padding: 1rem;
+	    text-align: center;
+    }
+    
+    #primary .entry-content form.login label {
+	    display: block;
+    }
+    
 	#primary a{
 		color : #38393a;
-		font-weight: 800;
+		font-weight: 600;
 	}
 	header.entry-header{
 		display: none;
@@ -29,6 +46,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	input#rememberme{
 		width: auto;
 	}
+	
+	.bp-header__main {
+	    display: none;
+    }
+	
+	@media screen and (max-width: 60em){
+	
+		#primary h2 {
+			padding: 10rem 1rem 3rem 1rem;
+			text-align: center;
+		}	
+	
+	}
+	
 </style>
 
 <?php wc_print_notices(); ?>

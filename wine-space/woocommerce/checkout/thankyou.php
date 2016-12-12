@@ -9,9 +9,46 @@
 ?>
  
  <style>
+ 
   #primary {
 	  color: #000;
+	  padding: 0 !important;
   }
+  
+  #primary h1.entry-title {
+	    background: #c4af78;
+	    padding: 3.5rem 1rem;
+	    color: #FFF;
+	    margin: 0;
+	    font-size: 2.5rem;
+    }
+  
+  .bp-header__main {
+	  display: none;
+  }
+  
+  .entry-content {
+	  padding: 3rem 2rem;
+  }
+  
+  #primary strong{
+		font-weight: 600;
+	}
+	
+	#primary table th {
+		font-weight: 600;
+	}
+  
+  @media screen and (max-width: 60em){
+	
+		#primary h1.entry-title {
+			padding: 10rem 1rem 3rem 1rem;
+			text-align: center;
+		}	
+	
+	}
+  
+  
  </style>
 
 <?php 

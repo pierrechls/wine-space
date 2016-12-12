@@ -28,7 +28,7 @@ ul.woocommerce-error{
     font-size: 1.7rem;
     margin: 0;
 }
-@media only screen and (max-width: 40em){
+@media only screen and (max-width: 60em){
 	ul.woocommerce-error{
 		padding: 8rem 1.2rem 2rem 1.2rem;
 		text-align: center;
