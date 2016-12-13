@@ -77,7 +77,7 @@ a:hover {
 }
 
 .bp-header__main {
-	position: fixed;
+	position: absolute;
 	right: 0;
     z-index: 99;
 	margin: 0 0 0 auto;
@@ -221,7 +221,7 @@ a:hover {
 }
 
 .dummy-logo {
-	position: fixed;
+	position: absolute;
     top: 0;
     left: 0;
     width: 30rem;
@@ -356,7 +356,7 @@ body #cdawrap a:hover.carbon-poweredby {
 /* Menu styles */
 
 .menu {
-	position: fixed;
+	position: absolute;
     top: 12rem;
     left: 0;
     width: 30rem;
@@ -657,7 +657,7 @@ body #cdawrap a:hover.carbon-poweredby {
 	left: 1em;
 	display: none;
 	color: #fff;
-	position: fixed;
+	position: absolute;
 	z-index: 1000;
 }
 
