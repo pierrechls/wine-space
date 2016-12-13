@@ -83,6 +83,15 @@ if ( ! defined( 'ABSPATH' ) ) {
     margin: 1rem auto 5rem auto;
 }
 
+.content .description .back-to-category a i {
+	margin-right: 1rem;
+}
+
+
+.content .description .back-to-category a {
+	color: #000;
+}
+
 .content .description .form-add-to-cart {
 	text-align: right;
 	margin: 4em auto;
@@ -188,9 +197,6 @@ get_header( 'shop' ); ?>
 			</div>
 			<div class="description">
 			
-				<h1><?php the_title(); ?></h1>
-				<h3><?php echo $product->post->post_excerpt ?></h3>
-				
 				<?php 
 			
 					$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
@@ -201,12 +207,15 @@ get_header( 'shop' ); ?>
 				
 				?>
 
-						<p class="back-to-category"><a href="<?php echo get_category_link( $single_cat->term_taxonomy_id ) ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour à la catégorie <?php echo $single_cat->name; ?></a></p>
+						<p class="back-to-category"><a href="<?php echo get_category_link( $single_cat->term_taxonomy_id ) ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour <!--<?php echo $single_cat->name; ?>--></a></p>
 
 				<?php 
 				
 					}
-				?>	
+				?>
+			
+				<h1><?php the_title(); ?></h1>
+				<h3><?php echo $product->post->post_excerpt ?></h3>	
 				
 				<div class="form-add-to-cart">
 					<?php if ( $product->is_in_stock() ) : ?>
