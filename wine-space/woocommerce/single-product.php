@@ -76,6 +76,13 @@ if ( ! defined( 'ABSPATH' ) ) {
     font-size: 2rem;
 }
 
+.content .description .back-to-category {
+	text-align: right;
+	text-transform: uppercase;
+    font-size: 1.2rem;
+    margin: 1rem auto 5rem auto;
+}
+
 .content .description .form-add-to-cart {
 	text-align: right;
 	margin: 4em auto;
@@ -183,6 +190,23 @@ get_header( 'shop' ); ?>
 			
 				<h1><?php the_title(); ?></h1>
 				<h3><?php echo $product->post->post_excerpt ?></h3>
+				
+				<?php 
+			
+					$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
+
+					if ( $product_cats && ! is_wp_error ( $product_cats ) ){
+
+						$single_cat = array_shift( $product_cats );
+				
+				?>
+
+						<p class="back-to-category"><a href="<?php echo get_category_link( $single_cat->term_taxonomy_id ) ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour à la catégorie <?php echo $single_cat->name; ?></a></p>
+
+				<?php 
+				
+					}
+				?>	
 				
 				<div class="form-add-to-cart">
 					<?php if ( $product->is_in_stock() ) : ?>
