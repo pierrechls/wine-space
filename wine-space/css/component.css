@@ -234,7 +234,23 @@ a:hover {
 
 .dummy-logo img {
 	width: 22rem;
-    margin: 0 auto;
+    margin: 1rem auto;
+}
+
+.dummy-logo-icon {
+	position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    color: #3b3d4a;
+    background: #000000;
+    display: none;
+}
+
+.dummy-logo-icon img {
+	width: 100%;
 }
 
 .dummy-icon {
@@ -312,6 +328,18 @@ body #cdawrap a:hover.carbon-poweredby {
 		display: none;
 	}
 	
+	.dummy-logo-icon {
+		display: block;
+	}
+	
+	.menu .menu__wrap {
+		top: 17rem;
+	}
+	
+	.menu .menu__breadcrumbs {
+		top: 10rem;
+	}
+		
 	.category-product h1 {
 		padding: 0.6rem 2.8rem 0;
 	}
