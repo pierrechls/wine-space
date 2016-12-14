@@ -11,15 +11,20 @@
          <div class="home-container" style="background-color: rgba(247,247,247,0.8); height:100vh;">
             <div class="bxslider" style="height:100vh;">
                 	<ul class="home-slider" style="height:100vh;">
-					
+   				
 					<?php 
-				
-						query_posts(array( 'category_name'  => 'code-promo', 'posts_per_page' => -1, 'orderby' => 'date', 'order' => 'ASC' ));
-						while (have_posts()) : the_post();
+					
+						$args = array( 'post_type' => 'slider', 'posts_per_page' => -1, 'orderby' => 'date', 'order' => 'ASC' );
+						$loop = new WP_Query( $args );
+						while ( $loop->have_posts() ) : $loop->the_post();
+						
+							if( has_post_thumbnail() ) {
 					
 					?>
-							<li style="background-image:url('<?php the_post_thumbnail_url( 'full' ); ?>');"></li>
+								<li style="background-image:url('<?php the_post_thumbnail_url( 'full' ); ?>');"></li>
 					<?php 
+							
+							}
 					
 						endwhile;
 					?>
