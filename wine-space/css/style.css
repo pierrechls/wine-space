@@ -244,13 +244,16 @@ nav {
     padding: 3rem 0;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+	line-height: 1;
+}
+
 h2 {
 	text-transform: uppercase;
 	color: #b7a56d;
 	text-align: left;
 	font-weight: 700;
-	font-size: 1.2em;
-	padding: 1%;
+	font-size: 2rem;
 }
 
 h3 {
