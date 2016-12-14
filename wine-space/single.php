@@ -10,19 +10,30 @@ get_header(); ?>
 <style>
 	#primary{
 		background: #fff;
+		min-height: 100vh;
 	}
 	#primary .article_content {
-	    padding: 1em;
-	    max-width: 986px;
 	    margin: auto;
 	    width: 100%;
 	    text-align: justify;
 	}
+	
 	#primary .article_content h1{
-		color:#a18e38 !important;
+		color: #FFF !important;
+		background: #a18e38;
+		padding: 10rem 2rem 5rem 3rem;
+		margin: 0 auto;
 		text-align: center;
 		line-height: 1;
 	}
+	
+	#primary .article_content .actu-content{
+		padding: 2rem;
+	    margin: auto;
+	    width: 100%;
+	    text-align: justify;
+	}
+	
 	#primary .article_content h2, #primary .article_content h3, #primary .article_content h4, #primary .article_content h5, #primary .article_content h6{
 		color:#38393a !important;
 	}
@@ -51,7 +62,12 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					
 					<h1> <?php the_title(); ?> </h1>
-					<?php the_content(); ?>
+					
+					<div class="actu-content">
+					
+						<?php the_content(); ?>
+						
+					</div>
 				
 				<?php endwhile; // end of the loop. ?>
 				

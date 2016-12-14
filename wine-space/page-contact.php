@@ -83,6 +83,21 @@ get_header(); ?>
 			color: #000;
 		}
 		
+		@media only screen and (max-width: 60em){
+			.contact-post .contact-formulaire {
+			    float: none;
+			    display: block;
+			    width: 100%;
+			}
+			
+			.contact-post .contact-infos-diverses {
+				display: block;
+				float: none;
+				width: 100%;
+			}
+	
+		}
+		
 	</style>
 
 	<div id="primary" class="content-area">
