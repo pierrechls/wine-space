@@ -90,7 +90,7 @@
 				endforeach; 
 				?>
 					<li class="menu__item space__item"><a class="menu__link" href="#"></a></li>
-					<li class="menu__item"><a class="menu__link" data-submenu="presse-distinctions" href="<?php echo get_site_url(); ?>/presse-distinctions/">Presses & Distinctions</a></li>
+					<li class="menu__item"><a class="menu__link" data-submenu="presse-distinctions" href="<?php echo get_site_url(); ?>/presse-distinctions/">Presse & Distinctions</a></li>
 					<li class="menu__item"><a class="menu__link" data-submenu="actualites" href="<?php echo get_site_url(); ?>/actualites/">Actualités</a></li>
 					<li class="menu__item"><a class="menu__link" data-submenu="contact" href="<?php echo get_site_url(); ?>/contact/">Contact</a></li>
 				</ul>

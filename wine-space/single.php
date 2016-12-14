@@ -12,6 +12,11 @@ get_header(); ?>
 		background: #fff;
 		min-height: 100vh;
 	}
+	
+	#primary p {
+		font-size: 1.6rem;
+	}
+	
 	#primary .article_content {
 	    margin: auto;
 	    width: 100%;
@@ -25,6 +30,7 @@ get_header(); ?>
 		margin: 0 auto;
 		text-align: center;
 		line-height: 1;
+		font-size: 3rem;
 	}
 	
 	#primary .article_content .actu-content{
