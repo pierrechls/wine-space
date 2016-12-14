@@ -45,6 +45,10 @@
  
 ### Create content
 
+- Fields
+- Contact
+- Page
+
 ## Prior installation
 
 You have to download [Wordpress](https://wordpress.org/download/) and install it on you server.
