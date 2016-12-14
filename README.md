@@ -2,6 +2,8 @@
 
 # Wine Space
 
+![preview](https://raw.githubusercontent.com/pierrechls/wine-space/master/wine-space/images/preview.png)
+
 > Wine Space is a template for WordPress using WooCommerce e-commerce plugin
 
 ## How to use it
