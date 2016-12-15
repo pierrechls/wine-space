@@ -225,8 +225,8 @@ a:hover {
     top: 0;
     left: 0;
     width: 30rem;
-    height: 12rem;
-    padding: 1.5rem 0 0 0;
+    height: 18rem;
+    padding: 3.5rem 0 0 0;
     text-align: center;
     color: #3b3d4a;
     background: #000000;
@@ -385,10 +385,10 @@ body #cdawrap a:hover.carbon-poweredby {
 
 .menu {
 	position: absolute;
-    top: 12rem;
+    top: 17rem;
     left: 0;
     width: 30rem;
-    height: calc(100vh - 12rem);
+    height: calc(100vh - 17rem);
     background: #000000;
 }
 

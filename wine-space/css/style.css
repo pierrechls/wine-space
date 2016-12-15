@@ -16,6 +16,26 @@ html {
 	font-size:62.5%;
 }
 
+
+@media screen and (max-width:800px){
+  html {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width:1400px){
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (min-width:1500px){
+  html {
+    font-size: 90%;
+  }
+}
+
+
 * {
   user-drag: none;
   user-select: none;
