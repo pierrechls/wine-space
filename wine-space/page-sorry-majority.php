@@ -16,17 +16,10 @@
 		<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.png" type="image/png">
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/normalize.min.css">
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css"><link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/supersized.css">
-			<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style_video.css">
-	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/bigvideo.css">
-
-	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/lightbox/css/lightbox.css">
 
 	    <script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/slider/jquery.bxslider.min.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/slider/jquery.bxslider.js"></script>
-		<link href="<?php bloginfo('template_directory'); ?>/slider/jquery.bxslider.css" rel="stylesheet" />
     </head>
 
     <style>
@@ -35,27 +28,30 @@
 		}
 		#majority{
 			margin: auto;
-			margin-top: 5%;
-			text-align: center;
+		    padding: 2rem;
+		    text-align: center;
 		}
 		#majority h1{
 			line-height: 1;
 		}
 		#majority p{
 			padding: 0 0 1em 0;
+			font-size: 1.6rem;
 		}
 		#majority input{
 			margin-bottom: 1em;
 		}
 		#majority img{
-			padding: 2em 0;
+			padding: 2em 1rem;
+			width: 10rem;
+			max-width: 100%;
 		}
 	</style>
 
 	<body>
 		<div id="majority">
 			<h1>Désolé, en raison de votre âge,<br/> vous ne pouvez accéder au site <?php bloginfo('name'); ?></h1>
-			 <img src="<?php bloginfo('template_directory'); ?>/images/logo.png"/>
+			 <img src="<?php bloginfo('template_directory'); ?>/images/logo-icon.png"/>
 			 <p>Pour accéder au site, vous devez avoir l'âge légal pour acheter ou consommer de l'alcool dans votre pays de résidence.</p>
 		</div>
 	</body>
