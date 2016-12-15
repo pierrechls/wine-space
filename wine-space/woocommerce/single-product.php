@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <style>
 
 .content .illustration {
-	float: left;
+	float: right;
     width: 45%;
     height: 100vh;
     text-align: center;
@@ -56,20 +56,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .content .description {
-    background: #c2ad74;
+    background: #FFF;
     color: #000;
     overflow: scroll;
     padding: 8rem 4rem 4rem 4rem;
+    background-image: url('<?php bloginfo('template_directory'); ?>/images/product-info-bg.jpg');
+    background-size: auto;
+    background-repeat: repeat;
     height: 100vh;
 }
 
 .content .description h1 {
-	text-align: right;
+	text-align: left;
 	padding: 0;
 	font-size: 3.5rem;
 }
 .content .description h3 {
-	text-align: right;
+	text-align: left;
     padding: 0;
     color: #000;
     margin: 1rem auto;
@@ -77,7 +80,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .content .description .back-to-category {
-	text-align: right;
+	text-align: left;
 	text-transform: uppercase;
     font-size: 1.2rem;
     margin: 1rem auto 5rem auto;
@@ -93,7 +96,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .content .description .form-add-to-cart {
-	text-align: right;
+	text-align: left;
 	margin: 4em auto;
 }
 
@@ -157,7 +160,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     line-height: 2.3rem;
 }
 
-@media screen and (max-width: 860px){
+@media screen and (max-width: 60em){
 
 	.content .illustration {
 		float: none;
