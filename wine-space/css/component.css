@@ -407,7 +407,7 @@ body #cdawrap a:hover.carbon-poweredby {
 	visibility: hidden;
 	overflow: hidden;
 	overflow-y: scroll;
-	width: calc(100% + 1rem);
+	width: calc(100% + 0rem);
 	height: 100%;
 	margin: 0;
 	padding: 0;
