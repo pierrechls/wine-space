@@ -76,7 +76,7 @@
 			<div class="menu__wrap">
 				<ul data-menu="main" class="menu__level">
 				<?php 
-				$wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby' => 'ASC',  'parent' =>0));
+				$wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby'=>'id','order'=>'ASC',  'parent' =>0));
 				foreach($wcatTerms as $wcatTerm) :
 				?>
 					 <?php $children = get_terms( $wcatTerm->taxonomy, array( 'parent' => $wcatTerm->term_id, 'hide_empty' => false ) ); ?>
