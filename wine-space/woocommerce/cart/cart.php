@@ -14,16 +14,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <style>
-	
+
 	#primary{
 		background-color: #fff;
 	}
-	
-	
+
+
     .bp-header__main {
 	    display: none;
     }
-	
+
 	#primary h1 {
 	    background: #c4af78;
 	    padding: 3.5rem 1rem;
@@ -31,14 +31,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    margin: 0;
 	    font-size: 2.5rem;
     }
-    
+
     #primary h3 {
     	padding: 2rem 0;
     }
-    
+
     #primary .myaccount-content {
 	    font-size: 1.7rem;
 	    color: #000;
+			padding: 2rem;
     }
 
 	#primary .myaccount-content .shop_table.cart {
@@ -126,7 +127,7 @@ a.woocommerce-remove-coupon{
 	table tr td:nth-of-type(4):before { content: "PU TTC"; }
 	table tr td:nth-of-type(5):before { content: "Qté"; }
 	table tr td:nth-of-type(6):before { content: "Total"; }
-	
+
 	input, textarea{
 		font: 10px 'Lato', sans-serif;
 	}
@@ -256,14 +257,14 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<?php } ?>
 
 				<input type="submit" class="button" name="update_cart" value="<?php _e( 'Update Cart', 'woocommerce' ); ?>" />
-				
+
 				<input type="submit" class="button" name="clear-cart" value="<?php _e('Vider le panier', 'woocommerce'); ?>" />
-				
+
 				<?php do_action( 'woocommerce_cart_actions' ); ?>
 
 				<?php wp_nonce_field( 'woocommerce-cart' ); ?>
 			</td>
-			
+
 		</tr>
 
 		<?php do_action( 'woocommerce_after_cart_contents' ); ?>

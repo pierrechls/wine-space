@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	#primary{
 		background-color: #fff;
 	}
-	
+
 	#primary h1 {
 	    background: #c4af78;
 	    padding: 3.5rem 1rem;
@@ -26,28 +26,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    margin: 0;
 	    font-size: 2.5rem;
     }
-    
+
     #primary h3 {
     	padding: 2rem 0;
     }
-    
+
     #primary .myaccount-content {
 	    padding: 1rem 2rem;
 	    font-size: 1.7rem;
 	    color: #000;
     }
-    
+
     .bp-header__main {
 	    display: none;
     }
-    
+
     @media screen and (max-width: 60em){
-	
+
 		#primary h1 {
 			padding: 10rem 1rem 3rem 1rem;
 			text-align: center;
-		}	
-	
+		}
+
 	}
 
 header.entry-header{
@@ -86,7 +86,7 @@ form.checkout.woocommerce-checkout .col2-set .col-1, form.checkout.woocommerce-c
 	    display: block;
 	    vertical-align: top;
 	}
-	
+
 	form.checkout.woocommerce-checkout .col2-set .col-2{
 		margin: auto !important;
 		margin-top: 6em !important;
@@ -148,7 +148,7 @@ p.form-row.form-row-wide.create-account label.checkbox{
 }
 
 h3#order_review_heading{
-	background-color: #a18e38;
+		background-color: #000000;
     color: #fff;
     padding: 2rem;
     margin-bottom: 10px;
@@ -221,22 +221,22 @@ div#payment.woocommerce-checkout-payment div.form-row.place-order input[type="su
 	table.shop_table.woocommerce-checkout-review-order-table tr.order-total td:nth-of-type(1):before {
 	    content: "";
 	}
-	
+
 	table.shop_table.woocommerce-checkout-review-order-table tr.cart-subtotal, table.shop_table.woocommerce-checkout-review-order-table tr.shipping, table.shop_table.woocommerce-checkout-review-order-table tr.order-total{
 		padding: 1em;
 	}
-	
+
 	table.shop_table.woocommerce-checkout-review-order-table tbody{
 		margin-bottom: 1em;
 	}
 	table.shop_table.woocommerce-checkout-review-order-table tr.cart-subtotal th, table.shop_table.woocommerce-checkout-review-order-table tr.cart-subtotal td{
 		padding-top: 0;
 	}
-	
+
 	table.shop_table.woocommerce-checkout-review-order-table tfoot tr td{
 		padding-left: 0;
 	}
-	
+
 	div#payment.woocommerce-checkout-payment{
 		margin-top: 3em;
 	}

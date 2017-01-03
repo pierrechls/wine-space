@@ -138,6 +138,11 @@ a:hover {
 	text-align: right;
 }
 
+.bp-nav a{
+	font-size: 1.2rem;
+	padding: 0.7rem 0.9rem;
+}
+
 .bp-nav__item {
 	position: relative;
 	display: inline-block;
@@ -229,7 +234,7 @@ a:hover {
     padding: 3.5rem 0 0 0;
     text-align: center;
     color: #3b3d4a;
-    background: #000000;
+    background: #414141;
 }
 
 .dummy-logo img {
@@ -240,12 +245,12 @@ a:hover {
 .dummy-logo-icon {
 	position: absolute;
     top: 1rem;
-    left: 1rem;
+    left: 50%;
     width: 10rem;
     height: 10rem;
+    margin-left: -5rem;
     text-align: center;
     color: #3b3d4a;
-    background: #000000;
     display: none;
 }
 
@@ -327,23 +332,23 @@ body #cdawrap a:hover.carbon-poweredby {
 	.dummy-logo {
 		display: none;
 	}
-	
+
 	.dummy-logo-icon {
 		display: block;
 	}
-	
+
 	.menu .menu__wrap {
 		top: 17rem;
 	}
-	
+
 	.menu .menu__breadcrumbs {
 		top: 10rem;
 	}
-		
+
 	.category-product h1 {
 		padding: 0.6rem 2.8rem 0;
 	}
-	
+
 	.content {
 		margin: 0;
 	}
@@ -384,12 +389,17 @@ body #cdawrap a:hover.carbon-poweredby {
 /* Menu styles */
 
 .menu {
-	position: absolute;
+    position: absolute;
+    text-align: center;
     top: 17rem;
     left: 0;
     width: 30rem;
     height: calc(100vh - 17rem);
-    background: #000000;
+    background-color: #414141;
+    background-image: url('http://pierre-charles.com/BrainFactory/EspaceVin/wp-content/themes/wine-space/images/menu-background.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 .menu__wrap {
@@ -410,7 +420,7 @@ body #cdawrap a:hover.carbon-poweredby {
 	width: calc(100% + 0rem);
 	height: 100%;
 	margin: 0;
-	padding: 0;
+	padding: 0 0 3rem 0;
 	list-style-type: none;
 }
 
@@ -422,6 +432,8 @@ body #cdawrap a:hover.carbon-poweredby {
 	display: block;
 	width: calc(100% - 1rem);
 }
+
+
 
 .menu__item.space__item {
 	padding-top: 4rem;

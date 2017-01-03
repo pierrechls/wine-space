@@ -25,7 +25,7 @@ get_header(); ?>
 	
 	#primary .article_content h1{
 		color: #FFF !important;
-		background: #a18e38;
+		background: #000000;
 		padding: 10rem 2rem 5rem 3rem;
 		margin: 0 auto;
 		text-align: center;

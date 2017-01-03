@@ -14,7 +14,7 @@ get_header(); ?>
 
 <style>
 
-#primary{
+	#primary{
 		background: #fff;
 		min-height: 100vh;
 	}
@@ -31,7 +31,7 @@ get_header(); ?>
 	
 	#primary .article_content h1{
 		color: #FFF !important;
-		background: #a18e38;
+		background: #000000;
 		padding: 10rem 2rem 5rem 3rem;
 		margin: 0 auto;
 		text-align: center;
@@ -46,12 +46,14 @@ get_header(); ?>
 	    text-align: justify;
 	}
 	
-	#primary .article_content h2, #primary .article_content h3, #primary .article_content h4, #primary .article_content h5, #primary .article_content h6{
-		color:#38393a !important;
-	}
 	#primary .article_content a{
 		color:#38393a !important;
 	}
+	
+	#primary .article_content a.checkout-button{
+		color: #FFFFFF !important;
+	}
+	
 	#primary .article_content img {
 		display: block;
 		height: auto;
@@ -75,9 +77,9 @@ get_header(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 					
-					<h1> <?php the_title(); ?> </h1>
+					<!-- <h1> <?php the_title(); ?> </h1> -->
 					
-					<div class="actu-content">
+					<!-- <div class="actu-content"> -->
 					
 						<?php
 						//do_action( 'winespace_page_before' );
@@ -94,7 +96,7 @@ get_header(); ?>
 						
 						<?php the_content() ?>
 						
-					</div>
+					<!-- </div> -->
 				
 				<?php endwhile; // end of the loop. ?>
 				

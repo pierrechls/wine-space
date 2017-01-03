@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 	
 	#primary h2 {
-	    background: #c4af78;
+	    background: #000000;
 	    padding: 3.5rem 1rem;
 	    color: #FFF;
 	    margin: 0;

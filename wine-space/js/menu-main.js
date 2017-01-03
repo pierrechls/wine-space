@@ -112,7 +112,7 @@
 		for(var i = 0, len = this.menusArr.length; i < len; ++i) {
 			this.menusArr[i].menuItems.forEach(function(item, pos) {
 				item.querySelector('a').addEventListener('click', function(ev) {
-					console.log(ev);
+					//console.log(ev);
 					if(ev.target.className === "menu__link in"){
 						var submenu = ev.target.getAttribute('data-submenu'),
 							itemName = ev.target.innerHTML,
