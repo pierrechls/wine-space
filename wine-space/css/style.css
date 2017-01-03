@@ -335,7 +335,7 @@ input, textarea {
 	-moz-border-radius: 6px;
 	border-radius: 6px;
 	width: 75%;
-	max-width: 300px;
+	max-width: 30rem;
 	-moz-box-shadow: none;
 	box-shadow: none;
 }
@@ -344,7 +344,7 @@ input:focus, textarea:focus {
 }
 textarea {
 	width: 85%;
-	height: 250px;	
+	height: 25rem;	
 }
 .info {
 	color: orangered;

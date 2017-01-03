@@ -29,6 +29,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    font-size: 2.5rem;
     }
     
+    #primary h2 {
+	    padding: 3.5rem 1rem;
+	    margin: 0;
+	    font-size: 2.5rem;
+	    text-align: center;
+    }
+    
+    #primary .woocommerce {
+		width: 50rem;
+	    height: 20rem;
+	    margin: 0 auto;
+	    top: 50%;
+	    left: 50%;
+	    position: absolute;
+	    margin-top: -10rem;
+	    margin-left: -25rem;
+	}
+	
+	#primary .woocommerce p {
+		text-align: center;
+	}
+	
+	#primary .woocommerce form label {
+		display: block;
+		margin: 1rem auto;
+	}
+    
     #primary .entry-content{
 	    padding: 1rem;
 	    text-align: center;
@@ -52,6 +79,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 		#primary h1 {
 			padding: 10rem 1rem 3rem 1rem;
 			text-align: center;
+		}
+		
+		#primary .woocommerce {
+			width: 100%;
+		    height: auto;
+		    margin: 0 auto;
+		    top: 0;
+		    left: 0;
+		    position: relative;
+		    margin-top: 0;
+		    margin-left: 0;
+		    margin-top: 15rem;
+		    padding: 1rem;
 		}	
 	
 	}

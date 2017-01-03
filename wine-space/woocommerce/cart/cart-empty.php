@@ -21,6 +21,41 @@ if ( ! defined( 'ABSPATH' ) ) {
 	/*margin-top: -20px;*/
 }
 
+	#primary .woocommerce {
+		width: 50rem;
+	    height: 10rem;
+	    margin: 0 auto;
+	    top: 50%;
+	    left: 50%;
+	    position: absolute;
+	    margin-top: -5rem;
+	    margin-left: -25rem;
+	}
+	
+	#primary .woocommerce p {
+		text-align: center;
+	}
+	
+	#primary .woocommerce a.return-to-shop {
+		background: #c0c0c0;
+		padding: 1rem 2rem;
+		text-align: center;
+		display: block;
+		margin: 0 auto;
+		border: 2px solid #dce4ec;
+	    font: 15px 'Lato', sans-serif;
+	    font-weight: 300;
+	    padding: 8px 0 9px 10px;
+	    text-indent: 1px;
+	    -webkit-border-radius: 6px;
+	    -moz-border-radius: 6px;
+	    border-radius: 6px;
+	    width: 75%;
+	    max-width: 30rem;
+	    -moz-box-shadow: none;
+	    box-shadow: none;
+	}
+
 #primary .entry-content .woocommerce-message{
 	padding: 10rem 1.2rem;
     text-align: center;
@@ -76,6 +111,23 @@ header.entry-header{
 .footer-container{
 	margin-top: 0;
 }
+
+	@media screen and (max-width: 60em){
+		
+		#primary .woocommerce {
+			width: 100%;
+		    height: auto;
+		    margin: 0 auto;
+		    top: 0;
+		    left: 0;
+		    position: relative;
+		    margin-top: 0;
+		    margin-left: 0;
+		    margin-top: 15rem;
+		    padding: 1rem;
+		}	
+	
+	}
 
 </style>
 

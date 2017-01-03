@@ -22,7 +22,7 @@ div.woocommerce-message{
 	padding: 2rem 1.2rem;
     text-align: left;
     list-style: none;
-    background-color: #a18e38;
+    background-color: #b7a56d;
     color: #fff;
     text-transform: uppercase;
     font-size: 1.7rem;

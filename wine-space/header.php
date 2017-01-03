@@ -18,7 +18,7 @@
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css">
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/home-style.css">
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/supersized.css">
-
+		
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/lightbox/css/lightbox.css">
 
 	    <script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>

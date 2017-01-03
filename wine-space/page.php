@@ -18,42 +18,42 @@ get_header(); ?>
 		background: #fff;
 		min-height: 100vh;
 	}
-	
+
 	#primary p {
 		font-size: 1.6rem;
 	}
-	
+
 	#primary .article_content {
 	    margin: auto;
 	    width: 100%;
 	    text-align: justify;
 	}
-	
+
 	#primary .article_content h1{
 		color: #FFF !important;
-		background: #000000;
+		background: #b7a56d;
 		padding: 10rem 2rem 5rem 3rem;
 		margin: 0 auto;
 		text-align: center;
 		line-height: 1;
 		font-size: 3rem;
 	}
-	
+
 	#primary .article_content .actu-content{
 		padding: 2rem;
 	    margin: auto;
 	    width: 100%;
 	    text-align: justify;
 	}
-	
+
 	#primary .article_content a{
 		color:#38393a !important;
 	}
-	
+
 	#primary .article_content a.checkout-button{
 		color: #FFFFFF !important;
 	}
-	
+
 	#primary .article_content img {
 		display: block;
 		height: auto;
@@ -72,34 +72,34 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		
+
 			<div class="article_content">
 
 				<?php while ( have_posts() ) : the_post(); ?>
-					
+
 					<!-- <h1> <?php the_title(); ?> </h1> -->
-					
+
 					<!-- <div class="actu-content"> -->
-					
+
 						<?php
 						//do_action( 'winespace_page_before' );
 						?>
-						
+
 						<?php //get_template_part( 'content', 'page' ); ?>
-		
+
 						<?php
 						/**
 						 * @hooked winespace_display_comments - 10
 						 */
 						//do_action( 'winespace_page_after' );
 						?>
-						
+
 						<?php the_content() ?>
-						
+
 					<!-- </div> -->
-				
+
 				<?php endwhile; // end of the loop. ?>
-				
+
 			</div>
 
 		</main><!-- #main -->
