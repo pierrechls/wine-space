@@ -27,6 +27,18 @@
 	box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+	display: none;
+}
+::-webkit-scrollbar-track {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+ 
+html {overflow: -moz-scrollbars-none;}
+
 
 /* Helper classes */
 
@@ -399,8 +411,15 @@ body #cdawrap a:hover.carbon-poweredby {
     background-image: url('http://pierre-charles.com/BrainFactory/EspaceVin/wp-content/themes/wine-space/images/menu-background.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center bottom;
 }
+
+@media screen and (max-height: 540px) and (min-width: 60rem) {
+  .menu {
+	  background-position: center top;
+  }
+}
+
 
 .menu__wrap {
 	position: absolute;
@@ -420,7 +439,8 @@ body #cdawrap a:hover.carbon-poweredby {
 	width: calc(100% + 0rem);
 	height: 100%;
 	margin: 0;
-	padding: 0 0 3rem 0;
+	/* padding: 0 0 3rem 0; */
+	padding: 0;
 	list-style-type: none;
 }
 

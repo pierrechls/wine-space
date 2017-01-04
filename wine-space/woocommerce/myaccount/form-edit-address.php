@@ -45,6 +45,18 @@ get_currentuserinfo();
 	    padding: 1rem 2rem;
 	    font-size: 1.7rem;
 	    color: #000;
+		width: 100%;
+	    margin: 0 auto;
+	    text-align: center;
+    }
+    
+    #primary .myaccount-content form h3 {
+	    text-align: center;
+    }
+    
+    #primary .myaccount-content form label {
+	    display: block;
+		margin: 2rem auto 1rem auto;
     }
     
     @media screen and (max-width: 60em){
@@ -73,6 +85,8 @@ get_currentuserinfo();
 	<?php wc_get_template( 'myaccount/my-address.php' ); ?>
 
 <?php else : ?>
+
+<h1>Editer mon adresse</h1>
 
 <div class="myaccount-content">
 

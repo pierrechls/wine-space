@@ -20,7 +20,7 @@ if ( ! $messages ){
 <style>
 ul.woocommerce-error{
 	padding: 2rem 1.2rem;
-    text-align: left;
+    text-align: center;
     list-style: none;
     background-color: #b7a56d;
     color: #fff;
