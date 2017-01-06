@@ -436,7 +436,7 @@ body #cdawrap a:hover.carbon-poweredby {
 	visibility: hidden;
 	overflow: hidden;
 	overflow-y: scroll;
-	width: calc(100% + 0rem);
+	width: calc(100% + 10rem);
 	height: 100%;
 	margin: 0;
 	/* padding: 0 0 3rem 0; */
@@ -450,7 +450,7 @@ body #cdawrap a:hover.carbon-poweredby {
 
 .menu__item {
 	display: block;
-	width: calc(100% - 1rem);
+	width: calc(100% - 10rem);
 }
 
 
