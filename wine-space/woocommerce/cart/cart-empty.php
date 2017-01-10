@@ -31,11 +31,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    margin-top: -5rem;
 	    margin-left: -25rem;
 	}
-	
+
 	#primary .woocommerce p {
 		text-align: center;
 	}
-	
+
 	#primary .woocommerce a.return-to-shop {
 		background: #c0c0c0;
 		padding: 1rem 2rem;
@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		display: block;
 		margin: 0 auto;
 		border: 2px solid #dce4ec;
-	    font: 15px 'Lato', sans-serif;
+	    font: 1.5rem 'Lato', sans-serif;
 	    font-weight: 300;
 	    padding: 8px 0 9px 10px;
 	    text-indent: 1px;
@@ -113,7 +113,7 @@ header.entry-header{
 }
 
 	@media screen and (max-width: 60em){
-		
+
 		#primary .woocommerce {
 			width: 100%;
 		    height: auto;
@@ -125,8 +125,8 @@ header.entry-header{
 		    margin-left: 0;
 		    margin-top: 15rem;
 		    padding: 1rem;
-		}	
-	
+		}
+
 	}
 
 </style>

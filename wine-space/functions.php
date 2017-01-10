@@ -28,7 +28,7 @@ require get_template_directory() . '/inc/init.php';
                 if ( $post = get_post( $coupon->id ) ) {
                         if ( !empty( $post->post_excerpt ) ) {
                             //echo "<span class='coupon-name'><b>".$coupon->code."</b></span>";
-                            echo "<p style='padding: 1em;text-align: center; color: #fff;font-weight: 800;background-color: #a18e38;' class='coupon-description'>".$post->post_excerpt."</p>";
+                            echo "<p style='padding: 1em;text-align: center; color: #fff;font-weight: 800;background-color: #b7a56d;' class='coupon-description'>".$post->post_excerpt."</p>";
                         }
                 }
             }

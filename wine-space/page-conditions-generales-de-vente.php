@@ -24,7 +24,7 @@ get_header(); ?>
 	    margin: 0;
 	    display: block;
 	    padding: 1em;
-	    color: #a18e38;
+	    color: #b7a56d;
 	    line-height: 1;
 	}
 		

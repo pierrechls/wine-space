@@ -72,7 +72,7 @@ div.coupon{
 .wc-proceed-to-checkout a {
     text-align: center;
     border: none;
-    background-color: #a18e38;
+    background-color: #b7a56d;
     color: white;
     font-size: 16.5px;
     padding: 10px 20px;
@@ -101,7 +101,7 @@ a.woocommerce-remove-coupon{
 }
 
 .woocommerce-message{
-	background-color: #a18e38;
+	background-color: #b7a56d;
     color: #FFF;
     position: relative;
     /* vertical-align: middle; */
@@ -117,7 +117,7 @@ a.woocommerce-remove-coupon{
     position: relative;
     vertical-align: middle;
     /* float: right; */
-    /* color: #a18e38; */
+    /* color: #b7a56d; */
 }
 
 @media only screen and (max-width: 480px) {

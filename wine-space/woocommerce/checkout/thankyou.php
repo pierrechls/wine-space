@@ -12,6 +12,7 @@
  
   #primary {
 	  color: #000;
+	  line-height: 1.2;
 	  padding: 0 !important;
   }
   
@@ -25,6 +26,25 @@
   
   .bp-header__main {
 	  display: none;
+  }
+  
+  #primary .article_content a.return-to-shop {
+	  color: #FFF !important;
+  }
+  
+  #primary .myaccount-content {
+	    padding: 1rem 2rem 10rem 2rem;
+	    font-size: 1.7rem;
+	    color: #000;
+    }
+    
+  #primary h2.thankyou-title {
+	  background: #c4af78;
+	  padding: 6rem 1rem;
+	  color: #FFF;
+	  margin: 0;
+	  font-size: 2.5rem;
+	  text-align: center;
   }
   
   .entry-content {
@@ -45,6 +65,10 @@
 			padding: 10rem 1rem 3rem 1rem;
 			text-align: center;
 		}	
+		
+		#primary h2.thankyou-title {
+		  padding: 10rem 1rem 6rem 1rem;
+	  }
 	
 	}
   
@@ -59,6 +83,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( $order ) : ?>
 
 	<?php if ( $order->has_status( 'failed' ) ) : ?>
+	
+		<h2 class="thankyou-title">Oups...!</h2>
+		
+		<div class="myaccount-content" >
 
 		<p><?php _e( 'Unfortunately your order cannot be processed as the originating bank/merchant has declined your transaction.', 'woocommerce' ); ?></p>
 
@@ -77,6 +105,10 @@ if ( $order ) : ?>
 		</p>
 
 	<?php else : ?>
+	
+		<h2 class="thankyou-title">Merci !</h2>
+		
+		<div class="myaccount-content" >
 
 		<p><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); ?></p>
 
@@ -112,3 +144,5 @@ if ( $order ) : ?>
 	<p><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', __( 'Thank you. Your order has been received.', 'woocommerce' ), null ); ?></p>
 
 <?php endif; ?>
+
+</div>

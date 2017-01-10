@@ -70,7 +70,7 @@ get_currentuserinfo();
     
 	abbr[title] {
 	    border-bottom: none;
-	    color: #a18e38;
+	    color: #b7a56d;
 	    padding-right: 10px;
 	}
 	label{

@@ -20,63 +20,63 @@ $order = wc_get_order( $order_id );
 		background-color: #fff;
 		padding: 1em;
 	}
-	
+
 	h1.entry-title{
-		color: #a18e38;
+		color: #b7a56d;
 	}
-	
+
 	table tbody tr.order_item td.product-name{
 		display: block;
 	    text-align: center;
 	    margin: auto;
 	    color: #38393a;
 	}
-	
+
 	table tbody tr.order_item td.product-name a{
 		display: block;
 	    text-align: center;
 	    margin: auto;
 	    color: #38393a;
 	}
-	
+
 	table tr td, table tr th{
 		text-align: center;
 	}
-	
+
 	a.return-to-shop{
 	    text-align: center;
 	    display: block;
 	    margin: auto;
 	    border: none;
-	    background-color: #a18e38;
+	    background-color: #b7a56d;
 	    color: white;
-	    font-size: 16.5px;
-	    padding: 10px 20px;
+	    font-size: 1.5rem;
+	    padding: 1rem 2rem;
 	    width: 50%;
-	    max-width: 200px;
+	    max-width: 20rem;
 	    -moz-transition: 0.25s;
 	    -o-transition: 0.25s;
 	    transition: 0.25s;
 	    -webkit-backface-visibility: hidden;
-	    font: 15px 'Lato', sans-serif;
+	    font: 1.5rem 'Lato', sans-serif;
 	    font-weight: 300;
-	    text-indent: 1px;
-	    -webkit-border-radius: 6px;
-	    -moz-border-radius: 6px;
-	    border-radius: 6px;
+	    text-indent: 1rem;
+	    -webkit-border-radius: 0.6rem;
+	    -moz-border-radius: 0.6rem;
+	    border-radius: 0.6rem;
 	    -moz-box-shadow: none;
 	    box-shadow: none;
-	    margin-top: 2em;
+	    margin-top: 2rem;
 	}
 
 	a.return-to-shop:hover {
-	    background-color: #ad993e;
+	    background-color: #b7a56d;
 	}
-	
+
 	h3{
 		margin-bottom: 1em;
 	}
-	
+
 	@media only screen and (max-width: 480px) {
 		table tr td:nth-of-type(1):before { content: "Cuvée"; }
 		table tr td:nth-of-type(2):before { content: "Total"; }
@@ -84,21 +84,21 @@ $order = wc_get_order( $order_id );
 		table tr td:nth-of-type(4):before { content: ""; }
 		table tr td:nth-of-type(5):before { content: ""; }
 		table tr td:nth-of-type(6):before { content: ""; }
-		
+
 		table tfoot tr td:nth-of-type(1):before { content: ""; }
 		table tfoot tr td:nth-of-type(2):before { content: ""; }
 		table tfoot tr td:nth-of-type(3):before { content: ""; }
 		table tfoot tr td:nth-of-type(4):before { content: ""; }
 		table tfoot tr td:nth-of-type(5):before { content: ""; }
 		table tfoot tr td:nth-of-type(6):before { content: ""; }
-		
+
 		table tfoot tr td{ padding-left: 0; }
-		
+
 		table.customer_details tr td:nth-of-type(1):before{ content: ""; }
 		table.customer_details tr td { padding-left: 0; }
 	}
 }
-	
+
 </style>
 <h2><?php _e( 'Order Details', 'woocommerce' ); ?></h2>
 <table class="shop_table order_details">

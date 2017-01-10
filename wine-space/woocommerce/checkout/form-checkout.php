@@ -55,7 +55,7 @@ header.entry-header{
 }
 
 .woocommerce-info{
-	background-color: #a18e38;
+	background-color: #b7a56d;
 	display: block;
 	float: left;
     width: 100%;
@@ -91,7 +91,7 @@ form.checkout.woocommerce-checkout .col2-set .col-1, form.checkout.woocommerce-c
 		margin: auto !important;
 		margin-top: 6em !important;
 	    border-left: none !important;
-	    border-top: 2px solid #a18e38;
+	    border-top: 2px solid #b7a56d;
 	    padding-top: 3em !important;
 	    padding-left: 0 !important;
 	}
@@ -99,7 +99,7 @@ form.checkout.woocommerce-checkout .col2-set .col-1, form.checkout.woocommerce-c
 
 form.checkout.woocommerce-checkout .col2-set .col-2{
 	margin: auto;
-    border-left: 2px solid #a18e38;
+    border-left: 2px solid #b7a56d;
     padding-left: 6em;
 }
 
@@ -126,7 +126,7 @@ form.checkout.woocommerce-checkout textarea{
 
 form.checkout.woocommerce-checkout abbr.required{
 	border-bottom: none;
-    color: #a18e38;
+    color: #b7a56d;
     font-weight: 800;
 }
 
@@ -148,7 +148,7 @@ p.form-row.form-row-wide.create-account label.checkbox{
 }
 
 h3#order_review_heading{
-		background-color: #000000;
+	background-color: #b7a56d;
     color: #fff;
     padding: 2rem;
     margin-bottom: 10px;
@@ -178,7 +178,7 @@ div#payment.woocommerce-checkout-payment div.form-row.place-order input[type="su
 div#payment.woocommerce-checkout-payment div.form-row.place-order input[type="submit"] {
     text-align: center;
     border: none;
-    background-color: #a18e38;
+    background-color: #b7a56d;
     color: white;
     font-size: 16.5px;
     margin: 3em auto 1em auto;

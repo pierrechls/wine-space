@@ -27,6 +27,7 @@ ul.woocommerce-error{
     text-transform: uppercase;
     font-size: 1.7rem;
     margin: 0;
+    display: none;
 }
 @media only screen and (max-width: 60em){
 	ul.woocommerce-error{

@@ -115,6 +115,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     vertical-align: top;
     text-align: center;
     border: 0.3rem solid #000;
+    margin: 1rem auto;
 }
 
 
@@ -128,6 +129,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     padding: 1.1rem 1.3rem;
     vertical-align: top;
     border-radius: 0.8rem;
+    margin: 1rem auto;
 }
 
 .content .description .informations {
@@ -228,7 +230,7 @@ get_header( 'shop' ); ?>
 					
 					            ?>
 					            <form action="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="cart" method="post" enctype='multipart/form-data'>
-					
+									
 					                <?php woocommerce_quantity_input(); ?>
 					
 					                <button type="submit" class="button alt">Ajouter au panier</button>

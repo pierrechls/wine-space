@@ -6,7 +6,7 @@
  * @package 	WooCommerce/Templates
  * @version     2.0.0
  */
- 
+
  ?>
 
 <style>
@@ -18,7 +18,7 @@
 }
 
 .woocommerce-message{
-	background-color: #a18e38;
+	background-color: #b7a56d;
     color: #F7F7F7;
     text-align: center;
     margin: auto;
@@ -30,18 +30,36 @@
 form.login{
 	display: block !important;
 	background-color: #F7F7F7;
-    padding: 4em 1em 0 1em;
+    padding: 1rem;
     text-align: center;
 }
 
+form.login p label{
+	margin: 1rem;
+}
+
+
 form.login p.form-row{
+	display: block;
+}
+
+form.login p.form-row.form-row-first, form.login p.form-row.form-row-last {
 	display: inline-block;
 }
 
+@media screen and (max-width: 60em){
+	form.login p label{
+		display: block;
+	}
+	form.login p.form-row.form-row-first, form.login p.form-row.form-row-last {
+	    display: block;
+	    padding: 0.5em 0;
+	}
+}
+
 form.login p.form-row input[type="submit"]{
-	padding: 5px 10px;
-	width: auto;
-	margin-right: 10px;
+	margin: 1rem auto;
+	display: block;
 }
 
 form.login p.form-row input#rememberme{
@@ -65,14 +83,6 @@ div.clear{
 	display: none;
 }
 
-@media screen and (max-width: 830px){
-	form.login p.form-row {
-	    display: block;
-	    padding: 0.5em 0;
-	}
-	
-}
-
 
 </style>
 
@@ -93,7 +103,7 @@ wc_print_notice( $info_message, 'notice' );
 <?php
 	woocommerce_login_form(
 		array(
-			'message'  => __( 'If you have shopped with us before, please enter your details in the boxes below. If you are a new customer please proceed to the Billing &amp; Shipping section.', 'woocommerce' ),
+			'message'  => __( '', 'woocommerce' ),
 			'redirect' => wc_get_page_permalink( 'checkout' ),
 			'hidden'   => true
 		)
