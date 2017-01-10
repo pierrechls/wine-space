@@ -49,13 +49,13 @@ get_header(); ?>
     color: white;
     font-size: 1.6rem;
     padding: 1rem 2rem;
-    width: 50%;
+    width: 75%;
     max-width: 20rem;
     -moz-transition: 0.25s;
     -o-transition: 0.25s;
     transition: 0.25s;
     -webkit-backface-visibility: hidden;
-    font: 15px 'Lato', sans-serif;
+    font: 1.6rem 'Lato', sans-serif;
     font-weight: 300;
     text-indent: 0.1rem;
     -webkit-border-radius: 0.6rem;
@@ -89,11 +89,11 @@ section.error-404.not-found {
 			<section class="error-404 not-found">
 
 				<div class="page-content">
-					
+
 					<h1 class="page-title">Oups ! Cette page n’a pas été trouvée.</h1>
-				
+
 					<p>Il semblerait qu'aucune page ne corresponde à votre recherche...</p>
-					
+
 					<a class="return-to-shop" href="<?php echo get_site_url(); ?>">Retour à l'accueil</a>
 
 				</div><!-- .page-content -->
