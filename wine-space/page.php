@@ -76,10 +76,13 @@ get_header(); ?>
 			<div class="article_content">
 
 				<?php while ( have_posts() ) : the_post(); ?>
-
-					<!-- <h1> <?php the_title(); ?> </h1> -->
-
-					<!-- <div class="actu-content"> -->
+				
+					<?php if( !is_realy_woocommerce_page() ) { ?>
+				
+						<h1><?php the_title() ?></h1>
+						<div class="actu-content"><?php the_content() ?></div>
+				
+					<?php } else { ?>
 
 						<?php
 						//do_action( 'winespace_page_before' );
@@ -96,7 +99,7 @@ get_header(); ?>
 
 						<?php the_content() ?>
 
-					<!-- </div> -->
+					<? } ?>
 
 				<?php endwhile; // end of the loop. ?>
 
