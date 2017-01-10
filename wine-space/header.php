@@ -7,7 +7,7 @@
 	    <meta name="description" content="<?php bloginfo('description'); ?>">
 	    <meta name="author" content="<?php bloginfo('name'); ?>" />
 	    <meta property="og:url" content="<?php echo get_site_url(); ?>/" />
-	    <meta property="og:image" content="<?php echo get_site_url(); ?>/images/og-image.png" />
+	    <meta property="og:image" content="<?php bloginfo('template_directory'); ?>/images/og-image.png" />
 	    <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 	    <meta property="og:description" content="<?php bloginfo('description'); ?>" />
 
@@ -51,7 +51,8 @@
 			<div class="dummy-logo">
 				<a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png"/></a>
 			</div>
-			<div class="bp-header__main">
+			<!--
+<div class="bp-header__main">
 				<nav class="bp-nav">
 					<a class="bp-nav__item" href="<?php echo get_site_url(); ?>/mon-compte/" data-info="Compte"><i class="fa fa-user" aria-hidden="true"></i></a>
 					<a class="bp-nav__item" href="<?php echo wc_get_cart_url(); ?>" data-info="Panier"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
@@ -66,6 +67,7 @@
 					</a>
 				</nav>
 			</div>
+-->
 		</header>
 		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
 		<nav id="ml-menu" class="menu">
@@ -121,3 +123,18 @@
 			</div>
 		</nav>
 		<div class="content">
+			<div class="bp-header__main <?php if(is_home()) echo "home" ?>">
+				<nav class="bp-nav">
+					<a class="bp-nav__item" href="<?php echo get_site_url(); ?>/mon-compte/" data-info="Compte"><i class="fa fa-user" aria-hidden="true"></i></a>
+					<a class="bp-nav__item" href="<?php echo wc_get_cart_url(); ?>" data-info="Panier"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+					<a class="cart-contents" href="<?php echo wc_get_cart_url(); ?>">
+						<?php 
+						if( WC()->cart->get_cart_contents_count() > 1 ) {
+							echo sprintf ( _n( '%d produits', '%d produits', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total();
+						} else {
+							echo sprintf ( _n( '%d produit', '%d produit', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total();
+						}
+						?>
+					</a>
+				</nav>
+			</div>
