@@ -21,14 +21,10 @@ get_currentuserinfo();
 
 <style>
 
-	.bp-header__main {
-		display: none;
-	}
-
 	#primary{
 		background-color: #fff;
 	}
-	
+
 	#primary h1 {
 	    background: #c4af78;
 	    padding: 3.5rem 1rem;
@@ -36,11 +32,11 @@ get_currentuserinfo();
 	    margin: 0;
 	    font-size: 2.5rem;
     }
-    
+
     #primary h3 {
     	padding: 2rem 0;
     }
-    
+
     #primary .myaccount-content {
 	    padding: 1rem 2rem;
 	    font-size: 1.7rem;
@@ -49,25 +45,25 @@ get_currentuserinfo();
 	    margin: 0 auto;
 	    text-align: center;
     }
-    
+
     #primary .myaccount-content form h3 {
 	    text-align: center;
     }
-    
+
     #primary .myaccount-content form label {
 	    display: block;
 		margin: 2rem auto 1rem auto;
     }
-    
+
     @media screen and (max-width: 60em){
-	
+
 		#primary h1 {
 			padding: 10rem 1rem 3rem 1rem;
 			text-align: center;
-		}	
-	
+		}
+
 	}
-    
+
 	abbr[title] {
 	    border-bottom: none;
 	    color: #b7a56d;
@@ -111,7 +107,7 @@ get_currentuserinfo();
 		</p>
 
 	</form>
-	
+
 </div>
 
 <?php endif; ?>

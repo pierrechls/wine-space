@@ -65,10 +65,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 4rem auto 1rem auto;
 }
 
-.bp-header__main {
-	display: none;
-}
-
 header.entry-header{
 	display: none;
 }

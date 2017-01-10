@@ -16,10 +16,6 @@ wc_print_notices(); ?>
 <style>
 
 
-    .bp-header__main {
-	    display: none;
-    }
-
 	#primary{
 		background-color: #fff;
 	}

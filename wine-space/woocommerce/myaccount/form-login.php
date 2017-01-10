@@ -18,14 +18,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	#primary{
 		background-color: #fff;
 	}
-	
+
 	#primary h2 {
 	    padding: 3.5rem 1rem;
 	    margin: 0;
 	    font-size: 2.5rem;
 	    text-align: center;
     }
-    
+
     #primary .woocommerce {
 		width: 50rem;
 	    height: 40rem;
@@ -36,25 +36,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    margin-top: -20rem;
 	    margin-left: -25rem;
 	}
-	
+
 	#primary .woocommerce p {
 		text-align: center;
 	}
-	
+
 	#primary .woocommerce form.login label {
 		display: block;
 		margin: 1rem auto;
 	}
-    
+
     #primary .entry-content form.login{
 	    padding: 1rem;
 	    text-align: center;
     }
-    
+
     #primary .entry-content form.login label {
 	    display: block;
     }
-    
+
 	#primary a{
 		color : #38393a;
 		font-weight: 600;
@@ -65,18 +65,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	input#rememberme{
 		width: auto;
 	}
-	
-	.bp-header__main {
-	    display: none;
-    }
-	
+
 	@media screen and (max-width: 60em){
-	
+
 		#primary h2 {
 			padding: 10rem 1rem 3rem 1rem;
 			text-align: center;
-		}	
-		
+		}
+
 		#primary .woocommerce {
 			width: 100%;
 		    height: auto;
@@ -88,9 +84,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		    margin-left: 0;
 		    margin-top: 5rem;
 		}
-	
+
 	}
-	
+
 </style>
 
 <?php wc_print_notices(); ?>

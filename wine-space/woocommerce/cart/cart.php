@@ -19,11 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		background-color: #fff;
 	}
 
-
-    .bp-header__main {
-	    display: none;
-    }
-
 	#primary h1 {
 	    background: #c4af78;
 	    padding: 3.5rem 1rem;

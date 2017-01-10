@@ -18,24 +18,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php wc_print_notices(); ?>
 
 <style>
-	
-	.bp-header__main {
-		display: none;
-	}
 
 	#primary{
 		background-color: #fff;
 		padding: 0 !important;
 	}
-	
+
 	#primary .order-content{
 		padding: 2rem;
 	}
-	
+
 	#primary .entry-content {
 		padding: 2rem;
 	}
-	
+
 	#primary h1.entry-title {
 		background: #c4af78;
 	    padding: 3.5rem 1rem;
@@ -43,17 +39,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    margin: 0;
 	    font-size: 2.5rem;
 	}
-	
+
 	@media screen and (max-width: 60em){
-	
+
 		#primary h1.entry-title {
 			padding: 10rem 1rem 3rem 1rem;
 			text-align: center;
-		}	
-	
+		}
+
 	}
-	
-	
+
+
 	#primary a{
 		color : #38393a;
 		font-weight: 600;
@@ -64,46 +60,46 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    background: none;
 	    font-weight: 600;
 	}
-	
+
 	header.title{
 		margin-bottom: 10px;
 	}
-	
+
 	table th {
 		font-weight: 600;
 	}
-	
-	@media only screen and (max-width: 480px) { 
-		table, thead, tbody, th, td, tr { 
-			display: block; 
-		}	
-		table thead tr { 
+
+	@media only screen and (max-width: 480px) {
+		table, thead, tbody, th, td, tr {
+			display: block;
+		}
+		table thead tr {
 			position: absolute;
 			top: -9999px;
 			left: -9999px;
-		}	
-		table tr { border: 1px solid #ccc; }	
-		table tr td { 
+		}
+		table tr { border: 1px solid #ccc; }
+		table tr td {
 			border: none;
-			border-bottom: 1px solid #eee; 
+			border-bottom: 1px solid #eee;
 			position: relative;
 			padding-left: 0;
 			text-align: center;
-		}	
-		table tr td:before { 
+		}
+		table tr td:before {
 			position: absolute;
 			top: 6px;
 			left: 6px;
-			width: 45%; 
-			padding-right: 10px; 
+			width: 45%;
+			padding-right: 10px;
 			white-space: nowrap;
-		}	
+		}
 		table tr td:nth-of-type(1):before { content: ""; }
 		table tr td:nth-of-type(2):before { content: ""; }
 		table tr td:nth-of-type(3):before { content: ""; }
 		table tr td:nth-of-type(4):before { content: ""; }
 		table tr td:nth-of-type(5):before { content: ""; }
-		
+
 		a.edit{
 		    margin-top: 10px;
 		    display: block;
@@ -139,5 +135,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 		endif;
 
 		do_action( 'woocommerce_view_order', $order_id ); ?>
-		
+
 	</div>

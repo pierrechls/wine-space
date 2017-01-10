@@ -37,10 +37,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    color: #000;
     }
 
-    .bp-header__main {
-	    display: none;
-    }
-
     @media screen and (max-width: 60em){
 
 		#primary h1 {

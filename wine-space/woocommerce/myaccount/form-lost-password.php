@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	#primary{
 		background-color: #fff;
 	}
-	
+
 	#primary h1 {
 	    background: #c4af78;
 	    padding: 3.5rem 1rem;
@@ -28,14 +28,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    margin: 0;
 	    font-size: 2.5rem;
     }
-    
+
     #primary h2 {
 	    padding: 3.5rem 1rem;
 	    margin: 0;
 	    font-size: 2.5rem;
 	    text-align: center;
     }
-    
+
     #primary .woocommerce {
 		width: 50rem;
 	    height: 20rem;
@@ -46,41 +46,37 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    margin-top: -10rem;
 	    margin-left: -25rem;
 	}
-	
+
 	#primary .woocommerce p {
 		text-align: center;
 	}
-	
+
 	#primary .woocommerce form label {
 		display: block;
 		margin: 1rem auto;
 	}
-    
+
     #primary .entry-content{
 	    padding: 1rem;
 	    text-align: center;
     }
-    
+
     #primary .entry-content label {
 	    display: block;
     }
-    
+
 	#primary a{
 		color : #38393a;
 		font-weight: 600;
 	}
-	
-	.bp-header__main {
-	    display: none;
-    }
-	
+
 	@media screen and (max-width: 60em){
-	
+
 		#primary h1 {
 			padding: 10rem 1rem 3rem 1rem;
 			text-align: center;
 		}
-		
+
 		#primary .woocommerce {
 			width: 100%;
 		    height: auto;
@@ -92,10 +88,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 		    margin-left: 0;
 		    margin-top: 15rem;
 		    padding: 1rem;
-		}	
-	
+		}
+
 	}
-	
+
 </style>
 
 <form method="post" class="lost_reset_password">

@@ -19,8 +19,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	#primary{
 		background-color: #fff;
-		padding: 1em;
 	}
+	#primary .myaccount-content {
+	    padding: 1rem 2rem 10rem 2rem;
+	    font-size: 1.7rem;
+	    color: #000;
+    }
 	header.entry-header{
 		display: none;
 	}
@@ -31,6 +35,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 </style>
 
 <h1>Modifier le compte</h1>
+
+<div class="myaccount-content">
 
 <form action="" method="post">
 
@@ -80,3 +86,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'woocommerce_edit_account_form_end' ); ?>
 
 </form>
+
+</div>
