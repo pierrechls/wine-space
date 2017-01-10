@@ -175,6 +175,10 @@ a {
 	line-height: 1.2;
 }
 
+#primary .article_content a.return-to-shop {
+	color: #FFF !important;
+}
+
 #code_promo img{
 	height: auto;
 	width: 100%
@@ -303,12 +307,12 @@ h2 {
 }
 
 h3 {
-	font-size: 1.2em;
+	font-size: 2rem;
 	text-align: left;
 	font-weight: 500;	
-	padding: 1%;
+	padding: 1.5rem 0;
 	color: #b7a56d;
-	margin-bottom: -10px;
+	margin-bottom: -1rem;
 }
 
 table {
@@ -321,7 +325,7 @@ table thead tr {
 	background: none !important;
 }
 table tr td, table tr th {
-	padding: 3px 5px;
+	padding: 0.3rem 0.5rem;
 	text-align: left;
 }
 table tr th {
@@ -340,22 +344,22 @@ table tr th {
 	display: none;
 }
 input, textarea {
-	border: 2px solid #dce4ec;
+	border: 0.2rem solid #dce4ec;
 	color: #38393a;
-	font: 15px 'Lato', sans-serif;
+	font: 1.5rem 'Lato', sans-serif;
 	font-weight: 300;
-	padding: 8px 0 9px 10px;
-	text-indent: 1px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
+	padding: 0.8rem 0 0.9rem 1rem;
+	text-indent: 0.1rem;
+	-webkit-border-radius: 0.6rem;
+	-moz-border-radius: 0.6rem;
+	border-radius: 0.6rem;
 	width: 75%;
 	max-width: 30rem;
 	-moz-box-shadow: none;
 	box-shadow: none;
 }
 input:focus, textarea:focus {
-	border: 2px solid #b7a56d;
+	border: 0.2rem solid #b7a56d;
 }
 textarea {
 	width: 85%;
@@ -368,10 +372,10 @@ input.bouton {
 	border: none;
 	background-color: #b7a56d;
 	color: white;
-	font-size: 16.5px;
-	padding: 8px 0;
+	font-size: 1.65rem;
+	padding: 0.8rem 0;
 	width: 50%;
-	max-width: 200px;
+	max-width: 20rem;
 	-moz-transition: 0.25s;
 	-o-transition: 0.25s;
 	transition: 0.25s;
@@ -394,11 +398,11 @@ input.bouton:hover {
 
 .container-video{
 	margin: 0 !important;
-	margin-top: -100px;
+	margin-top: -10rem;
 }
 
 .container-video video{
-	margin-top: -5px;
+	margin-top: -0.5rem;
 	width: 100%;
 }
 
@@ -407,12 +411,12 @@ input.bouton:hover {
 }
 .footer-container footer {
     color: white;
-    padding: 15px 0;
+    padding: 1.5rem 0;
 }
 footer p {
 	text-align: center;
 	margin: 0 auto;
-	font-size: 0.9em;
+	font-size: 0.9rem;
 }
 footer a {
 	color: #fff;
@@ -425,8 +429,8 @@ footer a {
 	background: url("../img/logo-cp-creation.png") 100% 100% no-repeat;
 	display: block;
 	float: right;
-	height: 25px;
-	width: 25px;
+	height: 2.5rem;
+	width: 2.5rem;
 	margin-top: -3px;
 	transition: all 0.4s ease-in-out;
 	-moz-transition: all 0.4s ease-in-out;
@@ -436,7 +440,7 @@ footer a {
 	background-position: 0 0;
 }
 .ie7 .title {
-    padding-top: 20px;
+    padding-top: 2rem;
 }
 p.tot {
 	width: 70%;
@@ -680,6 +684,14 @@ nav a {
 
 .clearfix {
     *zoom: 1;
+}
+
+address {
+	font-size: 1.6rem;
+}
+
+table {
+	font-size: 1.6rem;
 }
 
 /* ==========================================================================

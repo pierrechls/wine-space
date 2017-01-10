@@ -92,9 +92,16 @@ a:hover {
 	position: absolute;
 	right: 0;
     z-index: 99;
+    width: 100%;
 	margin: 0 0 0 auto;
-	padding: 2rem 4rem 0 0;
+	padding: 2rem 4rem 2rem 0;
 	text-align: right;
+	background: #b7a56d;
+}
+
+.bp-header__main.home {
+	background: transparent;
+	position: absolute;
 }
 
 .bp-header__title {
@@ -146,7 +153,7 @@ a:hover {
 }
 
 .bp-nav {
-	margin: 1rem 0 0 auto;
+	margin: 1rem 0 1rem auto;
 	text-align: right;
 }
 
@@ -174,7 +181,7 @@ a:hover {
 	font-size: 0.85em;
 	font-weight: bold;
 	position: absolute;
-	top: 120%;
+	top: 100%;
 	left: -250%;
 	width: 600%;
 	text-align: center;
@@ -247,6 +254,7 @@ a:hover {
     text-align: center;
     color: #3b3d4a;
     background: #414141;
+    z-index: 9999;
 }
 
 .dummy-logo img {
@@ -334,11 +342,15 @@ body #cdawrap a:hover.carbon-poweredby {
 	.bp-header {
 		/*padding-top: 3em;*/
 	}
+	.bp-header__main{
+		position: relative;	
+	}
+	
 	.bp-header__main,
 	.bp-nav {
-		padding: 1.2rem 1rem;
-	    /* width: 100%; */
-	    text-align: center;
+		padding: 1rem;
+	    width: 100%;
+	    text-align: right;
 	    margin: 0;
 	}
 	.dummy-logo {
@@ -408,10 +420,11 @@ body #cdawrap a:hover.carbon-poweredby {
     width: 30rem;
     height: calc(100vh - 17rem);
     background-color: #414141;
-    background-image: url('http://pierre-charles.com/BrainFactory/EspaceVin/wp-content/themes/wine-space/images/menu-background.jpg');
+    background-image: url('../images/menu-background.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center bottom;
+    z-index: 9999;
 }
 
 @media screen and (max-height: 540px) and (min-width: 60rem) {
@@ -635,13 +648,13 @@ body #cdawrap a:hover.carbon-poweredby {
 	font-size: 1.65rem;
 	line-height: 1rem;
 	position: relative;
-	padding: 3.3rem 3.75rem 0.8rem 1rem;
+	padding: 3.3rem 0 0.8rem 0;
 }
 
 .menu__breadcrumbs a {
 	font-weight: bold;
 	font-size: 0.8rem;
-	display: inline-block;
+	/* display: inline-block; */
 	cursor: pointer;
 	vertical-align: middle;
 	letter-spacing: 1px;
