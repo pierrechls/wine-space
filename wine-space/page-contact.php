@@ -103,19 +103,45 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		
+			<?php 
+			
+				$APIkey = '';
+				$GoogleMapLat = '';
+				$GoogleMapLong = '';
+				$GoogleZoom = '';
+					
+				$args = array( 'post_type' => 'google-map', 'posts_per_page' => 1, 'orderby' => 'date', 'order' => 'DESC' );
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post();
+				
+					$APIkey = do_shortcode( "[types field='api-key'][/types]" );
+					if( $APIkey != '' ) { ?>
+						
+						<?php $GoogleMapLat = do_shortcode( "[types field='latitude'][/types]" ); ?>
+						<?php $GoogleMapLong = do_shortcode( "[types field='longitude'][/types]" ); ?>
+						<?php $GoogleZoom = do_shortcode( "[types field='zoom'][/types]" ); ?>
+						
+					<?php }	?>
+				<?php 
+					
+				endwhile;
+			?>
+					
+				<?php wp_reset_query(); ?>
+		
 			<div id="map"></div>
 		    <script>
 		      function initMap() {
 		        
 		        var positionLatLng = {
-			        lat: 43.425083,
-			        lng: 2.946325
+			        lat: <?php if($GoogleMapLat != '') { echo $GoogleMapLat; } else { echo "48.8534100"; } ?>,
+			        lng: <?php if($GoogleMapLong != '') { echo $GoogleMapLong; } else { echo "2.3488000"; } ?>
 		        };
 		        
 		        var map = new google.maps.Map(document.getElementById('map'), {
 		          center: positionLatLng,
 		          scrollwheel: false,
-		          zoom: 9,
+		          zoom: <?php if($GoogleMapZoom != '') { echo $GoogleMapZoom; } else { echo "12"; } ?>,
 		          styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#707070"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#424242"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"lightness":17},{"color":"#484848"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"lightness":29},{"weight":0.2},{"color":"#ff0000"},{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
 		        });
 		        
@@ -126,8 +152,14 @@ get_header(); ?>
 		      }
 		
 		    </script>
-		    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtzUBl4h5LTIA8Hm_QhRM5MD8RlzwBPKo&callback=initMap"
+		    
+		    <?php if( $APIkey != '' ) { ?>
+		    	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtzUBl4h5LTIA8Hm_QhRM5MD8RlzwBPKo&callback=initMap"
 		    async defer></script>
+		    
+		    <?php } else { ?>
+		    	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		    <?php } ?>
 		    
 		    <div class="contact-post">
 
