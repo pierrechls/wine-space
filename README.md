@@ -8,10 +8,10 @@
 
 ## 📂 WordPress content
 
-- Download XML file [here](https://rawgit.com/pierrechls/wine-space/data/wordpress/espacevin.wordpress.xml)
+- Download XML file from [here](https://rawgit.com/pierrechls/wine-space/data/wordpress/espacevin.wordpress.xml)
 - In your WordPress dashboard, go to `Tools > Import` and import the XML file
 
 ## 📂 Toolset settings
 
-- Download XML file [here](https://rawgit.com/pierrechls/wine-space/data/toolset/settings.xml)
+- Download XML file from [here](https://rawgit.com/pierrechls/wine-space/data/toolset/settings.xml)
 - In your WordPress dashboard, go to `Toolset > Export/Import` and import the XML file
