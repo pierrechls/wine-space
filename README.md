@@ -44,7 +44,7 @@
 - **Follow** the instructions
 - **Configure** your products with min and max quantities
  
-### Init template
+### Init content
 
 #### WordPress content
 
@@ -56,13 +56,13 @@
 - Download XML file from [here](https://rawgit.com/pierrechls/wine-space/data/toolset/settings.xml)
 - In your WordPress dashboard, go to `Toolset > Export/Import` and import the XML file
 
-### Create content
+### Customize content
 
 #### Update map
 
 Go to `Google Maps > Contact map` and add your **API key** and your **coordinates**. 
 
-#### Have fun
+#### Create content
 
 Create as many **products**, **posts** and **pages** as you want.
 
