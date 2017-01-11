@@ -46,27 +46,15 @@
  
 ### Create content
 
-#### Pages 
+#### WordPress content
 
-Please create these pages :
+- Download XML file from [here](https://rawgit.com/pierrechls/wine-space/data/wordpress/espacevin.wordpress.xml)
+- In your WordPress dashboard, go to `Tools > Import` and import the XML file
 
-| Title                 | Slug                  | URL                                           |
-|-----------------------|-----------------------|-----------------------------------------------|
-| Actualités            | *actualites*          | *http://your-website.com/actualites*          |
-| Contact               | *contact*             | *http://your-website.com/contact*             |
-| Majorité              | *majority*            | *http://your-website.com/majority*            |
-| Pas majorité          | *sorry-majority*      | *http://your-website.com/sorry-majority*      |
-| Presse & distinctions | *presse-distinctions* | *http://your-website.com/presse-distinctions* | 
+#### Toolset settings
 
-#### Products
-
-- Create categories
-- Create products (following these instructions : title, description, additional informations...)
-
-#### Posts
-
-- Create one category (actualites)
-- Create poste with this category
+- Download XML file from [here](https://rawgit.com/pierrechls/wine-space/data/toolset/settings.xml)
+- In your WordPress dashboard, go to `Toolset > Export/Import` and import the XML file
 
 
 ## 📕 Prior installation
