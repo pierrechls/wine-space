@@ -58,12 +58,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 .content .description {
     background: #FFF;
     color: #000;
-    overflow: hidden;
-    padding: 0 4rem;
+    overflow: scroll;
+    padding: 0 2rem 0 4rem;
     background-image: url('<?php bloginfo('template_directory'); ?>/images/product-info-bg.jpg');
     background-size: auto;
     background-repeat: repeat;
     height: 100vh;
+}
+
+.content .description .mCSB_scrollTools {
+	top: 10;
+	bottom: 10;
 }
 
 .content .description .description-content {
@@ -94,7 +99,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-align: left;
 	text-transform: uppercase;
     font-size: 1.2rem;
-    margin: 1rem auto 5rem auto;
+    margin: 4rem auto 5rem auto;
 }
 
 .content .description .back-to-category a i {
@@ -181,7 +186,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 	
 	.content .description {
+		padding: 2rem 4rem;
 		overflow: inherit;
+		height: auto;
+	}
+	
+	.content .description .mCustomScrollBox {
 		height: auto;
 	}
 	
@@ -222,8 +232,6 @@ get_header( 'shop' ); ?>
 				</div>
 			</div>
 			<div class="description">
-			<div class="description-content">
-			<div class="description-content-scroll">
 			
 				<?php 
 			
@@ -309,10 +317,22 @@ get_header( 'shop' ); ?>
 					</div>
 				</div>
 			</div>
-			</div>
-			</div>
 
 		<?php endwhile; // end of the loop. ?>
+		
+		<script src="<?php bloginfo('template_directory'); ?>/scrollbar/js/mCustomScrollbar.min.js"></script>
+		
+		<script>
+			(function($){
+				$(window).on("load",function(){
+					
+					$(".content .description").mCustomScrollbar({
+						theme:"dark-thin"
+					});
+					
+				});
+			})(jQuery);
+		</script>
 
 	<?php
 		/**

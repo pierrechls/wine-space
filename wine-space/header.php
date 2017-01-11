@@ -20,6 +20,8 @@
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/supersized.css">
 		
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/lightbox/css/lightbox.css">
+	    
+	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/scrollbar/css/mCustomScrollbar.css">
 
 	    <script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
