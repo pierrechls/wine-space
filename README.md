@@ -66,6 +66,10 @@ Go to `Google Maps > Contact map` and add your **API key** and your **coordinate
 
 Create as many **products**, **posts** and **pages** as you want.
 
+#### More
+
+I suggest you to install [Jetpack](https://fr.wordpress.org/plugins/jetpack/) and [Google Analytics](https://fr.wordpress.org/plugins/google-analytics-dashboard-for-wp/) to get a lot of information about your website.
+
 ## 📕 Prior installation
 
 You have to download [Wordpress](https://wordpress.org/download/) and install it on you server.
