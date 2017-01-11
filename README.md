@@ -48,12 +48,12 @@
 
 #### WordPress content
 
-- Download XML file from [here](https://rawgit.com/pierrechls/wine-space/data/wordpress/espacevin.wordpress.xml)
+- Download XML file from <a href="http://rawgit.com/pierrechls/wine-space/data/wordpress/espacevin.wordpress.xml" download>here</a>
 - In your WordPress dashboard, go to `Tools > Import` and import the XML file
 
 #### Toolset settings
 
-- Download XML file from [here](https://rawgit.com/pierrechls/wine-space/data/toolset/settings.xml)
+- Download XML file from <a href="http://rawgit.com/pierrechls/wine-space/data/toolset/settings.xml" download>here</a>
 - In your WordPress dashboard, go to `Toolset > Export/Import` and import the XML file
 
 
