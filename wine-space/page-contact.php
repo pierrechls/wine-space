@@ -110,7 +110,7 @@ get_header(); ?>
 				$GoogleMapLong = '';
 				$GoogleZoom = '';
 					
-				$args = array( 'post_type' => 'google-map', 'posts_per_page' => 1, 'orderby' => 'date', 'order' => 'DESC' );
+				$args = array( 'post_type' => 'google-map', 'posts_per_page' => 1, 'orderby' => 'date', 'order' => 'ASC' );
 				$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post();
 				
@@ -154,7 +154,7 @@ get_header(); ?>
 		    </script>
 		    
 		    <?php if( $APIkey != '' ) { ?>
-		    	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtzUBl4h5LTIA8Hm_QhRM5MD8RlzwBPKo&callback=initMap"
+		    	<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $APIkey; ?>&callback=initMap"
 		    async defer></script>
 		    
 		    <?php } else { ?>
