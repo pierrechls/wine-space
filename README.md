@@ -6,71 +6,12 @@
 
 > Wine Space is a template for WordPress using WooCommerce e-commerce plugin
 
-## 🛠 How to use it
+## 📂 WordPress content
 
-### Clone the project
+- Download XML file [here](https://rawgit.com/pierrechls/wine-space/data/wordpress/espacevin.wordpress.xml)
+- In your WordPress dashboard, go to `Tools > Import` and import the XML file
 
-    git clone https://github.com/pierrechls/wine-space.git
-    
-### Add theme to your WordPress
+## 📂 Toolset settings
 
-- **Upload** the folder named *wine-space* to `/wp-content/themes/` folder using your favorite FTP Client
-- **Activate** it via your admin interface (`Appearance > Themes`)
-
-### Install external plugins
-
-#### WooCommerce
-
-- **Download** WooCommerce plugin from [WordPress](https://fr.wordpress.org/plugins/woocommerce/) or [WooThemes](https://www.woothemes.com/woocommerce/)
-- **Active** WooCommerce plugin from your admin interface
-- **Select** your favorite langage after downloading your langage from the [langage pack](https://translate.wordpress.org/projects/wp-plugins/woocommerce/language-packs) and adding downloaded files into WooCommerce plugin folder
-    
- 
-#### Toolset Types
-
-- **Download** Toolset Types plugin from [here](https://github.com/pierrechls/wp-types)
-- **Follow** the instructions
-- **Download** the XML file and import it from the plugin
-
-#### WPforms
-
-- **Download** WPforms plugin from [here](https://github.com/pierrechls/wp-forms)
-- **Follow** the instructions
-- **Create** forms (for example, you can insert a contact form in your contact page)
-
-#### Min/Max Quantities
-
-- **Download** Min/Max Quantities plugin from [here](https://github.com/pierrechls/wc-min-max-quantities)
-- **Follow** the instructions
-- **Configure** your products with min and max quantities
- 
-### Create content
-
-#### Pages 
-
-Please create these pages :
-
-| Title                 | Slug                  | URL                                           |
-|-----------------------|-----------------------|-----------------------------------------------|
-| Actualités            | *actualites*          | *http://your-website.com/actualites*          |
-| Contact               | *contact*             | *http://your-website.com/contact*             |
-| Majorité              | *majority*            | *http://your-website.com/majority*            |
-| Pas majorité          | *sorry-majority*      | *http://your-website.com/sorry-majority*      |
-| Presse & distinctions | *presse-distinctions* | *http://your-website.com/presse-distinctions* | 
-
-#### Products
-
-- Create categories
-- Create products (following these instructions : title, description, additional informations...)
-
-#### Posts
-
-- Create one category (actualites)
-- Create poste with this category
-
-
-## 📕 Prior installation
-
-You have to download [Wordpress](https://wordpress.org/download/) and install it on you server.
-
-
+- Download XML file [here](https://rawgit.com/pierrechls/wine-space/data/toolset/settings.xml)
+- In your WordPress dashboard, go to `Toolset > Export/Import` and import the XML file
