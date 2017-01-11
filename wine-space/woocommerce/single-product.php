@@ -58,12 +58,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 .content .description {
     background: #FFF;
     color: #000;
-    overflow: scroll;
-    padding: 8rem 4rem 4rem 4rem;
+    overflow: hidden;
+    padding: 0 4rem;
     background-image: url('<?php bloginfo('template_directory'); ?>/images/product-info-bg.jpg');
     background-size: auto;
     background-repeat: repeat;
     height: 100vh;
+}
+
+.content .description .description-content {
+	overflow-y: auto;
+    height: 100vh;
+    padding: 4rem 0;
+    width: calc(100% + 20rem);
+}
+
+.content .description .description-content .description-content-scroll {
+	width: calc(100% - 20rem);
 }
 
 .content .description h1 {
@@ -173,6 +184,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 		overflow: inherit;
 		height: auto;
 	}
+	
+	.content .description .description-content {
+		overflow: inherit;
+		height: auto;
+		width: 100%;
+	}
+	
+	.content .description .description-content .description-content-scroll {
+		width: 100%;
+	}
 
 }
 
@@ -201,6 +222,8 @@ get_header( 'shop' ); ?>
 				</div>
 			</div>
 			<div class="description">
+			<div class="description-content">
+			<div class="description-content-scroll">
 			
 				<?php 
 			
@@ -247,44 +270,46 @@ get_header( 'shop' ); ?>
 				<div class="informations">
 					<div class="domaine"><?php the_content() ?></div>
 					<div class="fiche-technique">
-						<div class="element">
+					
 							<?php $cepages = do_shortcode( "[types field='cepages'][/types]" ); if( $cepages != '' ) { ?>
+								<div class="element">
 									<h4>Cépages</h4>
 									<?php echo $cepages; ?>
+								</div>
 							<?php }	?>
-						</div>
-						
-						<div class="element">
+							
 							<?php $terroir = do_shortcode( "[types field='terroir'][/types]" ); if( $terroir != '' ) { ?>
+								<div class="element">
 									<h4>Terroir</h4>
 									<?php echo $terroir; ?>
+								</div>
 							<?php }	?>
-						</div>
-						
-						<div class="element">
+							
 							<?php $rendement = do_shortcode( "[types field='rendement'][/types]" ); if( $rendement != '' ) { ?>
+								<div class="element">
 									<h4>Rendement</h4>
 									<?php echo $rendement; ?>
+								</div>
 							<?php }	?>
-						</div>
-						
-						<div class="element">
+							
 							<?php $vignification = do_shortcode( "[types field='vignification'][/types]" ); if( $vignification != '' ) { ?>
+								<div class="element">
 									<h4>Vignification</h4>
 									<?php echo $vignification; ?>
+								</div>
 							<?php }	?>
-						</div>
 						
-						<div class="element">
 							<?php $degustation = do_shortcode( "[types field='degustation'][/types]" ); if( $degustation != '' ) { ?>
+								<div class="element">
 									<h4>Dégustation</h4>
 									<?php echo $degustation; ?>
+								</div>
 							<?php }	?>
-						</div>
 						
 					</div>
 				</div>
-			
+			</div>
+			</div>
 			</div>
 
 		<?php endwhile; // end of the loop. ?>
