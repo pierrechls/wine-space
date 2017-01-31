@@ -95,8 +95,11 @@
 				?>
 					<li class="menu__item space__item"><a class="menu__link" href="#"></a></li>
 					<li class="menu__item"><a class="menu__link" data-submenu="presse-distinctions" href="<?php echo get_site_url(); ?>/presse-distinctions/">Presse & Distinctions</a></li>
-					<li class="menu__item"><a class="menu__link" data-submenu="actualites" href="<?php echo get_site_url(); ?>/actualites/">Actualités</a></li>
+					<li class="menu__item"><a class="menu__link" data-submenu="a-propos" href="<?php echo get_site_url(); ?>/a-propos/">Qui sommes nous ?</a></li>
+					<li class="menu__item"><a class="menu__link" data-submenu="conditions-generales-de-vente" href="<?php echo get_site_url(); ?>/conditions-generales-de-vente/">CGV</a></li>
 					<li class="menu__item"><a class="menu__link" data-submenu="contact" href="<?php echo get_site_url(); ?>/contact/">Contact</a></li>
+					
+					<li class="menu__item"><a class="menu__link menu__link__inline" data-submenu="link-facebook" href="http://facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></i></a><a class="menu__link menu__link__inline" data-submenu="link-twitter" href="http://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a><a class="menu__link menu__link__inline" data-submenu="link-instagram" href="http://instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 				</ul>
 				
 				<?php 

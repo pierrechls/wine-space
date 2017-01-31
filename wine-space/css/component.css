@@ -484,10 +484,14 @@ body #cdawrap a:hover.carbon-poweredby {
 	font-size: 1.3rem;
 	position: relative;
 	display: block;
-	padding: 0 2.5rem 1.2rem 1.7rem;
+	padding: 0 2.5rem 1rem 1.7rem;
 	color: #FFFFFF;
 	-webkit-transition: color 0.1s;
 	transition: color 0.1s;
+}
+
+.menu__link__inline {
+	display: inline-block;
 }
 
 .menu__link[data-submenu].in::after {
