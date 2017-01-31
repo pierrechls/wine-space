@@ -40,28 +40,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 </style>
 
 <div class="quantity spin"><span>&ndash;</span><input type="number" pattern="\d*" step="<?php echo esc_attr( $step ); ?>" <?php if ( is_numeric( $min_value ) ) : ?>min="<?php echo esc_attr( $min_value ); ?>"<?php endif; ?> <?php if ( is_numeric( $max_value ) ) : ?>max="<?php echo esc_attr( $max_value ); ?>"<?php endif; ?> name="<?php echo esc_attr( $input_name ); ?>" value="<?php echo esc_attr( $input_value ); ?>" title="<?php _ex( 'Qty', 'Product quantity input tooltip', 'woocommerce' ) ?>" class="input-text qty text" size="4" /><span>+</span></div>
-
-<script>
-
-var spins = document.getElementsByClassName('spin');
-for (var i = 0, len = spins.length; i < len; i++) {
-    
-    (function () {
-        var spin = spins[i];
-	    var span = spin.getElementsByTagName('span');
-	    var input = spin.getElementsByTagName('input')[0];
-	    
-	    input.addEventListener('change', function() {
-	    	input.value = +input.value || 0;
-	    })
-	    
-	    span[0].addEventListener('click', function() {
-	    	input.value = Math.max(0, input.value - 1);
-	    });
-	    span[1].addEventListener('click', function() {
-	    	input.value -= -1;
-	    });
-    }());
-}
-
-</script>

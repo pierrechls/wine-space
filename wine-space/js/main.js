@@ -1,7 +1,5 @@
 var url = localStorage.getItem('website');
 
-
-
 var keys = {37: 1, 38: 1, 39: 1, 40: 1};
 
 function preventDefault(e) {
