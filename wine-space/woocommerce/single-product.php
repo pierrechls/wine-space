@@ -119,6 +119,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .content .description .form-add-to-cart form .quantity {
 	vertical-align: top;
 	display: inline-block;
+	margin-right: 1.5rem;
 }
 
 .content .description .form-add-to-cart form .quantity input.qty{
@@ -128,7 +129,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     font-size: 1.2rem;
     font-weight: 600;
     margin-right: 2rem;
-    vertical-align: top;
+    vertical-align: middle;
     text-align: center;
     border: 0.3rem solid #000;
     margin: 1rem auto;

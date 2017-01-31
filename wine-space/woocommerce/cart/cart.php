@@ -18,6 +18,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	#primary{
 		background-color: #fff;
 	}
+	
+	.quantity input {
+		max-width: 25%;
+	}
 
 	#primary h1 {
 	    background: #c4af78;
@@ -124,7 +128,7 @@ a.woocommerce-remove-coupon{
 	table tr td:nth-of-type(6):before { content: "Total"; }
 
 	input, textarea{
-		font: 10px 'Lato', sans-serif;
+		font: 1.5rem 'Lato', sans-serif;
 	}
 }
 
