@@ -83,7 +83,44 @@
 					<li class="menu__item"><a class="menu__link" data-submenu="conditions-generales-de-vente" href="<?php echo get_site_url(); ?>/conditions-generales-de-vente/">CGV</a></li>
 					<li class="menu__item"><a class="menu__link" data-submenu="contact" href="<?php echo get_site_url(); ?>/contact/">Contact</a></li>
 					<li class="menu__item space__item"><a class="menu__link" href="#"></a></li>
-					<li class="menu__item"><a class="menu__link menu__link__inline" data-submenu="link-facebook" href="http://facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></i></a><a class="menu__link menu__link__inline" data-submenu="link-twitter" href="http://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a><a class="menu__link menu__link__inline" data-submenu="link-instagram" href="http://instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					
+					
+					<?php 
+					
+						$args = array( 'post_type' => 'reseau-social', 'posts_per_page' => -1, 'orderby' => 'date', 'order' => 'ASC' );
+						
+						if( count($args) > 0 ) { ?>
+						
+							<li class="menu__item">
+							
+						<?php
+						
+							$loop = new WP_Query( $args );
+						
+							while ( $loop->have_posts() ) : $loop->the_post();
+								
+								$socialID = do_shortcode( "[types field='id'][/types]" );
+								$socialLink = do_shortcode( "[types field='lien'][/types]" );
+								$socialIcon = do_shortcode( "[types field='icon-fontawesome'][/types]" );
+								
+								if( $socialID != '' && $socialLink != '' && $socialIcon != '' ) {
+								?>
+								
+								<a class="menu__link menu__link__inline" data-submenu="link-<?php echo $socialID; ?>" href="<?php echo $socialLink; ?>"><i class="<?php echo $socialIcon; ?>" aria-hidden="true"></i></i></a>
+								
+								<?php
+								}
+						
+							endwhile; ?>
+							
+							</li>
+							
+							<?php
+						
+						}
+					?>
+					
+					<?php wp_reset_query(); ?>
 				</ul>
 				
 				<?php 
