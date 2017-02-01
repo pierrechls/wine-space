@@ -21,7 +21,7 @@
 							if( has_post_thumbnail() ) {
 					
 					?>
-								<li style="background-image:url('<?php the_post_thumbnail_url( 'full' ); ?>');"></li>
+								<li style="background-image:url('<?php the_post_thumbnail_url( 'full' ); ?>');"><div class="slider-text"><div class="content-text"><?php the_content(); ?></div></div></li>
 					<?php 
 							
 							}
@@ -50,9 +50,16 @@
 						maxSlides: 1,
 						minSlides: 1,
 						adaptiveHeight: true,
-						auto: true
+						auto: true,
+						onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
+				            $('.active-slide').removeClass('active-slide');
+				            $('.home-slider > li').eq(currentSlideHtmlObject + 1).addClass('active-slide');
+				        },
+				        onSliderLoad: function () {
+				            $('.home-slider > li').eq(1).addClass('active-slide');
+				        }
 					});
-				}); 
+				});
 		    });
 	   </script>
 

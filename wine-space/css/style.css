@@ -5,7 +5,8 @@ Author: Pierre Charles
 Author URI: http://www.pierre-charles.com/
 */
 
-@import url(http://fonts.googleapis.com/css?family=Lato:300,500,300italic,700);
+@import url('http://fonts.googleapis.com/css?family=Lato:300,500,300italic,700');
+@import url('https://fonts.googleapis.com/css?family=Lora');
 
 ::-webkit-input-placeholder { color:#38393a; }
 ::-moz-placeholder { color:#38393a; } /* firefox 19+ */
@@ -220,6 +221,36 @@ a {
     text-transform: capitalize;
     color: rgba(255,255,255,0.8);
     border-radius: 0;
+}
+
+.bxslider .slider-text {
+	position: relative;
+    display: table;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 50rem;
+    height: 70vh;
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.8rem;
+    color: #FFF;
+    opacity: 0;
+	margin-top: -1rem;
+    -webkit-transition: all 0.4s ease-out 0.5s;
+    -moz-transition: all 0.4s ease-out 0.5s;
+    -o-transition: all 0.4s ease-out 0.5s;
+    transition: all 0.4s ease-out 0.5s;
+}
+
+.bxslider .slider-text .content-text{ 
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.bxslider .active-slide .slider-text{ 
+	opacity: 1;
+	margin-top: 0;
 }
 
 .category-product{

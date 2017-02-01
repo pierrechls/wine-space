@@ -104,6 +104,10 @@ a:hover {
 	position: absolute;
 }
 
+.bp-header__main.home.up {
+	z-index: 99;
+}
+
 .bp-header__title {
 	font-size: 1.3em;
 	font-weight: 400;
