@@ -251,8 +251,9 @@ get_header( 'shop' ); ?>
 					}
 				?>
 			
-				<h1><?php the_title(); ?></h1>
 				<h3><?php echo $product->post->post_excerpt ?></h3>	
+				<h1><?php the_title(); ?></h1>
+				<h4>Prix : <span><?php echo $product->get_price(); ?> €</span></h4>
 				
 				<div class="form-add-to-cart">
 					<?php if ( $product->is_in_stock() ) : ?>
