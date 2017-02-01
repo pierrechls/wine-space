@@ -473,8 +473,20 @@ body #cdawrap a:hover.carbon-poweredby {
 
 
 .menu__item.space__item {
-	padding-top: 4rem;
+	padding-top: 1rem;
 	height: 0;
+}
+
+@media screen and (min-height: 50em) {
+	.menu__item.space__item {
+		padding-top: 3rem;
+	}
+}
+
+@media screen and (min-height: 60em) {
+	.menu__item.space__item {
+		padding-top: 5rem;
+	}
 }
 
 .menu__item__out {
@@ -496,6 +508,7 @@ body #cdawrap a:hover.carbon-poweredby {
 
 .menu__link__inline {
 	display: inline-block;
+	width: auto;
 }
 
 .menu__link[data-submenu].in::after {
@@ -656,7 +669,7 @@ body #cdawrap a:hover.carbon-poweredby {
 	font-size: 1.65rem;
 	line-height: 1rem;
 	position: relative;
-	padding: 3.3rem 0 0.8rem 0;
+	padding: 4rem 0 0.8rem 0;
 }
 
 .menu__breadcrumbs a {

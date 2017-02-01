@@ -53,23 +53,6 @@
 			<div class="dummy-logo">
 				<a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png"/></a>
 			</div>
-			<!--
-<div class="bp-header__main">
-				<nav class="bp-nav">
-					<a class="bp-nav__item" href="<?php echo get_site_url(); ?>/mon-compte/" data-info="Compte"><i class="fa fa-user" aria-hidden="true"></i></a>
-					<a class="bp-nav__item" href="<?php echo wc_get_cart_url(); ?>" data-info="Panier"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-					<a class="cart-contents" href="<?php echo wc_get_cart_url(); ?>">
-						<?php 
-						if( WC()->cart->get_cart_contents_count() > 1 ) {
-							echo sprintf ( _n( '%d produits', '%d produits', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total();
-						} else {
-							echo sprintf ( _n( '%d produit', '%d produit', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total();
-						}
-						?>
-					</a>
-				</nav>
-			</div>
--->
 		</header>
 		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
 		<nav id="ml-menu" class="menu">
@@ -77,6 +60,7 @@
 				<a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo-icon.png"/></a>
 			</div>
 			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+			<a href="http://www.pierre-charles.com/BrainFactory/EspaceVin" style="display: block;/* margin: 3rem auto 0 auto; */position: absolute;top: 1rem;left: 50%;width: 3rem;height: auto;text-align: center;margin-left: -1.5rem;font-size: 1.5rem;"><i class="fa fa-home" aria-hidden="true"></i></a>
 			<div class="menu__wrap">
 				<ul data-menu="main" class="menu__level">
 				<?php 
@@ -98,7 +82,7 @@
 					<li class="menu__item"><a class="menu__link" data-submenu="a-propos" href="<?php echo get_site_url(); ?>/a-propos/">Qui sommes nous ?</a></li>
 					<li class="menu__item"><a class="menu__link" data-submenu="conditions-generales-de-vente" href="<?php echo get_site_url(); ?>/conditions-generales-de-vente/">CGV</a></li>
 					<li class="menu__item"><a class="menu__link" data-submenu="contact" href="<?php echo get_site_url(); ?>/contact/">Contact</a></li>
-					
+					<li class="menu__item space__item"><a class="menu__link" href="#"></a></li>
 					<li class="menu__item"><a class="menu__link menu__link__inline" data-submenu="link-facebook" href="http://facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></i></a><a class="menu__link menu__link__inline" data-submenu="link-twitter" href="http://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a><a class="menu__link menu__link__inline" data-submenu="link-instagram" href="http://instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 				</ul>
 				
