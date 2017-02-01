@@ -61,7 +61,7 @@ get_header( 'shop' ); ?>
 				        'product_cat' => $term->slug,
 				        'post_type' => 'product',
 				        'orderby' => 'date',
-				        'order' => 'ASC'
+				        'order' => 'DESC'
 				    ) );
 
 					while ( $products->have_posts() ) : $products->the_post();

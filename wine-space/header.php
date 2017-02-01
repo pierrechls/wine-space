@@ -106,7 +106,7 @@
 								if( $socialID != '' && $socialLink != '' && $socialIcon != '' ) {
 								?>
 								
-								<a class="menu__link menu__link__inline" data-submenu="link-<?php echo $socialID; ?>" href="<?php echo $socialLink; ?>"><i class="<?php echo $socialIcon; ?>" aria-hidden="true"></i></i></a>
+								<a class="menu__link menu__link__inline menu__link__social" data-submenu="link-<?php echo $socialID; ?>" href="<?php echo $socialLink; ?>"><i class="<?php echo $socialIcon; ?>" aria-hidden="true"></i></i></a>
 								
 								<?php
 								}

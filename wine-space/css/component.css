@@ -511,6 +511,10 @@ body #cdawrap a:hover.carbon-poweredby {
 	width: auto;
 }
 
+.menu__link__social {
+	padding: 0 1rem;
+}
+
 .menu__link[data-submenu].in::after {
 	content: '\e904';
 	font-family: 'feather';

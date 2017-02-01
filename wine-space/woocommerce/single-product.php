@@ -58,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .content .description {
     background: #FFF;
     color: #000;
-    overflow: scroll;
+    overflow: auto;
     padding: 0 2rem 0 4rem;
     background-image: url('<?php bloginfo('template_directory'); ?>/images/product-info-bg.jpg');
     background-size: auto;
@@ -179,6 +179,29 @@ if ( ! defined( 'ABSPATH' ) ) {
     line-height: 2.3rem;
 }
 
+
+.content .description .informations .go-to-fiche-domaine {
+	text-align: left;
+	margin: 7rem auto;
+}
+
+.content .description .informations .go-to-fiche-domaine a {
+	background: #000;
+    outline: 0;
+    text-transform: uppercase;
+    border: 0;
+    font-size: 1.3rem;
+    color: #FFF;
+    padding: 1.1rem 1.3rem;
+    vertical-align: top;
+    border-radius: 0.8rem;
+    margin: 1rem auto;
+}
+
+.content .description .informations .go-to-fiche-domaine a i { 
+	margin-left: 1rem;
+}
+
 @media screen and (max-width: 60em){
 
 	.content .illustration {
@@ -281,42 +304,64 @@ get_header( 'shop' ); ?>
 					<div class="domaine"><?php the_content() ?></div>
 					<div class="fiche-technique">
 					
-							<?php $cepages = do_shortcode( "[types field='cepages'][/types]" ); if( $cepages != '' ) { ?>
+							<?php $elevage = do_shortcode( "[types field='product-elevage'][/types]" ); if( $elevage != '' ) { ?>
+								<div class="element">
+									<h4>Élevage</h4>
+									<?php echo $elevage; ?>
+								</div>
+							<?php }	?>
+					
+							<?php $cepages = do_shortcode( "[types field='product-cepages'][/types]" ); if( $cepages != '' ) { ?>
 								<div class="element">
 									<h4>Cépages</h4>
 									<?php echo $cepages; ?>
 								</div>
 							<?php }	?>
 							
-							<?php $terroir = do_shortcode( "[types field='terroir'][/types]" ); if( $terroir != '' ) { ?>
+							<?php $vinification = do_shortcode( "[types field='product-vinification'][/types]" ); if( $vinification != '' ) { ?>
 								<div class="element">
-									<h4>Terroir</h4>
-									<?php echo $terroir; ?>
-								</div>
-							<?php }	?>
-							
-							<?php $rendement = do_shortcode( "[types field='rendement'][/types]" ); if( $rendement != '' ) { ?>
-								<div class="element">
-									<h4>Rendement</h4>
-									<?php echo $rendement; ?>
-								</div>
-							<?php }	?>
-							
-							<?php $vignification = do_shortcode( "[types field='vignification'][/types]" ); if( $vignification != '' ) { ?>
-								<div class="element">
-									<h4>Vignification</h4>
-									<?php echo $vignification; ?>
+									<h4>Vinification</h4>
+									<?php echo $vinification; ?>
 								</div>
 							<?php }	?>
 						
-							<?php $degustation = do_shortcode( "[types field='degustation'][/types]" ); if( $degustation != '' ) { ?>
+							<?php $service = do_shortcode( "[types field='product-service'][/types]" ); if( $service != '' ) { ?>
 								<div class="element">
-									<h4>Dégustation</h4>
-									<?php echo $degustation; ?>
+									<h4>Service</h4>
+									<?php echo $service; ?>
 								</div>
 							<?php }	?>
-						
+							
+							<?php $garde = do_shortcode( "[types field='product-garde'][/types]" ); if( $garde != '' ) { ?>
+								<div class="element">
+									<h4>Garde</h4>
+									<?php echo $garde; ?>
+								</div>
+							<?php }	?>
+							
+							<?php $contenance = do_shortcode( "[types field='product-contenance'][/types]" ); if( $contenance != '' ) { ?>
+								<div class="element">
+									<h4>Contenance</h4>
+									<?php echo $contenance; ?>
+								</div>
+							<?php }	?>
+							
+							<?php $appellation = do_shortcode( "[types field='product-appellation'][/types]" ); if( $appellation != '' ) { ?>
+								<div class="element">
+									<h4>Appellation</h4>
+									<?php echo $appellation; ?>
+								</div>
+							<?php }	?>
+							
 					</div>
+					<?php
+						$parent_id = wpcf_pr_post_get_belongs(get_the_ID(), 'domaine');
+						if (!empty($parent_id)) { 
+					?>
+						<p class="go-to-fiche-domaine"><a href="<?php echo get_post_permalink( $parent_id );?>">Voir la fiche domaine <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+					<?php
+						}
+					?>
 				</div>
 			</div>
 
