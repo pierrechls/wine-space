@@ -149,7 +149,7 @@
 			</div>
 		</nav>
 		<div class="content">
-			<div class="bp-header__main <?php if(is_home() || is_product_category() || is_product() || is_404() ) echo "home up" ?>">
+			<div class="bp-header__main <?php if(is_home() || is_product_category() || is_product() || is_404() ) { echo "home"; } if(is_home()) { echo " up"; } ?>">
 				<nav class="bp-nav">
 					<a class="bp-nav__item" href="<?php echo get_site_url(); ?>/mon-compte/" data-info="Compte"><i class="fa fa-user" aria-hidden="true"></i></a>
 					<a class="bp-nav__item" href="<?php echo wc_get_cart_url(); ?>" data-info="Panier"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
