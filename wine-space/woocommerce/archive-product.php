@@ -73,7 +73,14 @@ get_header( 'shop' ); ?>
 					        	<img src="<?php the_post_thumbnail_url( 'full' ); ?>" /><br/>
 					        	<div class="info">
 					        		<h3><?php the_title(); ?></h3>
-									<?php echo apply_filters( 'woocommerce_short_description', $products->post->post_excerpt ) ?>
+					        		<?php
+										$parent_id = wpcf_pr_post_get_belongs(get_the_ID(), 'domaine');
+										if (!empty($parent_id)) {
+									?>
+											<p><?php echo get_the_title($parent_id); ?></p>
+									<?php
+										}
+									?>
 									<p><a class="btn-add-to-cart" href="?add-to-cart=<?php echo $products->post->ID ?>">Ajouter au panier</a></p>
 					        	</div>
 					    	</a>

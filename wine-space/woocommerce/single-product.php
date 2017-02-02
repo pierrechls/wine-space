@@ -273,8 +273,18 @@ get_header( 'shop' ); ?>
 				
 					}
 				?>
+				
+				<?php
+					$parent_id = wpcf_pr_post_get_belongs(get_the_ID(), 'domaine');
+					if (!empty($parent_id)) { 
+						$parentTitle = get_the_title($parent_id);
+						$parentURL = get_post_permalink( $parent_id );
+					}
+				?>
 			
-				<h3><?php echo $product->post->post_excerpt ?></h3>	
+				<?php if($parentTitle != '') { ?>
+					<h3><?php echo $parentTitle ?></h3>	
+				<?php } ?>
 				<h1><?php the_title(); ?></h1>
 				<h4>Prix : <span><?php echo $product->get_price(); ?> €</span></h4>
 				
@@ -354,14 +364,9 @@ get_header( 'shop' ); ?>
 							<?php }	?>
 							
 					</div>
-					<?php
-						$parent_id = wpcf_pr_post_get_belongs(get_the_ID(), 'domaine');
-						if (!empty($parent_id)) { 
-					?>
-						<p class="go-to-fiche-domaine"><a href="<?php echo get_post_permalink( $parent_id );?>">Voir la fiche domaine <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
-					<?php
-						}
-					?>
+					<?php if($parentURL != '') { ?>
+						<p class="go-to-fiche-domaine"><a href="<?php echo $parentURL;?>">Voir la fiche domaine <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+					<?php } ?>
 				</div>
 			</div>
 
