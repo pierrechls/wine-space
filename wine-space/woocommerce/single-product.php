@@ -67,8 +67,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .content .description .mCSB_scrollTools {
-	top: 10;
-	bottom: 10;
+	top: 1rem;
+	bottom: 1rem;
 }
 
 .content .description .description-content {
