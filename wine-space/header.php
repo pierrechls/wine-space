@@ -60,7 +60,7 @@
 				<a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo-icon.png"/></a>
 			</div>
 			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
-			<a href="http://www.pierre-charles.com/BrainFactory/EspaceVin" style="display: block;/* margin: 3rem auto 0 auto; */position: absolute;top: 1rem;left: 50%;width: 3rem;height: auto;text-align: center;margin-left: -1.5rem;font-size: 1.5rem;"><i class="fa fa-home" aria-hidden="true"></i></a>
+			<a href="<?php echo get_site_url(); ?>" class="come-back-home"><i class="fa fa-home" aria-hidden="true"></i></a>
 			<div class="menu__wrap">
 				<ul data-menu="main" class="menu__level">
 				<?php 
