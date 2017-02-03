@@ -276,6 +276,14 @@ a {
     text-align: right;
 }
 
+.regular-price {
+	font-style: italic;
+    color: rgba(0,0,0,0.3);
+    font-weight: 600;
+    text-decoration: line-through;
+    padding: 0 0.5rem;
+}
+
 .category-product p.woocommerce-info {
     position: absolute;
     font-weight: 600;
