@@ -110,7 +110,7 @@ get_header(); ?>
 	width: calc(100% - 20rem);
 }
 
-.content .description h1 {
+.content .description h1.title {
 	text-align: left;
 	padding: 0;
 	font-size: 3.5rem;
@@ -282,7 +282,7 @@ get_header(); ?>
 			
 				<p class="back-to-category"><a href="<?php echo get_site_url(); ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour</a></p>
 			
-				<h1><?php the_title(); ?></h1>
+				<h1 class="title"><?php the_title(); ?></h1>
 				
 				<div class="informations">
 					<div class="domaine"><?php the_content() ?></div>

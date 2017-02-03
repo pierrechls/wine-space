@@ -23,7 +23,7 @@ get_header(); ?>
 	    text-align: justify;
 	}
 
-	#primary .article_content h1{
+	#primary .article_content h1.title{
 		color: #FFF !important;
 		background: #b7a56d;
 		padding: 10rem 2rem 5rem 3rem;
@@ -67,7 +67,7 @@ get_header(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<h1> <?php the_title(); ?> </h1>
+					<h1 class="title"> <?php the_title(); ?> </h1>
 
 					<div class="actu-content">
 
