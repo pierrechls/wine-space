@@ -30,6 +30,13 @@
 			margin: auto;
 		    padding: 2rem;
 		    text-align: center;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    margin-left: -32.5rem;
+		    margin-top: -22.5rem;
+		    width: 65rem;
+		    height: 45rem;
 		}
 		#majority h1{
 			line-height: 1;
@@ -46,6 +53,33 @@
 			width: 10rem;
 			max-width: 100%;
 		}
+		
+		@media screen and (max-width: 50em) {
+
+			#majority{
+			    position: relative;
+			    top: inherit;
+			    left: inherit;
+			    margin-left: auto;
+			    margin-top: auto;
+			    width: auto;
+			    height: auto;
+			}
+		}
+		
+		@media screen and (max-height: 30em) {
+
+			#majority{
+			    position: relative;
+			    top: inherit;
+			    left: inherit;
+			    margin-left: auto;
+			    margin-top: auto;
+			    width: auto;
+			    height: auto;
+			}
+		}
+		
 	</style>
 
 	<body>
