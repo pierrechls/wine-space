@@ -316,7 +316,22 @@ get_header(); ?>
 					        	<img src="<?php echo get_the_post_thumbnail_url($child_post->ID, 'full' ); ?>" /><br/>
 					        	<div class="info">
 					        		<h3><?php echo $child_post->post_title; ?></h3>
-									<p><a class="btn-add-to-cart" href="?add-to-cart=<?php echo $child_post->ID ?>">Panier</a></p>
+					        		<?php $_product = wc_get_product( $child_post->ID ); ?>
+					        		<p style="margin: 0 0 1.8rem 0;">
+										<?php 
+											if($_product->get_sale_price() > 0 ){
+										?>
+												<span class="regular-price"><?php echo number_format($_product->get_regular_price(), 2); ?> €</span>
+												<span><?php echo number_format($_product->get_price(), 2); ?> €</span>
+										<?php
+											} else { 
+										?>
+												<span><?php echo number_format($_product->get_price(), 2); ?> €</span>
+										<?php 
+											}
+										?>
+									</p>
+									<p><a class="btn-add-to-cart" href="?add-to-cart=<?php echo $child_post->ID ?>">Ajouter</a></p>
 					        	</div>
 					    	</a>
 					    </li>
