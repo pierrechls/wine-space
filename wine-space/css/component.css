@@ -104,9 +104,40 @@ a:hover {
 	position: absolute;
 }
 
-.bp-header__main.home.up {
+.bp-header__main.up {
 	z-index: 99;
 }
+
+@media screen and (max-width: 60em) {
+
+	.bp-header__main.black-theme .bp-nav a.bp-nav__item {
+		color: #000000;
+	}
+	
+	.bp-header__main.black-theme .bp-nav a.bp-nav__item:hover {
+		color: #FFFFFF;
+		background: #000000;
+	}
+	
+	.bp-header__main.black-theme .bp-nav a.bp-nav__item:hover::before {
+		color: #000;
+	}
+	
+	
+	.bp-header__main.black-theme .bp-nav a.cart-contents {
+		color: #000000;
+	}
+	
+	.bp-header__main.black-theme .bp-nav a.cart-contents:hover {
+		color: #000000;
+	}
+	
+	.black-theme.action--open {
+		color: #000000;
+	}
+}
+
+.bp-header__main.
 
 .bp-header__title {
 	font-size: 1.3em;

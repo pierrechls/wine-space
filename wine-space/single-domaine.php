@@ -12,6 +12,8 @@ get_header(); ?>
 .bp-header__main {
 	background: transparent;
 	position: absolute;
+	z-index: 9;
+	width: 50%;
 }
 
 .domaine-separator {
@@ -232,6 +234,10 @@ get_header(); ?>
 
 @media screen and (max-width: 60em){
 
+	.bp-header__main {
+		width: 100%;
+	}
+
 	.content .domaine-products {
 		float: none;
 		width: 100%;
@@ -251,7 +257,7 @@ get_header(); ?>
 	}
 	
 	.content .description {
-		padding: 2rem 4rem;
+		padding: 7rem 4rem 4rem 4rem;
 		overflow: inherit;
 		height: auto;
 		width: 100%;
