@@ -288,12 +288,12 @@ get_header( 'shop' ); ?>
 				<h1><?php the_title(); ?></h1>
 				<h4>Prix : <?php 
 					if($product->get_sale_price() > 0 ){ ?>
-						<span class="regular-price"><?php echo $product->get_price(); ?> €</span>
-						<span><?php echo $product->get_regular_price(); ?> €</span></h4>
+						<span class="regular-price"><?php echo number_format($product->get_regular_price(), 2); ?> €</span>
+						<span><?php echo number_format($product->get_price(), 2); ?> €</span>
 					<?php } else { ?>
-						<span><?php echo $product->get_price(); ?> €</span></h4>
+						<span><?php echo number_format($product->get_price(), 2); ?> €</span>
 					<?php } ?>
-					
+				</h4>
 				<div class="form-add-to-cart">
 					<?php if ( $product->is_in_stock() ) : ?>
 

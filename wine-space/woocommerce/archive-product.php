@@ -15,6 +15,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' ); ?>
 
+<style>
+	.regular-price {
+		color: rgba(255,255,255,0.4);
+	}
+</style>
+
 	<?php
 		/**
 		 * woocommerce_before_main_content hook
@@ -64,7 +70,7 @@ get_header( 'shop' ); ?>
 				        'order' => 'DESC'
 				    ) );
 
-					while ( $products->have_posts() ) : $products->the_post();
+					while ( $products->have_posts() ) : $products->the_post(); global $product;
 				
 				?>
 
@@ -81,6 +87,21 @@ get_header( 'shop' ); ?>
 									<?php
 										}
 									?>
+									
+									<p style="margin: 0 0 1.8rem 0;">
+										<?php 
+											if($product->get_sale_price() > 0 ){
+										?>
+												<span class="regular-price"><?php echo number_format($product->get_regular_price(), 2); ?> €</span>
+												<span><?php echo number_format($product->get_price(), 2); ?> €</span>
+										<?php
+											} else { 
+										?>
+												<span><?php echo number_format($product->get_price(), 2); ?> €</span>
+										<?php 
+											}
+										?>
+									</p>
 									<p><a class="btn-add-to-cart" href="?add-to-cart=<?php echo $products->post->ID ?>">Ajouter au panier</a></p>
 					        	</div>
 					    	</a>
