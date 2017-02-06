@@ -23,7 +23,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     height: 100vh;
     text-align: center;
     background: #000;
-    background-image: url('<?php bloginfo('template_directory'); ?>/images/products-background.png');
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
@@ -247,8 +246,26 @@ get_header( 'shop' ); ?>
 	?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
+		
+				<?php 
 			
-			<div class="illustration">
+					$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
+					$categoryID = '';
+					$categoryName = '';
+					$categoryImage = '';
+
+					if ( $product_cats && ! is_wp_error ( $product_cats ) ){
+
+						$single_cat = array_shift( $product_cats );
+						$categoryID = $single_cat->term_taxonomy_id;
+						$categoryName = $single_cat->name;
+						$thumbnail_id = get_woocommerce_term_meta( $categoryID, 'thumbnail_id', true ); 
+						$categoryImage = wp_get_attachment_url( $thumbnail_id );
+				
+					}
+				?>
+			
+			<div class="illustration" style="background-image: url('<?php if( $categoryImage != '' ) { echo $categoryImage; } else { echo get_template_directory_uri() . '/images/products-background.png'; } ?>');">
 				<div class="wine-image">
 					<div class="wine-image-child">
 						<img src="<?php the_post_thumbnail_url( 'full' ); ?>" />
@@ -257,22 +274,7 @@ get_header( 'shop' ); ?>
 			</div>
 			<div class="description">
 			
-				<?php 
-			
-					$product_cats = wp_get_post_terms( get_the_ID(), 'product_cat' );
-
-					if ( $product_cats && ! is_wp_error ( $product_cats ) ){
-
-						$single_cat = array_shift( $product_cats );
-				
-				?>
-
-						<p class="back-to-category"><a href="<?php echo get_category_link( $single_cat->term_taxonomy_id ) ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour <!--<?php echo $single_cat->name; ?>--></a></p>
-
-				<?php 
-				
-					}
-				?>
+				<p class="back-to-category"><a href="<?php echo get_category_link( $categoryID ) ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour <!--<?php echo $categoryName; ?>--></a></p>
 				
 				<?php
 					$parent_id = wpcf_pr_post_get_belongs(get_the_ID(), 'domaine');
@@ -314,6 +316,7 @@ get_header( 'shop' ); ?>
 					    ?>
 					
 					<?php endif; ?>
+					
 				</div>
 				
 				<div class="informations">
