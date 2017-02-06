@@ -189,6 +189,16 @@ get_header(); ?>
     line-height: 2.3rem;
 }
 
+.content .description .informations .domaine-map {
+	width: 80%;
+	margin: 5rem auto;
+}
+
+.content .description .informations .domaine-map img {
+	width: 100%;
+	height: auto;
+}
+
 .content .description .informations .fiche-technique {
 	text-align: left;
 }
@@ -292,6 +302,13 @@ get_header(); ?>
 				
 				<div class="informations">
 					<div class="domaine"><?php the_content() ?></div>
+					
+					<?php $map = do_shortcode( "[types field='carte'][/types]" ); if( $map != '' ) { ?>
+						<div class="domaine-map">
+							<?php echo $map; ?>
+						</div>
+					<?php }	?>
+					
 				</div>
 			</div>
 			
