@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.5.2" created="2017-01-11 13:51" -->
+<!-- generator="WordPress/4.5.2" created="2017-02-07 07:38" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Espace Vin</title>
 	<link>http://www.pierre-charles.com/BrainFactory/EspaceVin</link>
 	<description>Un site utilisant WordPress</description>
-	<pubDate>Wed, 11 Jan 2017 13:51:42 +0000</pubDate>
+	<pubDate>Tue, 07 Feb 2017 07:38:30 +0000</pubDate>
 	<language>fr-FR</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://www.pierre-charles.com/BrainFactory/EspaceVin</wp:base_site_url>
@@ -44,7 +44,6 @@
 	<wp:term><wp:term_id><![CDATA[2]]></wp:term_id><wp:term_taxonomy><![CDATA[product_type]]></wp:term_taxonomy><wp:term_slug><![CDATA[simple]]></wp:term_slug><wp:term_parent><![CDATA[]]></wp:term_parent><wp:term_name><![CDATA[simple]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[4]]></wp:term_id><wp:term_taxonomy><![CDATA[product_type]]></wp:term_taxonomy><wp:term_slug><![CDATA[variable]]></wp:term_slug><wp:term_parent><![CDATA[]]></wp:term_parent><wp:term_name><![CDATA[variable]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[44]]></wp:term_id><wp:term_taxonomy><![CDATA[product_cat]]></wp:term_taxonomy><wp:term_slug><![CDATA[autres-regions]]></wp:term_slug><wp:term_parent><![CDATA[]]></wp:term_parent><wp:term_name><![CDATA[Autres régions]]></wp:term_name></wp:term>
-	<wp:term><wp:term_id><![CDATA[40]]></wp:term_id><wp:term_taxonomy><![CDATA[product_cat]]></wp:term_taxonomy><wp:term_slug><![CDATA[bordeaux]]></wp:term_slug><wp:term_parent><![CDATA[]]></wp:term_parent><wp:term_name><![CDATA[Bordeaux]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[20]]></wp:term_id><wp:term_taxonomy><![CDATA[product_cat]]></wp:term_taxonomy><wp:term_slug><![CDATA[bourgogne]]></wp:term_slug><wp:term_parent><![CDATA[]]></wp:term_parent><wp:term_name><![CDATA[Bourgogne]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[21]]></wp:term_id><wp:term_taxonomy><![CDATA[product_cat]]></wp:term_taxonomy><wp:term_slug><![CDATA[chablis]]></wp:term_slug><wp:term_parent><![CDATA[bourgogne]]></wp:term_parent><wp:term_name><![CDATA[Chablis]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[49]]></wp:term_id><wp:term_taxonomy><![CDATA[product_cat]]></wp:term_taxonomy><wp:term_slug><![CDATA[champagne]]></wp:term_slug><wp:term_parent><![CDATA[autres-regions]]></wp:term_parent><wp:term_name><![CDATA[Champagne]]></wp:term_name></wp:term>
@@ -56,8 +55,6 @@
 	<wp:term><wp:term_id><![CDATA[28]]></wp:term_id><wp:term_taxonomy><![CDATA[product_cat]]></wp:term_taxonomy><wp:term_slug><![CDATA[minervois]]></wp:term_slug><wp:term_parent><![CDATA[languedoc-roussillon]]></wp:term_parent><wp:term_name><![CDATA[Minervois]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[29]]></wp:term_id><wp:term_taxonomy><![CDATA[product_cat]]></wp:term_taxonomy><wp:term_slug><![CDATA[montpeyroux]]></wp:term_slug><wp:term_parent><![CDATA[languedoc-roussillon]]></wp:term_parent><wp:term_name><![CDATA[Montpeyroux]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[19]]></wp:term_id><wp:term_taxonomy><![CDATA[product_cat]]></wp:term_taxonomy><wp:term_slug><![CDATA[pic-saint-loup]]></wp:term_slug><wp:term_parent><![CDATA[languedoc-roussillon]]></wp:term_parent><wp:term_name><![CDATA[Pic Saint Loup]]></wp:term_name></wp:term>
-	<wp:term><wp:term_id><![CDATA[41]]></wp:term_id><wp:term_taxonomy><![CDATA[product_cat]]></wp:term_taxonomy><wp:term_slug><![CDATA[rive-droite]]></wp:term_slug><wp:term_parent><![CDATA[bordeaux]]></wp:term_parent><wp:term_name><![CDATA[Rive Droite]]></wp:term_name></wp:term>
-	<wp:term><wp:term_id><![CDATA[42]]></wp:term_id><wp:term_taxonomy><![CDATA[product_cat]]></wp:term_taxonomy><wp:term_slug><![CDATA[rive-gauche]]></wp:term_slug><wp:term_parent><![CDATA[bordeaux]]></wp:term_parent><wp:term_name><![CDATA[Rive Gauche]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[18]]></wp:term_id><wp:term_taxonomy><![CDATA[product_cat]]></wp:term_taxonomy><wp:term_slug><![CDATA[saint-chinian]]></wp:term_slug><wp:term_parent><![CDATA[languedoc-roussillon]]></wp:term_parent><wp:term_name><![CDATA[Saint Chinian]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[45]]></wp:term_id><wp:term_taxonomy><![CDATA[product_cat]]></wp:term_taxonomy><wp:term_slug><![CDATA[spiritueux]]></wp:term_slug><wp:term_parent><![CDATA[]]></wp:term_parent><wp:term_name><![CDATA[Spiritueux]]></wp:term_name></wp:term>
 	<wp:term><wp:term_id><![CDATA[51]]></wp:term_id><wp:term_taxonomy><![CDATA[product_cat]]></wp:term_taxonomy><wp:term_slug><![CDATA[sud-ouest]]></wp:term_slug><wp:term_parent><![CDATA[autres-regions]]></wp:term_parent><wp:term_name><![CDATA[Sud-Ouest]]></wp:term_name></wp:term>
@@ -280,7 +277,9 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/Giso/?page_id=42</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>42</wp:post_id>
 		<wp:post_date><![CDATA[2016-06-18 17:05:43]]></wp:post_date>
@@ -340,8 +339,8 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/Giso/?post_type=product&#038;p=48</guid>
 		<description></description>
-		<content:encoded><![CDATA[Le Domaine Alain Chabanon, à l'origine composé de 14 hectares de vignes, acquises autour de Jonquières (34) lors de sa création en 1990, est aujourd'hui composé de 16 hectares situés sur les territoires de cinq villages (Jonquières, St André de Sangonis, Lagamas, Saint Saturnin, et bien sûr Montpeyroux). La situation des parcelles du Domaine permet à la vigne de profiter d'un grand nombre de conditions climatiques différentes et de plusieurs types de sol, ce qui peut faire toute la différence sur les années à problèmes, et amener une complexité supplémentaire dans les assemblages.]]></content:encoded>
-		<excerpt:encoded><![CDATA[Domaine de la bouteille]]></excerpt:encoded>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>48</wp:post_id>
 		<wp:post_date><![CDATA[2016-06-18 17:14:29]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2016-06-18 15:14:29]]></wp:post_date_gmt>
@@ -513,17 +512,21 @@
 			<wp:meta_value><![CDATA[http://www.pierre-charles.com/BrainFactory/EspaceVin/wp-content/uploads/2016/10/giso-ft-philippine.pdf]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wpcf_belongs_domaine_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[262]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
 			<wp:meta_key><![CDATA[wpcf-cepages]]></wp:meta_key>
 			<wp:meta_value><![CDATA[Vermentino | Chenin]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key><![CDATA[wpcf-terroir]]></wp:meta_key>
+			<wp:meta_key><![CDATA[wpcf-elevage]]></wp:meta_key>
 			<wp:meta_value><![CDATA[Antériorité de la cuvée : premier millésime en 1995
 Age moyen des vignes : Vermentino 13ans, Chenin 21ans
 Terroir et mode de culture : sols pauvres et caillouteux  de type argilo-calcaire]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key><![CDATA[wpcf-rendement]]></wp:meta_key>
+			<wp:meta_key><![CDATA[wpcf-garde]]></wp:meta_key>
 			<wp:meta_value><![CDATA[18 hectolitres/hectare]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
@@ -533,8 +536,36 @@ Vignification : pressurage pneumatique, débourbage léger à froid.
 Pas de leuvrage. Fermentation en cuve inox à température moyenne]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key><![CDATA[wpcf-degustation]]></wp:meta_key>
+			<wp:meta_key><![CDATA[wpcf-service]]></wp:meta_key>
 			<wp:meta_value><![CDATA[Servir à une température de 12° à 14° C.]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-elevage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[En cuves]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-cepages]]></wp:meta_key>
+			<wp:meta_value><![CDATA[50% Syrah – 30% Grenache – 20% Mourvèdre]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-vinification]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Traditionnelle avec égrappage]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-service]]></wp:meta_key>
+			<wp:meta_value><![CDATA[15°]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-garde]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5 ans]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-contenance]]></wp:meta_key>
+			<wp:meta_value><![CDATA[75cl]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-appellation]]></wp:meta_key>
+			<wp:meta_value><![CDATA[A.O.C. Saint Chinian – 2015]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -572,354 +603,6 @@ Pas de leuvrage. Fermentation en cuve inox à température moyenne]]></wp:meta_v
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
 			<wp:meta_value><![CDATA[bienvenue-sur-le-nouveau-site-de-giso]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Bouteille</title>
-		<link>http://www.pierre-charles.com/BrainFactory/EspaceVin/produit/bouteille-6/</link>
-		<pubDate>Sat, 18 Jun 2016 15:23:21 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/Giso/?post_type=product&#038;p=58</guid>
-		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[Domaine de la bouteille]]></excerpt:encoded>
-		<wp:post_id>58</wp:post_id>
-		<wp:post_date><![CDATA[2016-06-18 17:23:21]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2016-06-18 15:23:21]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[bouteille-6]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[product]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="product_cat" nicename="saint-chinian"><![CDATA[Saint Chinian]]></category>
-		<category domain="product_type" nicename="simple"><![CDATA[simple]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_visibility]]></wp:meta_key>
-			<wp:meta_value><![CDATA[visible]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_stock_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[instock]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[total_sales]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_downloadable]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_virtual]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_purchase_note]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_featured]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_weight]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_length]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_width]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_height]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sku]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_product_attributes]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_regular_price]]></wp:meta_key>
-			<wp:meta_value><![CDATA[44.00]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sale_price]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sale_price_dates_from]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sale_price_dates_to]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_price]]></wp:meta_key>
-			<wp:meta_value><![CDATA[44.00]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sold_individually]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_manage_stock]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_backorders]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_stock]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_upsell_ids]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_crosssell_ids]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_product_version]]></wp:meta_key>
-			<wp:meta_value><![CDATA[2.5.5]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_product_image_gallery]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wc_rating_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wc_review_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wc_average_rating]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[minimum_allowed_quantity]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[maximum_allowed_quantity]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[group_of_quantity]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[minmax_do_not_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[minmax_cart_exclude]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[minmax_category_group_of_exclude]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[188]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
-			<wp:meta_value><![CDATA[cuvee-roches-blanche]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Bouteille</title>
-		<link>http://www.pierre-charles.com/BrainFactory/EspaceVin/produit/bouteille-5/</link>
-		<pubDate>Sat, 18 Jun 2016 15:26:27 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/Giso/?post_type=product&#038;p=60</guid>
-		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[Domaine de la bouteille]]></excerpt:encoded>
-		<wp:post_id>60</wp:post_id>
-		<wp:post_date><![CDATA[2016-06-18 17:26:27]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2016-06-18 15:26:27]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[bouteille-5]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[product]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="product_cat" nicename="saint-chinian"><![CDATA[Saint Chinian]]></category>
-		<category domain="product_type" nicename="simple"><![CDATA[simple]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_visibility]]></wp:meta_key>
-			<wp:meta_value><![CDATA[visible]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_stock_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[instock]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[total_sales]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_downloadable]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_virtual]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_purchase_note]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_featured]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_weight]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_length]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_width]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_height]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sku]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_product_attributes]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_regular_price]]></wp:meta_key>
-			<wp:meta_value><![CDATA[36.00]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sale_price]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sale_price_dates_from]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sale_price_dates_to]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_price]]></wp:meta_key>
-			<wp:meta_value><![CDATA[36.00]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_sold_individually]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_manage_stock]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_backorders]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_stock]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_upsell_ids]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_crosssell_ids]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_product_version]]></wp:meta_key>
-			<wp:meta_value><![CDATA[2.5.5]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_product_image_gallery]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wc_rating_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wc_average_rating]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[minimum_allowed_quantity]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[maximum_allowed_quantity]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[group_of_quantity]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[minmax_do_not_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[minmax_cart_exclude]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[minmax_category_group_of_exclude]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[188]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
-			<wp:meta_value><![CDATA[cuvee-pepite]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -1167,6 +850,479 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 		</wp:postmeta>
 	</item>
 	<item>
+		<title>Domaine de la bouteille</title>
+		<link>http://www.pierre-charles.com/BrainFactory/EspaceVin/domaine/domaine-de-la-bouteille/</link>
+		<pubDate>Wed, 01 Feb 2017 18:22:52 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/EspaceVin/?post_type=domaine&#038;p=262</guid>
+		<description></description>
+		<content:encoded><![CDATA[Le Domaine Alain Chabanon, à l'origine composé de 14 hectares de vignes, acquises autour de Jonquières (34) lors de sa création en 1990, est aujourd'hui composé de 16 hectares situés sur les territoires de cinq villages (Jonquières, St André de Sangonis, Lagamas, Saint Saturnin, et bien sûr Montpeyroux). La situation des parcelles du Domaine permet à la vigne de profiter d'un grand nombre de conditions climatiques différentes et de plusieurs types de sol, ce qui peut faire toute la différence sur les années à problèmes, et amener une complexité supplémentaire dans les assemblages.]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>262</wp:post_id>
+		<wp:post_date><![CDATA[2017-02-01 19:22:52]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2017-02-01 18:22:52]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[domaine-de-la-bouteille]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[domaine]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-carte]]></wp:meta_key>
+			<wp:meta_value><![CDATA[http://www.pierre-charles.com/BrainFactory/EspaceVin/wp-content/uploads/2017/02/map.png]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>map</title>
+		<link>http://www.pierre-charles.com/BrainFactory/EspaceVin/domaine/domaine-de-la-bouteille/map/</link>
+		<pubDate>Mon, 06 Feb 2017 20:13:49 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/EspaceVin/wp-content/uploads/2017/02/map.png</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>272</wp:post_id>
+		<wp:post_date><![CDATA[2017-02-06 21:13:49]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2017-02-06 20:13:49]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[map]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>262</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://www.pierre-charles.com/BrainFactory/EspaceVin/wp-content/uploads/2017/02/map.png]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2017/02/map.png]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:500;s:6:"height";i:490;s:4:"file";s:15:"2017/02/map.png";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:15:"map-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";}s:6:"medium";a:4:{s:4:"file";s:15:"map-300x294.png";s:5:"width";i:300;s:6:"height";i:294;s:9:"mime-type";s:9:"image/png";}s:14:"shop_thumbnail";a:4:{s:4:"file";s:15:"map-180x180.png";s:5:"width";i:180;s:6:"height";i:180;s:9:"mime-type";s:9:"image/png";}s:12:"shop_catalog";a:4:{s:4:"file";s:15:"map-300x300.png";s:5:"width";i:300;s:6:"height";i:300;s:9:"mime-type";s:9:"image/png";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Bouteille</title>
+		<link>http://www.pierre-charles.com/BrainFactory/EspaceVin/produit/bouteille-6/</link>
+		<pubDate>Sat, 18 Jun 2016 15:23:21 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/Giso/?post_type=product&#038;p=58</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>58</wp:post_id>
+		<wp:post_date><![CDATA[2016-06-18 17:23:21]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2016-06-18 15:23:21]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[bouteille-6]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[product]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="product_cat" nicename="saint-chinian"><![CDATA[Saint Chinian]]></category>
+		<category domain="product_type" nicename="simple"><![CDATA[simple]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_visibility]]></wp:meta_key>
+			<wp:meta_value><![CDATA[visible]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_stock_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[instock]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[total_sales]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_downloadable]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_virtual]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_purchase_note]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_featured]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_weight]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_length]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_width]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_height]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sku]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_product_attributes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_regular_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[44.00]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sale_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sale_price_dates_from]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sale_price_dates_to]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[44.00]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sold_individually]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_manage_stock]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_backorders]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_stock]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_upsell_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_crosssell_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_product_version]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2.5.5]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_product_image_gallery]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wc_rating_count]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wc_review_count]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wc_average_rating]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[minimum_allowed_quantity]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[maximum_allowed_quantity]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[group_of_quantity]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[minmax_do_not_count]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[minmax_cart_exclude]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[minmax_category_group_of_exclude]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[188]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
+			<wp:meta_value><![CDATA[cuvee-roches-blanche]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wpcf_belongs_domaine_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[262]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-elevage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[En cuves]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-cepages]]></wp:meta_key>
+			<wp:meta_value><![CDATA[50% Syrah – 30% Grenache – 20% Mourvèdre]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-vinification]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Traditionnelle avec égrappage]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-service]]></wp:meta_key>
+			<wp:meta_value><![CDATA[15°]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-garde]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5 ans]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-contenance]]></wp:meta_key>
+			<wp:meta_value><![CDATA[75cl]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-appellation]]></wp:meta_key>
+			<wp:meta_value><![CDATA[A.O.C. Saint Chinian – 2015]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Bouteille</title>
+		<link>http://www.pierre-charles.com/BrainFactory/EspaceVin/produit/bouteille-5/</link>
+		<pubDate>Sat, 18 Jun 2016 15:26:27 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/Giso/?post_type=product&#038;p=60</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>60</wp:post_id>
+		<wp:post_date><![CDATA[2016-06-18 17:26:27]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2016-06-18 15:26:27]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[bouteille-5]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[product]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="product_cat" nicename="saint-chinian"><![CDATA[Saint Chinian]]></category>
+		<category domain="product_type" nicename="simple"><![CDATA[simple]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_visibility]]></wp:meta_key>
+			<wp:meta_value><![CDATA[visible]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_stock_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[instock]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[total_sales]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_downloadable]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_virtual]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_purchase_note]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_featured]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_weight]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_length]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_width]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_height]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sku]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_product_attributes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_regular_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[36.00]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sale_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sale_price_dates_from]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sale_price_dates_to]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_price]]></wp:meta_key>
+			<wp:meta_value><![CDATA[36.00]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_sold_individually]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_manage_stock]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_backorders]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_stock]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_upsell_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_crosssell_ids]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_product_version]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2.5.5]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_product_image_gallery]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wc_rating_count]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:0:{}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wc_average_rating]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[minimum_allowed_quantity]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[maximum_allowed_quantity]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[group_of_quantity]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[minmax_do_not_count]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[minmax_cart_exclude]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[minmax_category_group_of_exclude]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[188]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
+			<wp:meta_value><![CDATA[cuvee-pepite]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wpcf_belongs_domaine_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[262]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-elevage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[En cuves]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-cepages]]></wp:meta_key>
+			<wp:meta_value><![CDATA[50% Syrah – 30% Grenache – 20% Mourvèdre]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-vinification]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Traditionnelle avec égrappage]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-service]]></wp:meta_key>
+			<wp:meta_value><![CDATA[15°]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-garde]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5 ans]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-contenance]]></wp:meta_key>
+			<wp:meta_value><![CDATA[75cl]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-appellation]]></wp:meta_key>
+			<wp:meta_value><![CDATA[A.O.C. Saint Chinian – 2015]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
 		<title>Bouteille</title>
 		<link>http://www.pierre-charles.com/BrainFactory/EspaceVin/produit/bouteille-4/</link>
 		<pubDate>Sat, 18 Jun 2016 15:28:32 +0000</pubDate>
@@ -1174,7 +1330,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/Giso/?post_type=product&#038;p=62</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[Domaine de la bouteille]]></excerpt:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>62</wp:post_id>
 		<wp:post_date><![CDATA[2016-06-18 17:28:32]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2016-06-18 15:28:32]]></wp:post_date_gmt>
@@ -1337,6 +1493,38 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
 			<wp:meta_value><![CDATA[cuvee-double-gold]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wpcf_belongs_domaine_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[262]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-elevage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[En cuves]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-cepages]]></wp:meta_key>
+			<wp:meta_value><![CDATA[50% Syrah – 30% Grenache – 20% Mourvèdre]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-vinification]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Traditionnelle avec égrappage]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-service]]></wp:meta_key>
+			<wp:meta_value><![CDATA[15°]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-garde]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5 ans]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-contenance]]></wp:meta_key>
+			<wp:meta_value><![CDATA[75cl]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-appellation]]></wp:meta_key>
+			<wp:meta_value><![CDATA[A.O.C. Saint Chinian – 2015]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Bouteille</title>
@@ -1346,7 +1534,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/Giso/?post_type=product&#038;p=64</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[Domaine de la bouteille]]></excerpt:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>64</wp:post_id>
 		<wp:post_date><![CDATA[2016-06-18 17:30:20]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2016-06-18 15:30:20]]></wp:post_date_gmt>
@@ -1513,6 +1701,38 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
 			<wp:meta_value><![CDATA[rose]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wpcf_belongs_domaine_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[262]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-elevage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[En cuves]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-cepages]]></wp:meta_key>
+			<wp:meta_value><![CDATA[50% Syrah – 30% Grenache – 20% Mourvèdre]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-vinification]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Traditionnelle avec égrappage]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-service]]></wp:meta_key>
+			<wp:meta_value><![CDATA[15°]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-garde]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5 ans]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-contenance]]></wp:meta_key>
+			<wp:meta_value><![CDATA[75cl]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-appellation]]></wp:meta_key>
+			<wp:meta_value><![CDATA[A.O.C. Saint Chinian – 2015]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Bouteille</title>
@@ -1522,7 +1742,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/Giso/?post_type=product&#038;p=66</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[Domaine de la bouteille]]></excerpt:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>66</wp:post_id>
 		<wp:post_date><![CDATA[2016-06-18 17:31:53]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2016-06-18 15:31:53]]></wp:post_date_gmt>
@@ -1689,6 +1909,42 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
 			<wp:meta_value><![CDATA[cuvee-emeraude]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-elevage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Hello]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wpcf_belongs_domaine_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[262]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-elevage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[En cuves]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-cepages]]></wp:meta_key>
+			<wp:meta_value><![CDATA[50% Syrah – 30% Grenache – 20% Mourvèdre]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-vinification]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Traditionnelle avec égrappage]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-service]]></wp:meta_key>
+			<wp:meta_value><![CDATA[15°]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-garde]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5 ans]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-contenance]]></wp:meta_key>
+			<wp:meta_value><![CDATA[75cl]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-appellation]]></wp:meta_key>
+			<wp:meta_value><![CDATA[A.O.C. Saint Chinian – 2015]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Bouteille</title>
@@ -1698,7 +1954,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/Giso/?post_type=product&#038;p=102</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[Domaine de la bouteille]]></excerpt:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>102</wp:post_id>
 		<wp:post_date><![CDATA[2016-09-14 12:53:04]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2016-09-14 10:53:04]]></wp:post_date_gmt>
@@ -1864,6 +2120,70 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
 			<wp:meta_value><![CDATA[financement-participatif]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-elevage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Antériorité de la cuvée : premier millésime en 1995
+Age moyen des vignes : Vermentino 13ans, Chenin 21ans
+Terroir et mode de culture : sols pauvres et caillouteux  de type argilo-calcaire]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-cepages]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Vermentino | Chenin]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-vignification]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Manuelles uniquement le matin, en cagettes ajourées
+Vignification : pressurage pneumatique, débourbage léger à froid.
+Pas de leuvrage. Fermentation en cuve inox à température moyenne]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-service]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Servir à une température de 12° à 14° C.]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-garde]]></wp:meta_key>
+			<wp:meta_value><![CDATA[18 hectolitres/hectare]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-contenance]]></wp:meta_key>
+			<wp:meta_value><![CDATA[18 hectolitres/hectare]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-appellation]]></wp:meta_key>
+			<wp:meta_value><![CDATA[18 hectolitres/hectare]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wpcf_belongs_domaine_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[262]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-elevage]]></wp:meta_key>
+			<wp:meta_value><![CDATA[En cuves]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-cepages]]></wp:meta_key>
+			<wp:meta_value><![CDATA[50% Syrah – 30% Grenache – 20% Mourvèdre]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-vinification]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Traditionnelle avec égrappage]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-service]]></wp:meta_key>
+			<wp:meta_value><![CDATA[15°]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-garde]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5 ans]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-contenance]]></wp:meta_key>
+			<wp:meta_value><![CDATA[75cl]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-product-appellation]]></wp:meta_key>
+			<wp:meta_value><![CDATA[A.O.C. Saint Chinian – 2015]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -2437,7 +2757,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/EspaceVin/?post_type=slider&#038;p=207</guid>
 		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
+		<content:encoded><![CDATA[Plus de 600 vins en stock au meilleur prix domaine]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>207</wp:post_id>
 		<wp:post_date><![CDATA[2016-12-14 11:36:04]]></wp:post_date>
@@ -2681,6 +3001,120 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 			<wp:comment_parent>0</wp:comment_parent>
 			<wp:comment_user_id>0</wp:comment_user_id>
 		</wp:comment>
+	</item>
+	<item>
+		<title>Facebook</title>
+		<link>http://www.pierre-charles.com/BrainFactory/EspaceVin/reseau-social/facebook/</link>
+		<pubDate>Wed, 01 Feb 2017 13:56:06 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/EspaceVin/?post_type=reseau-social&#038;p=253</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>253</wp:post_id>
+		<wp:post_date><![CDATA[2017-02-01 14:56:06]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2017-02-01 13:56:06]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[facebook]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[reseau-social]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[facebook]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-lien]]></wp:meta_key>
+			<wp:meta_value><![CDATA[https://www.facebook.com/espacevinboutique/]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-icon-fontawesome]]></wp:meta_key>
+			<wp:meta_value><![CDATA[fa fa-facebook]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Twitter</title>
+		<link>http://www.pierre-charles.com/BrainFactory/EspaceVin/reseau-social/twitter/</link>
+		<pubDate>Wed, 01 Feb 2017 14:18:20 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/EspaceVin/?post_type=reseau-social&#038;p=257</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>257</wp:post_id>
+		<wp:post_date><![CDATA[2017-02-01 15:18:20]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2017-02-01 14:18:20]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[twitter]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[reseau-social]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[twitter]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-lien]]></wp:meta_key>
+			<wp:meta_value><![CDATA[https://twitter.com/EspaceVin1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-icon-fontawesome]]></wp:meta_key>
+			<wp:meta_value><![CDATA[fa fa-twitter]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Pinterest</title>
+		<link>http://www.pierre-charles.com/BrainFactory/EspaceVin/reseau-social/pinterest/</link>
+		<pubDate>Wed, 01 Feb 2017 21:48:21 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://www.pierre-charles.com/BrainFactory/EspaceVin/?post_type=reseau-social&#038;p=268</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>268</wp:post_id>
+		<wp:post_date><![CDATA[2017-02-01 22:48:21]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2017-02-01 21:48:21]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[pinterest]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[reseau-social]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[pinterest]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-lien]]></wp:meta_key>
+			<wp:meta_value><![CDATA[https://fr.pinterest.com/espacevin/]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[wpcf-icon-fontawesome]]></wp:meta_key>
+			<wp:meta_value><![CDATA[fa fa-pinterest]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 </channel>
 </rss>
