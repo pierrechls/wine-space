@@ -259,15 +259,40 @@ get_header( 'shop' ); ?>
 					$categoryImage = '';
 
 					if ( $product_cats && ! is_wp_error ( $product_cats ) ){
-
-						$single_cat = array_shift( $product_cats );
-						$categoryID = $single_cat->term_taxonomy_id;
-						$categoryName = $single_cat->name;
+					
+						$queryCat = get_query_var( 'cat', 0 );
+						
+						if($queryCat != 0){
+						
+							foreach ($product_cats as $product_cat){
+							    if( $product_cat->term_taxonomy_id == $queryCat ) {
+								    $categoryID = $queryCat;
+								    $categoryName = get_cat_name( $categoryID );
+								    break;
+							    }
+							}
+						}
+						
+						if($categoryID == '') {
+							$single_cat = array_shift($product_cats);  
+							if($single_cat->parent == 0) {
+								foreach ($product_cats as $product_cat){
+								    if( $product_cat->parent > 0 ) {
+									    $single_cat = $product_cat;
+									    break;
+								    }
+								}
+							}
+							$categoryID = $single_cat->term_taxonomy_id;
+							$categoryName = $single_cat->name;
+						}
+						
 						$thumbnail_id = get_woocommerce_term_meta( $categoryID, 'thumbnail_id', true ); 
 						$categoryImage = wp_get_attachment_url( $thumbnail_id );
 				
 					}
 				?>
+					
 			
 			<div class="illustration" style="background-image: url('<?php if( $categoryImage != '' ) { echo $categoryImage; } else { echo get_template_directory_uri() . '/images/products-background.png'; } ?>');">
 				<div class="wine-image">
