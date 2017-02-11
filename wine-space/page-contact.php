@@ -15,6 +15,10 @@ get_header(); ?>
 
 	<style>
 	
+		#primary {
+			background: #FFFFFF;
+		}
+	
 		div#wpform-field-hp {
 			display: none;
 		}
@@ -170,7 +174,9 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 				
 		    </div>
-
+			
+			<div style="clear: both;"></div>
+			
 		</main><!-- #main -->
 	</div><!-- #primary -->
     </div>
