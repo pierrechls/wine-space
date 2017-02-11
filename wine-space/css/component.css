@@ -60,7 +60,7 @@ body {
 	overflow: hidden;
 	margin: 0;
 	color: #cecece;
-	background: #FFFFFF;
+	background: #000000;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -78,6 +78,7 @@ a:hover {
 .container {
 	overflow-y: auto;
 	height: 100vh;
+	background: #000;
 }
 
 .come-back-home {
