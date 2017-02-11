@@ -30,8 +30,14 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
+	
+		<?php 
+			$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+			$thumbnail_id = get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true ); 
+			$categoryImage = wp_get_attachment_url( $thumbnail_id );
+		?>
 		
-		<div class="category-product">
+		<div class="category-product" style="background-image: url('<?php if( $categoryImage != '' ) { echo $categoryImage; } else { echo get_template_directory_uri() . '/images/products-background.png'; } ?>');">
 		
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
@@ -40,8 +46,6 @@ get_header( 'shop' ); ?>
 		<?php endif; ?>
 
 		<?php //do_action( 'woocommerce_archive_description' ); ?>
-		
-		<?php $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
 
 		<?php if ( have_posts() ) : ?>
 
