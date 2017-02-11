@@ -105,6 +105,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-right: 1rem;
 }
 
+.content .description h4.product-price {
+	font-size: 1.5rem;
+}
+
 
 .content .description .back-to-category a {
 	color: #000;
@@ -163,11 +167,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .content .description .informations .fiche-technique .element {
-	margin: 4rem auto;
+	margin: 2rem auto;
 }
 
 .content .description .informations .fiche-technique .element h4 {
-	margin: 0 auto 0.9rem auto;
+	margin: 0 auto 0.2rem auto;
     font-size: 1.9rem;
     line-height: 2.3rem;
 }
@@ -288,7 +292,7 @@ get_header( 'shop' ); ?>
 					<h3><?php echo $parentTitle ?></h3>	
 				<?php } ?>
 				<h1><?php the_title(); ?></h1>
-				<h4>Prix : <?php 
+				<h4 class="product-price">Prix : <?php 
 					if($product->get_sale_price() > 0 ){ ?>
 						<span class="regular-price"><?php echo number_format($product->get_regular_price(), 2); ?> €</span>
 						<span><?php echo number_format($product->get_price(), 2); ?> €</span>
