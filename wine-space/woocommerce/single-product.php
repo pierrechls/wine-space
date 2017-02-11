@@ -15,10 +15,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<?php
-
-get_header( 'shop' ); ?>
-
 <style>
 
 .content .illustration {
@@ -239,6 +235,10 @@ get_header( 'shop' ); ?>
 }
 
 </style>
+
+<?php
+
+get_header( 'shop' ); ?>
 
 	<?php
 		/**
