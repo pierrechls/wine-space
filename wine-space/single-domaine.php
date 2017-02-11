@@ -294,9 +294,30 @@ get_header(); ?>
 </style>
 
 	<?php while ( have_posts() ) : the_post(); ?>
+	
+			<?php 
+			
+				$queryCat = get_query_var( 'cat', 0 );
+				$categoryImage = '';
+						
+				if($queryCat != 0){
+					$thumbnail_id = get_woocommerce_term_meta( $queryCat, 'thumbnail_id', true ); 
+					$categoryImage = wp_get_attachment_url( $thumbnail_id );
+				}
+			?>
+	
 			<div class="description">
 			
-				<p class="back-to-category"><a href="<?php echo get_site_url(); ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour</a></p>
+				<p class="back-to-category" id="domaine-back-to-category"><a href="<?php echo get_site_url(); ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour</a></p>
+				
+				<script type="text/javascript">
+					window.onload = function() { 
+						var history_prev = document.referrer;
+						if(history_prev != null || history_prev.length > 0 || history_prev != '') {
+							document.querySelector('#domaine-back-to-category a').setAttribute('href', history_prev);
+						}
+					}
+				</script>
 			
 				<h1 class="title"><?php the_title(); ?></h1>
 				
@@ -312,7 +333,7 @@ get_header(); ?>
 				</div>
 			</div>
 			
-			<div class="domaine-products">
+			<div class="domaine-products" style="background-image: url('<?php if( $categoryImage != '' ) { echo $categoryImage; } else { echo get_template_directory_uri() . '/images/products-background.png'; } ?>');">
 				<?php 
 					$child_posts = types_child_posts('product');
 				?>
