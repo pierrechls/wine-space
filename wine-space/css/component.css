@@ -83,7 +83,7 @@ a:hover {
 .come-back-home {
 	display: block;
 	position: absolute;
-	top: 1rem;
+	top: 18rem;
 	left: 50%;
 	width: 3rem;
 	height: auto;
@@ -308,8 +308,8 @@ a:hover {
     padding: 3.5rem 0 0 0;
     text-align: center;
     color: #3b3d4a;
-    background: #414141;
-    z-index: 9999;
+    /* background: #414141; */
+    z-index: 99999;
 }
 
 .dummy-logo img {
@@ -422,6 +422,7 @@ body #cdawrap a:hover.carbon-poweredby {
 
 	.menu .menu__breadcrumbs {
 		top: 10rem;
+		padding: 4.5rem 0 0.8rem 0
 	}
 
 	.category-product h1 {
@@ -470,16 +471,21 @@ body #cdawrap a:hover.carbon-poweredby {
 .menu {
     position: absolute;
     text-align: center;
-    top: 17rem;
+    top: 0;
     left: 0;
     width: 30rem;
-    height: calc(100vh - 17rem);
+    height: 100vh;
     background-color: #414141;
     background-image: url('../images/menu-background.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center bottom;
     z-index: 9999;
+    -moz-box-shadow: 0.2rem 0rem 2rem 0.2rem rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0.2rem 0rem 2rem 0.2rem rgba(0,0,0,0.5);
+	-o-box-shadow: 0.2rem 0rem 2rem 0.2rem rgba(0,0,0,0.5);
+	box-shadow: 0.2rem 0rem 2rem 0.2rem rgba(0,0,0,0.5);
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=rgba(0,0,0,0.5), Direction=90, Strength=20);
 }
 
 @media screen and (max-height: 540px) and (min-width: 60rem) {
@@ -491,7 +497,7 @@ body #cdawrap a:hover.carbon-poweredby {
 
 .menu__wrap {
 	position: absolute;
-	top: 7rem;
+	top: 24rem;
 	bottom: 0;
 	overflow: hidden;
 	width: 100%;
@@ -724,7 +730,7 @@ body #cdawrap a:hover.carbon-poweredby {
 	font-size: 1.65rem;
 	line-height: 1rem;
 	position: relative;
-	padding: 4rem 0 0.8rem 0;
+	padding: 21rem 0 0.8rem 0;
 }
 
 .menu__breadcrumbs a {
