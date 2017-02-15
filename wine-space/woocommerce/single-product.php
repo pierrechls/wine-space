@@ -85,6 +85,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-align: left;
 	padding: 0;
 	font-size: 3.5rem;
+	text-transform: capitalize;
 }
 .content .description h3 {
 	text-align: left;
