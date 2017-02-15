@@ -27,31 +27,43 @@ if ( ! defined( 'ABSPATH' ) ) {
     }
 
     #primary .woocommerce {
-		width: 50rem;
+		width: 65rem;
 	    height: 40rem;
 	    margin: 0 auto;
 	    top: 50%;
 	    left: 50%;
 	    position: absolute;
 	    margin-top: -20rem;
-	    margin-left: -25rem;
+	    margin-left: -32.5rem;
+	}
+
+	#primary .woocommerce #customer_login .col-1 {
+		display: inline-block;
+		float: left;
+		width: calc(65rem/2);
+	}
+
+	#primary .woocommerce #customer_login .col-2 {
+		display: inline-block;
+		float: right;
+		width: calc(65rem/2);
 	}
 
 	#primary .woocommerce p {
 		text-align: center;
 	}
 
-	#primary .woocommerce form.login label {
+	#primary .woocommerce form.login label, #primary .woocommerce form.register label{
 		display: block;
 		margin: 1rem auto;
 	}
 
-    #primary .entry-content form.login{
+    #primary .entry-content form.login, #primary .entry-content form.register {
 	    padding: 1rem;
 	    text-align: center;
     }
 
-    #primary .entry-content form.login label {
+    #primary .entry-content form.login label, #primary .entry-content form.register label {
 	    display: block;
     }
 
@@ -82,7 +94,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 		    position: relative;
 		    margin-top: 0;
 		    margin-left: 0;
-		    margin-top: 5rem;
+		}
+
+		#primary .woocommerce #customer_login .col-1, #primary .woocommerce #customer_login .col-2 {
+			display: block;
+			float: none;
+			width: 100%;
+		}
+
+		#primary .woocommerce #customer_login .col-2 {
+			padding-bottom: 10rem;
 		}
 
 	}
@@ -108,7 +129,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 
 			<p class="form-row form-row-wide">
-				<label for="username"><?php _e( 'Username or email address', 'woocommerce' ); ?> <span class="required">*</span></label>
+				<label for="username"><?php _e( 'Username or email', 'woocommerce' ); ?> <span class="required">*</span></label>
 				<input type="text" class="input-text" name="username" id="username" value="<?php if ( ! empty( $_POST['username'] ) ) echo esc_attr( $_POST['username'] ); ?>" />
 			</p>
 			<p class="form-row form-row-wide">
@@ -155,7 +176,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php endif; ?>
 
 			<p class="form-row form-row-wide">
-				<label for="reg_email"><?php _e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
+				<label for="reg_email"><?php _e( 'Email', 'woocommerce' ); ?> <span class="required">*</span></label>
 				<input type="email" class="input-text" name="email" id="reg_email" value="<?php if ( ! empty( $_POST['email'] ) ) echo esc_attr( $_POST['email'] ); ?>" />
 			</p>
 
