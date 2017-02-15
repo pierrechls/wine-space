@@ -151,7 +151,7 @@
 		<div class="content">
 			<div class="bp-header__main <?php if(is_home() || is_product_category() || is_product() || is_404() ) { echo "home"; } if(is_home()) { echo " up"; } if( 'domaine' == get_post_type() ) { echo " black-theme"; } ?> ">
 				<nav class="bp-nav">
-					<a class="bp-nav__item" href="<?php echo get_site_url(); ?>/mon-compte/" data-info="Compte"><i class="fa fa-user" aria-hidden="true"></i></a>
+					<a class="bp-nav__item" href="<?php echo get_site_url(); ?>/mon-compte/" data-info="<?php if(is_user_logged_in()){ echo 'Compte'; } else { echo 'Connexion / Inscription'; } ?>"><i class="fa fa-user" aria-hidden="true"></i></a>
 					<a class="bp-nav__item" href="<?php echo wc_get_cart_url(); ?>" data-info="Panier"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
 					<a class="cart-contents" href="<?php echo wc_get_cart_url(); ?>">
 						<?php 
