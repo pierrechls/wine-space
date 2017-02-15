@@ -70,8 +70,9 @@ get_header( 'shop' ); ?>
 				        'posts_per_page' => -1,
 				        'product_cat' => $term->slug,
 				        'post_type' => 'product',
-				        'orderby' => 'date',
-				        'order' => 'DESC'
+				        'orderby'   => 'meta_value_num',
+					    'meta_key'  => '_price',
+					    'order' => 'asc'
 				    ) );
 
 					while ( $products->have_posts() ) : $products->the_post(); global $product;
