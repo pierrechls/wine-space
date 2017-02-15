@@ -222,6 +222,9 @@ get_header( 'shop' ); ?>
     line-height: 2.3rem;
 }
 
+.content .description .informations .fiche-technique .element p:first-letter {
+    text-transform: uppercase;
+}
 
 .content .description .informations .go-to-fiche-domaine {
 	text-align: left;
@@ -438,6 +441,13 @@ get_header( 'shop' ); ?>
 								<div class="element">
 									<h4>Appellation</h4>
 									<?php echo $appellation; ?>
+								</div>
+							<?php }	?>
+							
+							<?php $millesime = do_shortcode( "[types field='product-millesime'][/types]" ); if( $millesime != '' ) { ?>
+								<div class="element">
+									<h4>Millésime</h4>
+									<?php echo $millesime; ?>
 								</div>
 							<?php }	?>
 							
