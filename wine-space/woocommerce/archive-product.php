@@ -88,10 +88,13 @@ get_header( 'shop' ); ?>
 										$parent_id = wpcf_pr_post_get_belongs(get_the_ID(), 'domaine');
 										if (!empty($parent_id)) {
 									?>
-											<p><?php echo get_the_title($parent_id); ?></p>
+											<p class="product-info-domaine"><?php echo get_the_title($parent_id); ?></p>
 									<?php
 										}
 									?>
+									
+									<?php $millesime = do_shortcode( "[types field='product-millesime'][/types]" ); if( $millesime != '' ) { ?>											<div class="product-info-millesime"><?php echo $millesime; ?></div>
+									<?php }	?>
 									
 									<p style="margin: 0 0 1.8rem 0;">
 										<?php 
