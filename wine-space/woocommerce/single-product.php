@@ -15,7 +15,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
+<?php
+
+get_header( 'shop' ); ?>
+
 <style>
+
 
 .content .illustration {
 	float: right;
@@ -44,13 +49,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .content .illustration .wine-image .wine-image-child {
     display: inline-block;
-    vertical-align: middle;          /* vertical alignment of the inline element */
-    font: 16px/1 Arial, sans-serif;  /* reset the font property */
-    padding: 5px;
+    vertical-align: middle;
+    height: 100vh;
+    width: 100%;
+}
+
+.content .illustration .wine-image .wine-image-child span.align-img {
+	display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
 
 .content .illustration .wine-image .wine-image-child img {
 	height: 80%;
+	margin-top: 5rem;
 	width: auto;
 }
 
@@ -237,10 +249,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </style>
 
-<?php
-
-get_header( 'shop' ); ?>
-
 	<?php
 		/**
 		 * woocommerce_before_main_content hook
@@ -298,6 +306,7 @@ get_header( 'shop' ); ?>
 			<div class="illustration" style="background-image: url('<?php if( $categoryImage != '' ) { echo $categoryImage; } else { echo get_template_directory_uri() . '/images/products-background.png'; } ?>');">
 				<div class="wine-image">
 					<div class="wine-image-child">
+						<span class="align-img"></span>
 						<img src="<?php the_post_thumbnail_url( 'full' ); ?>" />
 					</div>
 				</div>
