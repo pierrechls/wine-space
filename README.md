@@ -43,6 +43,12 @@
 - **Download** Min/Max Quantities plugin from [here](https://github.com/pierrechls/wc-min-max-quantities)
 - **Follow** the instructions
 - **Configure** your products with min and max quantities
+
+#### Category and taxonomy terms order
+
+- **Download** Category and taxonomy terms order plugin from [here](https://github.com/pierrechls/taxonomy-terms-order)
+- **Follow** the instructions
+- **Order** your categories as you want
  
 ### Init content
 
