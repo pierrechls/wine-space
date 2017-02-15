@@ -168,10 +168,50 @@ get_header(); ?>
 		    <div class="contact-post">
 
 				<?php while ( have_posts() ) : the_post(); ?>
-	
-					<?php the_content() ?>
+				
+					<div class="contact-formulaire">
+						<h2>Nous contacter</h2>
+						<?php the_content() ?>
+					</div>
 	
 				<?php endwhile; // end of the loop. ?>
+				
+				
+				
+				<?php 
+					
+				$args = array( 'post_type' => 'contact-information', 'posts_per_page' => 1, 'orderby' => 'date', 'order' => 'ASC' );
+				$loop = new WP_Query( $args );
+				while ( $loop->have_posts() ) : $loop->the_post(); ?>
+				
+					<div class="contact-infos-diverses">
+						<h2>Informations diverses</h2>
+						
+						<?php $contactAdress = do_shortcode( "[types field='adresse'][/types]" ); ?>
+						<?php if($contactAdress != '') { ?> <p><strong>Adresse :</strong></p><address><?php echo $contactAdress; ?></address> <?php } ?>
+						
+						
+						<?php $contactHoraires = do_shortcode( "[types field='horaires'][/types]" ); ?>
+						<?php if($contactHoraires != '') { ?> <p><strong>Adresse :</strong></p><p><?php echo $contactHoraires; ?></p> <?php } ?>
+						
+						
+						<?php $contactMail = do_shortcode( "[types field='mail'][/types]" ); ?>
+						<?php $contactTel = do_shortcode( "[types field='telephone'][/types]" ); ?>
+						<?php $contactTelBis = do_shortcode( "[types field='telephone-bis'][/types]" ); ?>
+						<?php if($contactMail != '' || $contactTel != '' || $contactTelBis != '') { ?> 
+								<p><strong>Coordonnées :</strong></p>
+								<?php if($contactMail != '') { ?> <p>Mail : <?php echo $contactMail; ?></p> <?php } ?>
+								<?php if($contactTel != '') { ?> <p>Tel : <a href="tel:<?php echo str_replace(' ', '', $contactTel); ?>"><?php echo $contactTel; ?></a></p> <?php } ?>
+								<?php if($contactTelBis != '') { ?> <p>Tel : <a href="tel:<?php echo str_replace(' ', '', $contactTelBis); ?>"><?php echo $contactTelBis; ?></a></p> <?php } ?>
+						
+						<?php }	?>
+						
+				<?php 
+					
+				endwhile;
+			?>
+					
+				<?php wp_reset_query(); ?>
 				
 		    </div>
 			
