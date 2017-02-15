@@ -139,17 +139,19 @@ get_header( 'shop' ); ?>
     margin: 4rem auto 5rem auto;
 }
 
+.content .description .back-to-category a {
+	color: rgba(0,0,0,0.75);
+    background: #baa571;
+    padding: 1rem 1.7rem;
+    border-radius: 0.8em;
+}
+
 .content .description .back-to-category a i {
 	margin-right: 1rem;
 }
 
 .content .description h4.product-price {
 	font-size: 1.5rem;
-}
-
-
-.content .description .back-to-category a {
-	color: #000;
 }
 
 .content .description .form-add-to-cart {
