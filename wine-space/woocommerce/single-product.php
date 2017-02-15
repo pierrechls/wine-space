@@ -107,6 +107,31 @@ get_header( 'shop' ); ?>
     font-size: 2rem;
 }
 
+.content .description .go-to-fiche-domaine {
+	text-align: left;
+	margin: 1rem auto 4rem auto;
+}
+
+.content .description .go-to-fiche-domaine a {
+	/*background: #000; */
+    outline: 0;
+    text-transform: uppercase;
+    border: 0;
+    font-size: 1.1rem;
+    color: #000;
+    padding: 1.1rem 0rem;
+    vertical-align: middle;
+    border-radius: 0.8rem;
+    font-style: italic;
+    /* border-top: 0.2rem solid #000; */
+    margin: 1rem auto;
+}
+
+.content .description .go-to-fiche-domaine a i {
+	color: #baa571;
+	margin-left: 0.4rem;
+}
+
 .content .description .back-to-category {
 	text-align: left;
 	text-transform: uppercase;
@@ -325,6 +350,9 @@ get_header( 'shop' ); ?>
 			
 				<?php if($parentTitle != '') { ?>
 					<h3><?php echo $parentTitle ?></h3>	
+					<?php if($parentURL != '') { ?>
+						<p class="go-to-fiche-domaine"><a href="<?if($categoryID != '') { echo esc_url( add_query_arg( 'cat', $categoryID, $parentURL) ); } else { echo $parentURL; } ?>">Voir la fiche domaine <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+					<?php } ?>
 				<?php } ?>
 				<h1><?php the_title(); ?></h1>
 				<h4 class="product-price">Prix : <?php 
@@ -412,9 +440,6 @@ get_header( 'shop' ); ?>
 							<?php }	?>
 							
 					</div>
-					<?php if($parentURL != '') { ?>
-						<p class="go-to-fiche-domaine"><a href="<?if($categoryID != '') { echo esc_url( add_query_arg( 'cat', $categoryID, $parentURL) ); } else { echo $parentURL; } ?>">Voir la fiche domaine <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
-					<?php } ?>
 				</div>
 			</div>
 
