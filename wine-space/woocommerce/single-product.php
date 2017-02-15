@@ -451,6 +451,13 @@ get_header( 'shop' ); ?>
 								</div>
 							<?php }	?>
 							
+							<?php $commentairesDegustation = do_shortcode( "[types field='product-commentaires-degustations'][/types]" ); if( $commentairesDegustation != '' ) { ?>
+								<div class="element">
+									<h4>Commentaire de dégustation</h4>
+									<?php echo $commentairesDegustation; ?>
+								</div>
+							<?php }	?>
+							
 					</div>
 				</div>
 			</div>
