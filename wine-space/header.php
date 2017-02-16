@@ -3,13 +3,34 @@
     <head>
 	    <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	    <title><?php bloginfo('name'); ?></title>
-	    <meta name="description" content="<?php bloginfo('description'); ?>">
-	    <meta name="author" content="<?php bloginfo('name'); ?>" />
-	    <meta property="og:url" content="<?php echo get_site_url(); ?>/" />
+	    <title><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?></title>
+	    <?php
+	    $args = array( 'post_type' => 'meta-information', 'posts_per_page' => 1, 'orderby' => 'date', 'order' => 'ASC' );
+	    $loop = new WP_Query( $args );
+	    if( count($args) > 0 && $loop->found_posts != 0 ) {
+	    	while ( $loop->have_posts() ) : $loop->the_post();
+				$metaDescription = do_shortcode( "[types field='description'][/types]" );
+				$metaKeywords = do_shortcode( "[types field='keywords'][/types]" );
+				$metaAuthor = do_shortcode( "[types field='author'][/types]" );
+				if( $metaDescription != '' ) { ?><meta name="description" content="<?php echo $metaDescription; ?>"><?php }
+				if( $metaKeywords != '' ) { ?><meta name="keywords" content="<?php echo $metaKeywords; ?>"><?php }
+				if( $metaAuthor != '' ) { ?><meta name="author" content="<?php echo $metaAuthor; ?>"><?php } ?>
+				<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+				<meta property="og:title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>" /> <?php
+				if( $metaDescription != '' ) { ?><meta property="og:description" content="<?php echo $metaDescription; ?>" /><?php }
+			endwhile;
+		} else { ?>
+			<meta name='description' content="<?php bloginfo('description'); ?>">
+			<meta name='keywords' content='vin du languedoc, vins du languedoc, achat vin languedoc, vente vin languedoc, prix domaine' />
+			<meta name='author' content="<?php bloginfo('name'); ?>" />
+			<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+			<meta property="og:description" content="<?php bloginfo('description'); ?>" />
+			<meta property="og:title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>" /> <?php
+		}
+		?>
+		<?php wp_reset_query(); ?>
+		<meta property="og:url" content="<?php echo get_site_url(); ?>/" />
 	    <meta property="og:image" content="<?php bloginfo('template_directory'); ?>/images/og-image.png" />
-	    <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
-	    <meta property="og:description" content="<?php bloginfo('description'); ?>" />
 
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 		<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon">
