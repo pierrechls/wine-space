@@ -315,7 +315,7 @@ a:hover {
 
 .dummy-logo img {
 	width: 22rem;
-    margin: 1rem auto;
+    margin: 0rem auto 2rem auto;
 }
 
 .dummy-logo-icon {
@@ -742,7 +742,8 @@ body #cdawrap a:hover.carbon-poweredby {
 	vertical-align: middle;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	color: #baa571;
+	/* color: #baa571; */
+	color: rgba(255,255,255,0.5)
 }
 
 .menu__breadcrumbs a:last-child {

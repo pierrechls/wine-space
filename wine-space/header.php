@@ -73,6 +73,7 @@
 		<header class="bp-header cf">
 			<div class="dummy-logo">
 				<a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png"/></a>
+				<p class="website-slogan"><?php bloginfo('description'); ?></p>
 			</div>
 		</header>
 		<button class="action action--open <?php if( 'domaine' == get_post_type() ) { echo "black-theme"; }?> " aria-label="Open Menu"><span class="icon icon--menu"></span></button>

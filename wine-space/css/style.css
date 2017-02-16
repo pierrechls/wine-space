@@ -7,6 +7,7 @@ Author URI: http://www.pierre-charles.com/
 
 @import url('http://fonts.googleapis.com/css?family=Lato:300,500,300italic,700');
 @import url('https://fonts.googleapis.com/css?family=Lora');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
 ::-webkit-input-placeholder { color:#38393a; }
 ::-moz-placeholder { color:#38393a; } /* firefox 19+ */
@@ -137,6 +138,34 @@ a {
 	transition-duration: 0.3s, 0.3s;
 	transition-timing-function: linear, linear;
 }
+
+header p.website-slogan {
+	margin: 0.5rem auto 0 auto;
+	font-size: 1.3rem;
+	font-family: 'Lora', serif;
+	color: #baa571;
+	quotes: "«\00A0" "\00A0»";
+	/*
+background: rgba(181,150,77,1);
+	background: -moz-linear-gradient(left, rgba(181,150,77,1) 0%, rgba(224,211,184,1) 47%, rgba(181,150,77,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(181,150,77,1)), color-stop(47%, rgba(224,211,184,1)), color-stop(100%, rgba(181,150,77,1)));
+	background: -webkit-linear-gradient(left, rgba(181,150,77,1) 0%, rgba(224,211,184,1) 47%, rgba(181,150,77,1) 100%);
+	background: -o-linear-gradient(left, rgba(181,150,77,1) 0%, rgba(224,211,184,1) 47%, rgba(181,150,77,1) 100%);
+	background: -ms-linear-gradient(left, rgba(181,150,77,1) 0%, rgba(224,211,184,1) 47%, rgba(181,150,77,1) 100%);
+	background: linear-gradient(to right, rgba(181,150,77,1) 0%, rgba(224,211,184,1) 47%, rgba(181,150,77,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5964d', endColorstr='#b5964d', GradientType=1 );
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+*/
+}
+
+header p.website-slogan::before {
+    content: open-quote;
+}
+header p.website-slogan::after {
+    content: close-quote;
+}
+
 .header-container {
 	-moz-box-shadow: 0 0 5px rgba(0,0,0,0.35);
 	box-shadow: 0 0 5px rgba(0,0,0,0.35);
