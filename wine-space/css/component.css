@@ -60,7 +60,7 @@ body {
 	overflow: hidden;
 	margin: 0;
 	color: #cecece;
-	background: #000000;
+	background: #FFFFFF;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -78,7 +78,7 @@ a:hover {
 .container {
 	overflow-y: auto;
 	height: 100vh;
-	background: #000;
+	background: #FFFFFF;
 }
 
 .come-back-home {
@@ -531,7 +531,7 @@ body #cdawrap a:hover.carbon-poweredby {
 
 
 .menu__item.space__item {
-	padding-top: 1rem;
+	padding-top: 1.7rem;
 	height: 0;
 }
 
