@@ -100,6 +100,7 @@
 				endforeach; 
 				?>
 					<li class="menu__item space__item"><a class="menu__link" href="#"></a></li>
+					<li class="menu__item"><a class="menu__link" data-submenu="domaines" href="<?php echo get_site_url(); ?>/domaines/">Domaines</a></li>
 					<li class="menu__item"><a class="menu__link" data-submenu="presse-distinctions" href="<?php echo get_site_url(); ?>/presse-distinctions/">Presse & Distinctions</a></li>
 					<li class="menu__item"><a class="menu__link" data-submenu="a-propos" href="<?php echo get_site_url(); ?>/a-propos/">Qui sommes nous ?</a></li>
 					<li class="menu__item"><a class="menu__link" data-submenu="conditions-generales-de-vente" href="<?php echo get_site_url(); ?>/conditions-generales-de-vente/">CGV</a></li>
