@@ -51,7 +51,7 @@
 		<script src="<?php bloginfo('template_directory'); ?>/slider/jquery.bxslider.js"></script>
 		<link href="<?php bloginfo('template_directory'); ?>/slider/jquery.bxslider.css" rel="stylesheet" />
 		
-		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/fonts/font-awesome/css/font-awesome.css">
+		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/fonts/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/organicfoodicons.css" />
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/component.css" />
 		<script src="<?php bloginfo('template_directory'); ?>/js/modernizr-custom.js"></script>
