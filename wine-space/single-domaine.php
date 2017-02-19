@@ -22,6 +22,26 @@ get_header(); ?>
 	height: 1rem;
 }
 
+.content .go-to-fiche-domaine {
+	text-align: left;
+	margin: 1rem auto 4rem auto;
+}
+
+.content .go-to-fiche-domaine a {
+	/*background: #000; */
+    outline: 0;
+    text-transform: uppercase;
+    border: 0;
+    font-size: 1.1rem;
+    color: #000;
+    padding: 1.1rem 0rem;
+    vertical-align: middle;
+    border-radius: 0.8rem;
+    font-style: italic;
+    /* border-top: 0.2rem solid #000; */
+    margin: 1rem auto;
+}
+
 .content .domaine-products {
 	float: right;
     width: 55%;
@@ -132,14 +152,17 @@ get_header(); ?>
     margin: 4rem auto 5rem auto;
 }
 
+.content .description .back-to-category a {
+	color: rgba(0,0,0,0.75);
+    background: #baa571;
+    padding: 1rem 1.7rem;
+    border-radius: 0.8em;
+}
+
 .content .description .back-to-category a i {
 	margin-right: 1rem;
 }
 
-
-.content .description .back-to-category a {
-	color: #000;
-}
 
 .content .description .form-add-to-cart {
 	text-align: left;
@@ -318,7 +341,9 @@ get_header(); ?>
 						}
 					}
 				</script>
-			
+				
+				<p class="go-to-fiche-domaine"><a href="<?php echo get_site_url(); ?>/domaine/">Voir tous les domaines <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+				
 				<h1 class="title"><?php the_title(); ?></h1>
 				
 				<div class="informations">
