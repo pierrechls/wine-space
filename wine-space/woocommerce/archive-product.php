@@ -19,6 +19,10 @@ get_header( 'shop' ); ?>
 	.regular-price {
 		color: rgba(255,255,255,0.4);
 	}
+	
+	.bp-header__main {
+		background: transparent;
+	}  
 </style>
 
 	<?php
@@ -30,6 +34,8 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
+	
+		<!-- <? get_product_search_form(); ?> -->
 	
 		<?php 
 			$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
@@ -66,15 +72,26 @@ get_header( 'shop' ); ?>
 				
 				<?php
 				
-					$products = new WP_Query( array(
-				        'posts_per_page' => -1,
-				        'product_cat' => $term->slug,
-				        'post_type' => 'product',
-				        'orderby'   => 'meta_value_num',
-					    'meta_key'  => '_price',
-					    'order' => 'asc'
-				    ) );
-
+					if ( is_search() ) {
+						$products = new WP_Query( array(
+							's' => get_search_query(),
+					        'posts_per_page' => -1,
+					        'post_type' => 'product',
+					        'orderby'   => 'meta_value_num',
+						    'meta_key'  => '_price',
+						    'order' => 'ASC'
+					    ) );
+					} else {
+						$products = new WP_Query( array(
+					        'posts_per_page' => -1,
+					        'product_cat' => $term->slug,
+					        'post_type' => 'product',
+					        'orderby'   => 'meta_value_num',
+						    'meta_key'  => '_price',
+						    'order' => 'ASC'
+					    ) );	
+					}
+					
 					while ( $products->have_posts() ) : $products->the_post(); global $product;
 				
 				?>
@@ -140,7 +157,7 @@ get_header( 'shop' ); ?>
 		<?php endif; ?>
 		
 		</div>
-
+		
 	<?php
 		/**
 		 * woocommerce_after_main_content hook
