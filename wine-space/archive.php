@@ -7,7 +7,12 @@
  * @package winespace
  *
  */
+ 
+  wp_redirect( home_url(), 301 );
+    exit;
+ ?>
 
+<?/*
 get_header(); ?>
 
 	<section id="primary" class="content-area">
@@ -36,3 +41,4 @@ get_header(); ?>
 
 <?php do_action( 'winespace_sidebar' ); ?>
 <?php get_footer(); ?>
+*/
