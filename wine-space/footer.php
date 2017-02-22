@@ -75,6 +75,7 @@
 		<script src="<?php bloginfo('template_directory'); ?>/js/menu-classie.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/dummydata.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/menu-main.js"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/search-popup.js"></script>
 	
 		<script src="<?php bloginfo('template_directory'); ?>/js/quantity-input.js"></script>
 	

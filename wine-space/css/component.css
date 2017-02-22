@@ -158,6 +158,13 @@ a:hover {
 	}
 }
 
+@media screen and (max-width: 60em) {
+
+	.bp-header__main .bp-nav a.cart-contents {
+		display: block;
+	}
+}
+
 .bp-header__main.
 
 .bp-header__title {
@@ -224,7 +231,7 @@ a:hover {
 	width: 3.3rem;
 	height: 3.3rem;
 	margin: 0 0.1rem;
-	text-align: left;
+	text-align: center;
 	border-radius: 50%;
 }
 

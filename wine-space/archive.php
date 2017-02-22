@@ -12,7 +12,7 @@
     exit;
  ?>
 
-<?/*
+<?php /*
 get_header(); ?>
 
 	<section id="primary" class="content-area">
@@ -42,3 +42,5 @@ get_header(); ?>
 <?php do_action( 'winespace_sidebar' ); ?>
 <?php get_footer(); ?>
 */
+
+?>

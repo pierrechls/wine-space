@@ -22,6 +22,7 @@ get_header( 'shop' ); ?>
 	
 	.bp-header__main {
 		background: transparent;
+		position: absolute;
 	}  
 </style>
 

@@ -201,6 +201,107 @@ header p.website-slogan::after {
 	margin: 0;
 }
 
+#search-products-content {
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 9999;
+    background: #baa571;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+}
+
+#search-products-content.open {
+	visibility: visible;
+    opacity: 1;
+}
+
+#search-products-content #close-search-products-content {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+#search-products-content #close-search-products-content a {
+	font-size: 1.2rem;
+    padding: 0.7rem 0.9rem;
+}
+
+#search-products-content #search-products-content-form {
+    width: 50rem;
+    margin: 0 auto;
+    height: 20rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25rem;
+    margin-top: -10rem;
+}
+
+#search-products-content #search-products-content-form form {
+	text-align: center;
+}
+
+#search-products-content #search-products-content-form form label {
+	display: block;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+
+#search-products-content #search-products-content-form form input {
+	text-align: center;
+    margin: 1rem auto;
+    display: block;
+}
+
+#search-products-content #search-products-content-form form input#input-search-product {
+	border-color: #FFFFFF;
+    background: #FFFFFF;
+    color: #38393a;
+    padding: 0.8rem 1rem 0.9rem 1rem;
+}
+
+#search-products-content #search-products-content-form form button#cancel-search {
+	border: 0.2rem solid #38393a;
+    color: #baa571;
+    font: 1.5rem 'Lato', sans-serif;
+    font-weight: 600;
+    padding: 0.8rem 0.5rem 0.9rem 0.5rem;
+    text-indent: 0.1rem;
+    background: #38393a;
+    border-radius: 0.6rem;
+    text-transform: uppercase;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+#search-products-content #search-products-content-form form input#input-submit-search-product {
+	display: inline-block;
+    width: auto;
+    padding: 0.8rem 2rem 0.9rem 2rem;
+    margin-left: 2rem;
+    border: 0.2rem solid #38393a;
+    color: #baa571;
+    background: #38393a;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 60em){
+	#search-products-content #search-products-content-form {
+	    width: 30rem;
+	    margin-left: -15rem;
+	}
+}
+
+
 #primary {
 	line-height: 1.2;
 }
@@ -297,12 +398,18 @@ header p.website-slogan::after {
 	color: #FFFFFF;
 	position: absolute;
     right: 0;
-    top: 7rem;
+    top: 8rem;
     font-size: 1.6rem;
     z-index: 99;
     margin: 0 0 0 auto;
     padding: 0.6rem 5rem 0;
     text-align: right;
+}
+
+@media screen and (max-width: 60em){
+	.category-product h1 {
+		top: 9rem;
+	}
 }
 
 .regular-price {
