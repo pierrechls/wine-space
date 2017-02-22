@@ -24,6 +24,64 @@ get_header( 'shop' ); ?>
 		background: transparent;
 		position: absolute;
 	}  
+	
+	.filter-bar {
+		color: #FFFFFF;
+	    position: absolute;
+	    left: 0;
+	    top: 8rem;
+	    font-size: 1.6rem;
+	    z-index: 99;
+	    margin: 0 auto;
+	    text-align: left;
+	    text-transform: uppercase;
+	}
+	
+	.filter-bar p {
+		margin: 0 auto;
+		padding: 0.6rem 0 0 2.8rem;
+	}
+	
+	.filter-bar p a {
+		margin: 0 1rem;
+	}
+	
+	.filter-bar p a.filter-active {
+		color: #baa571;
+	}
+	
+	.filter-bar p a i:first-child {
+		font-size: 1.1rem;
+	    padding-right: 0.3rem;
+	    vertical-align: bottom;
+	    padding: 0rem 0.3rem 0.3rem 0;
+	}
+	
+	@media screen and (max-width: 60em){
+
+		.filter-bar {
+			top: 9rem;
+		}
+		
+		.filter-bar p {
+			padding: 0.6rem 0 0 1.5rem;
+		}
+	}
+	
+	@media screen and (max-width: 40em){
+
+		.filter-bar {
+			right: 0;
+		    left: inherit;
+		    top: 13rem;
+		    margin-right: 2.5rem;
+		}
+		
+		.products {
+		    padding: 15rem 4rem;
+		}
+	}
+	
 </style>
 
 	<?php
@@ -36,12 +94,37 @@ get_header( 'shop' ); ?>
 		do_action( 'woocommerce_before_main_content' );
 	?>
 	
-		<!-- <? get_product_search_form(); ?> -->
-	
 		<?php 
 			$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 			$thumbnail_id = get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true ); 
 			$categoryImage = wp_get_attachment_url( $thumbnail_id );
+		?>
+		
+		<?php 
+			
+			$currentOrder = 'price';
+			$orderBy = 'meta_value_num';
+			$metakey = '_price';
+			$order = 'ASC';
+					
+			$orderByFilter = array('pricedesc', 'title', 'titledesc'); // 'price' filter is not mandatory because this is the default filter
+					
+			$newOrderBy = $_GET['orderby'];
+				
+			if( isset($newOrderBy) && $newOrderBy != '' && in_array($newOrderBy, $orderByFilter) ) {
+				$currentOrder = $newOrderBy;
+				if( $newOrderBy == 'pricedesc' ) {
+					$order = 'DESC';
+				} else if(  $newOrderBy == 'title' ) {
+					$orderBy = 'title';
+					$metakey = '';
+				} else if(  $newOrderBy == 'titledesc' ) {
+					$orderBy = 'title';
+					$metakey = '';
+					$order = 'DESC';
+				}
+			}
+					
 		?>
 		
 		<div class="category-product" style="background-image: url('<?php if( $categoryImage != '' ) { echo $categoryImage; } else { echo get_template_directory_uri() . '/images/products-background.png'; } ?>');">
@@ -49,6 +132,14 @@ get_header( 'shop' ); ?>
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
 			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
+			
+			<div class="filter-bar">
+				<?php $currentURL = '?' . $_SERVER['QUERY_STRING']; ?>
+				<p><a class="<? if($currentOrder == 'price') { echo "filter-active"; } ?>" href="<?php echo add_query_arg('orderby', 'price', $currentURL ); ?>"><i class="fa fa-arrow-down" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i></a>
+				<a class="<? if($currentOrder == 'pricedesc') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'pricedesc', $currentURL ); ?>"><i class="fa fa-arrow-up" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i></a>
+				<a class="<? if($currentOrder == 'title') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'title', $currentURL ); ?>"><i class="fa fa-arrow-down" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></a>
+				<a class="<? if($currentOrder == 'titledesc') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'titledesc', $currentURL ); ?>"><i class="fa fa-arrow-up" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></a></p>
+			</div>
 
 		<?php endif; ?>
 
@@ -78,18 +169,18 @@ get_header( 'shop' ); ?>
 							's' => get_search_query(),
 					        'posts_per_page' => -1,
 					        'post_type' => 'product',
-					        'orderby'   => 'meta_value_num',
-						    'meta_key'  => '_price',
-						    'order' => 'ASC'
+					        'orderby'   => $orderBy,
+						    'meta_key'  => $metakey,
+						    'order' => $order
 					    ) );
 					} else {
 						$products = new WP_Query( array(
 					        'posts_per_page' => -1,
 					        'product_cat' => $term->slug,
 					        'post_type' => 'product',
-					        'orderby'   => 'meta_value_num',
-						    'meta_key'  => '_price',
-						    'order' => 'ASC'
+					        'orderby'   => $orderBy,
+						    'meta_key'  => $metakey,
+						    'order' => $order
 					    ) );	
 					}
 					
