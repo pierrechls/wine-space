@@ -49,37 +49,37 @@ input[type='number'] {
 
 @media screen and (min-width: 1300px) {
   html {
-    font-size: 67%;
+    font-size: 65%;
   }
 }
 
 @media screen and (min-width: 1400px) {
   html {
-    font-size: 72%;
+    font-size: 70%;
   }
 }
 
 @media screen and (min-width: 1500px) {
   html {
-    font-size: 80%;
+    font-size: 75%;
   }
 }
 
 @media screen and (min-width: 1600px) {
   html {
-    font-size: 90%;
+    font-size: 80%;
   }
 }
 
 @media screen and (min-width: 1700px) {
   html {
-    font-size: 95%;
+    font-size: 85%;
   }
 }
 
 @media screen and (min-width: 1800px) {
   html {
-    font-size: 100%;
+    font-size: 90%;
   }
 }
 
