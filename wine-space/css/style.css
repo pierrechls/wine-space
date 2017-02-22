@@ -29,35 +29,68 @@ input[type='number'] {
     -moz-appearance:textfield;
 }
 
-@media screen and (min-width: 100px) and (max-width: 649px) {
+@media screen and (min-width: 800px) {
   html {
-    font-size: 70%;
+    font-size: 62.5%;
   }
 }
 
-@media screen and (min-width: 650px) and (max-width: 800px){
+@media screen and (min-width: 1000px) {
   html {
-    font-size: 70%;
+    font-size: 62.5%;
   }
 }
 
-@media screen and (min-width:1300px){
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 63%;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  html {
+    font-size: 67%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  html {
+    font-size: 72%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
   html {
     font-size: 90%;
   }
 }
 
-@media screen and (min-width:1400px){
+@media screen and (min-width: 1700px) {
+  html {
+    font-size: 95%;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media screen and (min-width: 1900px) {
   html {
     font-size: 105%;
   }
 }
 
-@media screen and (min-width:1500px){
-  html {
-    font-size: 110%;
-  }
-}
+
+
 
 
 * {
