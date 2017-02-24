@@ -68,9 +68,13 @@
 
 Go to `Google Maps > Contact map` and add your **API key** and your **coordinates**. 
 
+#### Update meta informations
+
+Go to `Meta informations > Meta header informations` and add your **description**, **keywords** and **author** metas informations. 
+
 #### Create content
 
-Create as many **products**, **posts** and **pages** as you want.
+Create as many **products**, **domains**, **posts**, **slider**, **social medias** and **pages** as you want.
 
 #### More
 
