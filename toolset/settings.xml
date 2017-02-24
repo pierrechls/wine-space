@@ -12,6 +12,44 @@
     </settings>
     <groups>
         <group>
+            <ID>504</ID>
+            <post_content></post_content>
+            <post_title>Meta informations</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_fields>,description,keywords,author,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,,meta-information,</_wp_types_group_post_types>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_templates>,,,,</_wp_types_group_templates>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+            </meta>
+            <hash>d61fc075601c4c940413d5da59b0b066</hash>
+            <checksum>d61fc075601c4c940413d5da59b0b066</checksum>
+            <__types_id>meta-informations</__types_id>
+            <__types_title>Meta informations</__types_title>
+        </group>
+        <group>
+            <ID>500</ID>
+            <post_content></post_content>
+            <post_title>Informations de contact</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_fields>,adresse,horaires,mail,telephone,telephone-bis,</_wp_types_group_fields>
+                <_wp_types_group_post_types>,,contact-information,</_wp_types_group_post_types>
+                <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
+                <_wp_types_group_templates>,,,,</_wp_types_group_templates>
+                <_wp_types_group_terms>all</_wp_types_group_terms>
+            </meta>
+            <hash>40c7739806839a2a05a73dc4b5a85ada</hash>
+            <checksum>40c7739806839a2a05a73dc4b5a85ada</checksum>
+            <__types_id>informations-de-contact</__types_id>
+            <__types_title>Informations de contact</__types_title>
+        </group>
+        <group>
             <ID>271</ID>
             <post_content></post_content>
             <post_title>Informations supplémentaires sur le domaine</post_title>
@@ -38,14 +76,14 @@
             <post_type>wp-types-group</post_type>
             <post_status>publish</post_status>
             <meta>
-                <_wp_types_group_fields>,product-elevage,product-cepages,product-vinification,product-service,product-garde,product-contenance,product-appellation,</_wp_types_group_fields>
+                <_wp_types_group_fields>,product-elevage,product-cepages,product-vinification,product-service,product-garde,product-contenance,product-appellation,product-millesime,product-commentaires-degustations,</_wp_types_group_fields>
                 <_wp_types_group_post_types>,,product,</_wp_types_group_post_types>
                 <_wp_types_group_filters_association>any</_wp_types_group_filters_association>
                 <_wp_types_group_templates>,,,,</_wp_types_group_templates>
                 <_wp_types_group_terms>all</_wp_types_group_terms>
             </meta>
-            <hash>8746b3516ef970e6ab4f2b6a0cf7a8a6</hash>
-            <checksum>8746b3516ef970e6ab4f2b6a0cf7a8a6</checksum>
+            <hash>712a9d5415db0f1f0a3b4d7b716c5673</hash>
+            <checksum>712a9d5415db0f1f0a3b4d7b716c5673</checksum>
             <__types_id>informations-supplementaires-sur-le-produit</__types_id>
             <__types_title>Informations supplémentaires sur le produit</__types_title>
         </group>
@@ -564,18 +602,20 @@
             <name>Élevage</name>
             <description></description>
             <data>
+                <slug-pre-save>product-elevage</slug-pre-save>
                 <placeholder></placeholder>
                 <user_default_value></user_default_value>
                 <repetitive>0</repetitive>
-                <submit-key>textarea-188400042</submit-key>
+                <custom_use></custom_use>
+                <submit-key>product-elevage</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
             <meta_key>wpcf-product-elevage</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>product-elevage</__types_id>
             <__types_title>Élevage</__types_title>
-            <hash>94ef8dba784e567d5f1ce50be95907fa</hash>
-            <checksum>94ef8dba784e567d5f1ce50be95907fa</checksum>
+            <hash>378a7aa9ef4b486d2866a88f5770f578</hash>
+            <checksum>378a7aa9ef4b486d2866a88f5770f578</checksum>
         </field>
         <field>
             <id>product-cepages</id>
@@ -584,18 +624,20 @@
             <name>Cépages</name>
             <description></description>
             <data>
+                <slug-pre-save>product-cepages</slug-pre-save>
                 <placeholder></placeholder>
                 <user_default_value></user_default_value>
                 <repetitive>0</repetitive>
-                <submit-key>textarea-1899669922</submit-key>
+                <custom_use></custom_use>
+                <submit-key>product-cepages</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
             <meta_key>wpcf-product-cepages</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>product-cepages</__types_id>
             <__types_title>Cépages</__types_title>
-            <hash>b709077981464e068b30c1fdbec7adf1</hash>
-            <checksum>b709077981464e068b30c1fdbec7adf1</checksum>
+            <hash>8a61135b74ad7aceb5c39f90fe27e8d0</hash>
+            <checksum>8a61135b74ad7aceb5c39f90fe27e8d0</checksum>
         </field>
         <field>
             <id>product-vinification</id>
@@ -604,18 +646,20 @@
             <name>Vinification</name>
             <description></description>
             <data>
+                <slug-pre-save>product-vinification</slug-pre-save>
                 <placeholder></placeholder>
                 <user_default_value></user_default_value>
                 <repetitive>0</repetitive>
-                <submit-key>textarea-1821813220</submit-key>
+                <custom_use></custom_use>
+                <submit-key>product-vinification</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
             <meta_key>wpcf-product-vinification</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>product-vinification</__types_id>
             <__types_title>Vinification</__types_title>
-            <hash>51cbef55d92447da80635ca2cdc191e8</hash>
-            <checksum>51cbef55d92447da80635ca2cdc191e8</checksum>
+            <hash>7bfeb726a33b99696258fd23c3a2e870</hash>
+            <checksum>7bfeb726a33b99696258fd23c3a2e870</checksum>
         </field>
         <field>
             <id>product-service</id>
@@ -624,18 +668,20 @@
             <name>Service</name>
             <description></description>
             <data>
+                <slug-pre-save>product-service</slug-pre-save>
                 <placeholder></placeholder>
                 <user_default_value></user_default_value>
                 <repetitive>0</repetitive>
-                <submit-key>textarea-1917263145</submit-key>
+                <custom_use></custom_use>
+                <submit-key>product-service</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
             <meta_key>wpcf-product-service</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>product-service</__types_id>
             <__types_title>Service</__types_title>
-            <hash>80d116af74ed9f02ba896cec4a7f997d</hash>
-            <checksum>80d116af74ed9f02ba896cec4a7f997d</checksum>
+            <hash>4dfc826464fb353cdbd53624d84b5a80</hash>
+            <checksum>4dfc826464fb353cdbd53624d84b5a80</checksum>
         </field>
         <field>
             <id>product-garde</id>
@@ -644,18 +690,20 @@
             <name>Garde</name>
             <description></description>
             <data>
+                <slug-pre-save>product-garde</slug-pre-save>
                 <placeholder></placeholder>
                 <user_default_value></user_default_value>
                 <repetitive>0</repetitive>
-                <submit-key>textarea-931326448</submit-key>
+                <custom_use></custom_use>
+                <submit-key>product-garde</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
             <meta_key>wpcf-product-garde</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>product-garde</__types_id>
             <__types_title>Garde</__types_title>
-            <hash>89ecae526ae3a356acba3d27dcff892e</hash>
-            <checksum>89ecae526ae3a356acba3d27dcff892e</checksum>
+            <hash>9a71ff5f5bb8a00a15a27ff60398f7de</hash>
+            <checksum>9a71ff5f5bb8a00a15a27ff60398f7de</checksum>
         </field>
         <field>
             <id>product-contenance</id>
@@ -664,18 +712,20 @@
             <name>Contenance</name>
             <description></description>
             <data>
+                <slug-pre-save>product-contenance</slug-pre-save>
                 <placeholder></placeholder>
                 <user_default_value></user_default_value>
                 <repetitive>0</repetitive>
-                <submit-key>textarea-1126645923</submit-key>
+                <custom_use></custom_use>
+                <submit-key>product-contenance</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
             <meta_key>wpcf-product-contenance</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>product-contenance</__types_id>
             <__types_title>Contenance</__types_title>
-            <hash>94bb0322a850a8cd761a1e3baa11adab</hash>
-            <checksum>94bb0322a850a8cd761a1e3baa11adab</checksum>
+            <hash>9b664509de45e4061bfedbd8d4052bb9</hash>
+            <checksum>9b664509de45e4061bfedbd8d4052bb9</checksum>
         </field>
         <field>
             <id>product-appellation</id>
@@ -684,18 +734,20 @@
             <name>Appellation</name>
             <description></description>
             <data>
+                <slug-pre-save>product-appellation</slug-pre-save>
                 <placeholder></placeholder>
                 <user_default_value></user_default_value>
                 <repetitive>0</repetitive>
-                <submit-key>textarea-1219386757</submit-key>
+                <custom_use></custom_use>
+                <submit-key>product-appellation</submit-key>
                 <disabled_by_type>0</disabled_by_type>
             </data>
             <meta_key>wpcf-product-appellation</meta_key>
             <meta_type>postmeta</meta_type>
             <__types_id>product-appellation</__types_id>
             <__types_title>Appellation</__types_title>
-            <hash>995ee70204fafb8122d761f21ed0c7b0</hash>
-            <checksum>995ee70204fafb8122d761f21ed0c7b0</checksum>
+            <hash>67f9547713e9c6243100290e8183405b</hash>
+            <checksum>67f9547713e9c6243100290e8183405b</checksum>
         </field>
         <field>
             <id>carte</id>
@@ -723,6 +775,237 @@
             <__types_title>Carte</__types_title>
             <hash>24d3292425cb8c67b53d8265467e551d</hash>
             <checksum>24d3292425cb8c67b53d8265467e551d</checksum>
+        </field>
+        <field>
+            <id>adresse</id>
+            <slug>adresse</slug>
+            <type>textarea</type>
+            <name>Adresse</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <submit-key>textarea-419922000</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-adresse</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>adresse</__types_id>
+            <__types_title>Adresse</__types_title>
+            <hash>d656bf584c199f5fefff97f2bc41a12e</hash>
+            <checksum>d656bf584c199f5fefff97f2bc41a12e</checksum>
+        </field>
+        <field>
+            <id>horaires</id>
+            <slug>horaires</slug>
+            <type>textarea</type>
+            <name>Horaires</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <submit-key>textarea-1649772575</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-horaires</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>horaires</__types_id>
+            <__types_title>Horaires</__types_title>
+            <hash>1e2471974a71d468c21b5f4ab415c5a8</hash>
+            <checksum>1e2471974a71d468c21b5f4ab415c5a8</checksum>
+        </field>
+        <field>
+            <id>mail</id>
+            <slug>mail</slug>
+            <type>email</type>
+            <name>Mail</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <email>
+                        <active>1</active>
+                        <message>Veuillez entrer une adresse e-mail valide.</message>
+                    </email>
+                </validate>
+                <submit-key>email-1680510243</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-mail</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>mail</__types_id>
+            <__types_title>Mail</__types_title>
+            <hash>fb39232f656d35b52d6e97ed27ecc31e</hash>
+            <checksum>fb39232f656d35b52d6e97ed27ecc31e</checksum>
+        </field>
+        <field>
+            <id>telephone</id>
+            <slug>telephone</slug>
+            <type>phone</type>
+            <name>Téléphone</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <submit-key>phone-343196131</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-telephone</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>telephone</__types_id>
+            <__types_title>Téléphone</__types_title>
+            <hash>3171a7621ca7e850ee2896f84ccda81f</hash>
+            <checksum>3171a7621ca7e850ee2896f84ccda81f</checksum>
+        </field>
+        <field>
+            <id>telephone-bis</id>
+            <slug>telephone-bis</slug>
+            <type>phone</type>
+            <name>Téléphone (bis)</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <submit-key>phone-65386941</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-telephone-bis</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>telephone-bis</__types_id>
+            <__types_title>Téléphone (bis)</__types_title>
+            <hash>0d94bd84b3dc39cdf9fbbd218329cc07</hash>
+            <checksum>0d94bd84b3dc39cdf9fbbd218329cc07</checksum>
+        </field>
+        <field>
+            <id>product-millesime</id>
+            <slug>product-millesime</slug>
+            <type>textarea</type>
+            <name>Millésime</name>
+            <description></description>
+            <data>
+                <slug-pre-save>product-millesime</slug-pre-save>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <custom_use></custom_use>
+                <submit-key>product-millesime</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-product-millesime</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>product-millesime</__types_id>
+            <__types_title>Millésime</__types_title>
+            <hash>f2bb4b1d9a93846b0645cd97c0e30cc4</hash>
+            <checksum>f2bb4b1d9a93846b0645cd97c0e30cc4</checksum>
+        </field>
+        <field>
+            <id>product-commentaires-degustations</id>
+            <slug>product-commentaires-degustations</slug>
+            <type>textarea</type>
+            <name>Commentaires dégustations</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <submit-key>textarea-1471614254</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-product-commentaires-degustations</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>product-commentaires-degustations</__types_id>
+            <__types_title>Commentaires dégustations</__types_title>
+            <hash>98b589c235f2d3c8661a15451c36b821</hash>
+            <checksum>98b589c235f2d3c8661a15451c36b821</checksum>
+        </field>
+        <field>
+            <id>description</id>
+            <slug>description</slug>
+            <type>textfield</type>
+            <name>Description</name>
+            <description></description>
+            <data>
+                <slug-pre-save>description</slug-pre-save>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>Ce champ est requis.</message>
+                    </required>
+                </validate>
+                <custom_use></custom_use>
+                <submit-key>description</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-description</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>description</__types_id>
+            <__types_title>Description</__types_title>
+            <hash>5d2041f05ba05ec63c504bbbc66ee52f</hash>
+            <checksum>5d2041f05ba05ec63c504bbbc66ee52f</checksum>
+        </field>
+        <field>
+            <id>keywords</id>
+            <slug>keywords</slug>
+            <type>textfield</type>
+            <name>Keywords</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>Ce champ est requis.</message>
+                    </required>
+                </validate>
+                <submit-key>textfield-1993923529</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-keywords</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>keywords</__types_id>
+            <__types_title>Keywords</__types_title>
+            <hash>98faa69b396f66ebf8cdece9b413c78f</hash>
+            <checksum>98faa69b396f66ebf8cdece9b413c78f</checksum>
+        </field>
+        <field>
+            <id>author</id>
+            <slug>author</slug>
+            <type>textfield</type>
+            <name>Author</name>
+            <description></description>
+            <data>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <validate>
+                    <required>
+                        <active>1</active>
+                        <value>true</value>
+                        <message>Ce champ est requis.</message>
+                    </required>
+                </validate>
+                <submit-key>textfield-2123969796</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+            </data>
+            <meta_key>wpcf-author</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>author</__types_id>
+            <__types_title>Author</__types_title>
+            <hash>7834cd43904c94e69531088141954d4a</hash>
+            <checksum>7834cd43904c94e69531088141954d4a</checksum>
         </field>
     </fields>
     <types>
@@ -950,6 +1233,114 @@
             <__types_title>Domaines</__types_title>
             <hash>3e8a2d451338d5e9428c08b81ad12528</hash>
             <checksum>3e8a2d451338d5e9428c08b81ad12528</checksum>
+        </type>
+        <type>
+            <icon>email</icon>
+            <labels>
+                <name>Contact</name>
+                <singular_name>Coordonnées de contact</singular_name>
+                <add_new>Ajouter un(e) nouveau(elle)</add_new>
+                <add_new_item>Ajouter un(e) nouveau(elle) %s</add_new_item>
+                <edit_item>Modifier %s</edit_item>
+                <new_item>Nouveau(elle) %s</new_item>
+                <view_item>Visualiser %s</view_item>
+                <search_items>Rechercher dans %s</search_items>
+                <not_found>Aucun(e) %s trouvé(e)</not_found>
+                <not_found_in_trash>Aucun(e) %s trouvé(e) dans la corbeille</not_found_in_trash>
+                <parent_item_colon>Texte parent</parent_item_colon>
+                <all_items>Tous les éléments</all_items>
+                <enter_title_here>Saisir le titre ici</enter_title_here>
+            </labels>
+            <slug>contact-information</slug>
+            <description></description>
+            <public>public</public>
+            <menu_position>25--wpcf-add-menu-after--wpforms-overview</menu_position>
+            <supports>
+                <title>1</title>
+            </supports>
+            <rewrite>
+                <enabled>1</enabled>
+                <custom>normal</custom>
+                <slug></slug>
+                <with_front>1</with_front>
+                <feeds>1</feeds>
+                <pages>1</pages>
+            </rewrite>
+            <has_archive>1</has_archive>
+            <has_archive_slug></has_archive_slug>
+            <show_in_menu>1</show_in_menu>
+            <show_in_menu_page></show_in_menu_page>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <rest_base></rest_base>
+            <wpcf-post-type></wpcf-post-type>
+            <_builtin></_builtin>
+            <_toolset_edit_last>1487195009</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <id>contact-information</id>
+            <__types_id>contact-information</__types_id>
+            <__types_title>Contact</__types_title>
+            <hash>3956bd3e3506e805494d5b93cc7c9065</hash>
+            <checksum>3956bd3e3506e805494d5b93cc7c9065</checksum>
+        </type>
+        <type>
+            <icon>nametag</icon>
+            <labels>
+                <name>Meta informations</name>
+                <singular_name>Meta information</singular_name>
+                <add_new>Ajouter un(e) nouveau(elle)</add_new>
+                <add_new_item>Ajouter un(e) nouveau(elle) %s</add_new_item>
+                <edit_item>Modifier %s</edit_item>
+                <new_item>Nouveau(elle) %s</new_item>
+                <view_item>Visualiser %s</view_item>
+                <search_items>Rechercher dans %s</search_items>
+                <not_found>Aucun(e) %s trouvé(e)</not_found>
+                <not_found_in_trash>Aucun(e) %s trouvé(e) dans la corbeille</not_found_in_trash>
+                <parent_item_colon>Texte parent</parent_item_colon>
+                <all_items>Tous les éléments</all_items>
+                <enter_title_here>Saisir le titre ici</enter_title_here>
+            </labels>
+            <slug>meta-information</slug>
+            <description></description>
+            <public>public</public>
+            <menu_position>75--wpcf-add-menu-after--tools.php</menu_position>
+            <supports>
+                <title>1</title>
+            </supports>
+            <rewrite>
+                <enabled>1</enabled>
+                <custom>normal</custom>
+                <slug></slug>
+                <with_front>1</with_front>
+                <feeds>1</feeds>
+                <pages>1</pages>
+            </rewrite>
+            <has_archive>1</has_archive>
+            <has_archive_slug></has_archive_slug>
+            <show_in_menu>1</show_in_menu>
+            <show_in_menu_page></show_in_menu_page>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <rest_base></rest_base>
+            <wpcf-post-type></wpcf-post-type>
+            <_builtin></_builtin>
+            <_toolset_edit_last>1487243884</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <id>meta-information</id>
+            <__types_id>meta-information</__types_id>
+            <__types_title>Meta informations</__types_title>
+            <hash>3ac72752889a453575eafd5532a7379b</hash>
+            <checksum>3ac72752889a453575eafd5532a7379b</checksum>
         </type>
     </types>
     <post_relationships>
