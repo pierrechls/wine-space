@@ -19,9 +19,24 @@
 						while ( $loop->have_posts() ) : $loop->the_post();
 						
 							if( has_post_thumbnail() ) {
-					
-					?>
+							
+								$urlRelationship = get_field('slider-url-to-go', get_the_ID());
+								$urlToGo = '';
+								
+								if($urlRelationship) {
+									foreach( $urlRelationship as $url):
+										$urlToGo = get_the_permalink($url->ID);
+									endforeach;
+								}
+							?>
+							
+							<?php if($urlToGo != '') { ?>
+								<a href="<?php echo $urlToGo; ?>">
+							<?php }?>
 								<li style="background-image:url('<?php the_post_thumbnail_url( 'full' ); ?>');"><div class="slider-text"><div class="content-text"><?php the_content(); ?></div></div></li>
+							<?php if($urlToGo != '') { ?>
+								</a>
+							<?php }?>
 					<?php 
 							
 							}
@@ -53,10 +68,10 @@
 						auto: true,
 						onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
 				            $('.active-slide').removeClass('active-slide');
-				            $('.home-slider > li').eq(currentSlideHtmlObject + 1).addClass('active-slide');
+				            $('.home-slider li').eq(currentSlideHtmlObject + 1).addClass('active-slide');
 				        },
 				        onSliderLoad: function () {
-				            $('.home-slider > li').eq(1).addClass('active-slide');
+				            $('.home-slider li').eq(1).addClass('active-slide');
 				        }
 					});
 				});
