@@ -398,7 +398,7 @@ header p.website-slogan::after {
     width: 100%;
     margin: 0 auto;
     max-width: 50rem;
-    height: 70vh;
+    height: 100vh;
     text-align: center;
     font-family: 'Lora', serif;
     font-style: italic;
