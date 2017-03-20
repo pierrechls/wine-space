@@ -38,6 +38,12 @@
 - **Follow** the instructions
 - **Create** forms (for example, you can insert a contact form in your contact page)
 
+#### Advanced Custom Fields
+
+- **Download** ACFields plugin from [here](https://github.com/pierrechls/wp-acf)
+- **Follow** the instructions
+- **Download** the XML file and import it from the plugin
+
 #### Min/Max Quantities
 
 - **Download** Min/Max Quantities plugin from [here](https://github.com/pierrechls/wc-min-max-quantities)
