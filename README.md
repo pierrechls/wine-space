@@ -30,7 +30,7 @@
 
 - **Download** Toolset Types plugin from [here](https://github.com/pierrechls/wp-types)
 - **Follow** the instructions
-- **Download** the XML file and import it from the plugin
+- **Download** the XML file and import it from the plugin (please refer to the *Init content* section)
 
 #### WPforms
 
@@ -40,9 +40,9 @@
 
 #### Advanced Custom Fields
 
-- **Download** ACFields plugin from [here](https://github.com/pierrechls/wp-acf)
+- **Download** ACF plugin from [here](https://github.com/pierrechls/wp-acf)
 - **Follow** the instructions
-- **Download** the XML file and import it from the plugin
+- **Download** the XML file and import it from the plugin (please refer to the *Init content* section)
 
 #### Min/Max Quantities
 
@@ -67,6 +67,11 @@
 
 - Download XML file from [here](https://rawgit.com/pierrechls/wine-space/data/toolset/settings.xml)
 - In your WordPress dashboard, go to `Toolset > Export/Import` and import the XML file
+
+#### Advanced Custom Fields settings
+
+- Download XML file from [here](https://rawgit.com/pierrechls/wine-space/data/advanced-custom-field/advanced-custom-field.xml)
+- In your WordPress dashboard, go to `Tools > Export/Import` and import the XML file
 
 ### Customize content
 
