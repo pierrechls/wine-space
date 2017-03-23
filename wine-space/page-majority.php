@@ -132,12 +132,12 @@
 
 					if(legal_age == 1){
 						//Il a 18ans
-						window.location.href("<?php echo get_site_url(); ?>");
+						window.location.href = "<?php echo get_site_url(); ?>";
 					}
 
 					else if(legal_age == 2){
 						//Il n'a pas 18ans
-					  	window.location.href("<?php echo get_site_url(); ?>/sorry-majority/");
+					  	window.location.href = "<?php echo get_site_url(); ?>/sorry-majority/";
 					}
 				}
 		 	}
