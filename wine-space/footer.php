@@ -78,11 +78,39 @@
 		<script src="<?php bloginfo('template_directory'); ?>/js/search-popup.js"></script>
 	
 		<script src="<?php bloginfo('template_directory'); ?>/js/quantity-input.js"></script>
+		
+		<?php 
+			
+			$currentCategory = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
+			$currentCategoryParent = '';
+			if($currentCategory->parent != 0) { $currentCategoryParent = get_category( $currentCategory->parent ); }
+			
+		?>
 	
 	<script>
 	(function() {
+		
+		var submenuIndex = null
+		var initSubmenu = false
+		
+		<?php if($currentCategory && $currentCategoryParent != '') { ?>
+			submenuIndex = document.querySelector('ul[data-menu="' + '<?php echo $currentCategoryParent->slug; ?>' + '"]').getAttribute('data-menuindex')
+		<?php } ?>
+		
+		if(submenuIndex != null) {
+			initSubmenu = <?php if($currentCategory) { ?> true <?php } else { ?> false <?php } ?>;
+		} else {
+			initSubmenu = false
+		}
+	
 		var menuEl = document.getElementById('ml-menu'),
 			mlmenu = new MLMenu(menuEl, {
+				initSubmenu: initSubmenu,
+				defaultSlideOnInit: {
+					index: parseInt(submenuIndex),
+					slug: '<?php echo $currentCategoryParent->slug; ?>',
+					name: '<?php echo $currentCategoryParent->name; ?>'	
+				},
 				// breadcrumbsCtrl : true, // show breadcrumbs
 				// initialBreadcrumb : 'all', // initial breadcrumb text
 				backCtrl : false, // show back button

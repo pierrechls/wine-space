@@ -85,11 +85,12 @@
 
 		// create breadcrumbs
 		if( self.options.breadcrumbsCtrl ) {
-			this.breadcrumbsCtrl = document.createElement('nav');
-			this.breadcrumbsCtrl.className = 'menu__breadcrumbs';
-			this.el.insertBefore(this.breadcrumbsCtrl, this.el.firstChild);
-			// add initial breadcrumb
-			this._addBreadcrumb(0);
+			//this.breadcrumbsCtrl = document.querySelector('nav.menu__breadcrumbs');
+		  	this.breadcrumbsCtrl = document.createElement('nav');
+		  	this.breadcrumbsCtrl.className = 'menu__breadcrumbs';
+		  	this.el.insertBefore(this.breadcrumbsCtrl, this.el.firstChild);
+		  	//add initial breadcrumb
+		  	this._addBreadcrumb(0);
 		}
 
 		// event binding
@@ -153,6 +154,22 @@
 		// next menu (submenu) slides in
 		this._menuIn(subMenuEl, clickPosition);
 	};
+	
+	MLMenu.prototype._openSubMenuOnInit = function(subMenuEl, clickPosition, subMenuName) {
+		if( this.isAnimating ) {
+			return false;
+		}
+		this.isAnimating = true;
+
+		// save "parent" menu index for back navigation
+		this.menusArr[this.menus.indexOf(subMenuEl)].backIdx = this.current;
+		// save "parent" menu´s name
+		this.menusArr[this.menus.indexOf(subMenuEl)].name = subMenuName;
+		// current menu slides out
+		this._menuOutOnInit(clickPosition);
+		// next menu (submenu) slides in
+		this._menuInOnInit(subMenuEl, clickPosition);
+	};
 
 	MLMenu.prototype._back = function() {
 		if( this.isAnimating ) {
@@ -181,6 +198,25 @@
 		// slide out current menu items - first, set the delays for the items
 		this.menusArr[this.current].menuItems.forEach(function(item, pos) {
 			item.style.WebkitAnimationDelay = item.style.animationDelay = isBackNavigation ? parseInt(pos * self.options.itemsDelayInterval) + 'ms' : parseInt(Math.abs(clickPosition - pos) * self.options.itemsDelayInterval) + 'ms';
+		});
+		// animation class
+		if( this.options.direction === 'r2l' ) {
+			classie.add(currentMenu, !isBackNavigation ? 'animate-outToLeft' : 'animate-outToRight');
+		}
+		else {
+			classie.add(currentMenu, isBackNavigation ? 'animate-outToLeft' : 'animate-outToRight');
+		}
+	};
+	
+	MLMenu.prototype._menuOutOnInit = function(clickPosition) {
+		// the current menu
+		var self = this,
+			currentMenu = this.menusArr[this.current].menuEl,
+			isBackNavigation = typeof clickPosition == 'undefined' ? true : false;
+
+		// slide out current menu items - first, set the delays for the items
+		this.menusArr[this.current].menuItems.forEach(function(item, pos) {
+			item.style.WebkitAnimationDelay = item.style.animationDelay = '0ms';
 		});
 		// animation class
 		if( this.options.direction === 'r2l' ) {
@@ -257,6 +293,73 @@
 			classie.add(nextMenuEl, isBackNavigation ? 'animate-inFromRight' : 'animate-inFromLeft');
 		}
 	};
+	
+	MLMenu.prototype._menuInOnInit = function(nextMenuEl, clickPosition) {
+		var self = this,
+			// the current menu
+			currentMenu = this.menusArr[this.current].menuEl,
+			isBackNavigation = typeof clickPosition == 'undefined' ? true : false,
+			// index of the nextMenuEl
+			nextMenuIdx = this.menus.indexOf(nextMenuEl),
+
+			nextMenuItems = this.menusArr[nextMenuIdx].menuItems,
+			nextMenuItemsTotal = nextMenuItems.length;
+
+		// slide in next menu items - first, set the delays for the items
+		nextMenuItems.forEach(function(item, pos) {
+			item.style.WebkitAnimationDelay = item.style.animationDelay = '0ms';
+
+			// we need to reset the classes once the last item animates in
+			// the "last item" is the farthest from the clicked item
+			// let's calculate the index of the farthest item
+			var farthestIdx = clickPosition <= nextMenuItemsTotal/2 || isBackNavigation ? nextMenuItemsTotal - 1 : 0;
+
+			if( pos === farthestIdx ) {
+				onEndAnimation(item, function() {
+					// reset classes
+					if( self.options.direction === 'r2l' ) {
+						classie.remove(currentMenu, !isBackNavigation ? 'animate-outToLeft' : 'animate-outToRight');
+						classie.remove(nextMenuEl, !isBackNavigation ? 'animate-inFromRight' : 'animate-inFromLeft');
+					}
+					else {
+						classie.remove(currentMenu, isBackNavigation ? 'animate-outToLeft' : 'animate-outToRight');
+						classie.remove(nextMenuEl, isBackNavigation ? 'animate-inFromRight' : 'animate-inFromLeft');
+					}
+					classie.remove(currentMenu, 'menu__level--current');
+					classie.add(nextMenuEl, 'menu__level--current');
+
+					//reset current
+					self.current = nextMenuIdx;
+
+					// control back button and breadcrumbs navigation elements
+					if( !isBackNavigation ) {
+						// show back button
+						if( self.options.backCtrl ) {
+							classie.remove(self.backCtrl, 'menu__back--hidden');
+						}
+
+						// add breadcrumb
+						self._addBreadcrumb(nextMenuIdx);
+					}
+					else if( self.current === 0 && self.options.backCtrl ) {
+						// hide back button
+						classie.add(self.backCtrl, 'menu__back--hidden');
+					}
+
+					// we can navigate again..
+					self.isAnimating = false;
+				});
+			}
+		});
+
+		// animation class
+		if( this.options.direction === 'r2l' ) {
+			classie.add(nextMenuEl, !isBackNavigation ? 'animate-inFromRight' : 'animate-inFromLeft');
+		}
+		else {
+			classie.add(nextMenuEl, isBackNavigation ? 'animate-inFromRight' : 'animate-inFromLeft');
+		}
+	};
 
 	MLMenu.prototype._addBreadcrumb = function(idx) {
 		if( !this.options.breadcrumbsCtrl ) {
@@ -266,6 +369,11 @@
 		var bc = document.createElement('a');
 		bc.innerHTML = idx ? this.menusArr[idx].name : this.options.initialBreadcrumb;
 		this.breadcrumbsCtrl.appendChild(bc);
+		
+		if(this.options.initSubmenu) {
+			this._openSubMenuOnInit(document.querySelector('ul[data-menu="' + this.options.defaultSlideOnInit.slug + '"]'), this.options.defaultSlideOnInit.index, this.options.defaultSlideOnInit.name);
+			this.options.initSubmenu = false
+		}
 
 		var self = this;
 		bc.addEventListener('click', function(ev) {

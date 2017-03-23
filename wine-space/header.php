@@ -145,11 +145,12 @@
 					
 					<?php wp_reset_query(); ?>
 				</ul>
+			
 				
 				<?php 
-				foreach($wcatTerms as $wcatTerm) :
+				foreach($wcatTerms as $keyWcatTerm=>$wcatTerm) :
 				?>
-					<ul data-menu="<?php echo $wcatTerm->slug ?>" class="menu__level">
+					<ul data-menu="<?php echo $wcatTerm->slug; ?>" data-menuindex="<?php echo $keyWcatTerm; ?>" class="menu__level">
 						<?php
 						$wsubargs = array(
 						   'hierarchical' => 1,
