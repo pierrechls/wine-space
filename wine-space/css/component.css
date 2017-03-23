@@ -571,6 +571,10 @@ body #cdawrap a:hover.carbon-poweredby {
 	transition: color 0.1s;
 }
 
+.menu__link[data-color='bio-color']{
+	color: #8cab27;
+}
+
 .menu__link__inline {
 	display: inline-block;
 	width: auto;
