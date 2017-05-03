@@ -17,7 +17,13 @@ get_header( 'shop' ); ?>
 
 <style>
 	.regular-price {
-		color: rgba(255,255,255,0.4);
+		/* color: rgba(255,255,255,0.4); */
+		color: #FFF;
+	}
+	
+	.product-price {
+		color: #FFF;
+		font-weight: 600;
 	}
 	
 	.bp-header__main {
@@ -209,16 +215,16 @@ get_header( 'shop' ); ?>
 											if($product->get_sale_price() > 0 ){
 										?>
 												<span class="regular-price"><?php echo number_format($product->get_regular_price(), 2); ?> €</span>
-												<span><?php echo number_format($product->get_price(), 2); ?> €</span>
+												<span class="product-price"><?php echo number_format($product->get_price(), 2); ?> €</span>
 										<?php
 											} else { 
 										?>
-												<span><?php echo number_format($product->get_price(), 2); ?> €</span>
+												<span class="product-price"><?php echo number_format($product->get_price(), 2); ?> €</span>
 										<?php 
 											}
 										?>
 									</p>
-									<p><a class="btn-add-to-cart" href="?add-to-cart=<?php echo $products->post->ID ?>">Ajouter au panier</a></p>
+									<p><a class="btn-add-to-cart" href="<?php echo esc_url( add_query_arg( 'cat', $term->term_id, get_permalink( $products->post->ID )) ); ?>">Ajouter au panier</a></p>
 					        	</div>
 					    	</a>
 					    </li>

@@ -369,7 +369,7 @@ get_header( 'shop' ); ?>
 					<?php } ?>
 				</h4>
 				<div class="form-add-to-cart">
-					<?php if ( $product->is_in_stock() ) : ?>
+					<?php if ( $product->is_in_stock() ) { ?>
 
 					    <?php
 					        if ( $product->product_type == 'simple' ) {
@@ -387,7 +387,15 @@ get_header( 'shop' ); ?>
 					        }
 					    ?>
 					
-					<?php endif; ?>
+					<?php } else { ?>
+					
+						<form action="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="cart" method="post" enctype='multipart/form-data'>
+							
+			                <button disabled="true" style="background: rgba(0,0,0,0.5);" type="submit" class="button alt">Produit épuisé</button>
+			
+			            </form>
+						
+					<?php } ?>
 					
 				</div>
 				
