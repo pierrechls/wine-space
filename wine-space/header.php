@@ -85,10 +85,12 @@
 			<a href="<?php echo get_site_url(); ?>" class="come-back-home"><i class="fa fa-home" aria-hidden="true"></i></a>
 			<div class="menu__wrap">
 				<ul data-menu="main" class="menu__level">
+				
 				<?php 
 				$wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby'=>'id','order'=>'ASC',  'parent' =>0));
 				foreach($wcatTerms as $wcatTerm) :
 				?>
+					
 					 <?php $children = get_terms( $wcatTerm->taxonomy, array( 'parent' => $wcatTerm->term_id, 'hide_empty' => false ) ); ?>
 					 
 					 <?php if ( $children ) { ?>
@@ -99,9 +101,10 @@
 				<?php 
 				endforeach; 
 				?>
+				
 					<li class="menu__item space__item"><a class="menu__link" href="#"></a></li>
-					<li class="menu__item"><a class="menu__link" data-submenu="domaines" href="<?php echo get_site_url(); ?>/domaines/">Domaines</a></li>
-					<li class="menu__item"><a class="menu__link" data-submenu="presse-distinctions" href="<?php echo get_site_url(); ?>/presse-distinctions/">Presse & Distinctions</a></li>
+					<li class="menu__item"><a class="menu__link" data-submenu="domaines" href="<?php echo get_site_url(); ?>/domaines/">Tous les domaines</a></li>
+					<li class="menu__item"><a class="menu__link" data-submenu="presse-distinctions" href="<?php echo get_site_url(); ?>/actualites/">Actualités</a></li>
 					<li class="menu__item"><a class="menu__link" data-submenu="a-propos" href="<?php echo get_site_url(); ?>/a-propos/">Qui sommes nous ?</a></li>
 					<li class="menu__item"><a class="menu__link" data-submenu="conditions-generales-de-vente" href="<?php echo get_site_url(); ?>/conditions-generales-de-vente/">CGV</a></li>
 					<li class="menu__item"><a class="menu__link" data-submenu="contact" href="<?php echo get_site_url(); ?>/contact/">Contact</a></li>
@@ -175,6 +178,7 @@
 		<div class="content">
 			<div class="bp-header__main <?php if(is_home() || is_product_category() || is_product() || is_404() ) { echo "home"; } if(is_home()) { echo " up"; } if( 'domaine' == get_post_type() ) { echo " black-theme"; } ?> ">
 				<nav class="bp-nav">
+					<a class="bp-nav__item" id="open-hotline-icon" href="#" data-info="Hotline"><i class="fa fa-bolt" aria-hidden="true"></i></a>
 					<a class="bp-nav__item" id="search-product-icon" href="#" data-info="Rechercher"><i class="fa fa-search" aria-hidden="true"></i></a>
 					<a class="bp-nav__item" href="<?php echo get_site_url(); ?>/mon-compte/" data-info="<?php if(is_user_logged_in()){ echo 'Compte'; } else { echo 'Connexion / Inscription'; } ?>"><i class="fa fa-user" aria-hidden="true"></i></a>
 					<a class="bp-nav__item" href="<?php echo wc_get_cart_url(); ?>" data-info="Panier"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
@@ -190,7 +194,13 @@
 				</nav>
 			</div>
 			<div id="search-products-content">
-				<div id="search-products-content-form">
+			
+				<div class="search-post-type-content-form">
 					<? get_product_search_form(); ?>
 				</div>
+				
+			</div>
+			<div id="hotline-dialog-content">
+				<h1>Hotline</h1>	
+				<div id="close-hotline-dialog-content"><button>Retour</button></div>
 			</div>
