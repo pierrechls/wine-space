@@ -40,34 +40,38 @@ get_header(); ?>
 		font-size: 2.5rem;
 	}
 	
+	h3.region-title {
+		padding: 3rem;
+	}
+		
 	.masonry {
-	    column-count: 3;
+	    column-count: 4;
 	    column-gap: 1rem;
 	    padding: 2rem 2rem;
 	}
 	
 	.item {
-	    background-color: rgba(255, 255, 255, 0.8);
 	    display: inline-block;
-	    padding: 1rem 2rem;
-	    margin: 0 0 4rem;
+	    padding: 1rem;
+	    margin: 0;
 	    width: 100%;
+	    min-height: 5rem;
 	}
 	
 	.item a, .item a:hover {
-	    color: #000;
+	    color: #FFF;
 	}
 	
 	.item h5.actu-title {
-		color: #000;
-		font-size: 1.4rem;
-		margin-bottom: 2rem;
+		color: #FFF;
+		font-size: 1.3rem;
+		margin: 0;
 		text-transform: capitalize;
 	}
 	
 	.item p.actu-date {
 		font-size: 1.5rem;
-		color: #000;
+		color: #FFF;
 		margin: 0 auto;
 		font-style: italic;
 	}
@@ -111,45 +115,74 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		
+			<div style="color:#FFF !important;">
 			
 			<?php
 				
-				$args = array(
+				$argsDomaines = array(
 					'posts_per_page' => -1,
 					'post_type'      => 'domaine',
 					'order'          => 'DESC',
 					'orderby'        => 'date'
 				);
 				
-				$the_query = new WP_Query( $args );
+				$allDomaines = new WP_Query( $argsDomaines );
 				
-				if ( $the_query->have_posts() ) :
+				if ( $allDomaines->have_posts() ) :
 			
 			?>
 				
-				<div class="masonry">
+				<?php
 				
-			<?php
-			
-				while ( $the_query->have_posts() ) : $the_query->the_post();
-			
-			?>
-								
-					<div class="item">
-						<h5 class="actu-title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h5>
-						<div class="actu-more">
-							<a href="<?php echo get_permalink(); ?>">Voir le domaine <i class="fa fa-plus" aria-hidden="true"></i></a>
-						</div>
-					</div>
+					$allRegions = [];
+					$firstDomaine = $allDomaines->posts[0];
+					$domaineCat = get_field_object( "region-du-domaine", $firstDomaine->ID );
+					$allRegions = $domaineCat['choices'];
+					
+					?>
+					
+					<?php 
+					
+						foreach ($allRegions as $region) { ?>
+						
+							<h3 class="region-title"><?php echo $region; ?></h3>
+						    
+						    <div class="masonry">
+						    
+						    <?php
+						    
+						    while ( $allDomaines->have_posts() ) : $allDomaines->the_post();
+						    
+						    	$domainCat = get_field_object( "region-du-domaine", get_the_ID() );
+						    	
+						    	$domaineCatValue = $domainCat['value'];
+						    	$domaineCatLabel = $domainCat['choices'][ $domaineCatValue ];
+						    	
+						    	if($domaineCatLabel === $region) {
+						
+							?>
+												
+										<div class="item">
+											<h5 class="actu-title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h5>
+										</div>
+											
+							<?php 
 							
-			<?php 
-			
-				endwhile;
-			
-			?>
-				
-				<div style="clear:both"></div>
-				</div>
+								}
+								
+							
+							endwhile;
+							
+							?>
+							
+						    </div>
+						    
+						    <?php
+						    
+						}
+					
+					?>
 				
 			<?php
 				
@@ -157,7 +190,7 @@ get_header(); ?>
 			
 			?>
 					
-					<p class="no-actu">Désolé, le site <?php echo get_bloginfo('name' ); ?> n'a pas encore publié d'actualités.</p>
+					<p class="no-actu">Désolé, le site <?php echo get_bloginfo('name' ); ?> n'a pas encore de domaines.</p>
 				
 			<?php
 			
@@ -165,6 +198,8 @@ get_header(); ?>
 				
 			?>
 			
+			</div>
+						
 		</main><!-- #main -->
 </div><!-- #primary -->
 
