@@ -16,30 +16,37 @@ get_header(); ?>
 
 
 	#primary{
-		background-color: #fff;
-		height: 100vh;
-		background-image: url('<?php bloginfo('template_directory'); ?>/images/products-background.png');
-		background-size: cover;
-		background-position: center center;
-		background-attachment: fixed;
-		padding: 2.5rem 1rem;
+		background: #fff;
 		min-height: 100vh;
+		padding-top: 10rem;
 	}
 	
 	h1.actus-title {
-		color: #FFF;
-		margin: 0.5rem auto 4rem 2rem;
+		color: #000;
+		margin: 2rem auto 4rem 4rem;
 		font-size: 2.5rem;
+	}
+	
+	.subscribe-to-newsletter {
+		margin: 2rem auto 4rem 4rem;
+	}
+	
+	.subscribe-to-newsletter i {
+		margin-right: 1rem;
+	}
+	
+	.subscribe-to-newsletter a, .subscribe-to-newsletter a:hover {
+		color: #000;
 	}
 	
 	.masonry {
 	    column-count: 2;
 	    column-gap: 1rem;
-	    padding: 2rem 2rem;
+	    padding: 2rem 3rem;
 	}
 	
 	.item {
-	    background-color: #FFF;
+	    background-color: rgba(0,0,0,0.1);
 	    display: inline-block;
 	    padding: 1rem 2rem;
 	    margin: 0 0 4rem;
@@ -102,6 +109,10 @@ get_header(); ?>
 <div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<h1 class="actus-title"><?php the_title() ?></h1>
+			
+			<?php if( get_field('subscribe_text') && get_field('newsletter_page_link') ): ?>
+				<div class="subscribe-to-newsletter"><p><i class="fa fa-newspaper-o" aria-hidden="true"></i><a href="<?php the_field('newsletter_page_link'); ?>"><?php the_field('subscribe_text'); ?></a></p></div>
+			<?php endif; ?>
 			
 			<?php
 				
