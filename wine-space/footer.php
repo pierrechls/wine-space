@@ -75,7 +75,7 @@
 		<script src="<?php bloginfo('template_directory'); ?>/js/menu-classie.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/dummydata.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/menu-main.js"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/search-popup.js"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/search-hotline-popup.js"></script>
 	
 		<script src="<?php bloginfo('template_directory'); ?>/js/quantity-input.js"></script>
 		
@@ -163,5 +163,25 @@
 			$(".payment_method_etransactions_std").append("<img src='" + link + "/images/payment/etransactions.png'>");
 			
 		</script>
+		
+		
+		<script>
+		     
+		      var productsForm = document.getElementById('product-search-form');
+		      var domainesForm = document.getElementById('domaine-search-form');
+		      productsForm.style.display = 'block';
+		      domainesForm.style.display = 'none';
+		      var selectPostType = document.getElementById('select-option-post-type');
+		      selectPostType.onchange = function () {
+		        if (selectPostType.options[selectPostType.selectedIndex].value == 2) {
+		        	productsForm.style.display = 'none';
+					domainesForm.style.display = 'block';
+		        } else {
+					productsForm.style.display = 'block';
+					domainesForm.style.display = 'none';
+				}
+			  }
+		</script>
+
 </body>
 </html>
