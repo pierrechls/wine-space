@@ -20,13 +20,24 @@
 						
 							if( has_post_thumbnail() ) {
 							
-								$urlRelationship = get_field('slider-url-to-go', get_the_ID());
+								$urlPageOrCat = get_field('slider-link-page-or-cat', get_the_ID());	
 								$urlToGo = '';
 								
-								if($urlRelationship) {
-									foreach( $urlRelationship as $url):
-										$urlToGo = get_the_permalink($url->ID);
-									endforeach;
+								if( $urlPageOrCat === 'category') {
+									$categorySelected = get_field('slider-url-to-go-cat', get_the_ID());
+									if($categorySelected) {
+										$urlToGo = get_category_link($categorySelected->term_id);
+									}
+									
+								} else if ( $urlPageOrCat === 'page' ) {
+									
+									$urlRelationship = get_field('slider-url-to-go', get_the_ID());
+									
+									if($urlRelationship) {
+										foreach( $urlRelationship as $url):
+											$urlToGo = get_the_permalink($url->ID);
+										endforeach;
+									}
 								}
 							?>
 							
