@@ -93,10 +93,18 @@
 					
 					 <?php $children = get_terms( $wcatTerm->taxonomy, array( 'parent' => $wcatTerm->term_id, 'hide_empty' => false ) ); ?>
 					 
+					 	<?php $term_id = $wcatTerm->taxonomy . '_' . $wcatTerm->term_id;?>
+					 	
+					 	<?php 
+					 	
+					 	if( get_field('show_cat', $term_id) ) { ?>
+					 
 					 <?php if ( $children ) { ?>
 						 	<li class="menu__item"><a class="menu__link in" <?php if($wcatTerm->slug === 'vins-bio' ) { echo 'data-color="bio-color"'; } ?> data-submenu="<?php echo $wcatTerm->slug ?>" href="#"><?php echo $wcatTerm->name; ?></a></li>
 					 <?php } else { ?>
 						 <li class="menu__item"><a class="menu__link" data-submenu="<?php echo $wcatTerm->slug ?>" <?php if($wcatTerm->slug === 'vins-bio' ) { echo 'data-color="bio-color"'; } ?> href="<?php echo get_term_link( $wcatTerm->slug, $wcatTerm->taxonomy );?>"><?php echo $wcatTerm->name; ?></a></li>
+					 <?php } ?>
+					 
 					 <?php } ?>
 				<?php 
 				endforeach; 
@@ -165,8 +173,18 @@
 						$wsubcats = get_categories($wsubargs);
 						foreach ($wsubcats as $wsc):
 						?>
+							
+							<?php $term_id = $wsc->taxonomy . '_' . $wsc->term_id; ?>
+					 	
+					 	<?php 
+					 	
+					 		if( get_field('show_cat', $term_id) ) { ?>
+							
 							<li class="menu__item"><a class="menu__link" href="<?php echo get_term_link( $wsc->slug, $wsc->taxonomy );?>"><?php echo $wsc->name;?></a></li>
 						<?php
+						
+							}
+							
 						endforeach;
 						?>  
 					</ul>
