@@ -40,7 +40,7 @@ get_header(); ?>
 	}
 	
 	.masonry {
-	    column-count: 2;
+	    column-count: 1;
 	    column-gap: 1rem;
 	    padding: 2rem 3rem;
 	}
