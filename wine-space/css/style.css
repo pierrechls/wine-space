@@ -446,6 +446,13 @@ header p.website-slogan::after {
     -moz-transition: all 0.4s ease-out 0s;
     -o-transition: all 0.4s ease-out 0s;
     transition: all 0.4s ease-out 0s;
+    text-align: center;
+    color: #38393a;
+}
+
+#hotline-dialog-content p, #hotline-dialog-content a, #hotline-dialog-content h3, #hotline-dialog-content h4 {
+	color: #38393a;
+	text-align: center;
 }
 
 #hotline-dialog-content.open {
@@ -458,9 +465,65 @@ header p.website-slogan::after {
 	margin-top: 2rem;
 }
 
+
+#hotline-dialog-content button {
+	border: 0.2rem solid #38393a;
+    color: #baa571;
+    font: 1.5rem 'Lato', sans-serif;
+    font-weight: 600;
+    padding: 0.8rem 0.5rem 0.9rem 0.5rem;
+    text-indent: 0.1rem;
+    background: #38393a;
+    border-radius: 0.6rem;
+    text-transform: uppercase;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+#hotline-dialog-content .hotline-content-article {
+	margin-bottom: 3rem;
+}
+
+#hotline-dialog-content .hotline-content-article h3, #hotline-dialog-content .hotline-content-article h4, #hotline-dialog-content .hotline-content-article h5 {
+	margin: 0 auto;
+}
+
+#hotline-dialog-content #messagerie-instantanee-hotline a {
+	border: 0.2rem solid #38393a;
+    color: #baa571;
+    font: 1.5rem 'Lato', sans-serif;
+    font-weight: 600;
+    padding: 0.8rem 0.5rem 0.9rem 0.5rem;
+    text-indent: 0.1rem;
+    background: #38393a;
+    border-radius: 0.6rem;
+    text-transform: uppercase;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
 #hotline-dialog-content #close-hotline-dialog-content a {
 	font-size: 1.2rem;
     padding: 0.7rem 0.9rem;
+}
+
+#hotline-dialog-content .content-hotline {
+    width: 50rem;
+    margin: 0 auto;
+    height: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25rem;
+    margin-top: -15rem;
+}
+
+
+@media screen and (max-width: 60em){
+	#hotline-dialog-content .content-hotline {
+	    width: 30rem;
+	    margin-left: -15rem;
+	}
 }
 
 #primary {

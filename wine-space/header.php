@@ -219,6 +219,38 @@
 				
 			</div>
 			<div id="hotline-dialog-content">
-				<h1>Hotline</h1>	
-				<div id="close-hotline-dialog-content"><button>Retour</button></div>
+				
+				<div class="content-hotline">
+					<?php
+						$args = array( 'post_type' => 'hotline', 'posts_per_page' => 1, 'orderby' => 'date', 'order' => 'ASC' );
+						$loop = new WP_Query( $args );
+						if( count($args) > 0 && $loop->found_posts != 0 ) {
+						while ( $loop->have_posts() ) : $loop->the_post();
+					?>
+						<div class="hotline-content-article"><?php the_content(); ?></div>	
+						
+						<?php 
+						
+							if( get_field('link-to-facebook-messenger', get_the_ID() ) ) {
+						
+						?>
+						
+							<div id="messagerie-instantanee-hotline">
+								<a href="<?php echo the_field('link-to-facebook-messenger', get_the_ID() ); ?>" target="_blank">Messagerie instantanée</a>
+							</div>
+							
+						<?php
+						
+							}
+						
+						?>
+						
+						<div id="close-hotline-dialog-content">
+							<button>Retour</button>
+						</div>
+					<?php
+						endwhile;
+						}
+					?>
+				</div>
 			</div>
