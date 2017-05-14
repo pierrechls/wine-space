@@ -343,7 +343,16 @@ get_header( 'shop' ); ?>
 			</div>
 			<div class="description">
 			
-				<p class="back-to-category"><a href="<?php echo get_category_link( $categoryID ) ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour <!--<?php echo $categoryName; ?>--></a></p>
+				<p class="back-to-category" id="product-back-to-category"><a href="<?php echo get_category_link( $categoryID ) ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour <!--<?php echo $categoryName; ?>--></a></p>
+				
+				<script type="text/javascript">
+					var history_prev = document.referrer;
+						if(history_prev != null || history_prev.length > 0 || history_prev != '') {
+							if(history_prev.indexOf("<?php echo get_site_url(); ?>") > -1) {
+								document.querySelector('#product-back-to-category a').setAttribute('href', history_prev);
+							}
+						}
+				</script>
 				
 				<?php
 					$parent_id = wpcf_pr_post_get_belongs(get_the_ID(), 'domaine');
