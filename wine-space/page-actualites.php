@@ -108,6 +108,9 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		
+			<?php while ( have_posts() ) : the_post(); ?>
+		
 			<h1 class="actus-title"><?php the_title() ?></h1>
 			
 			<?php if( get_field('subscribe_text') && get_field('newsletter_page_link') ): ?>
@@ -115,11 +118,15 @@ get_header(); ?>
 			<?php endif; ?>
 			
 			<?php
+			
+				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 				
 				$args = array(
 					'category_name' 	 => 'actualites',
 					'order'    			 => 'DESC',
-					'orderby' => 'date'
+					'orderby'			 => 'date',
+					'posts_per_page' 	 => 20,
+					'paged' 			 => $paged
 				);
 				
 				$the_query = new WP_Query( $args );
@@ -151,6 +158,11 @@ get_header(); ?>
 			?>
 				
 				<div style="clear:both"></div>
+				
+				<?php if (function_exists("pagination") && $the_query->max_num_pages > 1) { ?>
+					     <?php pagination($the_query->max_num_pages); ?>
+				<?php } ?>
+				
 				</div>
 				
 			<?php
@@ -165,6 +177,12 @@ get_header(); ?>
 			
 				endif;
 				
+			?>
+			
+			<?php 
+			
+				endwhile;
+			
 			?>
 			
 		</main><!-- #main -->
