@@ -334,12 +334,12 @@ get_header(); ?>
 				<p class="back-to-category" id="domaine-back-to-category"><a href="<?php echo get_site_url(); ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour</a></p>
 				
 				<script type="text/javascript">
-					window.onload = function() { 
-						var history_prev = document.referrer;
+					var history_prev = document.referrer;
 						if(history_prev != null || history_prev.length > 0 || history_prev != '') {
-							document.querySelector('#domaine-back-to-category a').setAttribute('href', history_prev);
+							if(history_prev.indexOf("<?php echo get_site_url(); ?>") > -1) {
+								document.querySelector('#domaine-back-to-category a').setAttribute('href', history_prev);
+							}
 						}
-					}
 				</script>
 				
 				<p class="go-to-fiche-domaine"><a href="<?php echo get_site_url(); ?>/domaine/">Voir tous les domaines <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
