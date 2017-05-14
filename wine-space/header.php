@@ -111,11 +111,13 @@
 				?>
 				
 					<li class="menu__item space__item"><a class="menu__link" href="#"></a></li>
-					<li class="menu__item"><a class="menu__link" data-submenu="domaines" href="<?php echo get_site_url(); ?>/domaines/">Tous les domaines</a></li>
-					<li class="menu__item"><a class="menu__link" data-submenu="presse-distinctions" href="<?php echo get_site_url(); ?>/actualites/">Actualités</a></li>
-					<li class="menu__item"><a class="menu__link" data-submenu="a-propos" href="<?php echo get_site_url(); ?>/a-propos/">Qui sommes nous ?</a></li>
-					<li class="menu__item"><a class="menu__link" data-submenu="conditions-generales-de-vente" href="<?php echo get_site_url(); ?>/conditions-generales-de-vente/">CGV</a></li>
-					<li class="menu__item"><a class="menu__link" data-submenu="contact" href="<?php echo get_site_url(); ?>/contact/">Contact</a></li>
+					<li class="menu__item"><a class="menu__link footer__link" data-submenu="domaines" href="<?php echo get_site_url(); ?>/domaines/">Tous les domaines</a></li>
+					<li class="menu__item"><a class="menu__link footer__link" data-submenu="presse-distinctions" href="<?php echo get_site_url(); ?>/actualites/">Actualités</a></li>
+					<li class="menu__item"><a class="menu__link footer__link" data-submenu="a-propos" href="<?php echo get_site_url(); ?>/a-propos/">Qui sommes nous ?</a></li>
+					<li class="menu__item"><a class="menu__link footer__link" data-submenu="a-propos" href="<?php echo get_site_url(); ?>/mentions-legales/">Mentions Légales</a></li>
+					<li class="menu__item"><a class="menu__link footer__link" data-submenu="a-propos" href="<?php echo get_site_url(); ?>/conditions-de-livraison/">Informations de livraison</a></li>
+					<li class="menu__item"><a class="menu__link footer__link" data-submenu="conditions-generales-de-vente" href="<?php echo get_site_url(); ?>/conditions-generales-de-vente/">CGV</a></li>
+					<li class="menu__item"><a class="menu__link footer__link" data-submenu="contact" href="<?php echo get_site_url(); ?>/contact/">Contact</a></li>
 					<li class="menu__item space__item"><a class="menu__link" href="#"></a></li>
 					
 					
@@ -140,7 +142,7 @@
 								if( $socialID != '' && $socialLink != '' && $socialIcon != '' ) {
 								?>
 								
-								<a class="menu__link menu__link__inline menu__link__social" data-submenu="link-<?php echo $socialID; ?>" href="<?php echo $socialLink; ?>"><i class="<?php echo $socialIcon; ?>" aria-hidden="true"></i></i></a>
+								<a class="menu__link menu__link__inline menu__link__social" data-submenu="link-<?php echo $socialID; ?>" href="<?php echo $socialLink; ?>" target="_blank"><i class="<?php echo $socialIcon; ?>" aria-hidden="true"></i></i></a>
 								
 								<?php
 								}

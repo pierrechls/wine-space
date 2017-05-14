@@ -93,6 +93,10 @@ input[type='number'] {
   .menu__link {
 	  padding: 0 2.5rem 0.7rem 1.7rem !important;
   }
+  
+  .menu__link.footer__link {
+	  padding: 0 2.5rem 0.4rem 1.7rem !important;
+  }
 }
 
 
@@ -330,6 +334,59 @@ header p.website-slogan::after {
         .custom-dropdown--small .custom-dropdown__select { padding-right: .5em }
     }
 }
+
+
+
+/* Pagination */
+
+.pagination-footer {
+	display: block;
+    clear: both;
+    position: relative;
+    padding: 2rem 0;
+    background: rgba(37,37,37,0.6);
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(56,56,56,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(56,56,56,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(56,56,56,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#383838',GradientType=0 ); /* IE6-9 */
+}
+
+.pagination {
+    clear:both;
+    position: relative;
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    line-height: 1.5rem;
+    text-align: center;
+}
+ 
+.pagination span, .pagination a {
+    display: inline-block;
+    margin: 0.2rem 0.2rem 0.2rem 0;
+    padding: 0.6rem 0.9rem 0.5rem 0.9rem;
+    text-decoration: none;
+    width:auto;
+    color:#fff; /* Pagination text color */
+    background: #555; /* Pagination non-active background color */
+    -webkit-transition: background .15s ease-in-out;
+    -moz-transition: background .15s ease-in-out;
+    -ms-transition: background .15s ease-in-out;
+    -o-transition: background .15s ease-in-out;
+    transition: background .15s ease-in-out;
+}
+ 
+.pagination a:hover{
+    color:#fff;
+    background: #baa571; /* Pagination background on hover */
+}
+ 
+.pagination .current{
+    padding: 0.6rem 0.9rem 0.5rem 0.9rem;
+    background: #baa571; /* Current page background */
+    color:#fff;
+}
+
 
 #search-products-content {
 	position: absolute;
