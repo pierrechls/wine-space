@@ -55,6 +55,12 @@
 - **Download** Category and taxonomy terms order plugin from [here](https://github.com/pierrechls/taxonomy-terms-order)
 - **Follow** the instructions
 - **Order** your categories as you want
+
+#### Table Rate Shipping
+
+- **Download** Table Rate Shipping plugin from [here](https://github.com/pierrechls/wc-table-rate-shipping)
+- **Follow** the instructions
+- **Add your** shipping conditions
  
 ### Init content
 
