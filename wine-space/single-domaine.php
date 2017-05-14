@@ -331,7 +331,7 @@ get_header(); ?>
 	
 			<div class="description">
 			
-				<p class="back-to-category" id="domaine-back-to-category"><a href="<?php echo get_site_url(); ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour</a></p>
+				<p class="back-to-category" id="domaine-back-to-category"><a href="<?php echo get_site_url() . '/domaines/'; ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour</a></p>
 				
 				<script type="text/javascript">
 					var history_prev = document.referrer;
