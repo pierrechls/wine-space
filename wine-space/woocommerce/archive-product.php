@@ -52,6 +52,17 @@ get_header( 'shop' ); ?>
 		margin: 0 1rem;
 	}
 	
+	.filter-bar form {
+		margin: 0 auto;
+		padding: 0.6rem 0 0 2.8rem;
+		margin-bottom: 1rem;
+	}
+	
+	.filter-bar form select {
+		margin: 0 auto;
+		margin-left: 1rem;
+	}
+	
 	.filter-bar p a.filter-active {
 		color: #baa571;
 	}
@@ -84,7 +95,7 @@ get_header( 'shop' ); ?>
 		}
 		
 		.products {
-		    padding: 15rem 4rem;
+		    padding: 22rem 4rem 3rem 4rem;
 		}
 	}
 	
@@ -141,9 +152,26 @@ get_header( 'shop' ); ?>
 			
 			<div class="filter-bar">
 				<?php $currentURL = '?' . $_SERVER['QUERY_STRING']; ?>
-				<p><a class="<? if($currentOrder == 'title') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'title', $currentURL ); ?>"><i class="fa fa-arrow-down" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></a>
-				<a class="<? if($currentOrder == 'titledesc') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'titledesc', $currentURL ); ?>"><i class="fa fa-arrow-up" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></a><a class="<? if($currentOrder == 'price') { echo "filter-active"; } ?>" href="<?php echo add_query_arg('orderby', 'price', $currentURL ); ?>"><i class="fa fa-arrow-down" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i></a>
-				<a class="<? if($currentOrder == 'pricedesc') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'pricedesc', $currentURL ); ?>"><i class="fa fa-arrow-up" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i></a></p>
+				<form method="get">
+				    <span class="custom-dropdown custom-dropdown--white">
+						<select name='color' onchange='this.form.submit();' class="custom-dropdown__select custom-dropdown__select--white">
+							 <option value='all' <?php if( $_GET['color'] === 'all' ) { echo 'selected'; }?> >Toutes les couleurs</option>
+					         <option value='red' <?php if( $_GET['color'] === 'red' ) { echo 'selected'; }?>>Rouge</option>
+					         <option value='rose' <?php if( $_GET['color'] === 'rose' ) { echo 'selected'; }?>>Rose</option>
+					         <option value='white' <?php if( $_GET['color'] === 'white' ) { echo 'selected'; }?>>Blanc</option>
+						</select>
+					</span>
+				    <? if($currentOrder == 'title') {?> <input type="hidden" name="orderby" value="title"/> <?php } ?>
+				    <? if($currentOrder == 'titledesc') {?> <input type="hidden" name="orderby" value="titledesc"/> <?php } ?>
+				    <? if($currentOrder == 'price') {?> <input type="hidden" name="orderby" value="price"/> <?php } ?>
+				    <? if($currentOrder == 'pricedesc') {?> <input type="hidden" name="orderby" value="pricedesc"/> <?php } ?>
+				</form>
+				
+				<p>
+					<a class="<? if($currentOrder == 'title') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'title', $currentURL ); ?>"><i class="fa fa-arrow-down" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></a>
+					<a class="<? if($currentOrder == 'titledesc') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'titledesc', $currentURL ); ?>"><i class="fa fa-arrow-up" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></a>
+					<a class="<? if($currentOrder == 'price') { echo "filter-active"; } ?>" href="<?php echo add_query_arg('orderby', 'price', $currentURL ); ?>"><i class="fa fa-arrow-down" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i></a>
+					<a class="<? if($currentOrder == 'pricedesc') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'pricedesc', $currentURL ); ?>"><i class="fa fa-arrow-up" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i></a></p>
 			</div>
 
 		<?php endif; ?>
@@ -170,28 +198,56 @@ get_header( 'shop' ); ?>
 				<?php
 				
 					$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+					
+					$possibleColors = array('red', 'white', 'rose');
+					
+					$wine_color =  ( $_GET['color'] && in_array($_GET['color'], $possibleColors) ) ? ( array($_GET['color']) ) : array('red', 'white', 'rose', 'none');
 				
 					if ( is_search() ) {
 						$products = new WP_Query( array(
 							's' => get_search_query(),
-					        'posts_per_page' => -1,
+					        'product_cat' => $term->slug,
 					        'post_type' => 'product',
-					        'orderby'   => $orderBy,
-						    'meta_key'  => $metakey,
-						    'order' => $order,
 						    'posts_per_page' => 20,
-							'paged' => $paged
+							'paged' => $paged,
+							'order' => $order,
+				            'orderby' => $orderBy,
+				            'meta_key' => $metakey,
+				            'meta_query' => array(
+				               array(
+				               'key'       => '_price',
+				               'compare'   => '=',
+				               'type'      => 'NUMERIC',
+				               ),
+				               array(
+									'key'	 	=> 'wine-color',
+									'value'	  	=> $wine_color,
+									'compare' 	=> 'IN',
+								)
+				            )
+							
 					    ) );
 					} else {
 						$products = new WP_Query( array(
-					        'posts_per_page' => -1,
 					        'product_cat' => $term->slug,
 					        'post_type' => 'product',
-					        'orderby'   => $orderBy,
-						    'meta_key'  => $metakey,
-						    'order' => $order,
 						    'posts_per_page' => 20,
-							'paged' => $paged
+							'paged' => $paged,
+							'order' => $order,
+				            'orderby' => $orderBy,
+				            'meta_key' => $metakey,
+				            'meta_query' => array(
+				               array(
+				               'key'       => '_price',
+				               'compare'   => '=',
+				               'type'      => 'NUMERIC',
+				               ),
+				               array(
+									'key'	 	=> 'wine-color',
+									'value'	  	=> $wine_color,
+									'compare' 	=> 'IN',
+								)
+				            )
 					    ) );	
 					}
 					
