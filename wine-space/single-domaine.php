@@ -342,7 +342,7 @@ get_header(); ?>
 						}
 				</script>
 				
-				<p class="go-to-fiche-domaine"><a href="<?php echo get_site_url(); ?>/domaine/">Voir tous les domaines <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+				<p class="go-to-fiche-domaine"><a href="<?php echo get_site_url(); ?>/domaines/">Voir tous les domaines <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
 				
 				<h1 class="title"><?php the_title(); ?></h1>
 				
@@ -379,6 +379,14 @@ get_header(); ?>
 					        	<img src="<?php echo get_the_post_thumbnail_url($child_post->ID, 'full' ); ?>" /><br/>
 					        	<div class="info">
 					        		<h3><?php echo $child_post->post_title; ?></h3>
+					        		<?php 
+					        			$child_post_array = (array)$child_post;
+					        			$millesime = $child_post_array['fields']['product-millesime'] ? $child_post_array['fields']['product-millesime'] : '';
+					        			if($millesime != '') {
+						        			?> <p><?php echo $millesime; ?></p> <?php
+					        			};
+					        		?>
+					        		
 					        		<?php $_product = wc_get_product( $child_post->ID ); ?>
 					        		<p style="margin: 0 0 1.8rem 0;">
 										<?php 
@@ -394,7 +402,7 @@ get_header(); ?>
 											}
 										?>
 									</p>
-									<p><a class="btn-add-to-cart" href="?add-to-cart=<?php echo $child_post->ID ?>">Ajouter</a></p>
+									<p><a class="btn-add-to-cart" href="<?php echo get_permalink( $child_post->ID ); ?>">Ajouter</a></p>
 					        	</div>
 					    	</a>
 					    </li>
