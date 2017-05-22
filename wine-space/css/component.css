@@ -505,7 +505,7 @@ body #cdawrap a:hover.carbon-poweredby {
 
 .menu__wrap {
 	position: absolute;
-	top: 24rem;
+	top: 23.3rem;
 	bottom: 0;
 	overflow: hidden;
 	width: 100%;
@@ -565,14 +565,14 @@ body #cdawrap a:hover.carbon-poweredby {
 	font-size: 1.3rem;
 	position: relative;
 	display: block;
-	padding: 0 2.5rem 1rem 1.7rem;
+	padding: 0 2.5rem 0.8rem 1.7rem;
 	color: #FFFFFF;
 	-webkit-transition: color 0.1s;
 	transition: color 0.1s;
 }
 
 .menu__link.footer__link {
-	padding: 0 2.5rem 0.7rem 1.7rem;
+	padding: 0 2.5rem 0.5rem 1.7rem;
 }
 
 .menu__link[data-color='bio-color']{
