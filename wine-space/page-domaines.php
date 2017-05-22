@@ -26,7 +26,7 @@ get_header(); ?>
 	#primary{
 		background-color: #fff;
 		/* height: 100vh; */
-		background-image: url('<?php bloginfo('template_directory'); ?>/images/products-background.png');
+		background-image: url('<?php bloginfo('template_directory'); ?>/images/domaines-background.jpg');
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
@@ -123,8 +123,8 @@ get_header(); ?>
 				$argsDomaines = array(
 					'posts_per_page' => -1,
 					'post_type'      => 'domaine',
-					'order'          => 'DESC',
-					'orderby'        => 'date'
+					'orderby'=> 'title',
+					'order' => 'ASC'
 				);
 				
 				$allDomaines = new WP_Query( $argsDomaines );
