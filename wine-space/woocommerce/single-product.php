@@ -349,7 +349,15 @@ get_header( 'shop' ); ?>
 					var history_prev = document.referrer;
 						if(history_prev != null || history_prev.length > 0 || history_prev != '') {
 							if(history_prev.indexOf("<?php echo get_site_url(); ?>") > -1) {
-								document.querySelector('#product-back-to-category a').setAttribute('href', history_prev);
+								var urlWithoutParams = location.protocol + '//' + location.host + location.pathname;
+								var lastUrlSaved = localStorage.getItem('previousUrl');
+								if(!lastUrlSaved) {
+									localStorage.setItem('previousUrl', history_prev);
+									document.querySelector('#product-back-to-category a').setAttribute('href', history_prev);	
+								} else if (lastUrlSaved.indexOf(urlWithoutParams) > -1) {
+									localStorage.setItem('previousUrl', history_prev);
+									document.querySelector('#product-back-to-category a').setAttribute('href', lastUrlSaved);	
+								}
 							}
 						}
 				</script>

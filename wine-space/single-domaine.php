@@ -336,12 +336,35 @@ get_header(); ?>
 				<p class="back-to-category" id="domaine-back-to-category"><a href="<?php echo get_site_url() . '/domaines/'; ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour</a></p>
 				
 				<script type="text/javascript">
+				
+					function removeParam(key, sourceURL) {
+					    var rtn = sourceURL.split("?")[0],
+					        param,
+					        params_arr = [],
+					        queryString = (sourceURL.indexOf("?") !== -1) ? sourceURL.split("?")[1] : "";
+					    if (queryString !== "") {
+					        params_arr = queryString.split("&");
+					        for (var i = params_arr.length - 1; i >= 0; i -= 1) {
+					            param = params_arr[i].split("=")[0];
+					            if (param === key) {
+					                params_arr.splice(i, 1);
+					            }
+					        }
+					        rtn = rtn + "?" + params_arr.join("&");
+					    }
+					    return rtn;
+					}
+				
 					var history_prev = document.referrer;
 						if(history_prev != null || history_prev.length > 0 || history_prev != '') {
 							if(history_prev.indexOf("<?php echo get_site_url(); ?>") > -1) {
-								document.querySelector('#domaine-back-to-category a').setAttribute('href', history_prev);
+								var originalURL = history_prev;
+								var alteredURL = removeParam("add-to-cart", originalURL);
+								document.querySelector('#domaine-back-to-category a').setAttribute('href', alteredURL);
 							}
 						}
+						
+					
 				</script>
 				
 				<p class="go-to-fiche-domaine"><a href="<?php echo get_site_url(); ?>/domaines/">Voir tous les domaines <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
