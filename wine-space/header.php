@@ -127,7 +127,7 @@
 						
 						if( count($args) > 0 ) { ?>
 						
-							<li class="menu__item">
+							<li class="menu__item item__social__icon">
 							
 						<?php
 						
