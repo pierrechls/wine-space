@@ -43,6 +43,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 	    width: auto;
 	    height: auto;
 	}
+	
+	div#payment ul.payment_methods.methods {
+		margin: 4rem auto;
+		padding: 1rem 0;
+	}
+	
+	div#payment ul.payment_methods.methods li {
+		margin: 1rem auto;
+	}
+	
+	div#payment ul.payment_methods.methods li img {
+		display: inline-block;
+	    margin: 0 auto;
+	    margin-left: 2rem;
+	    height: 5rem;
+	    width: auto;
+	}
+	
 </style>
 
 <?php if ( ! is_ajax() ) : ?>
@@ -50,6 +68,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php endif; ?>
 
 <div id="payment" class="woocommerce-checkout-payment">
+
+	<h3 style="background-color: #b7a56d; color: #fff; padding: 2rem; margin: 6rem auto 1rem auto;">Moyen de paiement</h3>
+
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 	<ul class="payment_methods methods">
 		<?php

@@ -13,7 +13,9 @@
   #primary {
 	  color: #000;
 	  line-height: 1.2;
-	  padding: 0 !important;
+	  padding-top: 9rem;
+	  /* padding: 0 !important; */
+	  padding-top: 9rem !important;
   }
 
   #primary h1.entry-title {
@@ -57,6 +59,10 @@
 
   @media screen and (max-width: 60em){
 
+		#primary {
+			padding: 0 !important;
+		}
+		
 		#primary h1.entry-title {
 			padding: 10rem 1rem 3rem 1rem;
 			text-align: center;

@@ -12,6 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
+<!--
 <div class="woocommerce-shipping-fields">
 	<?php if ( WC()->cart->needs_shipping_address() === true ) : ?>
 
@@ -69,3 +70,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php do_action( 'woocommerce_after_order_notes', $checkout ); ?>
 </div>
+-->

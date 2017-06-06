@@ -17,10 +17,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	#primary{
 		background-color: #fff;
+		padding-top: 9rem;
 	}
 
 	#primary h1 {
-	    background: #c4af78;
+	    background: #b7a56d;
 	    padding: 3.5rem 1rem;
 	    color: #FFF;
 	    margin: 0;
@@ -38,6 +39,10 @@ if ( ! defined( 'ABSPATH' ) ) {
     }
 
     @media screen and (max-width: 60em){
+
+		#primary {
+			padding-top: 0;
+		}
 
 		#primary h1 {
 			padding: 10rem 1rem 3rem 1rem;
@@ -71,8 +76,10 @@ form.checkout.woocommerce-checkout{
 }
 
 form.checkout.woocommerce-checkout .col2-set .col-1, form.checkout.woocommerce-checkout .col2-set .col-2{
-	width: 49%;
-    display: inline-block;
+	/* width: 49%; */
+    /* display: inline-block; */
+    display: block;
+    width: 100%;
     vertical-align: top;
 }
 
@@ -99,8 +106,13 @@ form.checkout.woocommerce-checkout .col2-set .col-2{
     padding-left: 6em;
 }
 
+.woocommerce-billing-fields select {
+	display: block;
+}
+
 p.form-row label {
-    margin-right: 20px;
+	margin-bottom: 1rem;
+    margin-right: 0.2rem;
 }
 
 form.checkout.woocommerce-checkout h3{
@@ -169,7 +181,7 @@ table.shop_table.woocommerce-checkout-review-order-table tr.cart-subtotal th, ta
 }
 
 div#payment.woocommerce-checkout-payment div.form-row.place-order input[type="submit"]:hover {
-    background-color: #ad993e;
+    background-color: #b7a56d;
 }
 div#payment.woocommerce-checkout-payment div.form-row.place-order input[type="submit"] {
     text-align: center;
@@ -193,6 +205,9 @@ div#payment.woocommerce-checkout-payment div.form-row.place-order input[type="su
     border-radius: 6px;
     -moz-box-shadow: none;
     box-shadow: none;
+    font-weight: 600;
+    font-size: 1.65rem;
+    padding: 1rem 2rem;
 }
 
 @media only screen and (max-width: 480px){
@@ -240,7 +255,7 @@ div#payment.woocommerce-checkout-payment div.form-row.place-order input[type="su
 
 </style>
 
-<h1 class="woocommerce-title-user">Ma commande</h1>
+<h1 class="woocommerce-title-user" style="text-align:center;">Ma commande</h1>
 
 
 <div class="myaccount-content" >
@@ -264,6 +279,8 @@ $get_checkout_url = apply_filters( 'woocommerce_get_checkout_url', WC()->cart->g
 	<?php if ( sizeof( $checkout->checkout_fields ) > 0 ) : ?>
 
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
+		
+			
 
 		<div class="col2-set" id="customer_details">
 			<div class="col-1">

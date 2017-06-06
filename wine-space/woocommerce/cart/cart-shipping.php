@@ -14,6 +14,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
+
+<style>
+
+	ul#shipping_method {
+		text-align: left;
+		list-style: none;
+		padding: 1rem 0;
+	}
+	
+	ul#shipping_method li {
+		text-align: left;
+	}
+	
+	ul#shipping_method li input {
+		display: inline-block;
+	    width: auto;
+	    margin-right: 1rem;
+	}
+	
+	ul#shipping_method li input label {
+		text-align: left;
+		margin: 0 auto;
+	}
+	
+</style>
+
 <tr class="shipping">
 	<th><?php
 		if ( $show_package_details ) {

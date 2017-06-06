@@ -44,6 +44,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	#primary .myaccount-content .shop_table.cart {
 		margin: 2rem auto;
 	}
+	
+	#primary a.woocommerce-remove-coupon {
+		margin: 0 1rem;
+		font-style: italic;
+	}
 
 header.entry-header{
 	display: none;
