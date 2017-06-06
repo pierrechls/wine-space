@@ -80,7 +80,9 @@ get_header(); ?>
 }
 
 .domaine-products .domaine-products-all .domaine-products-list .domaine-product img {
-	width: 8rem;
+	/* width: 8rem; */
+	width: auto;
+    height: 30rem;
 }
 
 .domaine-products .domaine-products-all .domaine-products-list .domaine-product .info h3{
