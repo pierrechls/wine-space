@@ -192,7 +192,7 @@ get_header(); ?>
 						
 						
 						<?php $contactHoraires = do_shortcode( "[types field='horaires'][/types]" ); ?>
-						<?php if($contactHoraires != '') { ?> <p><strong>Adresse :</strong></p><p><?php echo $contactHoraires; ?></p> <?php } ?>
+						<?php if($contactHoraires != '') { ?> <p><strong>Horaires d'ouverture :</strong></p><p><?php echo $contactHoraires; ?></p> <?php } ?>
 						
 						
 						<?php $contactMail = do_shortcode( "[types field='mail'][/types]" ); ?>
