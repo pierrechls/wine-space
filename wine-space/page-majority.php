@@ -89,7 +89,7 @@
 			 <img src="<?php bloginfo('template_directory'); ?>/images/logo-icon.png"/>
 			 <p>Avez-vous l'âge légal pour acheter ou consommer de l'alcool dans votre pays de résidence ?</p>
 
-			 <form method="post" onsubmit="redirect_age()" action="<?php echo get_site_url(); ?>">
+			 <form method="post" onsubmit="redirect_age(this)">
 				  <input type="submit" name="yes" value="OUI, je suis majeur" onclick="verification_majority(1)" />
 				  <input type="submit" name="no" value="NON, je ne suis pas majeur" onclick="verification_majority(2)" />
 			 </form>
@@ -113,6 +113,10 @@
 			    var today = dd+'/'+mm+'/'+yyyy;
 			    return today;
 			}
+			
+			function set_action(form, action) {
+		        form.action = action;
+		    }
 
 			function verification_majority(age){
 		 		// Détection
@@ -125,14 +129,22 @@
 				}
 			}
 
-			function redirect_age(){
+			function redirect_age(form){
 		 		// Détection
 				if(typeof localStorage!='undefined') {
 					var legal_age = localStorage.getItem('majority');
-
 					if(legal_age == 1){
 						//Il a 18ans
-						window.location.href = "<?php echo get_site_url(); ?>";
+						if(localStorage.getItem('urlBeforeMajority')){
+							var action = localStorage.getItem('urlBeforeMajority');
+							set_action(form, action);
+							localStorage.removeItem('urlBeforeMajority');
+							window.location.href = action;
+						} else {
+							var action = "<?php echo get_site_url(); ?>";
+							set_action(form, action);
+							window.location.href = "<?php echo get_site_url(); ?>";
+						}
 					}
 
 					else if(legal_age == 2){

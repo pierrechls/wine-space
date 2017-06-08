@@ -32,6 +32,7 @@
 				  var date_today = get_actual_date();
 				  
 				  if(legal_age!=1 && legal_age!=2) {
+				  	localStorage.setItem('urlBeforeMajority', window.location.href );
 				    window.location.replace("<?php echo get_site_url(); ?>/majority/");
 				  }
 				  else if(legal_age==1){
@@ -39,6 +40,7 @@
 					  	
 				  	}
 				  	else{
+				  		localStorage.setItem('urlBeforeMajority', window.location.href );
 					  	window.location.replace("<?php echo get_site_url(); ?>/majority/");
 				  	}
 				  }
