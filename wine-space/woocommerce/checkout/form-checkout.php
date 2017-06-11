@@ -85,25 +85,31 @@ form.checkout.woocommerce-checkout .col2-set .col-1, form.checkout.woocommerce-c
 
 @media only screen and (max-width: 760px){
 	form.checkout.woocommerce-checkout .col2-set .col-1, form.checkout.woocommerce-checkout .col2-set .col-2{
-		width: 100%;
+		/*
+width: 100%;
 	    display: block;
 	    vertical-align: top;
+*/
 	}
 
 	form.checkout.woocommerce-checkout .col2-set .col-2{
-		margin: auto !important;
+		/*
+margin: auto !important;
 		margin-top: 6em !important;
 	    border-left: none !important;
 	    border-top: 2px solid #b7a56d;
 	    padding-top: 3em !important;
 	    padding-left: 0 !important;
+*/
 	}
 }
 
 form.checkout.woocommerce-checkout .col2-set .col-2{
-	margin: auto;
+	/*
+margin: auto;
     border-left: 2px solid #b7a56d;
     padding-left: 6em;
+*/
 }
 
 .woocommerce-billing-fields select {

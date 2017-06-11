@@ -29,7 +29,8 @@ form.checkout.woocommerce-checkout .col-left, form.checkout.woocommerce-checkout
 	    vertical-align: top;
 	}
 
-	form.checkout.woocommerce-checkout .col-right{
+	/*
+form.checkout.woocommerce-checkout .col-right{
 		margin: auto !important;
 		margin-top: 6em !important;
 	    border-left: none !important;
@@ -37,6 +38,7 @@ form.checkout.woocommerce-checkout .col-left, form.checkout.woocommerce-checkout
 	    padding-top: 3em !important;
 	    padding-left: 0 !important;
 	}
+*/
 }
 
 </style>
@@ -44,12 +46,12 @@ form.checkout.woocommerce-checkout .col-left, form.checkout.woocommerce-checkout
 <div class="woocommerce-billing-fields">
 	<?php if ( WC()->cart->ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
 
-		<h3><?php _e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h3>
+		<h3><?php _e( 'Billing Details', 'woocommerce' ); ?></h3>
 
 	<?php else : ?>
 
 		<!-- <h3><?php _e( 'Billing Details', 'woocommerce' ); ?></h3> -->
-		<h3><?php _e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h3>
+		<h3><?php _e( 'Billing Details', 'woocommerce' ); ?></h3>
 
 	<?php endif; ?>
 

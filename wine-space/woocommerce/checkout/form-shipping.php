@@ -12,7 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<!--
 <div class="woocommerce-shipping-fields">
 	<?php if ( WC()->cart->needs_shipping_address() === true ) : ?>
 
@@ -25,24 +24,74 @@ if ( ! defined( 'ABSPATH' ) ) {
 			} else {
 
 				$ship_to_different_address = $checkout->get_value( 'ship_to_different_address' );
-
 			}
 		?>
 
 		<h3 id="ship-to-different-address">
 			<label for="ship-to-different-address-checkbox" class="checkbox"><?php _e( 'Ship to a different address?', 'woocommerce' ); ?></label>
-			<input id="ship-to-different-address-checkbox" class="input-checkbox" <?php checked( $ship_to_different_address, 1 ); ?> type="checkbox" name="ship_to_different_address" value="1" />
+			<input id="ship-to-different-address-checkbox" class="input-checkbox" <?php checked( $ship_to_different_address, 1 ); ?> type="checkbox" name="ship_to_different_address" value="1" onclick="hideShowShippingAddressContent();" />
 		</h3>
+		
+		<script>
+		
+			 shippingAddressInterval();
+			
+			function shippingAddressInterval() {
+				if (document.readyState === "complete") {
+					hideShowShippingAddressContent();
+				} else {
+					var readyStateCheckInterval = setInterval(function() {
+					    if (document.readyState === "complete") {
+					        clearInterval(readyStateCheckInterval);
+					        hideShowShippingAddressContent();
+					    }
+					}, 10);
+				}
+					
+			}
+			
+			function hideShowShippingAddressContent() {
+				var shipToDifferentAddress = document.getElementById("ship-to-different-address-checkbox").checked;
+				var shippingAddressdocument = document.querySelector(".col-2 .woocommerce-shipping-fields .shipping_address");
+				if(shipToDifferentAddress){
+					shippingAddressdocument.style.display = 'block';
+				} else {
+					shippingAddressdocument.style.display = 'none';
+				}
+			}
+			
+			
+		</script>
 
 		<div class="shipping_address">
 
 			<?php do_action( 'woocommerce_before_checkout_shipping_form', $checkout ); ?>
-
+			
+			<div class="col-left">
+	
+			<?php $itemNumberShipping = 0; ?>
+		
 			<?php foreach ( $checkout->checkout_fields['shipping'] as $key => $field ) : ?>
-
-				<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
-
+		
+				<?php $itemNumberShipping++; ?>
+				<?php if($itemNumberShipping <= 4) { woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );} ?>
+		
 			<?php endforeach; ?>
+			
+			</div>
+
+			<div class="col-right">
+
+			<?php $itemNumberShipping = 0; ?>
+		
+			<?php foreach ( $checkout->checkout_fields['shipping'] as $key => $field ) : ?>
+		
+				<?php $itemNumberShipping++; ?>
+				<?php if($itemNumberShipping > 4) { woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );} ?>
+		
+			<?php endforeach; ?>
+			
+			</div>
 
 			<?php do_action( 'woocommerce_after_checkout_shipping_form', $checkout ); ?>
 
@@ -70,4 +119,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php do_action( 'woocommerce_after_order_notes', $checkout ); ?>
 </div>
--->
