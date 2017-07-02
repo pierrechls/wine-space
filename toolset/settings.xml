@@ -12,6 +12,38 @@
     </settings>
     <groups>
         <group>
+            <ID>3046</ID>
+            <post_content></post_content>
+            <post_title>Field Group for Domaines</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_fields></_wp_types_group_fields>
+                <_wp_types_group_post_types>domaine</_wp_types_group_post_types>
+            </meta>
+            <hash>73139217b0e2461fbfac4fa825c90c88</hash>
+            <checksum>73139217b0e2461fbfac4fa825c90c88</checksum>
+            <__types_id>field-group-for-domaines</__types_id>
+            <__types_title>Field Group for Domaines</__types_title>
+        </group>
+        <group>
+            <ID>3045</ID>
+            <post_content></post_content>
+            <post_title>Field Group for Google Maps</post_title>
+            <post_excerpt></post_excerpt>
+            <post_type>wp-types-group</post_type>
+            <post_status>publish</post_status>
+            <meta>
+                <_wp_types_group_fields></_wp_types_group_fields>
+                <_wp_types_group_post_types>google-map</_wp_types_group_post_types>
+            </meta>
+            <hash>0026aecc49f5723f267a213fc645f71e</hash>
+            <checksum>0026aecc49f5723f267a213fc645f71e</checksum>
+            <__types_id>field-group-for-google-maps</__types_id>
+            <__types_title>Field Group for Google Maps</__types_title>
+        </group>
+        <group>
             <ID>504</ID>
             <post_content></post_content>
             <post_title>Meta informations</post_title>
@@ -1007,11 +1039,40 @@
             <hash>7834cd43904c94e69531088141954d4a</hash>
             <checksum>7834cd43904c94e69531088141954d4a</checksum>
         </field>
+        <field>
+            <id>slide-link</id>
+            <slug>slide-link</slug>
+            <type>file</type>
+            <name>Lien</name>
+            <description>Lien (optionnel) vers une page souhaitée</description>
+            <data>
+                <slug-pre-save>slide-link</slug-pre-save>
+                <placeholder></placeholder>
+                <user_default_value></user_default_value>
+                <repetitive>0</repetitive>
+                <custom_use></custom_use>
+                <submit-key>slide-link</submit-key>
+                <disabled_by_type>0</disabled_by_type>
+                <validate>
+                    <url2>
+                        <active>1</active>
+                        <message>Please enter a valid URL address pointing to the file.</message>
+                        <suppress_for_cred>1</suppress_for_cred>
+                    </url2>
+                </validate>
+            </data>
+            <meta_key>wpcf-slide-link</meta_key>
+            <meta_type>postmeta</meta_type>
+            <__types_id>slide-link</__types_id>
+            <__types_title>Lien</__types_title>
+            <hash>7311c3d849522ad13bf3b05a6ad53ae2</hash>
+            <checksum>7311c3d849522ad13bf3b05a6ad53ae2</checksum>
+        </field>
     </fields>
     <types>
         <type>
             <_builtin></_builtin>
-            <_toolset_edit_last>1481739052</_toolset_edit_last>
+            <_toolset_edit_last>1490006739</_toolset_edit_last>
             <_wpcf_author_id>1</_wpcf_author_id>
             <wpcf-post-type>slider</wpcf-post-type>
             <icon>slides</icon>
@@ -1062,8 +1123,8 @@
             <id>slider</id>
             <__types_id>slider</__types_id>
             <__types_title>Slider</__types_title>
-            <hash>19ed73c9357729504795017aaa72b588</hash>
-            <checksum>19ed73c9357729504795017aaa72b588</checksum>
+            <hash>3e8c9012354c96c9b3e6d9f1c24923f7</hash>
+            <checksum>3e8c9012354c96c9b3e6d9f1c24923f7</checksum>
         </type>
         <type>
             <icon>location</icon>
@@ -1341,6 +1402,62 @@
             <__types_title>Meta informations</__types_title>
             <hash>3ac72752889a453575eafd5532a7379b</hash>
             <checksum>3ac72752889a453575eafd5532a7379b</checksum>
+        </type>
+        <type>
+            <_builtin></_builtin>
+            <_toolset_edit_last>1494263445</_toolset_edit_last>
+            <_wpcf_author_id>1</_wpcf_author_id>
+            <wpcf-post-type>hotline</wpcf-post-type>
+            <icon>megaphone</icon>
+            <labels>
+                <name>Hotline</name>
+                <ignore>on</ignore>
+                <singular_name>Hotline</singular_name>
+                <add_new>Ajouter un(e) nouveau(elle)</add_new>
+                <add_new_item>Ajouter un(e) nouveau(elle) %s</add_new_item>
+                <edit_item>Modifier %s</edit_item>
+                <new_item>Nouveau(elle) %s</new_item>
+                <view_item>Visualiser %s</view_item>
+                <search_items>Rechercher dans %s</search_items>
+                <not_found>Aucun(e) %s trouvé(e)</not_found>
+                <not_found_in_trash>Aucun(e) %s trouvé(e) dans la corbeille</not_found_in_trash>
+                <parent_item_colon>Texte parent</parent_item_colon>
+                <all_items>Tous les éléments</all_items>
+                <enter_title_here>Saisir le titre ici</enter_title_here>
+            </labels>
+            <slug>hotline</slug>
+            <description></description>
+            <public>public</public>
+            <menu_position>25--wpcf-add-menu-after--wpforms-overview</menu_position>
+            <supports>
+                <title>1</title>
+                <editor>1</editor>
+            </supports>
+            <rewrite>
+                <enabled>1</enabled>
+                <custom>normal</custom>
+                <slug></slug>
+                <with_front>1</with_front>
+                <feeds>1</feeds>
+                <pages>1</pages>
+            </rewrite>
+            <has_archive>1</has_archive>
+            <has_archive_slug></has_archive_slug>
+            <show_in_menu>1</show_in_menu>
+            <show_in_menu_page></show_in_menu_page>
+            <show_ui>1</show_ui>
+            <publicly_queryable>1</publicly_queryable>
+            <can_export>1</can_export>
+            <show_in_nav_menus>1</show_in_nav_menus>
+            <query_var_enabled>1</query_var_enabled>
+            <query_var></query_var>
+            <permalink_epmask>EP_PERMALINK</permalink_epmask>
+            <rest_base></rest_base>
+            <id>hotline</id>
+            <__types_id>hotline</__types_id>
+            <__types_title>Hotline</__types_title>
+            <hash>8ed732a71683a3afde973b33225d6f3b</hash>
+            <checksum>8ed732a71683a3afde973b33225d6f3b</checksum>
         </type>
     </types>
     <post_relationships>
