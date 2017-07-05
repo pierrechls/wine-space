@@ -53,10 +53,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 		margin: 1rem auto;
 	}
 	
+	div#payment ul.payment_methods.methods li img:first-child {
+	    margin-left: 2rem;
+	}
+	
 	div#payment ul.payment_methods.methods li img {
 		display: inline-block;
 	    margin: 0 auto;
-	    margin-left: 2rem;
+	    margin-left: 0.3rem;
 	    height: 5rem;
 	    width: auto;
 	}
