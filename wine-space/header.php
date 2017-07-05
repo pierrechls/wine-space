@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
     <head>
 	    <meta charset="utf-8">
@@ -56,6 +57,17 @@
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/component.css" />
 		<script src="<?php bloginfo('template_directory'); ?>/js/modernizr-custom.js"></script>
 		
+		<?php 
+					
+			global $current_user;
+			get_currentuserinfo();
+			
+			if($current_user->user_email == 'pierre.chls@gmail.com' || $current_user->user_email == 'domaine-moulinier@wanadoo.fr'){
+			 
+			} else {
+				echo "<script type='text/javascript'>window.top.location='". get_site_url() ."/coming-soon/';</script>"; exit;
+			}
+		?>
 		
 		<script type="text/javascript">
 			localStorage.setItem('website', '<?php echo get_site_url(); ?>');
@@ -96,6 +108,7 @@
 					 	<?php $term_id = $wcatTerm->taxonomy . '_' . $wcatTerm->term_id;?>
 					 	
 					 	<?php 
+					 	
 					 	
 					 	if( get_field('show_cat', $term_id) ) { ?>
 					 
@@ -216,7 +229,7 @@
 			<div id="search-products-content">
 			
 				<div class="search-post-type-content-form">
-					<? get_product_search_form(); ?>
+					<?php get_product_search_form(); ?>
 				</div>
 				
 			</div>
