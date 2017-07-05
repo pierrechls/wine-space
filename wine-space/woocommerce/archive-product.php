@@ -161,17 +161,17 @@ get_header( 'shop' ); ?>
 					         <option value='white' <?php if( $_GET['color'] === 'white' ) { echo 'selected'; }?>>Blanc</option>
 						</select>
 					</span>
-				    <? if($currentOrder == 'title') {?> <input type="hidden" name="orderby" value="title"/> <?php } ?>
-				    <? if($currentOrder == 'titledesc') {?> <input type="hidden" name="orderby" value="titledesc"/> <?php } ?>
-				    <? if($currentOrder == 'price') {?> <input type="hidden" name="orderby" value="price"/> <?php } ?>
-				    <? if($currentOrder == 'pricedesc') {?> <input type="hidden" name="orderby" value="pricedesc"/> <?php } ?>
+				    <?php if($currentOrder == 'title') {?> <input type="hidden" name="orderby" value="title"/> <?php } ?>
+				    <?php if($currentOrder == 'titledesc') {?> <input type="hidden" name="orderby" value="titledesc"/> <?php } ?>
+				    <?php if($currentOrder == 'price') {?> <input type="hidden" name="orderby" value="price"/> <?php } ?>
+				    <?php if($currentOrder == 'pricedesc') {?> <input type="hidden" name="orderby" value="pricedesc"/> <?php } ?>
 				</form>
 				
 				<p>
-					<a class="<? if($currentOrder == 'title') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'title', $currentURL ); ?>"><i class="fa fa-arrow-down" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></a>
-					<a class="<? if($currentOrder == 'titledesc') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'titledesc', $currentURL ); ?>"><i class="fa fa-arrow-up" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></a>
-					<a class="<? if($currentOrder == 'price') { echo "filter-active"; } ?>" href="<?php echo add_query_arg('orderby', 'price', $currentURL ); ?>"><i class="fa fa-arrow-down" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i></a>
-					<a class="<? if($currentOrder == 'pricedesc') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'pricedesc', $currentURL ); ?>"><i class="fa fa-arrow-up" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i></a></p>
+					<a class="<?php if($currentOrder == 'title') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'title', $currentURL ); ?>"><i class="fa fa-arrow-down" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></a>
+					<a class="<?php if($currentOrder == 'titledesc') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'titledesc', $currentURL ); ?>"><i class="fa fa-arrow-up" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></a>
+					<a class="<?php if($currentOrder == 'price') { echo "filter-active"; } ?>" href="<?php echo add_query_arg('orderby', 'price', $currentURL ); ?>"><i class="fa fa-arrow-down" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i></a>
+					<a class="<?php if($currentOrder == 'pricedesc') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'pricedesc', $currentURL ); ?>"><i class="fa fa-arrow-up" aria-hidden="true"></i><i class="fa fa-eur" aria-hidden="true"></i></a></p>
 			</div>
 
 		<?php endif; ?>

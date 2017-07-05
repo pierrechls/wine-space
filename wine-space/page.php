@@ -99,7 +99,7 @@ get_header(); ?>
 
 						<?php the_content() ?>
 
-					<? } ?>
+					<?php } ?>
 
 				<?php endwhile; // end of the loop. ?>
 
