@@ -77,7 +77,16 @@ get_header(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 				
-					<?php if( !is_realy_woocommerce_page() ) { ?>
+					<?php 
+					
+						$termsUrl = esc_url( wc_get_page_permalink( 'terms' ) );
+						$currentPermalink = get_permalink();
+						
+					?>
+					
+					
+				
+					<?php if( !is_realy_woocommerce_page() || $termsUrl == $currentPermalink ) { ?>
 				
 						<h1 class="title"><?php the_title() ?></h1>
 						<div class="actu-content"><?php the_content() ?></div>
