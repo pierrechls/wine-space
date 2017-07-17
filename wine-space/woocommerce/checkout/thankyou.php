@@ -13,9 +13,8 @@
   #primary {
 	  color: #000;
 	  line-height: 1.2;
-	  padding-top: 9rem;
 	  /* padding: 0 !important; */
-	  padding-top: 9rem !important;
+	  padding: 9rem 0 !important;
   }
 
   #primary h1.entry-title {
