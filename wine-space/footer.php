@@ -162,7 +162,7 @@
 			$(".payment_method_etransactions_std").append("<img src='" + link + "/images/payment/cb.png'>");
 			$(".payment_method_etransactions_std").append("<img src='" + link + "/images/payment/visa.png'>");
 			$(".payment_method_etransactions_std").append("<img src='" + link + "/images/payment/mastercard.png'>");
-			$(".payment_method_etransactions_std").append("<img src='" + link + "/images/payment/etransactions.png'>");
+			$(".payment_method_etransactions_std").append("<img src='" + link + "/images/payment/3d_secure.png'>");
 			
 		</script>
 		
