@@ -337,7 +337,7 @@ get_header( 'shop' ); ?>
 				<div class="wine-image">
 					<div class="wine-image-child">
 						<span class="align-img"></span>
-						<img src="<?php the_post_thumbnail_url( 'full' ); ?>" />
+						<?php the_post_thumbnail( 'full'); ?>
 					</div>
 				</div>
 			</div>

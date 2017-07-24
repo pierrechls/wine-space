@@ -401,7 +401,7 @@ get_header(); ?>
 				?>
 						<li class="domaine-product">
 					    	<a href="<?php echo get_permalink( $child_post->ID ) ?>">
-					        	<img src="<?php echo get_the_post_thumbnail_url($child_post->ID, 'full' ); ?>" /><br/>
+					    		<?php echo get_the_post_thumbnail($child_post->ID, 'medium'); ?> <br/>
 					        	<div class="info">
 					        		<h3><?php echo $child_post->post_title; ?></h3>
 					        		<?php 

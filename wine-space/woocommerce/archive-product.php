@@ -257,7 +257,7 @@ get_header( 'shop' ); ?>
 
 					    <li class="product">
 					    	<a href="<?php echo esc_url( add_query_arg( 'cat', $term->term_id, get_permalink( $products->post->ID )) ); ?>">
-					        	<img src="<?php the_post_thumbnail_url( 'full' ); ?>" /><br/>
+					        	<?php the_post_thumbnail( 'medium'); ?> <br/>
 					        	<div class="info">
 					        		<h3><?php the_title(); ?></h3>
 					        		<?php

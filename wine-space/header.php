@@ -76,22 +76,32 @@
 
 	<body>
 
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-38706004-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
+
         <!--[if lt IE 8]>
              <p class="chromeframe">Vous utilisez un navigateur obsolète. <a href="http://browsehappy.ch/fr/">Mettez à jour votre navigateur</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">installez Google Chrome Frame</a> pour une meilleure expérience de ce site.</p>
         <![endif]-->
         
         <div class="container">
-		<!-- Blueprint header -->
 		<header class="bp-header cf">
 			<div class="dummy-logo">
-				<a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png"/></a>
+				<a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png"/ alt="Logo <?php echo str_replace(' ', '-', strtolower(bloginfo('name'))); ?>"></a>
 				<p class="website-slogan"><?php bloginfo('description'); ?></p>
 			</div>
 		</header>
 		<button class="action action--open <?php if( 'domaine' == get_post_type() ) { echo "black-theme"; }?> " aria-label="Open Menu"><span class="icon icon--menu"></span></button>
 		<nav id="ml-menu" class="menu">
 			<div class="dummy-logo-icon">
-				<a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo-icon.png"/></a>
+				<a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo-icon.png" alt="Logo <?php echo str_replace(' ', '-', strtolower(bloginfo('name'))); ?>"/></a>
 			</div>
 			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
 			<a href="<?php echo get_site_url(); ?>" class="come-back-home"><i class="fa fa-home" aria-hidden="true"></i></a>
