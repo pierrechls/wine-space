@@ -163,6 +163,7 @@
 			$(".payment_method_etransactions_std").append("<img src='" + link + "/images/payment/visa.png'>");
 			$(".payment_method_etransactions_std").append("<img src='" + link + "/images/payment/mastercard.png'>");
 			$(".payment_method_etransactions_std").append("<img src='" + link + "/images/payment/3d_secure.png'>");
+			$(".payment_method_etransactions_std").append("<img src='" + link + "/images/payment/paypal.png'>");
 			
 		</script>
 		
