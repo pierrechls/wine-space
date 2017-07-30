@@ -373,7 +373,7 @@ get_header( 'shop' ); ?>
 				<?php if($parentTitle != '') { ?>
 					<h3><?php echo $parentTitle ?></h3>	
 					<?php if($parentURL != '') { ?>
-						<p class="go-to-fiche-domaine"><a href="<?if($categoryID != '') { echo esc_url( add_query_arg( 'cat', $categoryID, $parentURL) ); } else { echo $parentURL; } ?>">Voir la fiche domaine <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+						<p class="go-to-fiche-domaine"><a href="<?php if($categoryID != '') { echo esc_url( add_query_arg( 'cat', $categoryID, $parentURL) ); } else { echo $parentURL; } ?>">Voir la fiche domaine <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
 					<?php } ?>
 				<?php } ?>
 				<h1><?php the_title(); ?></h1>
