@@ -740,11 +740,13 @@ header p.website-slogan::after {
 	text-transform: uppercase;
 	text-align: center;
 	margin: 1rem auto 0 auto;
+	text-shadow: 0 0 1rem #000;
 }
 
 .category-product .product .info p{
 	font-size: 1.3rem;
 	margin: 0 0 1.3rem 0;
+	text-shadow: 0 0 1rem #000;
 }
 
 .category-product .product .info .btn-add-to-cart {
@@ -752,6 +754,7 @@ header p.website-slogan::after {
     text-transform: uppercase;
     border: 0.1rem solid #FFFFFF;
     padding: 0.5rem 1rem;
+    text-shadow: 0 0 1rem #000;
 }
 
 
