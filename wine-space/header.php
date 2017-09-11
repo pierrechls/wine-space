@@ -40,6 +40,8 @@
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css">
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/home-style.css">
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/supersized.css">
+	    
+	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/majority.css">
 		
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/lightbox/css/lightbox.css">
 	    
@@ -60,6 +62,7 @@
 		<script type="text/javascript">
 			localStorage.setItem('website', '<?php echo get_site_url(); ?>');
 		</script>
+		
     </head>
 
 	<body>
@@ -78,6 +81,24 @@
         <!--[if lt IE 8]>
              <p class="chromeframe">Vous utilisez un navigateur obsolète. <a href="http://browsehappy.ch/fr/">Mettez à jour votre navigateur</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">installez Google Chrome Frame</a> pour une meilleure expérience de ce site.</p>
         <![endif]-->
+        <div id="majority-container">
+	        <div class="majority-content majority-form">
+				 <h1>Bienvenue sur le site de <?php bloginfo('name'); ?></h1>
+				 <img src="<?php bloginfo('template_directory'); ?>/images/logo-icon.png"/>
+				 <p>Avez-vous l'âge légal pour acheter ou consommer de l'alcool dans votre pays de résidence ?</p>
+	
+				 <form method="post" onsubmit="redirect_age(this)">
+					  <input type="submit" name="yes" value="OUI, je suis majeur" onclick="verification_majority(1)" />
+					  <input type="submit" name="no" value="NON, je ne suis pas majeur" onclick="verification_majority(2)" />
+				 </form>
+				 <p style="font-style:italic;">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+			</div>
+			<div class="majority-content sorry-majority">
+				<h1>Désolé, en raison de votre âge,<br/> vous ne pouvez accéder au site <?php bloginfo('name'); ?></h1>
+				 <img src="<?php bloginfo('template_directory'); ?>/images/logo-icon.png"/>
+				 <p>Pour accéder au site, vous devez avoir l'âge légal pour acheter ou consommer de l'alcool dans votre pays de résidence.</p>
+			</div>
+        </div>
         
         <div class="container">
 		<header class="bp-header cf">

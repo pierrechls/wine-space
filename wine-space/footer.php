@@ -8,63 +8,11 @@
  */
 ?>
 	        
-	        <script>
-	        	
-	        	function get_actual_date(){
-		        	var today = new Date();
-				    var dd = today.getDate();
-				    var mm = today.getMonth()+1; //January is 0!
-				
-				    var yyyy = today.getFullYear();
-				    if(dd<10){
-				        dd='0'+dd
-				    } 
-				    if(mm<10){
-				        mm='0'+mm
-				    } 
-				    var today = dd+'/'+mm+'/'+yyyy;
-				    return today;
-				}
-	        
-				if(typeof localStorage!='undefined') {
-				  var legal_age = parseInt(localStorage.getItem('majority'));
-				  var date_save = localStorage.getItem('datesave');
-				  var date_today = get_actual_date();
-				  
-				  if(legal_age!=1 && legal_age!=2) {
-				  	localStorage.setItem('urlBeforeMajority', window.location.href );
-				    window.location.replace("<?php echo get_site_url(); ?>/majority/");
-				  }
-				  else if(legal_age==1){
-				  	if(date_save === date_today){
-					  	
-				  	}
-				  	else{
-				  		localStorage.setItem('urlBeforeMajority', window.location.href );
-					  	window.location.replace("<?php echo get_site_url(); ?>/majority/");
-				  	}
-				  }
-				  else if(legal_age==2){
-					 window.location.replace("<?php echo get_site_url(); ?>/sorry-majority/ ");
-				  }
-				}
-			</script>
-
-       <!--
- <div class="footer-container">
-            <footer class="wrapper">
-            	<p><?php bloginfo('name'); ?> © 2017</p>
-            	<p><a href="<?php echo get_site_url(); ?>/conditions-generales-de-vente/">CGV</a> | <a href="<?php echo get_site_url(); ?>/mentions-legales/">Mentions Légales</a></p>
-            	<p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
-            	<br/>
-                <p style="color: #989696;">Developped by <a style="color: #989696;" href="http://www.brainfactory.fr/" target="_blank"> Brain Factory</a></p>
-            </footer>
-        </div>
--->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 		
+		<script src="<?php bloginfo('template_directory'); ?>/js/majority.js"></script>
 		
         <script src="<?php bloginfo('template_directory'); ?>/js/mobile.js"></script>
         <script src="<?php bloginfo('template_directory'); ?>/js/plugin.js"></script>
