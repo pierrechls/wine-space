@@ -41,7 +41,7 @@ get_header(); ?>
 	}
 	
 	h3.region-title {
-		padding: 3rem;
+		padding: 0 5rem 0 3rem;
 	}
 		
 	.masonry {
@@ -55,7 +55,7 @@ get_header(); ?>
 	    padding: 1rem;
 	    margin: 0;
 	    width: 100%;
-	    min-height: 5rem;
+	    min-height: 2rem;
 	}
 	
 	.item a, .item a:hover {
@@ -154,24 +154,27 @@ get_header(); ?>
 						    
 						    while ( $allDomaines->have_posts() ) : $allDomaines->the_post();
 						    
-						    	$domainCat = get_field_object( "region-du-domaine", get_the_ID() );
+						    	$hide = get_field( "hide-into-domaines-page", get_the_ID() );
 						    	
-						    	$domaineCatValue = $domainCat['value'];
-						    	$domaineCatLabel = $domainCat['choices'][ $domaineCatValue ];
-						    	
-						    	if($domaineCatLabel === $region) {
-						
-							?>
-												
+						    	if(!$hide){
+						   
+						    		$domainCat = get_field_object( "region-du-domaine", get_the_ID() );	
+						    		
+						    		$domaineCatValue = $domainCat['value'];
+									$domaineCatLabel = $domainCat['choices'][ $domaineCatValue ];
+									
+									if($domaineCatLabel === $region) {
+									
+									?>
 										<div class="item">
-											<h5 class="actu-title"><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h5>
+											<h5 class="actu-title">
+												<a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
+											</h5>
 										</div>
-											
-							<?php 
-							
-								}
-								
-							
+									<?php
+									}
+						    	}
+						    
 							endwhile;
 							
 							?>
