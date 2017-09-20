@@ -221,8 +221,9 @@ a:hover {
 }
 
 .bp-nav a{
-	font-size: 1.2rem;
-	padding: 0.7rem 0.9rem;
+	font-size: 1.35rem;
+    padding: 0.7rem 0.9rem;
+    font-weight: 600;
 }
 
 .bp-nav__item {
@@ -541,6 +542,7 @@ body #cdawrap a:hover.carbon-poweredby {
 
 .menu__level .menu__item.item__social__icon {
 	padding-bottom: 2rem;
+	margin-top: 1rem;
 }
 
 
@@ -592,7 +594,15 @@ body #cdawrap a:hover.carbon-poweredby {
 }
 
 .menu__link.footer__link {
-	padding: 0 2.5rem 0.5rem 1.7rem;
+	padding: 0 2.5rem 0.1rem 1.7rem;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+}
+
+.menu__link.header__link {
+	font-size: 1.4rem;
+    color: #baa571;
+    margin: 0.2rem auto 1.3rem auto;
 }
 
 .menu__link[data-color='bio-color']{
@@ -606,6 +616,7 @@ body #cdawrap a:hover.carbon-poweredby {
 
 .menu__link__social {
 	padding: 0 1rem;
+	font-size: 1.7rem;
 }
 
 .menu__link[data-submenu].in::after {
