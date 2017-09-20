@@ -91,5 +91,4 @@ window.onload = function() {
 	    window.ontouchmove = null;
 	    document.onkeydown = null;
 	}
-
 }
