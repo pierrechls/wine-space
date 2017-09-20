@@ -16,7 +16,7 @@ get_header(); ?>
 
 	.bp-header__main {
 		background: transparent;
-		position: absolute;
+		position: fixed;
 	}
 	
 	.bp-header__main.black-theme .bp-nav a.bp-nav__item, .bp-header__main.black-theme .bp-nav a.cart-contents, .black-theme.action--open {

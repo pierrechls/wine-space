@@ -16,21 +16,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header( 'shop' ); ?>
 
 <style>
+
+	.bp-header__main.home {
+		position: fixed;
+	}
+
 	.regular-price {
 		/* color: rgba(255,255,255,0.4); */
 		color: #FFF;
 	}
-	
+
 	.product-price {
 		color: #FFF;
 		font-weight: 600;
 	}
-	
+
 	.bp-header__main {
 		background: transparent;
-		position: absolute;
-	}  
-	
+		position: fixed;
+	}
+
 	.filter-bar {
 		color: #FFFFFF;
 	    position: absolute;
@@ -42,49 +47,49 @@ get_header( 'shop' ); ?>
 	    text-align: left;
 	    text-transform: uppercase;
 	}
-	
+
 	.filter-bar p {
 		margin: 0 auto;
 		padding: 0.6rem 0 0 2.8rem;
 	}
-	
+
 	.filter-bar p a {
 		margin: 0 1rem;
 	}
-	
+
 	.filter-bar form {
 		margin: 0 auto;
 		padding: 0.6rem 0 0 2.8rem;
 		margin-bottom: 1rem;
 	}
-	
+
 	.filter-bar form select {
 		margin: 0 auto;
 		margin-left: 1rem;
 	}
-	
+
 	.filter-bar p a.filter-active {
 		color: #baa571;
 	}
-	
+
 	.filter-bar p a i:first-child {
 		font-size: 1.1rem;
 	    padding-right: 0.3rem;
 	    vertical-align: bottom;
 	    padding: 0rem 0.3rem 0.3rem 0;
 	}
-	
+
 	@media screen and (max-width: 60em){
 
 		.filter-bar {
 			top: 9rem;
 		}
-		
+
 		.filter-bar p {
 			padding: 0.6rem 0 0 1.5rem;
 		}
 	}
-	
+
 	@media screen and (max-width: 40em){
 
 		.filter-bar {
@@ -93,12 +98,12 @@ get_header( 'shop' ); ?>
 		    top: 13rem;
 		    margin-right: 2.5rem;
 		}
-		
+
 		.products {
 		    padding: 22rem 4rem 3rem 4rem;
 		}
 	}
-	
+
 </style>
 
 	<?php
@@ -110,24 +115,24 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_before_main_content' );
 	?>
-	
-		<?php 
+
+		<?php
 			$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-			$thumbnail_id = get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true ); 
+			$thumbnail_id = get_woocommerce_term_meta( $term->term_id, 'thumbnail_id', true );
 			$categoryImage = wp_get_attachment_url( $thumbnail_id );
 		?>
-		
-		<?php 
-			
+
+		<?php
+
 			$currentOrder = 'price';
 			$orderBy = 'meta_value_num';
 			$metakey = '_price';
 			$order = 'ASC';
-					
+
 			$orderByFilter = array('pricedesc', 'title', 'titledesc'); // 'price' filter is not mandatory because this is the default filter
-					
+
 			$newOrderBy = $_GET['orderby'];
-				
+
 			if( isset($newOrderBy) && $newOrderBy != '' && in_array($newOrderBy, $orderByFilter) ) {
 				$currentOrder = $newOrderBy;
 				if( $newOrderBy == 'pricedesc' ) {
@@ -141,15 +146,15 @@ get_header( 'shop' ); ?>
 					$order = 'DESC';
 				}
 			}
-					
+
 		?>
-		
+
 		<div class="category-product" style="background-image: url('<?php if( $categoryImage != '' ) { echo $categoryImage; } else { echo get_template_directory_uri() . '/images/products-background.png'; } ?>');">
-		
+
 		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
 
 			<h1 class="page-title"><?php woocommerce_page_title(); ?></h1>
-			
+
 			<div class="filter-bar">
 				<?php $currentURL = '?' . $_SERVER['QUERY_STRING']; ?>
 				<form method="get">
@@ -166,7 +171,7 @@ get_header( 'shop' ); ?>
 				    <?php if($currentOrder == 'price') {?> <input type="hidden" name="orderby" value="price"/> <?php } ?>
 				    <?php if($currentOrder == 'pricedesc') {?> <input type="hidden" name="orderby" value="pricedesc"/> <?php } ?>
 				</form>
-				
+
 				<p>
 					<a class="<?php if($currentOrder == 'title') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'title', $currentURL ); ?>"><i class="fa fa-arrow-down" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></a>
 					<a class="<?php if($currentOrder == 'titledesc') { echo "filter-active"; } ?>" href="<?php echo add_query_arg( 'orderby', 'titledesc', $currentURL ); ?>"><i class="fa fa-arrow-up" aria-hidden="true"></i><i class="fa fa-font" aria-hidden="true"></i></a>
@@ -187,22 +192,22 @@ get_header( 'shop' ); ?>
 				 * @hooked woocommerce_result_count - 20
 				 * @hooked woocommerce_catalog_ordering - 30
 				 */
-				
+
 				//do_action( 'woocommerce_before_shop_loop' );
 			?>
 
 			<?php woocommerce_product_loop_start(); ?>
 
 				<?php woocommerce_product_subcategories(); ?>
-				
+
 				<?php
-				
+
 					$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-					
+
 					$possibleColors = array('red', 'white', 'rose');
-					
+
 					$wine_color =  ( $_GET['color'] && in_array($_GET['color'], $possibleColors) ) ? ( array($_GET['color']) ) : array('red', 'white', 'rose', 'none');
-				
+
 					if ( is_search() ) {
 						$products = new WP_Query( array(
 							's' => get_search_query(),
@@ -225,7 +230,7 @@ get_header( 'shop' ); ?>
 									'compare' 	=> 'IN',
 								)
 				            )
-							
+
 					    ) );
 					} else {
 						$products = new WP_Query( array(
@@ -248,11 +253,11 @@ get_header( 'shop' ); ?>
 									'compare' 	=> 'IN',
 								)
 				            )
-					    ) );	
+					    ) );
 					}
-					
+
 					while ( $products->have_posts() ) : $products->the_post(); global $product;
-				
+
 				?>
 
 					    <li class="product">
@@ -268,21 +273,21 @@ get_header( 'shop' ); ?>
 									<?php
 										}
 									?>
-									
+
 									<?php $millesime = do_shortcode( "[types field='product-millesime'][/types]" ); if( $millesime != '' ) { ?>											<div class="product-info-millesime"><?php echo $millesime; ?></div>
 									<?php }	?>
-									
+
 									<p style="margin: 0 0 1.8rem 0;">
-										<?php 
+										<?php
 											if($product->get_sale_price() > 0 ){
 										?>
 												<span class="regular-price"><?php echo number_format($product->get_regular_price(), 2); ?> €</span>
 												<span class="product-price"><?php echo number_format($product->get_price(), 2); ?> €</span>
 										<?php
-											} else { 
+											} else {
 										?>
 												<span class="product-price"><?php echo number_format($product->get_price(), 2); ?> €</span>
-										<?php 
+										<?php
 											}
 										?>
 									</p>
@@ -291,20 +296,20 @@ get_header( 'shop' ); ?>
 					    	</a>
 					    </li>
 
-				<?php 
-					
+				<?php
+
 					endwhile;
 					wp_reset_query();
 				?>
-			
+
 			<?php woocommerce_product_loop_end(); ?>
-			
+
 			<?php if (function_exists("pagination") && $products->max_num_pages > 1) { ?>
 					<div class="pagination-footer">
 				     <?php pagination($products->max_num_pages); ?>
 					</div>
 			<?php } ?>
-				
+
 
 			<?php
 				/**
@@ -312,7 +317,7 @@ get_header( 'shop' ); ?>
 				 *
 				 * @hooked woocommerce_pagination - 10
 				 */
-				
+
 				//do_action( 'woocommerce_after_shop_loop' );
 			?>
 
@@ -321,9 +326,9 @@ get_header( 'shop' ); ?>
 			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 
 		<?php endif; ?>
-		
+
 		</div>
-		
+
 	<?php
 		/**
 		 * woocommerce_after_main_content hook
