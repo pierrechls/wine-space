@@ -117,6 +117,8 @@
 			<div class="menu__wrap">
 				<ul data-menu="main" class="menu__level">
 				
+				<li class="menu__item"><a class="menu__link header__link" data-submenu="domaines" href="<?php echo get_site_url(); ?>/domaines/">Domaines</a></li>
+				
 				<?php 
 				$wcatTerms = get_terms('product_cat', array('hide_empty' => 0, 'orderby'=>'id','order'=>'ASC',  'parent' =>0));
 				foreach($wcatTerms as $wcatTerm) :
@@ -143,7 +145,6 @@
 				?>
 				
 					<li class="menu__item space__item"><a class="menu__link" href="#"></a></li>
-					<li class="menu__item"><a class="menu__link footer__link" data-submenu="domaines" href="<?php echo get_site_url(); ?>/domaines/">Tous les domaines</a></li>
 					<li class="menu__item"><a class="menu__link footer__link" data-submenu="presse-distinctions" href="<?php echo get_site_url(); ?>/actualites/">Actualités</a></li>
 					<li class="menu__item"><a class="menu__link footer__link" data-submenu="a-propos" href="<?php echo get_site_url(); ?>/a-propos/">Qui sommes nous ?</a></li>
 					<li class="menu__item"><a class="menu__link footer__link" data-submenu="a-propos" href="<?php echo get_site_url(); ?>/mentions-legales/">Mentions Légales</a></li>
