@@ -93,6 +93,41 @@ get_header( 'shop' ); ?>
 	width: calc(100% - 20rem);
 }
 
+.content .description #header-links {
+	width: 100%;
+    display: block;
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+
+.content .description #header-links .back-button {
+	margin: 4rem auto 5rem auto;
+}
+
+.content .description #header-links .domaine-button {
+	margin: 2rem auto 1rem auto;
+    display: inline-block;
+}
+
+@media screen and (max-width: 64em){
+
+	.content .description #header-links {
+		-webkit-column-count: 1; /* Chrome, Safari, Opera */
+	    -moz-column-count: 1; /* Firefox */
+	    column-count: 1;
+	}
+	
+	.content .description #header-links .back-button {
+		margin: 4rem auto 5rem auto;
+	}
+	
+	.content .description #header-links .domaine-button {
+		margin: 1rem auto 1rem auto;
+	    display: inline-block;
+	}
+}
+
 .content .description h1 {
 	text-align: left;
 	padding: 0;
@@ -105,6 +140,13 @@ get_header( 'shop' ); ?>
     color: #000;
     margin: 1rem auto;
     font-size: 2rem;
+    font-weight: 600;
+}
+
+.content .description .millesime-content h4 {
+	font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 .content .description .go-to-fiche-domaine {
@@ -136,7 +178,7 @@ get_header( 'shop' ); ?>
 	text-align: left;
 	text-transform: uppercase;
     font-size: 1.2rem;
-    margin: 4rem auto 5rem auto;
+    /* margin: 4rem auto 5rem auto; */
 }
 
 .content .description .back-to-category a {
@@ -343,47 +385,69 @@ get_header( 'shop' ); ?>
 			</div>
 			<div class="description">
 			
-				<p class="back-to-category" id="product-back-to-category"><a href="<?php echo get_category_link( $categoryID ) ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour <!--<?php echo $categoryName; ?>--></a></p>
-				
-				<script type="text/javascript">
-					var history_prev = document.referrer;
-						if(history_prev != null || history_prev.length > 0 || history_prev != '') {
-							if(history_prev.indexOf("<?php echo get_site_url(); ?>") > -1) {
-								var currentUrlWithoutParams = location.protocol + '//' + location.host + location.pathname;
-								var historyPrevWithoutParams = history_prev;
-								if (historyPrevWithoutParams.indexOf('?') > -1) {
-									historyPrevWithoutParams = history_prev.substring(0, history_prev.indexOf('?'));
-								}
-								var lastUrlSaved = localStorage.getItem('previousUrl');
-								if(historyPrevWithoutParams != currentUrlWithoutParams) {
-									if(historyPrevWithoutParams.indexOf('<?php echo get_site_url(); ?>/majority') > -1){
-										// after redirect we dont change back URL
-									} else {
-										localStorage.setItem('previousUrl', history_prev);
-										document.querySelector('#product-back-to-category a').setAttribute('href', history_prev);
+				<div id="header-links">
+			
+					<div class="back-button">
+						<p class="back-to-category" id="product-back-to-category"><a href="<?php echo get_category_link( $categoryID ) ?>" class="product-category-title"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour <!--<?php echo $categoryName; ?>--></a></p>
+					</div>
+					
+					<script type="text/javascript">
+						var history_prev = document.referrer;
+							if(history_prev != null || history_prev.length > 0 || history_prev != '') {
+								if(history_prev.indexOf("<?php echo get_site_url(); ?>") > -1) {
+									var currentUrlWithoutParams = location.protocol + '//' + location.host + location.pathname;
+									var historyPrevWithoutParams = history_prev;
+									if (historyPrevWithoutParams.indexOf('?') > -1) {
+										historyPrevWithoutParams = history_prev.substring(0, history_prev.indexOf('?'));
 									}
-								} else {
-									document.querySelector('#product-back-to-category a').setAttribute('href', lastUrlSaved);
+									var lastUrlSaved = localStorage.getItem('previousUrl');
+									if(historyPrevWithoutParams != currentUrlWithoutParams) {
+										if(historyPrevWithoutParams.indexOf('<?php echo get_site_url(); ?>/majority') > -1){
+											// after redirect we dont change back URL
+										} else {
+											localStorage.setItem('previousUrl', history_prev);
+											document.querySelector('#product-back-to-category a').setAttribute('href', history_prev);
+										}
+									} else {
+										document.querySelector('#product-back-to-category a').setAttribute('href', lastUrlSaved);
+									}
 								}
 							}
+					</script>
+					
+					<?php
+						$parent_id = wpcf_pr_post_get_belongs(get_the_ID(), 'domaine');
+						if (!empty($parent_id)) { 
+							$parentTitle = get_the_title($parent_id);
+							$parentURL = get_post_permalink( $parent_id );
 						}
-				</script>
+					?>
 				
-				<?php
-					$parent_id = wpcf_pr_post_get_belongs(get_the_ID(), 'domaine');
-					if (!empty($parent_id)) { 
-						$parentTitle = get_the_title($parent_id);
-						$parentURL = get_post_permalink( $parent_id );
-					}
-				?>
-			
-				<?php if($parentTitle != '') { ?>
-					<h3><?php echo $parentTitle ?></h3>	
-					<?php if($parentURL != '') { ?>
-						<p class="go-to-fiche-domaine"><a href="<?php if($categoryID != '') { echo esc_url( add_query_arg( 'cat', $categoryID, $parentURL) ); } else { echo $parentURL; } ?>">Voir la fiche domaine <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
-					<?php } ?>
-				<?php } ?>
+					<?php if($parentTitle != '') { ?>
+					
+						<div class="domaine-button">
+							<h3><?php echo $parentTitle ?></h3>	
+								
+							<?php if($parentURL != '') { ?>
+								<p class="go-to-fiche-domaine"><a href="<?php if($categoryID != '') { echo esc_url( add_query_arg( 'cat', $categoryID, $parentURL) ); } else { echo $parentURL; } ?>">Voir la fiche domaine <i class="fa fa-arrow-right" aria-hidden="true"></i></a></p>
+							<?php } ?>
+						<?php } ?>
+						</div>
+					
+				
+				</div>
+				
+				
 				<h1><?php the_title(); ?></h1>
+				<?php $millesime = do_shortcode( "[types field='product-millesime'][/types]" ); if( $millesime != '' ) { ?>
+					<div class="millesime-content">
+						<?php 
+							$millesime = str_replace("<p>", "", $millesime);
+							$millesime = str_replace("</p>", "", $millesime);
+						?>
+						<h4>Millésime <?php echo $millesime; ?></h4>
+					</div>
+				<?php }	?>
 				<h4 class="product-price">Prix : <?php 
 					if($product->get_sale_price() > 0 ){ ?>
 						<span class="regular-price"><?php echo number_format($product->get_regular_price(), 2); ?> €</span>
@@ -427,6 +491,13 @@ get_header( 'shop' ); ?>
 					<div class="domaine"><?php the_content() ?></div>
 					<div class="fiche-technique">
 					
+							<?php $appellation = do_shortcode( "[types field='product-appellation'][/types]" ); if( $appellation != '' ) { ?>
+								<div class="element">
+									<h4>Appellation</h4>
+									<?php echo $appellation; ?>
+								</div>
+							<?php }	?>
+					
 							<?php $elevage = do_shortcode( "[types field='product-elevage'][/types]" ); if( $elevage != '' ) { ?>
 								<div class="element">
 									<h4>Élevage</h4>
@@ -466,20 +537,6 @@ get_header( 'shop' ); ?>
 								<div class="element">
 									<h4>Contenance</h4>
 									<?php echo $contenance; ?>
-								</div>
-							<?php }	?>
-							
-							<?php $appellation = do_shortcode( "[types field='product-appellation'][/types]" ); if( $appellation != '' ) { ?>
-								<div class="element">
-									<h4>Appellation</h4>
-									<?php echo $appellation; ?>
-								</div>
-							<?php }	?>
-							
-							<?php $millesime = do_shortcode( "[types field='product-millesime'][/types]" ); if( $millesime != '' ) { ?>
-								<div class="element">
-									<h4>Millésime</h4>
-									<?php echo $millesime; ?>
 								</div>
 							<?php }	?>
 							
