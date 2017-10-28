@@ -42,8 +42,11 @@ Author URI: http://www.pierre-charles.com/
     height: 45rem;
     z-index: 100;
 }
-#majority-container .majority-content h1{
+#majority-container .majority-content p.welcome-majority{
 	line-height: 1;
+    font-size: 2.5rem;
+    font-weight: 800;
+    padding: 0;
 }
 #majority-container .majority-content p{
 	padding: 0 0 1em 0;

@@ -638,6 +638,12 @@ header p.website-slogan::after {
 	background-position: center center;
 }
 
+.home-slider li a {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
 .slider {
 	list-style-type: none;
 	padding:0;
@@ -741,6 +747,18 @@ header p.website-slogan::after {
 }
 
 .category-product .product .info {
+	background: rgba(0,0,0,0.5);
+    /* border: 0.2rem solid #b7a56d; */
+    margin: 1rem auto 0rem auto;
+    padding-bottom: 2rem;
+    -webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	-o-hyphens: auto;
+	hyphens: auto;
+}
+
+.domaine-products-all .domaine-product .info {
 	background: rgba(0,0,0,0.5);
     /* border: 0.2rem solid #b7a56d; */
     margin: 1rem auto 0rem auto;
