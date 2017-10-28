@@ -41,13 +41,17 @@
 								}
 							?>
 							
-							<?php if($urlToGo != '') { ?>
-								<a href="<?php echo $urlToGo; ?>">
-							<?php }?>
-								<li style="background-image:url('<?php the_post_thumbnail_url( 'full' ); ?>');"><div class="slider-text"><div class="content-text"><?php the_content(); ?></div></div></li>
-							<?php if($urlToGo != '') { ?>
-								</a>
-							<?php }?>
+								<li style="background-image:url('<?php the_post_thumbnail_url( 'full' ); ?>');">
+									<?php if($urlToGo != '') { ?>
+										<a href="<?php echo $urlToGo; ?>">
+									<?php }?>
+										<div class="slider-text">
+											<div class="content-text"><?php the_content(); ?></div>
+										</div>
+									<?php if($urlToGo != '') { ?>
+										</a>
+									<?php }?>
+								</li>
 					<?php 
 							
 							}

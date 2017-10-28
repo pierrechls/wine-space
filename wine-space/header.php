@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
     <head>
+    
+    	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-38706004-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-38706004-1');
+		</script>
+
+
 	    <meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    <meta http-equiv="x-ua-compatible" content="ie=edge">
 	    <title><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?></title>
 	    <?php
 	    $args = array( 'post_type' => 'meta-information', 'posts_per_page' => 1, 'orderby' => 'date', 'order' => 'ASC' );
@@ -36,6 +48,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 		<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" type="image/x-icon">
 		<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.png" type="image/png">
+		<link rel="apple-touch-icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.png">
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/normalize.min.css">
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/style.css">
 	    <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/home-style.css">
@@ -67,25 +80,14 @@
 
 	<body>
 
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		
-		  ga('create', 'UA-38706004-1', 'auto');
-		  ga('send', 'pageview');
-		
-		</script>
-
         <!--[if lt IE 8]>
              <p class="chromeframe">Vous utilisez un navigateur obsolète. <a href="http://browsehappy.ch/fr/">Mettez à jour votre navigateur</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">installez Google Chrome Frame</a> pour une meilleure expérience de ce site.</p>
         <![endif]-->
         <div id="majority-container">
 	        <div class="majority-content majority-form">
-				 <h1>Bienvenue sur le site de <?php bloginfo('name'); ?></h1>
-				 <img src="<?php bloginfo('template_directory'); ?>/images/logo-icon.png"/>
-				 <p>Avez-vous l'âge légal pour acheter ou consommer de l'alcool dans votre pays de résidence ?</p>
+				 <p class="welcome-majority">Bienvenue sur le site de <?php bloginfo('name'); ?></p>
+				 <img src="<?php bloginfo('template_directory'); ?>/images/logo-icon.png" alt="Logo <?php echo str_replace(' ', '-', strtolower(bloginfo('name'))); ?>" />
+				 <p class="text-majority">Avez-vous l'âge légal pour acheter ou consommer de l'alcool dans votre pays de résidence ?</p>
 	
 				 <form method="post" onsubmit="redirect_age(this)">
 					  <input type="submit" name="yes" value="OUI, je suis majeur" onclick="verification_majority(1)" />
@@ -94,16 +96,16 @@
 				 <p style="font-style:italic;">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
 			</div>
 			<div class="majority-content sorry-majority">
-				<h1>Désolé, en raison de votre âge,<br/> vous ne pouvez accéder au site <?php bloginfo('name'); ?></h1>
-				 <img src="<?php bloginfo('template_directory'); ?>/images/logo-icon.png"/>
-				 <p>Pour accéder au site, vous devez avoir l'âge légal pour acheter ou consommer de l'alcool dans votre pays de résidence.</p>
+				<p class="welcome-majority">Désolé, en raison de votre âge,<br/> vous ne pouvez accéder au site <?php bloginfo('name'); ?></p>
+				 <img src="<?php bloginfo('template_directory'); ?>/images/logo-icon.png" alt="Logo <?php echo str_replace(' ', '-', strtolower(bloginfo('name'))); ?>" />
+				 <p class="text-majority">Pour accéder au site, vous devez avoir l'âge légal pour acheter ou consommer de l'alcool dans votre pays de résidence.</p>
 			</div>
         </div>
         
         <div class="container">
 		<header class="bp-header cf">
 			<div class="dummy-logo">
-				<a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png"/ alt="Logo <?php echo str_replace(' ', '-', strtolower(bloginfo('name'))); ?>"></a>
+				<a href="<?php echo get_site_url(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="Logo <?php echo str_replace(' ', '-', strtolower(bloginfo('name'))); ?>" /></a>
 				<p class="website-slogan"><?php bloginfo('description'); ?></p>
 			</div>
 		</header>
@@ -175,7 +177,7 @@
 								if( $socialID != '' && $socialLink != '' && $socialIcon != '' ) {
 								?>
 								
-								<a class="menu__link menu__link__inline menu__link__social" data-submenu="link-<?php echo $socialID; ?>" href="<?php echo $socialLink; ?>" target="_blank"><i class="<?php echo $socialIcon; ?>" aria-hidden="true"></i></i></a>
+								<a class="menu__link menu__link__inline menu__link__social" data-submenu="link-<?php echo $socialID; ?>" href="<?php echo $socialLink; ?>" target="_blank"><i class="<?php echo $socialIcon; ?>" aria-hidden="true"></i></a>
 								
 								<?php
 								}
