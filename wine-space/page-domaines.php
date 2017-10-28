@@ -26,10 +26,12 @@ get_header(); ?>
 	#primary{
 		background-color: #fff;
 		/* height: 100vh; */
-		background-image: url('<?php bloginfo('template_directory'); ?>/images/domaines-background.jpg');
-		background-size: cover;
-		background-position: center center;
-		background-attachment: fixed;
+		
+		background: #737373;
+		/* background-image: url('<?php bloginfo('template_directory'); ?>/images/domaines-background.jpg'); */
+		/* background-size: cover; */
+		/* background-position: center center; */
+		/* background-attachment: fixed; */
 		padding: 8rem 1rem 2.5rem 1rem;
 		min-height: 100vh;
 	}
