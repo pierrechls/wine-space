@@ -19,6 +19,7 @@ get_header( 'shop' ); ?>
 
 	.bp-header__main.home {
 		position: fixed;
+		z-index: 2;
 	}
 
 	.regular-price {
@@ -261,20 +262,25 @@ get_header( 'shop' ); ?>
 				?>
 
 					    <li class="product">
-					    	<a href="<?php echo esc_url( add_query_arg( 'cat', $term->term_id, get_permalink( $products->post->ID )) ); ?>">
 					        	<?php the_post_thumbnail( 'medium'); ?> <br/>
 					        	<div class="info">
-					        		<h3><?php the_title(); ?></h3>
+					        		<h3>
+										<a href="<?php echo esc_url( add_query_arg( 'cat', $term->term_id, get_permalink( $products->post->ID )) ); ?>"><?php the_title(); ?></a>
+									</h3>
 					        		<?php
 										$parent_id = wpcf_pr_post_get_belongs(get_the_ID(), 'domaine');
 										if (!empty($parent_id)) {
 									?>
-											<p class="product-info-domaine"><?php echo get_the_title($parent_id); ?></p>
+											<p class="product-info-domaine">
+												<a href="<?php echo esc_url( get_permalink($parent_id) ); ?>"><?php echo get_the_title($parent_id); ?></a>
+											</p>
 									<?php
 										}
 									?>
 
-									<?php $millesime = do_shortcode( "[types field='product-millesime'][/types]" ); if( $millesime != '' ) { ?>											<div class="product-info-millesime"><?php echo $millesime; ?></div>
+									<?php $millesime = do_shortcode( "[types field='product-millesime'][/types]" ); if( $millesime != '' ) { ?>											<div class="product-info-millesime">
+											<a href="<?php echo esc_url( add_query_arg( 'cat', $term->term_id, get_permalink( $products->post->ID )) ); ?>"><?php echo $millesime; ?></a>
+										</div>
 									<?php }	?>
 
 									<p style="margin: 0 0 1.8rem 0;">
@@ -291,9 +297,43 @@ get_header( 'shop' ); ?>
 											}
 										?>
 									</p>
-									<p><a class="btn-add-to-cart" href="<?php echo esc_url( add_query_arg( 'cat', $term->term_id, get_permalink( $products->post->ID )) ); ?>">Ajouter au panier</a></p>
+									
+									<div class="info-actions">
+										<div class="actions <?php if ( !$product->is_in_stock() ) { echo 'not-is-stock'; } ?>">
+											<div class="see-product p-action">
+												<p>
+													<a href="<?php echo esc_url( add_query_arg( 'cat', $term->term_id, get_permalink( $products->post->ID )) ); ?>">
+														<i class="fa fa-eye" aria-hidden="true"></i>Voir
+													</a>
+												</p>
+											</div>
+											<hr class="p-action-separator"/>
+											<div class="add-product p-action">
+												<?php if ( $product->is_in_stock() ) { ?>
+												<div class="loading-add-to-cart"></div>
+												<form id="add-to-card-product-<?php echo $products->post->ID; ?>" onsubmit="return submitAddProductForm(<?php echo $products->post->ID; ?>)">
+												    	<?php woocommerce_quantity_input(); ?>
+												    	<div class="product-details">
+												    		<input type="hidden" value="<?php echo $products->post->ID; ?>" name="productId" class="product-identifier">
+												    	</div>
+														
+														<button type="submit" class="add-to-cart-ajax">
+															<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+															Ajouter au panier
+														</button>
+											    </form>
+											    <?php } else { ?>
+													<form action="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="cart" method="post" enctype='multipart/form-data'>
+							
+			                <button disabled="true" style="background: rgba(0,0,0,0.5); outline: 0; text-transform: uppercase; border: 0; font-size: 1.1rem; color: #FFF; padding: 1.1rem 1.3rem; vertical-align: top; border-radius: 0.8rem; margin: 1rem auto 0 auto;" type="submit" class="button alt">Produit épuisé</button>
+			
+			            </form>
+												
+												<?php } ?>
+											</div>
+										</div>
+									</div>
 					        	</div>
-					    	</a>
 					    </li>
 
 				<?php
@@ -301,6 +341,47 @@ get_header( 'shop' ); ?>
 					endwhile;
 					wp_reset_query();
 				?>
+				
+				<script type="text/javascript">
+				
+					function submitAddProductForm(productId) {
+						  addToCartAjax(productId);
+						  return false;
+					}
+					
+					function addToCartAjax (productId) {
+							var form = document.querySelector('#add-to-card-product-' + productId);
+							var idProduct = form.querySelector('input.product-identifier').value;
+							var quantity = form.querySelector('input.input-text.qty').value;
+							if(quantity > 0) {
+								 var loading = form.parentElement.querySelector('.loading-add-to-cart');
+								 form.style.display = 'none';
+								 loading.style.marginTop = '4rem';
+								 loading.innerHTML = '<div class="spinner"></div>';
+						    	 $.get('<?php echo get_site_url(); ?>/?post_type=product&add-to-cart='+idProduct+'&quantity='+quantity, function() {
+									 $.ajax({
+										    type : 'POST',
+										    url : '<?php echo get_site_url(); ?>/',
+										    data : '&cartDetails=true',
+										    dataType : 'html',
+										    success: function (data) {
+										      var cartContents = document.querySelector('.bp-nav a.cart-contents');
+								              cartContents.innerHTML = data;
+										      loading.innerHTML = '<p style="font-size: 2rem; color:#000;"><i class="fa fa-check" aria-hidden="true"></i></p>';
+										      setTimeout(function(){ 
+										      	loading.innerHTML = '';
+										      	loading.style.marginTop = '0';
+										      	form.style.display = 'block';
+										      }, 1 * 1000);
+								              
+								            },
+								            error : function(result) {}
+									 })
+							      });
+							 }
+					}
+				
+				</script>
 
 			<?php woocommerce_product_loop_end(); ?>
 
