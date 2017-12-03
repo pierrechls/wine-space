@@ -1,14 +1,7 @@
 <?php
 
-	if( isset($_POST['cartDetails']) ){
-		if( WC()->cart->get_cart_contents_count() > 1 ) {
-			echo sprintf ( _n( '%d produits', '%d produits', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total();
-		} else {
-			echo sprintf ( _n( '%d produit', '%d produit', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total();
-		};
-		die;
-    }
-
+	include 'script-ajax/add-product-to-cart.php';
+	
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +68,7 @@
 
 	    <script src="<?php bloginfo('template_directory'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
-	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/slider/jquery.bxslider.min.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/slider/jquery.bxslider.js"></script>
 		<link href="<?php bloginfo('template_directory'); ?>/slider/jquery.bxslider.css" rel="stylesheet" />
