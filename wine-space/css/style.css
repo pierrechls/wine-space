@@ -5,9 +5,9 @@ Author: Pierre Charles
 Author URI: http://www.pierre-charles.com/
 */
 
-@import url('http://fonts.googleapis.com/css?family=Lato:300,500,300italic,700');
-@import url('https://fonts.googleapis.com/css?family=Lora');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('//fonts.googleapis.com/css?family=Lato:300,500,300italic,700');
+@import url('//fonts.googleapis.com/css?family=Lora');
+@import url('//fonts.googleapis.com/css?family=Playfair+Display');
 
 ::-webkit-input-placeholder { color:#38393a; }
 ::-moz-placeholder { color:#38393a; } /* firefox 19+ */
@@ -916,7 +916,7 @@ header p.website-slogan::after {
 	width: 2rem;
 	height: 2rem;
 	text-align: center;
-	background: #000;
+	background-color: #000;
 	background-size: contain;
 	background-position: center center;
 	cursor: pointer;
@@ -928,11 +928,11 @@ header p.website-slogan::after {
 }
 
 .category-product .product .info .info-actions .actions .p-action.add-product form .quantity span.btn-less {
-	background-image: url('<?php bloginfo('template_directory'); ?>/images/icons/less.svg');
+/* 	background-image: url('../images/icons/less.svg'); */
 }
 
 .category-product .product .info .info-actions .actions .p-action.add-product form .quantity span.btn-more {
-	background-image: url('<?php bloginfo('template_directory'); ?>/images/icons/more.svg');
+/* 	background-image: url('../images/icons/more.svg'); */
 }
 
 .domaine-products-all .domaine-product .info {
