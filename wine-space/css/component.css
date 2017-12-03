@@ -615,7 +615,7 @@ body #cdawrap a:hover.carbon-poweredby {
 }
 
 .menu__link__social {
-	padding: 0 1rem;
+	padding: 0 1rem !important;
 	font-size: 1.7rem;
 }
 
