@@ -757,6 +757,11 @@ header p.website-slogan::after {
 	-o-hyphens: auto;
 	hyphens: auto;
 	position: relative;
+	color: #FFF;
+}
+
+.category-product .product .info p {
+	color: #FFF !important;
 }
 
 .category-product .product .info .info-actions {
@@ -767,11 +772,17 @@ header p.website-slogan::after {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: all .2s ease;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.2s linear;
 }
 
-.category-product .product .info:hover .info-actions {
+.category-product .product .info .info-actions.noClick {
+	pointer-events: none;
+}
+
+.category-product .product .info:hover .info-actions, .category-product .product .info.hoverEffect .info-actions {
 	opacity: 1;
+	visibility: visible;
 }
 
 .category-product .product .info .info-actions .actions {
