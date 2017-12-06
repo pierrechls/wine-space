@@ -265,21 +265,27 @@ get_header( 'shop' ); ?>
 					        	<?php the_post_thumbnail( 'medium'); ?> <br/>
 					        	<div class="info">
 					        		<h3>
-										<a href="<?php echo esc_url( add_query_arg( 'cat', $term->term_id, get_permalink( $products->post->ID )) ); ?>"><?php the_title(); ?></a>
+										<!-- <a href="<?php echo esc_url( add_query_arg( 'cat', $term->term_id, get_permalink( $products->post->ID )) ); ?>"> -->
+										<?php the_title(); ?>
+										<!-- </a> -->
 									</h3>
 					        		<?php
 										$parent_id = wpcf_pr_post_get_belongs(get_the_ID(), 'domaine');
 										if (!empty($parent_id)) {
 									?>
 											<p class="product-info-domaine">
-												<a href="<?php echo esc_url( get_permalink($parent_id) ); ?>"><?php echo get_the_title($parent_id); ?></a>
+												<!-- <a href="<?php echo esc_url( get_permalink($parent_id) ); ?>"> -->
+												<?php echo get_the_title($parent_id); ?>
+												<!-- </a> -->
 											</p>
 									<?php
 										}
 									?>
 
 									<?php $millesime = do_shortcode( "[types field='product-millesime'][/types]" ); if( $millesime != '' ) { ?>											<div class="product-info-millesime">
-											<a href="<?php echo esc_url( add_query_arg( 'cat', $term->term_id, get_permalink( $products->post->ID )) ); ?>"><?php echo $millesime; ?></a>
+											<!-- <a href="<?php echo esc_url( add_query_arg( 'cat', $term->term_id, get_permalink( $products->post->ID )) ); ?>"> -->
+											<?php echo $millesime; ?>
+											<!-- </a> -->
 										</div>
 									<?php }	?>
 
@@ -367,7 +373,7 @@ get_header( 'shop' ); ?>
 										    success: function (data) {
 										      var cartContents = document.querySelector('.bp-nav a.cart-contents');
 								              cartContents.innerHTML = data;
-										      loading.innerHTML = '<p style="font-size: 2rem; color:#000;"><i class="fa fa-check" aria-hidden="true"></i></p>';
+										      loading.innerHTML = '<p style="font-size: 2rem; color:#000 !important;"><i class="fa fa-check" aria-hidden="true"></i></p>';
 										      setTimeout(function(){ 
 										      	loading.innerHTML = '';
 										      	loading.style.marginTop = '0';
@@ -380,6 +386,26 @@ get_header( 'shop' ); ?>
 							      });
 							 }
 					}
+					
+					$(document).ready(function() {
+					
+						$('.info').bind('touchstart', function(e) {
+							var infoElement = $(this);
+							if(!infoElement.hasClass('hoverEffect')) {
+						        infoElement.addClass('hoverEffect')
+						        infoElement.find('.info-actions').addClass('noClick');
+						        setTimeout(function(){
+							        infoElement.find('.info-actions').removeClass('noClick');
+						        }, 0.3 * 1000);
+					        }
+					    });
+						
+						$(".products").on("touchstart", function(event){
+							if(event.target === this) {
+								$('.info').removeClass('hoverEffect');
+							}
+						});
+					});
 				
 				</script>
 
