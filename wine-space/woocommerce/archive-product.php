@@ -262,7 +262,9 @@ get_header( 'shop' ); ?>
 				?>
 
 					    <li class="product">
-					        	<?php the_post_thumbnail( 'medium'); ?> <br/>
+					        	<a href="<?php echo get_permalink( $child_post->ID ) ?>">
+					        		<?php the_post_thumbnail( 'medium'); ?> <br/>
+					        	</a>
 					        	<div class="info">
 					        		<h3>
 										<!-- <a href="<?php echo esc_url( add_query_arg( 'cat', $term->term_id, get_permalink( $products->post->ID )) ); ?>"> -->
