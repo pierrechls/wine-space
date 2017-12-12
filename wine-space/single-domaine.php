@@ -85,23 +85,107 @@ get_header(); ?>
     height: 30rem;
 }
 
-.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info h3{
+.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info {
+	background: rgba(0,0,0,0.5);
+    /* border: 0.2rem solid #b7a56d; */
+    margin: 1rem auto 0rem auto;
+    padding-bottom: 2rem;
+    -webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	-o-hyphens: auto;
+	hyphens: auto;
+	position: relative;
+	color: #FFF;
+	width: 10rem;
+}
+
+
+.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info h3 {
 	text-transform: uppercase;
 	text-align: center;
 	margin: 1rem auto 0 auto;
 	font-size: 1.3rem;
 }
 
-.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info p{
+.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info p, .domaine-products .domaine-products-all .domaine-products-list .domaine-product .info .product-info-millesime {
+	color: #FFF !important;
 	font-size: 1.3rem;
 	margin: 0 0 1.3rem 0;
 }
 
-.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info .btn-add-to-cart {
-    font-size: 1rem;
+.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info .info-actions {
+	position: absolute;
+    top: 0;
+    left: 0;
+    background: #b7a56d;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.2s linear;
+}
+
+.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info .info-actions .quantity input {
+    text-align: center;
+    padding: 0.5rem 0;
+    margin-bottom: 0.2rem;
+    width: 3rem;
+}
+
+.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info-actions.noClick {
+	pointer-events: none;
+}
+
+.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info:hover .info-actions,
+.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info.hoverEffect .info-actions {
+	opacity: 1;
+	visibility: visible;
+}
+
+.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info .info-actions .actions {
+	width: 10rem;
+    height: 12rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -6rem;
+    margin-left: -5rem;
+}
+
+.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info .info-actions .actions i {
+	display: block;
+	font-size: 1.4rem;
+}
+
+.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info .info-actions .actions a {
+	color: #000;
+    font-weight: 700;
     text-transform: uppercase;
-    border: 0.1rem solid #FFFFFF;
-    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info .info-actions .actions hr { 
+	width: 50%;
+    margin: 1rem auto;
+    border: 0;
+    height: 0px;
+    border-top: 1px solid #000;
+}
+
+.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info .info-actions .actions.not-is-stock {
+	height: 12rem;
+    margin-top: -6rem;
+}
+
+.domaine-products .domaine-products-all .domaine-products-list .domaine-product .info .info-actions button {
+	background: none;
+    border: 0;
+    outline: 0;
+    font-size: 1.1rem;
+    text-shadow: none;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .content .description {
@@ -400,36 +484,77 @@ get_header(); ?>
 					foreach($child_posts as $child_post) :
 				?>
 						<li class="domaine-product">
-					    	<a href="<?php echo get_permalink( $child_post->ID ) ?>">
-					    		<?php echo get_the_post_thumbnail($child_post->ID, 'medium'); ?> <br/>
+					        	<a href="<?php echo get_permalink( $child_post->ID ) ?>">
+					        		<?php echo get_the_post_thumbnail($child_post->ID, 'medium'); ?> <br/>
+					        	</a>
 					        	<div class="info">
-					        		<h3><?php echo $child_post->post_title; ?></h3>
-					        		<?php 
+					        		<h3>
+										<?php echo $child_post->post_title; ?>
+									</h3>
+									
+									<?php 
 					        			$child_post_array = (array)$child_post;
 					        			$millesime = $child_post_array['fields']['product-millesime'] ? $child_post_array['fields']['product-millesime'] : '';
 					        			if($millesime != '') {
-						        			?> <p><?php echo $millesime; ?></p> <?php
+						        			?> <div class="product-info-millesime">
+						        				<?php echo $millesime; ?>
+												</div> <?php
 					        			};
 					        		?>
 					        		
 					        		<?php $_product = wc_get_product( $child_post->ID ); ?>
-					        		<p style="margin: 0 0 1.8rem 0;">
-										<?php 
+
+									<p style="margin: 0 0 1.8rem 0;">
+										<?php
 											if($_product->get_sale_price() > 0 ){
 										?>
 												<span class="regular-price"><?php echo number_format($_product->get_regular_price(), 2); ?> €</span>
-												<span><?php echo number_format($_product->get_price(), 2); ?> €</span>
+												<span class="product-price"><?php echo number_format($_product->get_price(), 2); ?> €</span>
 										<?php
-											} else { 
+											} else {
 										?>
-												<span><?php echo number_format($_product->get_price(), 2); ?> €</span>
-										<?php 
+												<span class="product-price"><?php echo number_format($_product->get_price(), 2); ?> €</span>
+										<?php
 											}
 										?>
 									</p>
-									<p><a class="btn-add-to-cart" href="<?php echo get_permalink( $child_post->ID ); ?>">Ajouter</a></p>
+									
+									<div class="info-actions">
+										<div class="actions <?php if ( !$_product->is_in_stock() ) { echo 'not-is-stock'; } ?>">
+											<div class="see-product p-action">
+												<p>
+													<a href="<?php echo esc_url( add_query_arg( 'cat', $term->term_id, get_permalink( $child_post->ID )) ); ?>">
+														<i class="fa fa-eye" aria-hidden="true"></i>Voir
+													</a>
+												</p>
+											</div>
+											<hr class="p-action-separator"/>
+											<div class="add-product p-action">
+												<?php if ( $_product->is_in_stock() ) { ?>
+												<div class="loading-add-to-cart"></div>
+												<form id="add-to-card-product-<?php echo $child_post->ID; ?>" onsubmit="return submitAddProductForm(<?php echo $child_post->ID; ?>)">
+												    	<?php woocommerce_quantity_input(); ?>
+												    	<div class="product-details">
+												    		<input type="hidden" value="<?php echo $child_post->ID; ?>" name="productId" class="product-identifier">
+												    	</div>
+														
+														<button type="submit" class="add-to-cart-ajax">
+															<i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+															Ajouter
+														</button>
+											    </form>
+											    <?php } else { ?>
+													<form action="<?php echo esc_url( $_product->add_to_cart_url() ); ?>" class="cart" method="post" enctype='multipart/form-data'>
+							
+			                <button disabled="true" style="background: rgba(0,0,0,0.5); outline: 0; text-transform: uppercase; border: 0; font-size: 1.1rem; color: #FFF; padding: 1.1rem 1.3rem; vertical-align: top; border-radius: 0.8rem; margin: 1rem auto 0 auto;" type="submit" class="button alt">Produit épuisé</button>
+			
+			            </form>
+												
+												<?php } ?>
+											</div>
+										</div>
+									</div>
 					        	</div>
-					    	</a>
 					    </li>
 				<?php 
 					endforeach; 
@@ -462,5 +587,66 @@ get_header(); ?>
 				});
 			})(jQuery);
 		</script>
+		
+		<script type="text/javascript">
+				
+					function submitAddProductForm(productId) {
+						  addToCartAjax(productId);
+						  return false;
+					}
+					
+					function addToCartAjax (productId) {
+							var form = document.querySelector('#add-to-card-product-' + productId);
+							var idProduct = form.querySelector('input.product-identifier').value;
+							var quantity = form.querySelector('input.input-text.qty').value;
+							if(quantity > 0) {
+								 var loading = form.parentElement.querySelector('.loading-add-to-cart');
+								 form.style.display = 'none';
+								 loading.style.marginTop = '4rem';
+								 loading.innerHTML = '<div class="spinner"></div>';
+						    	 $.get('<?php echo get_site_url(); ?>/?post_type=product&add-to-cart='+idProduct+'&quantity='+quantity, function() {
+									 $.ajax({
+										    type : 'POST',
+										    url : '<?php echo get_site_url(); ?>/',
+										    data : '&cartDetails=true',
+										    dataType : 'html',
+										    success: function (data) {
+										      var cartContents = document.querySelector('.bp-nav a.cart-contents');
+								              cartContents.innerHTML = data;
+										      loading.innerHTML = '<p style="font-size: 2rem; color:#000 !important;"><i class="fa fa-check" aria-hidden="true"></i></p>';
+										      setTimeout(function(){ 
+										      	loading.innerHTML = '';
+										      	loading.style.marginTop = '0';
+										      	form.style.display = 'block';
+										      }, 1 * 1000);
+								              
+								            },
+								            error : function(result) {}
+									 })
+							      });
+							 }
+					}
+					
+					$(document).ready(function() {
+					
+						$('.info').bind('touchstart', function(e) {
+							var infoElement = $(this);
+							if(!infoElement.hasClass('hoverEffect')) {
+						        infoElement.addClass('hoverEffect')
+						        infoElement.find('.info-actions').addClass('noClick');
+						        setTimeout(function(){
+							        infoElement.find('.info-actions').removeClass('noClick');
+						        }, 0.3 * 1000);
+					        }
+					    });
+						
+						$(".products").on("touchstart", function(event){
+							if(event.target === this) {
+								$('.info').removeClass('hoverEffect');
+							}
+						});
+					});
+				
+				</script>
 	
 <?php get_footer(); ?>
