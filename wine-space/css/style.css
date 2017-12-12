@@ -718,6 +718,9 @@ header p.website-slogan::after {
 	.category-product h1 {
 		top: 9rem;
 	}
+	.category-product{
+		background: #414141 !important;
+	}
 }
 
 .regular-price {

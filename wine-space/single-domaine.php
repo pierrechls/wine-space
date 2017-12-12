@@ -361,6 +361,7 @@ get_header(); ?>
 		float: none;
 		width: 100%;
 		height: auto;
+		background: #414141 !important;
 	}
 	
 	.domaine-products .domaine-products-all {

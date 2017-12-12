@@ -295,6 +295,7 @@ get_header( 'shop' ); ?>
 	.content .illustration {
 		float: none;
 		width: 100%;
+		background: #414141 !important;
 	}
 	
 	.content .description {
