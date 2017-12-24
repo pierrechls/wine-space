@@ -9,8 +9,8 @@
  get_header(); ?>
         
          <div class="home-container" style="background-color: rgba(247,247,247,0.8); height:100vh;">
-            <div class="bxslider" style="height:100vh;">
-                	<ul class="home-slider" style="height:100vh;">
+            <div class="bxslider" style="height:80vh;">
+                	<ul class="home-slider" style="height:80vh;">
    				
 					<?php 
 					
@@ -63,6 +63,32 @@
 					
 					</ul>
 		    </div>
+		    	<?php
+						$args = array( 'post_type' => 'website-description', 'posts_per_page' => 1, 'orderby' => 'date', 'order' => 'ASC' );
+						$loop = new WP_Query( $args );
+						if( count($args) > 0 && $loop->found_posts != 0 ) {
+						while ( $loop->have_posts() ) : $loop->the_post();
+					?>
+						<div class="description-slogan-text">	
+						
+						<?php 
+						
+							if( get_field('text', get_the_ID() ) ) {
+						
+						?>
+						
+							<h6><?php echo the_field('text', get_the_ID() ); ?></h6>
+							
+						<?php
+						
+							}
+						
+						?>
+						</div>
+					<?php
+						endwhile;
+						}
+					?>
         </div>
         
 		</div> <!-- end content div -->
